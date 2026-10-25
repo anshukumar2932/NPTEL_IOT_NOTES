@@ -1804,3 +1804,781 @@ If the options contain pairs like:
 ## FINAL MEMORY LINE
 
 **Interoperability = communicate/exchange → Syntax = format → Semantics = meaning → UMB-A = adapt/map → UMB-C = route → Arduino = Sketch → setup initializes → loop repeats → array starts 0 → DHT = temperature + humidity → sensor = electrical signal → actuator = motion → servo = precise rotary control.**
+
+
+---
+
+# 🚨 WEEK 5 UPDATE — MOCK-EXAM CROSS-CHECK
+
+**Priority remains: Assignment first → ALL Week-5 lecture topics → repeated mock patterns → traps/numbers/code recognition.**
+
+This update uses the uploaded cumulative mock exams and keeps only the patterns relevant to **Week 5: Interoperability + Arduino + Sensors + Actuators**.
+
+## 1. HIGH-PRIORITY MOCK PATTERNS
+
+### A. UMB Adaptor — VERY HIGH PRIORITY
+
+Repeated mock pattern:
+
+> What is the primary function of the UMB Adaptor?
+
+**Answer:** It converts physical IoT devices into **virtual abstractions using a Universal Device Template (UDT)**.
+
+The Week-5 lecture further specifies that:
+- UMB-A converts physical devices into virtual abstractions.
+- UDT contains:
+  - Global Device ID
+  - Global Function ID
+  - Global Action ID
+  - Global Event ID
+  - Global Parameters
+- UMB adaptors translate local middleware messages into global metadata messages.
+
+fileciteturn72file2
+
+**Memory:**  
+**UMB-A = Adapt + Abstract + Translate**
+
+Mock exams repeatedly test this distinction. fileciteturn74file1 fileciteturn74file2
+
+---
+
+### B. UMB-A vs UMB-C — DO NOT MIX
+
+| Component | Main role |
+|---|---|
+| **UMB-A / UMB Adaptor** | Converts/maps local device/middleware information into a universal/global representation |
+| **UMB-C / UMB Core** | Core/routing function between heterogeneous middleware environments |
+
+### Trap
+
+- “UMB-A routes between UMB cores” → **❌**
+- “UMB-A converts devices into virtual abstractions using UDT” → **✅**
+
+---
+
+# 2. ARDUINO UNO — NUMBERS TO MEMORIZE
+
+The Week-5 lecture gives the following Arduino UNO values:
+
+| Feature | Value |
+|---|---:|
+| Operating voltage | **5 V** |
+| Clock speed | **16 MHz** |
+| Digital I/O | **14** |
+| Analog input | **6** |
+| PWM | **6** |
+| UART | **1** |
+| Computer interface | **USB via ATmega16U2** |
+
+fileciteturn72file1
+
+### Assignment-confirmed traps
+
+- UNO operating voltage → **5 V**
+- Arduino IDE program → **Sketch**
+- PC connection → **USB**
+- Array starting index → **0**
+
+fileciteturn74file0 fileciteturn74file4
+
+### Fast memory
+
+> **UNO = 5V / 16MHz / 14 digital / 6 analog / 6 PWM / 1 UART**
+
+---
+
+# 3. ARDUINO IDE SETUP — EXAM RECOGNITION
+
+The lecture's setup sequence is:
+
+1. Connect/power the board through USB.
+2. Launch Arduino IDE.
+3. Select the board type.
+4. Select the port.
+
+Menu path:
+
+**TOOLS → BOARD → select board**
+
+**TOOLS → PORT → select port**
+
+fileciteturn72file3
+
+### Trap
+
+Selecting the correct **board** and selecting the correct **port** are separate steps.
+
+---
+
+# 4. SERIAL MONITOR
+
+The Arduino IDE's **Serial Monitor**:
+
+- opens the serial console
+- displays data printed to the console
+
+fileciteturn72file4
+
+### Memory
+
+**Serial Monitor = see `Serial.print()` / `Serial.println()` output**
+
+---
+
+# 5. ARDUINO DATA TYPES — LECTURE DETAIL
+
+The Week-5 lecture lists Arduino-supported types including:
+
+- `void`
+- `long`
+- `int`
+- `char`
+- `boolean`
+- `unsigned char`
+- `byte`
+- `unsigned int`
+- `word`
+- `unsigned long`
+- `float`
+- `double`
+- arrays
+- String object
+- string/char array
+- `short`
+
+fileciteturn72file7
+
+### MCQ trap
+
+Do not assume the question is asking only for C/C++ primitive types. The lecture explicitly includes arrays and string forms in its supported-type list.
+
+---
+
+# 6. ARDUINO FUNCTIONS — MUST RECOGNIZE FROM CODE
+
+## `pinMode()`
+
+Configures a pin as input/output.
+
+Typical pattern:
+
+```cpp
+pinMode(pin, OUTPUT);
+```
+
+## `digitalWrite()`
+
+Writes a digital state:
+
+```cpp
+digitalWrite(pin, HIGH);
+digitalWrite(pin, LOW);
+```
+
+## `delay()`
+
+Delay is specified in **milliseconds**.
+
+Therefore:
+
+```cpp
+delay(2000);
+```
+
+means:
+
+**2000 ms = 2 seconds**
+
+The Week-5 assignment explicitly tests this. fileciteturn73file1
+
+## `random()`
+
+Generates a pseudo-random number within a specified range.
+
+The assignment explicitly identifies `random()` as the answer. fileciteturn74file4
+
+## Arrays
+
+Arduino arrays use **zero-based indexing**.
+
+First element:
+
+```text
+array[0]
+```
+
+The assignment explicitly tests this. fileciteturn74file0
+
+## Interrupts
+
+The Week-5 lecture covers interrupts as part of Arduino programming.
+
+A typical recognition pattern is:
+
+```cpp
+attachInterrupt(digitalPinToInterrupt(pin), ISR, mode);
+```
+
+### Why interrupts matter
+
+For an external event, an interrupt lets the controller respond to the event rather than repeatedly checking the pin in the main loop.
+
+A cumulative mock specifically tests the advantage of interrupts: prompt response to critical events without wasting CPU cycles on constant polling. fileciteturn74file7
+
+### Trap
+
+**Interrupt ≠ polling**
+
+- Polling → repeatedly check
+- Interrupt → event triggers the handler
+
+---
+
+# 7. TRAFFIC-CONTROL EXAMPLE — VERY HIGH PRIORITY
+
+The Week-5 assignment asks which LED is turned on first for the **GO** signal.
+
+### Correct sequence
+
+**Green → Yellow → Red**
+
+Therefore:
+
+> **Green LED is switched ON first.**
+
+The assignment explanation states that the `traffic()` function first sets the green LED HIGH and displays the GO message, then changes to yellow and red. fileciteturn74file4
+
+### Trap
+
+Do not choose red simply because red is commonly associated with “stop.” The question asks for the **first/GO** state.
+
+---
+
+# 8. DHT SENSOR — HIGH PRIORITY
+
+## What DHT measures
+
+**Temperature + Humidity**
+
+The Week-5 lecture identifies the device as a:
+
+**Digital Humidity and Temperature Sensor (DHT)**
+
+fileciteturn72file0
+
+The assignment also directly tests this. fileciteturn73file1
+
+## DHT pin mapping from the lecture
+
+From left to right:
+
+| Pin | Function |
+|---|---|
+| **1** | 3.3–5 V power supply |
+| **2** | Data |
+| **3** | Null |
+| **4** | Ground |
+
+fileciteturn72file0
+
+### Memory
+
+**DHT = Power – Data – Null – Ground**
+
+---
+
+# 9. SENSOR — CORE DEFINITION
+
+The Week-5 assignment asks:
+
+> What does a sensor convert a physical quantity into?
+
+**Answer: an electrical signal.**
+
+The assignment explanation states that a sensor is an electronic element converting a physical quantity/measurement into an electrical signal. fileciteturn73file1
+
+### Core chain
+
+**Physical quantity → Sensor → Electrical signal**
+
+### Do not confuse
+
+- Sensor → detects/measures
+- Actuator → performs physical action
+
+---
+
+# 10. DHT TIMING TRAP
+
+The assignment asks about:
+
+```cpp
+delay(2000);
+```
+
+Correct interpretation:
+
+**2 seconds**
+
+because:
+
+\[
+2000\text{ ms} = 2\text{ s}
+\]
+
+fileciteturn74file9
+
+### Common traps
+
+- 0.2 s → ❌
+- 1 s → ❌
+- 2 s → ✅
+- 20 s → ❌
+
+---
+
+# 11. SERVO MOTOR — VERY HIGH PRIORITY
+
+A servo motor is:
+
+> **A high-precision actuator providing controlled rotary motion.**
+
+The assignment explicitly marks the statement “servo is a low-precision motor used only for linear motion” as **False**. fileciteturn73file1
+
+### Therefore
+
+**Servo → controlled rotary motion**
+
+### Trap
+
+Servo is **not**:
+- a sensor
+- a DHT device
+- an ultrasonic sensor
+- a low-precision linear-only motor
+
+---
+
+# 12. SERVO CONNECTION — LECTURE NUMBERS
+
+The Week-5 lecture's servo example uses:
+
+- Servo ground → Arduino ground
+- Servo power → Arduino **5V**
+- Servo signal → digital output pin
+- Example signal pin → **pin 8**
+
+fileciteturn73file5
+
+### Memory
+
+**Servo: GND → GND, Power → 5V, Signal → digital pin 8 (example)**
+
+> The pin number is an example from the lecture connection diagram; do not treat pin 8 as a universal requirement for every servo setup.
+
+---
+
+# 13. SERVO LIBRARY CODE RECOGNITION
+
+The Week-5 lecture covers the Servo library.
+
+Typical pattern:
+
+```cpp
+#include <Servo.h>
+
+Servo myservo;
+
+myservo.attach(8);
+myservo.write(90);
+```
+
+### Meaning
+
+- `attach(pin)` → associates the Servo object with a physical digital pin.
+- `write(angle)` → commands the servo to move to a specified angle.
+
+A cumulative mock explicitly tests the meaning of `Servo.attach()`: it associates a Servo object with a specific physical GPIO pin. fileciteturn73file8
+
+### Trap
+
+`attach()` does **not**:
+- read the current angle
+- directly provide power
+- itself command the angle
+
+**attach = connect Servo object to pin**
+
+**write = command angle**
+
+---
+
+# 14. STEPPER MOTOR
+
+The Week-5 assignment explicitly asks:
+
+> Is a stepper motor a type of actuator?
+
+**YES / TRUE**
+
+fileciteturn73file1
+
+### Core classification
+
+**Stepper motor → actuator**
+
+Do not confuse:
+- DHT → sensor
+- servo → actuator
+- stepper → actuator
+
+---
+
+# 15. SENSOR vs ACTUATOR — MASTER COMPARISON
+
+| Sensor | Actuator |
+|---|---|
+| Measures/detects | Performs action |
+| Physical quantity → electrical signal | Control signal → physical action |
+| Input side of sensing loop | Output/action side |
+| DHT example | Servo example |
+| Temperature/humidity | Controlled rotary motion |
+
+### Fast recall
+
+> **Sensor senses. Actuator acts.**
+
+---
+
+# 16. INTEROPERABILITY — MOCK + LECTURE CROSS-CHECK
+
+The assignment establishes:
+
+- interoperability → devices/systems can communicate and exchange data
+- syntactic interoperability → message format
+- UMB → Universal Middleware Bridge
+
+fileciteturn74file0
+
+The lecture explains why interoperability is needed because of heterogeneity in:
+
+- operating systems
+- databases
+- data representations
+- control models
+- syntactic/semantic interpretations
+
+Examples of operating systems/databases are explicitly shown in the lecture. fileciteturn73file7
+
+### Memory
+
+**Heterogeneity → interoperability problem**
+
+---
+
+# 17. SYNTACTIC vs SEMANTIC — CLASSIC MCQ TRAP
+
+| Type | Meaning |
+|---|---|
+| **Syntactic interoperability** | **Format / structure** |
+| **Semantic interoperability** | **Meaning / interpretation** |
+
+### One-line memory
+
+> **Syntax = how data is written. Semantics = what data means.**
+
+---
+
+# 18. MOCK-EXAM PRIORITY RANKING FOR WEEK 5
+
+## 🔴 Tier 1 — MEMORIZE
+
+1. UMB-A → physical device → virtual abstraction using UDT
+2. UDT identifiers/parameters
+3. UMB-A vs UMB-C
+4. UNO = **5V, 16MHz, 14 digital, 6 analog, 6 PWM, 1 UART**
+5. Sketch
+6. USB
+7. Array starts at **0**
+8. `random()`
+9. Traffic sequence = **Green → Yellow → Red**
+10. DHT = **temperature + humidity**
+11. Sensor → electrical signal
+12. `delay(2000)` = **2 seconds**
+13. Servo = controlled rotary motion
+14. `attach(pin)` = associate Servo object with pin
+15. Stepper = actuator
+
+## 🟠 Tier 2 — VERY IMPORTANT
+
+16. Arduino setup sequence
+17. Serial Monitor
+18. `pinMode()`
+19. `digitalWrite()`
+20. `delay()`
+21. interrupts vs polling
+22. DHT pin mapping
+23. Servo wiring
+24. `Servo.write(angle)`
+25. syntactic vs semantic interoperability
+
+## 🟡 Tier 3 — UNDERSTAND
+
+26. Why interoperability is needed
+27. heterogeneous OS/database/data representations
+28. device discovery
+29. device classification
+30. complete Arduino data-type list from the lecture
+31. sensor/actuator integration examples
+
+---
+
+# 19. WEEK-5 MCQ/MSQ TRAP BANK
+
+### Trap 1
+**Syntactic = meaning**
+
+❌ Wrong.
+
+**Syntactic = format.**
+
+### Trap 2
+**Semantic = message structure**
+
+❌ Wrong.
+
+**Semantic = meaning.**
+
+### Trap 3
+**UMB-A = routing**
+
+❌ Wrong.
+
+**UMB-A = adaptation/virtual abstraction/mapping.**
+
+### Trap 4
+**UMB-C = converts physical devices to UDT**
+
+❌ Wrong.
+
+**UMB-A does that.**
+
+### Trap 5
+**Arduino program = packet/frame**
+
+❌ Wrong.
+
+**Arduino program = sketch.**
+
+### Trap 6
+**Array starts at 1**
+
+❌ Wrong.
+
+**Array starts at 0.**
+
+### Trap 7
+**`random()` configures a pin**
+
+❌ Wrong.
+
+**`random()` generates a pseudo-random value.**
+
+### Trap 8
+**Green is the stop signal in the traffic example**
+
+❌ Wrong.
+
+In the lecture's traffic example:
+
+**Green = GO → Yellow → Red**
+
+### Trap 9
+**DHT measures distance**
+
+❌ Wrong.
+
+**DHT = temperature + humidity.**
+
+### Trap 10
+**Sensor converts physical quantity into mechanical motion**
+
+❌ Wrong.
+
+**Sensor → electrical signal.**
+
+### Trap 11
+**Servo = low-precision linear-only motor**
+
+❌ Wrong.
+
+**Servo = high-precision controlled rotary motion.**
+
+### Trap 12
+**Stepper is not an actuator**
+
+❌ Wrong.
+
+**Stepper = actuator.**
+
+### Trap 13
+**`delay(2000)` = 2000 seconds**
+
+❌ Wrong.
+
+**2000 milliseconds = 2 seconds.**
+
+### Trap 14
+**`attach()` moves servo to an angle**
+
+❌ Wrong.
+
+`attach()` associates the Servo object with a pin.
+
+`write(angle)` commands the angle.
+
+### Trap 15
+**Interrupt = polling**
+
+❌ Wrong.
+
+Interrupt is event-driven; polling repeatedly checks.
+
+---
+
+# 20. WEEK-5 NUMBERS / CODE SHEET
+
+| Item | Value / Meaning |
+|---|---|
+| Arduino UNO voltage | **5 V** |
+| Clock | **16 MHz** |
+| Digital I/O | **14** |
+| Analog inputs | **6** |
+| PWM | **6** |
+| UART | **1** |
+| USB interface | **ATmega16U2** |
+| First array index | **0** |
+| `delay(2000)` | **2 s** |
+| DHT power range | **3.3–5 V** |
+| DHT data | **Pin 2** |
+| DHT null | **Pin 3** |
+| DHT ground | **Pin 4** |
+| Servo example signal pin | **8** |
+| Traffic first LED | **Green** |
+
+---
+
+# 21. 60-SECOND WEEK-5 RECALL
+
+> **Interoperability = communicate/exchange.**  
+> **Syntax = format.**  
+> **Semantics = meaning.**  
+> **UMB = Universal Middleware Bridge.**  
+> **UMB-A = adapt/map/virtualize.**  
+> **UDT = global device/function/action/event/parameters.**  
+> **Arduino = open-source programmable board + IDE.**  
+> **UNO = 5V, 16MHz, 14 digital, 6 analog, 6 PWM, 1 UART.**  
+> **Program = sketch.**  
+> **PC = USB.**  
+> **Array starts = 0.**  
+> **random() = pseudo-random number.**  
+> **Traffic = Green → Yellow → Red.**  
+> **DHT = temperature + humidity.**  
+> **Sensor = physical quantity → electrical signal.**  
+> **delay(2000) = 2 seconds.**  
+> **Servo = controlled rotary motion.**  
+> **attach(pin) = Servo object → pin.**  
+> **write(angle) = command angle.**  
+> **Stepper = actuator.**
+
+---
+
+# 22. FINAL WEEK-5 RAPID DRILL
+
+1. What does interoperability enable?  
+   → **Communication and data exchange**
+
+2. Syntactic interoperability?  
+   → **Message format**
+
+3. Semantic interoperability?  
+   → **Meaning**
+
+4. UMB full form?  
+   → **Universal Middleware Bridge**
+
+5. Main role of UMB-A?  
+   → **Convert physical devices into virtual abstractions using UDT**
+
+6. Five major UDT fields?  
+   → **Global Device ID, Function ID, Action ID, Event ID, Parameters**
+
+7. UNO voltage?  
+   → **5 V**
+
+8. UNO clock?  
+   → **16 MHz**
+
+9. UNO digital I/O?  
+   → **14**
+
+10. UNO analog inputs?  
+    → **6**
+
+11. Arduino IDE program called?  
+    → **Sketch**
+
+12. Computer connection?  
+    → **USB**
+
+13. First array index?  
+    → **0**
+
+14. Pseudo-random function?  
+    → **random()**
+
+15. First traffic LED?  
+    → **Green**
+
+16. DHT measures?  
+    → **Temperature + humidity**
+
+17. Sensor output?  
+    → **Electrical signal**
+
+18. `delay(2000)`?  
+    → **2 seconds**
+
+19. Servo motion?  
+    → **Controlled rotary motion**
+
+20. `attach()`?  
+    → **Associates Servo object with a physical pin**
+
+21. `write(90)`?  
+    → **Commands servo angle**
+
+22. Stepper classification?  
+    → **Actuator**
+
+23. DHT pin 2?  
+    → **Data**
+
+24. DHT pin 4?  
+    → **Ground**
+
+25. Interrupt vs polling?  
+    → **Interrupt responds to an event; polling repeatedly checks**
+
+---
+
+# 23. UPDATE SOURCE CHECK
+
+The Week-5 assignment directly supports the 15 assignment answers and their explanations, including interoperability, syntactic interoperability, UMB, Arduino UNO, sketch, USB, array indexing, `random()`, traffic control, DHT, sensor output, `delay(2000)`, servo, and stepper. fileciteturn74file0 fileciteturn73file1
+
+The Week-5 lecture supports the UNO specifications, DHT pin arrangement, UMB-A/UDT structure, Arduino setup, Serial Monitor, Arduino data types, and servo connection details. fileciteturn72file1 fileciteturn72file0 fileciteturn72file2 fileciteturn72file3 fileciteturn72file4
+
+The cumulative mock exams reinforce the UMB-A/UDT pattern and the Arduino interrupt and Servo `attach()` recognition patterns. fileciteturn74file1 fileciteturn74file2 fileciteturn74file7 fileciteturn73file8
+
+**No images were generated or added.**
