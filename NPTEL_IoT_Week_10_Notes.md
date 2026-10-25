@@ -1,356 +1,410 @@
-# NPTEL Introduction to Internet of Things — Week 10 Exam Notes
+# NPTEL Introduction to Internet of Things — Week 10
+## Assignment-First + Complete Lecture Coverage + Cumulative Mock Cross-Check
 
-## Assignment Priority + Complete Lecture Coverage
-
-**Week:** 10  
-**Exam type:** MCQ/MSQ  
-**Assignment:** 15 questions, 15 marks  
-**Lecture:** Smart Cities and Smart Homes – Part I, II, III; Connected Vehicles – Part I, II
-
-> **Exam rule for this file:** Assignment questions come first because they are the highest-priority revision source. After that, every major topic appearing in the Week 10 lecture PDF is covered, including concepts that are not directly asked in the assignment.
+> **Exam priority rule:** Assignment questions are the highest priority. Learn the exact answer mappings first, then the related lecture concepts. This file covers all Week-10 lecture topics from the uploaded `Week-10.pdf` and all 15 questions from `Assignment_10(1).pdf`.
+>
+> **No images added.**
 
 ---
 
-# 1. WEEK 10 ULTRA-QUICK REVISION
+# PART A — ASSIGNMENT 10: HIGHEST PRIORITY
 
-## Smart City
-A smart city:
-- is an **urban system**,
-- uses **Information & Communication Technology (ICT)**,
-- makes infrastructure more **interactive, accessible and efficient**.
+## Assignment answer lock
 
-### Why smart cities?
-- Rapidly growing urban population
-- Fast depletion of natural resources
-- Environmental and climate changes
+| Q | Answer | Must remember |
+|---|---|---|
+| 1 | **C** | Sensors & Tags → Sensory Organs |
+| 2 | **A** | Six smart-city focus areas include Smart Economy |
+| 3 | **D** | Smart Parking Lots → empty-slot routing/detection |
+| 4 | **C** | Multi-tenancy data leakage → Security & Privacy |
+| 5 | **B** | Data fusion → precise/accurate data for better decisions |
+| 6 | **C** | Same sensor type gives different data at same location → Conflicts |
+| 7 | **D** | Sensor-node/local-network fusion → Signal level |
+| 8 | **A** | Smart parking layers include Information Collection |
+| 9 | **D** | Intentionally deployed nearby energy source → Dedicated harvesting |
+| 10 | **C** | IEEE 802.15.4 PHY/MAC + low-cost/low-energy → Zigbee |
+| 11 | **D** | Power-line home control → X-10 |
+| 12 | **A** | TCP/IP V2X limitation → endpoint/location-oriented communication |
+| 13 | **B** | ICV spectrum → 75 MHz, 5850–5925 MHz |
+| 14 | **B** | 4G LTE/DSRC intelligent transportation → Phase-2 |
+| 15 | **D** | Mobile OBUs + static RSUs, V2V/V2I → Ad-hoc domain |
 
-### Human ↔ Smart City analogy
-| Human | Smart City |
-|---|---|
-| Skeleton | Buildings, industries, people |
-| Skin | Transportation, logistics |
-| Organs | Hospitals, police, banks, schools |
-| Brain | Ubiquitously embedded intelligence |
-| Nerves | Digital telecommunication networks |
-| Sensory organs | Sensors, tags |
-| Cognition | Software |
-
-**Assignment trap:** Sensors and Tags = **Sensory Organs**.
-
-### Six application focus areas
-1. Smart Economy
-2. Smart Governance
-3. Smart People
-4. Smart Mobility
-5. Smart Environment
-6. Smart Living
+These answers and explanations are taken directly from the uploaded Week-10 assignment. fileciteturn104file0L25-L61 fileciteturn104file0L75-L114 fileciteturn104file0L125-L167 fileciteturn104file0L178-L219 fileciteturn104file0L227-L270 fileciteturn104file0L278-L322 fileciteturn104file0L330-L397
 
 ---
 
-# 2. ASSIGNMENT-FIRST: ALL 15 QUESTIONS
+## Q1. Human ↔ Smart City analogy
 
-## Q1. In the human–smart city analogy, what do Sensors and Tags correspond to?
+**Question:** In the lecture analogy, what do **Sensors and Tags** correspond to?
 
 **Answer: C — Sensory Organs**
 
-### Explanation
-The lecture maps:
-- Skeleton → Buildings, Industries, People
-- Skin → Transportation, Logistics
-- Organs → Hospital, Police, Banks, Schools
-- Brain → Ubiquitously embedded intelligence
-- Nerves → Digital telecommunication networks
-- **Sensory Organs → Sensors, Tags**
-- Cognition → Software
+### Full analogy
 
-### Trap
-Do not confuse **Sensors/Tags** with nerves or brain.
+| Human | Smart city |
+|---|---|
+| Skeleton | Buildings, Industries, People |
+| Skin | Transportation, Logistics |
+| Organs | Hospitals, Police, Banks, Schools |
+| Brain | Ubiquitously embedded intelligence |
+| Nerves | Digital telecommunication networks |
+| **Sensory organs** | **Sensors, Tags** |
+| Cognition | Software |
 
-**Memory:** `Sensors + Tags = Sensory Organs`
+**Exam trap:**  
+- Sensors/Tags ≠ nerves.
+- Digital telecommunication networks = **nerves**.
+- Ubiquitously embedded intelligence = **brain**.
 
-**Lecture reference:** Part I, Slide 3.
+The lecture gives this analogy explicitly. fileciteturn104file1L445-L454
 
 ---
 
-## Q2. Which is one of the six Application Focus Areas of a smart city?
+## Q2. Six smart-city Application Focus Areas
 
 **Answer: A — Smart Economy**
 
-### Six focus areas
-- Smart Economy → competitiveness
-- Smart Governance → citizen participation
-- Smart People → social and human capital
-- Smart Mobility → transport and ICT
-- Smart Environment → natural resources
-- Smart Living → quality of life
+Memorize all six:
 
-### Trap
-Smart Bandwidth, Smart Voltage and Smart Currency are not among the six.
+1. **Smart Economy** → competitiveness
+2. **Smart Governance** → citizen participation
+3. **Smart People** → social and human capital
+4. **Smart Mobility** → transport and ICT
+5. **Smart Environment** → natural resources
+6. **Smart Living** → quality of life
 
-**Memory:** `Economy – Governance – People – Mobility – Environment – Living`
+**Trap:** Smart Bandwidth, Smart Voltage, Smart Currency are distractors.
 
-**Lecture reference:** Part I, Slide 4.
+Source: assignment and lecture. fileciteturn104file0L49-L70 fileciteturn104file1L458-L470
 
 ---
 
-## Q3. Which smart-city application deals with auto-routing vehicles to empty parking slots and detecting vacant slots?
+## Q3. Smart Parking Lots
 
 **Answer: D — Smart Parking Lots**
 
-### Explanation
-Smart parking can provide:
-- automatic routing to empty slots,
-- automatic charging for services,
-- vacant-slot detection.
+The lecture lists these functions:
 
-### Related benefits
-- Shorter parking search time
-- Reduced congestion
-- Reduced pollution
-- Reduced fuel consumption
-- Increased urban mobility
-- Potentially increased parking revenue
+- Auto-routing vehicles to empty slots
+- Auto-charging for services
+- Detecting vacant slots
 
-**Memory:** `Empty slot → Smart Parking`
+### Memory hook
+**Parking = find slot + route + charge + detect vacancy.**
+
+The assignment explicitly ties these functions to Smart Parking Lots. fileciteturn104file0L75-L93
 
 ---
 
-## Q4. Which challenge involves data leakage because multiple tenants share the same infrastructure?
+## Q4. Multi-tenancy and data leakage
 
 **Answer: C — Security and Privacy**
 
-### Explanation
-Multi-tenancy can cause:
-- exposure to attacks,
-- vulnerabilities,
-- risk of data leakage.
+Smart-city security/privacy challenges include:
+
+- Exposure to attacks
+- Exposure to vulnerabilities
+- **Multi-tenancy → risk of data leakage**
 
 ### Trap
-This is **not** primarily heterogeneity.
+If the question says **data leakage because multiple tenants share infrastructure**, choose **Security and Privacy**, not heterogeneity.
 
-**Memory:** `Multi-tenancy + data leakage = Security & Privacy`
+The lecture separately defines heterogeneity as integration of varying hardware, radio and software platforms and varying user requirements. fileciteturn104file1L599-L613
 
 ---
 
-## Q5. What is the primary purpose of data fusion in smart-city IoT?
+## Q5. Purpose of data fusion
 
-**Answer: B — Make the large incoming data volume precise and accurate for better decision making**
+**Answer: B — Make large incoming data volume precise and accurate for better decision making**
 
-### Explanation
-Smart cities produce enormous amounts of data. Data fusion:
-- combines data from multiple sources,
-- improves precision/accuracy,
-- supports better decisions,
-- enables optimal use of massive data across multiple platforms.
+Data fusion:
+
+- Combines data from multiple sources/platforms.
+- Improves the precision and accuracy of available data.
+- Helps decision-making.
+- Enables optimum use of massive multi-source data.
+
+The lecture says that data precision/accuracy directly affects decision quality. fileciteturn104file1L678-L687
 
 ### Trap
-Data fusion does not mean deleting redundant sensors or replacing sensors.
-
-**Memory:** `Many sources → fused information → better decision`
+Data fusion does **not** mean:
+- deleting redundant sensors,
+- replacing sensors,
+- intentionally increasing latency.
 
 ---
 
-## Q6. Which data-fusion challenge occurs when the same type of sensor reports different data for the same location?
+## Q6. Same sensor type gives different values at same location
 
 **Answer: C — Conflicts**
 
-### Four major terms
-- **Imperfection** → inaccurate or uncertain sensor data
-- **Ambiguity** → outliers or missing data
-- **Conflicts** → same sensor type gives different data for same location
-- **Alignment** → converting sensor data frames into a singular frame before transmission
+Data-fusion challenges:
 
-### Trap
-“Different readings from same sensor type at same location” = **Conflicts**, not imperfection.
+| Challenge | Meaning |
+|---|---|
+| **Imperfection** | Inaccurate or uncertain WSN sensor data |
+| **Ambiguity** | Outliers, missing data |
+| **Conflicts** | Same sensor type reports different data for same location |
+| **Alignment** | Sensor data frames converted to a singular frame before transmission |
+| **Trivial features** | Processing trivial features may reduce overall system accuracy |
+
+Source: lecture and assignment. fileciteturn104file1L708-L723
+
+**Very high-probability trap:**  
+**Different values from same sensor type at same location = CONFLICTS.**
 
 ---
 
-## Q7. At which data-fusion level does fusion happen at the sensor node or within the local network?
+## Q7. Fusion at sensor node/local network
 
 **Answer: D — Signal level**
 
-### Four stages
-| Level | Meaning |
-|---|---|
-| Decision | Ensemble of decisions |
-| Feature | Information fused before decision making |
-| Pixel | Information fused at imaging-device level |
-| Signal | Fusion at sensor node/local network |
+### Four stages of data fusion
 
-**Memory:** `Signal = closest to sensor`
+| Level | What happens |
+|---|---|
+| **Signal level** | Fusion at sensor node / within local network |
+| **Pixel level** | Fusion at imaging-device level |
+| **Feature level** | Fusion of information before decision making |
+| **Decision level** | Ensemble of decisions |
+
+The lecture defines these stages directly. fileciteturn104file1L744-L755
+
+### Memory order
+**Signal → Pixel → Feature → Decision**
+
+Do not confuse:
+- **Signal** = closest to sensor/network.
+- **Decision** = output/decision stage.
 
 ---
 
-## Q8. Which is one of the three functional layers of smart parking?
+## Q8. Functional layers of smart parking
 
 **Answer: A — Information Collection**
 
-### Three layers
+Three functional layers:
+
 1. **Information Collection**
 2. **System Deployment**
 3. **Service Dissemination**
 
-### Trap
-Fuel refilling, vehicle manufacturing and traffic-signal coloring are not the three functional layers.
+### Information Collection
+Sources shown in the lecture:
+
+- Sensors
+- Parking meters
+- Sensor networks
+- Crowd sensing
+
+### System Deployment
+Includes:
+
+- Software system
+- Information management
+- E-parking
+- Guidance
+- Data analytics
+
+### Service Dissemination
+Includes:
+
+- Dynamic pricing strategies
+- Infrastructure-based information
+- Infrastructure-free information
+- Parking choice
+- Vehicular activities
+
+Sources: fileciteturn104file1L812-L823 fileciteturn104file1L828-L855 fileciteturn104file1L860-L874
 
 ---
 
-## Q9. Which energy-harvesting type uses energy sources intentionally deployed near IoT devices?
+## Q9. Dedicated energy harvesting
 
 **Answer: D — Dedicated energy harvesting**
 
-### Explanation
-Dedicated harvesting:
-- intentionally deploys an energy source near IoT sources,
-- harvested energy depends on:
-  1. sensitivity of the harvesting circuit,
-  2. distance between device and source,
-  3. environment.
+### Ambient vs dedicated
 
-### Contrast
-**Ambient harvesting** uses naturally available sources such as:
-- RF,
-- wind,
-- sun,
-- heat,
-- vibration.
+**Ambient energy harvesting**
+- Uses energy already available in the environment.
+- Examples listed:
+  - RF
+  - Wind
+  - Sun
+  - Heat
+  - Vibration
+
+**Dedicated energy harvesting**
+- Energy source is **intentionally deployed near the IoT source/device**.
+- Harvested energy depends on:
+  1. Sensitivity of harvesting circuit
+  2. Distance between device and source
+  3. Environment
+
+Source: fileciteturn104file1L898-L943
+
+**Trap:** "intentionally deployed near IoT devices" = **Dedicated**.
 
 ---
 
-## Q10. Which HAN standard uses IEEE 802.15.4 at the physical and MAC layers and targets low-cost, low-energy devices?
+## Q10. Zigbee and IEEE 802.15.4
 
 **Answer: C — Zigbee**
 
-### Explanation
-Zigbee has four layers:
-1. Physical
-2. MAC
-3. Network
-4. Application
-
 The lecture states:
-- Physical + MAC → IEEE 802.15.4
-- Network + Application → Zigbee
 
-### Trap
-IEEE 802.15.4 is the underlying PHY/MAC technology; **Zigbee** is the HAN standard/protocol stack built above it.
+- Zigbee has four layers:
+  1. Physical
+  2. MAC
+  3. Network
+  4. Application
+- **IEEE 802.15.4 defines Physical + MAC**
+- Zigbee defines Network + Application
+- Target: **low-cost, low-energy devices**
+
+Source: fileciteturn104file1L1151-L1164
+
+### Exam distinction
+
+**IEEE 802.15.4**
+→ PHY + MAC
+
+**Zigbee**
+→ Network + Application on top of 802.15.4
 
 ---
 
-## Q11. Which HAN standard controls compliant devices over existing power lines/electrical wiring?
+## Q11. X-10
 
 **Answer: D — X-10**
 
-### X-10
-- Uses existing house power lines/electrical wiring.
-- Low speed.
-- Low data rate.
-- Mainly used for:
-  - lighting,
-  - appliance networks,
-  - security sensors.
-- Adopted by GE and Philips.
-- Defines transmission of bits over AC carrier signals.
+X-10:
 
-### Memory
-`Power line + home appliance control = X-10`
+- Enables remote control of compliant transmitters/receivers.
+- Uses existing power lines/electrical wiring.
+- Adopted by GE and Philips according to the lecture.
+- Low-speed and low-data-rate.
+- Used mainly for:
+  - Lighting control
+  - Appliance networks
+  - Security sensors
 
----
-
-## Q12. Why does traditional TCP/IP not work well for V2X communication according to the lecture?
-
-**Answer: A — TCP/IP was designed mainly for single-pair information exchange dependent on data location**
-
-### Lecture logic
-Traditional TCP/IP:
-- is mainly designed for information exchange between a single pair of entities,
-- is dependent on data location,
-- identifies endpoint addresses,
-- endpoint addressing alone is not ideal for content distribution in highly mobile V2X environments.
+Source: fileciteturn104file1L1169-L1182
 
 ### Trap
-Do not interpret this as “TCP/IP cannot be used with wireless devices.” That is false.
-
-**Memory:** `TCP/IP → endpoint/location-centric; V2X → highly mobile/content-centric`
+**Power-line home control + lighting/appliances = X-10.**
 
 ---
 
-## Q13. What frequency spectrum was allocated for Intelligent Connected Vehicles?
+## Q12. Why traditional TCP/IP struggles with V2X
+
+**Answer: A**
+
+According to the lecture, TCP/IP:
+
+- Was designed mainly for information exchange between a **single pair of entities**.
+- Is dependent on the **location of data**.
+- Identifies **endpoint addresses**, which alone is not sufficient for content distribution.
+- The highly mobile environment creates additional problems.
+
+Source: fileciteturn104file1L1357-L1367
+
+### Core contrast
+
+**Traditional IP approach**
+→ "Where is the endpoint/data?"
+
+**Content-centric approach**
+→ "What data/content do I need?"
+
+This leads to **CCN / Information-Centric Networking** concepts later in the lecture.
+
+---
+
+## Q13. ICV dedicated spectrum
 
 **Answer: B — 75 MHz (5850–5925 MHz)**
 
-### Important number
-**75 MHz = 5850–5925 MHz**
+Memorize:
 
-The lecture associates this dedicated spectrum with **DSRC**.
+> **ICV / DSRC → 75 MHz → 5850–5925 MHz**
 
-### Related standards
-- IEEE 802.11p
-- IEEE 1609 family
-- SAE J2735
-- SAE J2945
-
-**Memory:** `ICV → 75 MHz → 5850–5925 MHz`
+The lecture states that the US Department of Transport and FCC allocated this dedicated spectrum for ICVs, based on DSRC. fileciteturn106file0L176-L185
 
 ---
 
-## Q14. Which ICV development phase uses 4G LTE or DSRC and focuses on intelligent transportation services?
+## Q14. ICV development phase
 
 **Answer: B — Phase-2**
 
-### ICV phases
-- **Phase-1** → infotainment, remote information processing, 2G/3G
-- **Phase-2** → intelligent transportation services, 4G LTE or DSRC
-- **Phase-3** → vehicles connected to the cloud
+| Phase | Main idea | Technology |
+|---|---|---|
+| **Phase-1** | Infotainment + remote information processing | 2G/3G |
+| **Phase-2** | Intelligent transportation services | 4G LTE or DSRC |
+| **Phase-3** | Vehicles connected to cloud | Cloud connectivity |
 
-### Memory
-`2G/3G = Phase 1`  
-`4G LTE/DSRC = Phase 2`  
-`Cloud-connected vehicles = Phase 3`
+Source: fileciteturn106file1L231-L243
+
+**Trap:** 4G LTE/DSRC + intelligent transportation = **Phase-2**.
 
 ---
 
-## Q15. Which VANET domain contains mobile vehicles and static RSUs communicating through V2V/V2I using DSRC?
+## Q15. VANET domain classification
 
 **Answer: D — Ad-hoc Domain**
 
-### Explanation
-Ad-hoc domain:
-- Vehicles/OBUs → mobile
+The **Ad-hoc Domain** contains:
+
+- Vehicles / OBUs → mobile
 - RSUs → static
-- Communication → V2V or V2I
-- DSRC stack → IEEE 802.11p
+- V2V communication
+- V2I communication
+- DSRC stack / IEEE 802.11p
 
-### Trap
-Do not confuse it with:
-- In-vehicle domain,
-- Infrastructure domain,
-- Cloud domain.
+Source: fileciteturn106file1L301-L313
 
----
+### Domain comparison
 
-# 3. SMART CITIES — COMPLETE LECTURE COVERAGE
-
-## 3.1 Definition
-
-A smart city is an **urban system** that uses **ICT** to make infrastructure:
-- interactive,
-- accessible,
-- efficient.
-
-### Drivers
-The lecture identifies:
-- rapid urban population growth,
-- depletion of natural resources,
-- environmental/climate changes.
+| Domain | Key idea |
+|---|---|
+| **In-Vehicle** | Internal vehicle components/OBUs, sensors, actuators |
+| **Ad-hoc** | Vehicles + RSUs; V2V/V2I |
+| **Infrastructure** | RSUs + gateways + Internet/cellular connectivity |
+| Cloud | Backend/cloud services |
 
 ---
 
-# 4. HUMAN–SMART CITY ANALOGY
+# PART B — COMPLETE WEEK-10 LECTURE NOTES
 
-This analogy is highly exam-relevant.
+# 1. Smart Cities
 
-| Human body | Smart city equivalent |
+## 1.1 Definition
+
+A **Smart City** is an urban system that:
+
+- Uses **Information & Communication Technology (ICT)**.
+- Makes infrastructure more:
+  - Interactive
+  - Accessible
+  - Efficient
+
+### Why smart cities?
+
+The lecture identifies major motivations:
+
+- Rapidly growing urban population
+- Fast depletion of natural resources
+- Environmental and climate changes
+
+Source: fileciteturn104file1L430-L443
+
+---
+
+# 2. Human ↔ Smart City Analogy
+
+This is a major memory table.
+
+| Human body | Smart city |
 |---|---|
 | Skeleton | Buildings, industries, people |
 | Skin | Transportation, logistics |
@@ -360,1216 +414,1140 @@ This analogy is highly exam-relevant.
 | Sensory organs | Sensors, tags |
 | Cognition | Software |
 
-### Fast recall
-**Body structure → city infrastructure**  
-**Nerves → communication**  
-**Sensors → sensing organs**  
-**Brain → embedded intelligence**  
-**Cognition → software**
+### Exam trigger words
+
+- **Sensors/Tags** → sensory organs
+- **Digital telecom** → nerves
+- **Embedded intelligence** → brain
+- **Software** → cognition
+- **Buildings/industries/people** → skeleton
 
 ---
 
-# 5. SIX SMART-CITY APPLICATION FOCUS AREAS
+# 3. Six Smart-City Application Focus Areas
 
-## 1. Smart Economy
-Focus:
-- competitiveness.
+### 1. Smart Economy
+Focus: competitiveness.
 
-## 2. Smart Governance
-Focus:
-- citizen participation.
+### 2. Smart Governance
+Focus: citizen participation.
 
-## 3. Smart People
-Focus:
-- social and human capital.
+### 3. Smart People
+Focus: social and human capital.
 
-## 4. Smart Mobility
-Focus:
-- transport and ICT.
+### 4. Smart Mobility
+Focus: transport and ICT.
 
-## 5. Smart Environment
-Focus:
-- natural resources.
+### 5. Smart Environment
+Focus: natural resources.
 
-## 6. Smart Living
-Focus:
-- quality of life.
+### 6. Smart Living
+Focus: quality of life.
 
-### Mnemonic
-**E-G-P-M-E-L**
+Source: fileciteturn104file1L458-L475
 
-Think:
-> Economy, Governance, People, Mobility, Environment, Living.
+### One-line recall
+**Economy – Governance – People – Mobility – Environment – Living**
 
 ---
 
-# 6. CURRENT SMART-CITY FOCUS AREAS
+# 4. Current Smart-City Focus Areas
 
 ## Smart Homes
-Applications:
-- health monitoring,
-- conservation of electricity/water/fuel,
-- security and safety.
+
+Lecture examples:
+
+- Health monitoring
+- Conservation of electricity, water and fuel
+- Security and safety
 
 ## Smart Parking Lots
-Applications:
-- route vehicles to empty slots,
-- automatic charging,
-- detect vacant slots.
+
+- Auto-routing to empty slots
+- Auto charging
+- Vacancy detection
 
 ## Smart Vehicles
-Applications:
-- driver assistance in bad weather/low visibility,
-- detection of bad driving or substance influence,
-- crash alerts,
-- self-diagnostics.
+
+- Driver assistance during bad weather/low visibility
+- Detection of bad driving patterns
+- Detection of driving under influence
+- Crash alerts
+- Self-diagnostics
 
 ## Smart Health
-Applications:
-- low-cost portable diagnosis kits,
-- remote check-ups,
-- remote diagnosis,
-- on-body sensors,
-- emergency alerts for heart attacks/seizures.
+
+- Low-cost portable at-home diagnosis
+- Remote check-ups and diagnosis
+- On-body sensors
+- Emergency medical alerts
 
 ## Pollution and Calamity Monitoring
-Applications:
-- weather/man-made calamity monitoring,
-- pollutant threshold alerts,
-- resource reallocation,
-- service rerouting during calamities.
+
+- Weather/man-made calamity monitoring
+- Above-threshold pollutant alerts
+- Resource reallocation and service rerouting
 
 ## Smart Energy
-Applications:
-- smart metering,
-- smart energy allocation/distribution,
-- integration of traditional and renewable energy in the same grid.
+
+- Smart metering
+- Smart allocation/distribution
+- Traditional + renewable energy in the same grid
 
 ## Smart Agriculture
-Applications:
-- plant water-stress detection,
-- crop-health monitoring,
-- crop-infection detection,
-- automatic fertilizer/pesticide application,
-- harvesting scheduling,
-- transfer of harvests to warehouses/markets.
+
+- Plant water-stress detection
+- Crop-health monitoring
+- Crop-infection detection
+- Automatic fertilizer/pesticide application
+- Harvest scheduling and transfer planning
+
+Source: fileciteturn104file1L524-L582
 
 ---
 
-# 7. TECHNOLOGICAL FOCUS AREAS OF SMART CITIES
+# 5. Technological Focus Areas
 
-The lecture organizes smart-city technology into four major stages:
+The lecture groups smart-city technology into four major activities:
 
-## Data Collection
-Examples:
-- mobile devices,
-- sensors,
-- architectures.
+| Area | Examples |
+|---|---|
+| **Data Collection** | Mobile devices, sensors, architecture |
+| **Data Transmission** | Radios, networking, topologies |
+| **Data Storage** | Local storage, data warehouses |
+| **Data Processing** | Data cleaning, analytics, prediction |
 
-## Data Transmission
-Examples:
-- radios,
-- networking,
-- topologies.
+Source: fileciteturn104file1L584-L597
 
-## Data Storage
-Examples:
-- local storage,
-- data warehouses.
-
-## Data Processing
-Examples:
-- data cleaning,
-- analytics,
-- prediction.
-
-### Exam chain
-`Collect → Transmit → Store → Process`
+### Easy sequence
+**Collect → Transmit → Store → Process**
 
 ---
 
-# 8. IoT CHALLENGES IN SMART CITIES
+# 6. IoT Challenges in Smart Cities
 
-## 8.1 Security and Privacy
+## 6.1 Security and Privacy
+
 Problems:
-- exposure to attacks,
-- vulnerabilities,
-- cross-site scripting,
-- side-channel attacks,
-- multi-tenancy and data leakage.
 
-**Assignment connection:** Q4.
+- Attacks
+- Vulnerabilities
+- Multi-tenancy → data leakage
 
----
+## 6.2 Heterogeneity
 
-## 8.2 Heterogeneity
 Need to integrate:
-- different hardware platforms/specifications,
-- different radio specifications,
-- different software platforms,
-- different user requirements.
 
-### Trap
-Heterogeneity = **different technologies/platforms**, not data leakage.
+- Different hardware platforms/specifications
+- Different radio specifications
+- Different software platforms
+- Different user requirements
 
----
+## 6.3 Reliability
 
-## 8.3 Reliability
-Problems:
-- unreliable communication due to vehicle mobility,
-- device failures.
+- Unreliable communication because of vehicle mobility
+- Device failures
 
----
+## 6.4 Large Scale
 
-## 8.4 Large Scale
-Problems:
-- deployment scale can introduce delays,
-- mobility creates additional delays,
-- device distribution affects monitoring.
+- Deployment-scale delay
+- Mobility-induced delay
+- Device distribution affects monitoring
 
----
+## 6.5 Legal and Social Aspects
 
-## 8.5 Legal and Social Aspects
-Services using user-provided information may be subject to:
-- local laws,
-- international laws.
+- Services using user-provided information may be subject to laws.
+- Informed individual consent is required when humans are used as data sources.
 
-When humans act as data sources:
-- individual/informed consent is required.
+## 6.6 Big Data
 
----
+- Huge-volume transfer/storage/maintenance is expensive.
+- Data cleaning is time-consuming.
+- Analytics on huge data volumes is processing-intensive.
 
-## 8.6 Big Data
-Problems:
-- transfer of huge volumes is expensive,
-- storage is expensive,
-- maintenance is expensive,
-- data cleaning/purification is time-consuming,
-- analytics on gigantic datasets is processing-intensive.
+## 6.7 Sensor Networks
 
----
-
-## 8.7 Sensor Networks
 Important concerns:
-- select appropriate sensors,
-- plan energy use,
-- place devices correctly,
-- design reliable network architecture,
-- choose suitable communication medium.
 
-### High-priority chain
-`Sensor choice + energy + placement + architecture + communication`
+- Appropriate sensor selection
+- Energy planning
+- Device placement
+- Network architecture
+- Communication medium
+
+Source: fileciteturn104file1L599-L660
+
+### MCQ mapping
+
+- Data leakage from multi-tenancy → **Security & Privacy**
+- Different hardware/radio/software → **Heterogeneity**
+- Vehicle mobility → **Reliability**
+- Huge-volume processing → **Big Data**
+- Human data source consent → **Legal/Social**
 
 ---
 
-# 9. DATA FUSION
+# 7. Data Fusion
 
-Smart cities generate enormous data periodically.
+## 7.1 Why data fusion?
 
-## Main purpose
+Smart cities periodically produce enormous data volumes.
+
+The problem is not just "more data"; the challenge is obtaining **precise and accurate information** from the incoming data.
+
 Data fusion:
-- combines data from multiple sources,
-- improves precision and accuracy,
-- supports better decision making,
-- enables optimum utilization of massive data,
-- works across multiple platforms.
 
-The lecture explicitly connects data quality with decision quality.
+- Uses data from multiple sources.
+- Works across multiple platforms.
+- Improves the information available for decisions.
+- Enables optimum utilization of massive data.
+
+Source: fileciteturn104file1L678-L687
 
 ---
 
-# 10. MULTI-SENSOR DATA FUSION
+# 8. Multi-Sensor Data Fusion
 
 Multi-sensor fusion:
-- combines information from multiple sensor sources,
-- gives decision systems more variables before making a decision,
-- can provide qualitatively superior inference compared with one sensor type,
-- improves understanding of the operational surroundings through heterogeneous sensors.
 
-### Core idea
-**Many imperfect sensors can collectively provide better information than one sensor alone.**
+- Combines information from multiple sensor sources.
+- Lets decision systems consider many variables.
+- Can produce better inferences than a single sensor type.
+- Heterogeneous sensor information gives better understanding of surroundings.
 
----
-
-# 11. DATA-FUSION CHALLENGES
-
-## Imperfection
-Sensor data is:
-- inaccurate,
-- uncertain.
-
-## Ambiguity
-Data contains:
-- outliers,
-- missing data.
-
-## Conflicts
-The same sensor type:
-- reports different data,
-- for the same location.
-
-**Assignment Q6 → Conflicts**
-
-## Alignment
-Sensor data frames:
-- are converted into a singular frame,
-- before transmission.
-
-## Trivial Features
-Processing trivial data features may:
-- reduce overall system accuracy.
-
-### Memory
-**I-A-C-A-T**
-- Imperfection
-- Ambiguity
-- Conflicts
-- Alignment
-- Trivial features
-
----
-
-# 12. DATA-FUSION OPPORTUNITIES
-
-Data fusion can:
-- use collective information richer than individual sources,
-- optimally amalgamate data,
-- improve information content from multiple low-power/low-precision sensors,
-- hide critical data sources and semantics.
-
-The lecture notes applications such as:
-- military,
-- medical cases.
-
----
-
-# 13. STAGES OF DATA FUSION
-
-## Decision Level
-**Ensemble of decisions**
-
-Think:
-> Multiple decisions → combine into final decision.
-
-## Feature Level
-**Fusion of information prior to decision making**
-
-Think:
-> Features are combined before final decision.
-
-## Pixel Level
-**Fusion at imaging-device level**
-
-Think:
-> Imaging data is combined at the imaging device.
-
-## Signal Level
-**Fusion at sensor node/local network**
-
-Think:
-> Closest to the sensing hardware.
-
-### Assignment Q7
-Sensor node/local network → **Signal level**.
-
-### Easy order
-`Signal → Pixel → Feature → Decision`
-
-From lower-level raw sensing toward higher-level decision.
-
----
-
-# 14. MATHEMATICAL METHODS OF DATA FUSION
-
-## Probability-based
-Examples:
-- Bayesian analysis,
-- statistics,
-- recursive methods.
-
-## AI-based
-Examples:
-- Artificial Neural Networks (ANN),
-- Machine Learning,
-- Convolutional Neural Networks (CNN).
-
-## Theory of Evidence
-Examples:
-- belief functions,
-- transferable belief models.
-
-### Exam trap
-Do not classify Bayesian analysis as AI-based in this slide.
-
----
-
-# 15. AI IN IoT DECISION MAKING
-
-The lecture introduces AI as part of decision-making in IoT.
-
-The exam-relevant connection is:
-
-```text
-Sensor data
-    ↓
-Data fusion / processing
-    ↓
-AI / analytics
-    ↓
-Decision
-```
-
-The important point is that improved information quality enables better automated decisions.
-
----
-
-# 16. DATA FUSION FOR AUTONOMOUS VEHICLES
-
-Connected/autonomous vehicles produce information from:
-- multiple sensors,
-- multiple sources,
-- vehicle surroundings.
-
-Data fusion helps combine these observations so that vehicle decisions are more informed.
-
-### Exam connection
-This bridges:
-- Week 10 data fusion,
-- connected vehicles,
-- V2X,
-- intelligent transportation.
-
----
-
-# 17. SMART PARKING
-
-Smart parking aims to:
-- shorten parking search time,
-- reduce congestion,
-- reduce pollution,
-- reduce unnecessary fuel consumption,
-- reduce driver costs,
-- increase urban mobility,
-- increase parking revenue through more efficient turnover.
-
----
-
-# 18. THREE FUNCTIONAL LAYERS OF SMART PARKING
-
-## Layer 1 — Information Collection
-Possible sensing sources:
-- sensors,
-- parking meters,
-- sensor networks,
-- crowd sensing.
-
-## Layer 2 — System Deployment
-Includes:
-- software system,
-- information management,
-- e-parking,
-- guidance,
-- data analytics.
-
-## Layer 3 — Service Dissemination
-Includes:
-- dynamic pricing,
-- strategies,
-- infrastructure-based information,
-- infrastructure-free information,
-- parking choice,
-- vehicular activities.
-
-### Assignment
-Q8 asks directly for **Information Collection**.
-
----
-
-# 19. SMART PARKING INFORMATION SENSING
-
-Two major sensing approaches:
-
-## Stationary sensing
-- large number of sensors,
-- detects presence/absence at a particular place.
-
-## Mobile sensing
-- fewer sensors,
-- collects information along a route.
-
-### Comparison
-| Stationary | Mobile |
-|---|---|
-| Many sensors | Fewer sensors |
-| Fixed location | Moving route |
-| Presence/absence in place | Information along route |
-
----
-
-# 20. ENERGY MANAGEMENT IN SMART CITIES
-
-## Energy-efficient solutions
-The lecture lists:
-- lightweight protocols,
-- scheduling optimization,
-- predictive energy-consumption models,
-- cloud-based approaches,
-- low-power transceivers,
-- cognitive management frameworks.
-
----
-
-# 21. ENERGY HARVESTING
-
-Two important categories in the lecture:
-
-## Ambient Energy Harvesting
-Uses naturally available energy sources.
-
-Examples:
-- RF sources,
-- wind,
-- sun,
-- heat,
-- vibration.
-
-## Dedicated Energy Harvesting
-Energy sources are:
-- intentionally deployed near IoT sources.
-
-Harvested energy depends on:
-1. sensitivity of harvesting circuit,
-2. distance between device and source,
-3. environment.
-
-### Assignment trap
-If the source is **intentionally deployed near the IoT device** → **Dedicated**.
-
----
-
-# 22. SMART HOME — COMPLETE LECTURE COVERAGE
-
-## Smart-home infrastructure
-Consists of:
-- intelligent networking-device infrastructure,
-- seamless integration of various devices,
-- wired/wireless technologies.
-
-Goals:
-- ease of use,
-- personalized home space,
-- safer home space.
-
-The lecture mentions corporations including:
-- GE,
-- Cisco,
-- Google,
-- Microsoft.
-
----
-
-# 23. SMART HOME CHARACTERISTICS
-
-A smart home:
-- provides a productive and cost-efficient environment,
-- maximizes occupant effectiveness,
-- provides efficient management,
-- minimizes lifetime hardware/facility costs.
-
-It optimizes:
-- structures,
-- systems,
-- services and management,
-- interrelationships among them.
-
----
-
-# 24. HOME AREA NETWORKS (HANs)
-
-A HAN is:
-- a network contained within a home,
-- able to enable remote access/control,
-- capable of integrating different home systems.
-
-Examples of integrated systems:
-- security,
-- home automation,
-- personal media,
-- communication.
-
-### HAN building blocks
-The lecture organizes HAN discussion around:
-- elements,
-- standards,
-- architectures,
-- initiatives.
-
----
-
-# 25. IP IN HANs
-
-## Multi-protocol gateway
-A multi-protocol gateway:
-- bridges a non-IP network to an IP network.
-
-### Limitation
-Bridging new technologies is not automatically easy.
-
-For a new technology/network:
-- a new mapping may be required.
+Source: fileciteturn104file1L693-L702
 
 ### Exam idea
-`Non-IP ↔ IP → gateway/mapping`
+**Many imperfect sensors + fusion → better collective information.**
 
 ---
 
-# 26. WIRED HAN
+# 9. Data-Fusion Challenges
 
-Advantages:
-- easy integration with existing house infrastructure,
-- low cost.
+Memorize this table exactly.
 
-Possible communication media:
-- power lines,
-- coaxial cables,
-- telephone lines,
-- optical fibers,
-- other wired technologies.
+| Challenge | Meaning |
+|---|---|
+| **Imperfection** | Inaccurate/uncertain WSN sensor data |
+| **Ambiguity** | Outliers, missing data |
+| **Conflicts** | Same sensor type reports different data for same location |
+| **Alignment** | Convert sensor data frames into a singular frame before transmission |
+| **Trivial features** | Processing trivial features may reduce whole-system accuracy |
 
----
+Source: fileciteturn104file1L708-L723
 
-# 27. WIRELESS HAN
-
-Possible technologies:
-- home Wi-Fi,
-- Zigbee,
-- 6LoWPAN.
-
-Advantages:
-- easier implementation,
-- less dependence on new physical cabling.
+### High-value trap
+**Same sensor type + same location + different readings = Conflicts.**
 
 ---
 
-# 28. HAN STANDARDS
+# 10. Opportunities of Data Fusion
 
-The lecture covers:
+The lecture lists:
 
-1. UPnP
-2. DLNA
-3. Konnex / KNX
-4. LonWorks
-5. Zigbee
-6. X-10
+- Collective data is richer than single-source data.
+- Optimal amalgamation of data.
+- Increased collective information content from multiple low-power/low-precision sensors.
+- Ability to hide critical data sources and semantics in contexts such as military/medical applications.
 
-These are highly important comparison targets.
+Source: fileciteturn104file1L729-L738
 
 ---
 
-# 29. UPnP
+# 11. Stages of Data Fusion
 
-**Universal Plug and Play**
+| Stage | Meaning |
+|---|---|
+| **Signal level** | Fusion at sensor node / local network |
+| **Pixel level** | Fusion at imaging-device level |
+| **Feature level** | Fusion before decision making |
+| **Decision level** | Ensemble of decisions |
 
-Key points:
-- application-layer technology,
-- mainly web-based,
-- uses TCP/IP support for lower layers,
-- supports integration of technologies,
-- transparent networking,
-- zero-configuration networking,
-- automatic device discovery.
+Source: fileciteturn104file1L744-L755
+
+### Memory ladder
+**Signal → Pixel → Feature → Decision**
+
+### Assignment lock
+If question says **"at sensor node/local network"** → **Signal level**.
+
+---
+
+# 12. Mathematical Methods of Data Fusion
+
+The lecture groups methods into:
+
+## Probability-based
+- Bayesian analysis
+- Statistics
+- Recursive methods
+
+## AI-based
+- ANN
+- Machine Learning
+- CNN
+
+## Theory-of-Evidence-based
+- Belief functions
+- Transferable belief models
+
+Source: fileciteturn104file1L761-L773
+
+---
+
+# 13. AI in IoT Decision Making
+
+Conceptual flow:
+
+**Sensors → AI / intelligent processing → highly accurate decision → Actuator**
+
+Without intelligence, raw sensor inputs can create a decision-making gap.
+
+The lecture's AI-in-IoT slide explicitly contrasts decision-making without intelligence with an AI-assisted architecture. fileciteturn103file7L812-L821
+
+### Exam idea
+AI helps convert multi-source sensor information into more accurate decisions that can drive actuators.
+
+---
+
+# 14. Data Fusion for Autonomous Vehicles
+
+Data fusion is especially important in vehicles because a vehicle may need to combine information from multiple sensing modalities and sources before taking decisions.
+
+Think:
+
+**Sensors → fusion → decision → vehicle action**
+
+This connects Week 10's data-fusion section with the later connected-vehicle section.
+
+---
+
+# 15. Smart Parking
+
+## Benefits
+
+Smart parking can:
+
+- Shorten parking-search time.
+- Reduce traffic congestion.
+- Reduce pollution from unnecessary vehicle circulation.
+- Reduce fuel consumption/cost.
+- Increase urban mobility.
+- Increase parking-related revenue because less time is spent searching.
+
+Source: fileciteturn104file1L797-L807
+
+---
+
+# 16. Smart Parking Functional Layers
+
+Three layers:
+
+1. **Information Collection**
+2. **System Deployment**
+3. **Service Dissemination**
+
+### Information Collection
+- Sensors
+- Parking meters
+- Sensor networks
+- Crowd sensing
+
+### System Deployment
+- Software system
+- Information management
+- E-parking
+- Guidance
+- Data analytics
+
+### Service Dissemination
+- Dynamic pricing strategies
+- Infrastructure-based information
+- Infrastructure-free information
+- Parking choice
+- Vehicular activities
+
+Source: fileciteturn104file1L812-L874
+
+---
+
+# 17. Information Sensing in Smart Parking
+
+Two broad sensing approaches:
+
+## Stationary sensing
+- Large number of sensors
+- Detects presence/absence in place
+
+## Mobile sensing
+- Fewer sensors
+- Collects information along a route
+
+Source: fileciteturn104file1L879-L892
+
+### Trap
+Do not automatically assume "mobile" means more sensors. The lecture specifically contrasts **stationary = many sensors** and **mobile = fewer sensors**.
+
+---
+
+# 18. Energy Management in Smart Cities
+
+## Energy-efficient solutions
+
+Lecture examples:
+
+- Lightweight protocols
+- Scheduling optimization
+- Predictive models for energy consumption
+- Cloud-based approach
+- Low-power transceivers
+- Cognitive management framework
+
+Source: fileciteturn104file1L898-L912
+
+---
+
+# 19. Energy Harvesting
+
+## Ambient energy harvesting
+
+Environmental sources listed:
+
+- RF
+- Wind
+- Sun
+- Heat
+- Vibration
+
+## Dedicated energy harvesting
+
+- Energy source intentionally deployed near IoT source.
+- Harvested amount depends on:
+  1. Harvesting-circuit sensitivity
+  2. Device-source distance
+  3. Environment
+
+Source: fileciteturn104file1L914-L943
+
+### One-line exam rule
+**Ambient = already around. Dedicated = deliberately placed nearby.**
+
+---
+
+# 20. Smart Home
+
+## Smart-home infrastructure
+
+Consists of:
+
+- Intelligent networking-device infrastructure
+- Seamless integration of devices using wired/wireless technologies
+
+Goals include:
+
+- Ease of use
+- Personalized home space
+- Safe home environment
+
+The lecture notes corporations such as GE, Cisco, Google and Microsoft as examples of organizations involved in smart-home systems. fileciteturn104file1L965-L978
+
+---
+
+# 21. Smart Home Goals
+
+A smart home provides:
+
+- Productive and cost-efficient environment
+- Better effectiveness for occupants
+- Efficient management
+- Minimum lifetime cost of hardware/facilities
+- Optimization of:
+  - Structures
+  - Systems
+  - Services/management
+  - Interrelationships among them
+
+Source: fileciteturn104file1L980-L994
+
+---
+
+# 22. Home Area Networks (HANs)
+
+A **HAN** is a network contained within a home.
+
+It enables:
+
+- Remote access
+- Remote control
+- Integration of systems such as:
+  - Security
+  - Home automation
+  - Personal media
+  - Communication
+
+Source: fileciteturn104file1L1007-L1022
+
+---
+
+# 23. HAN Elements
+
+## Internet Protocol / Multi-protocol gateway
+
+A multi-protocol gateway:
+
+- Bridges non-IP networks to IP networks.
+- Allows technologies with different networking approaches to interact.
+- May require new mapping for new technologies/networks.
+
+Source: fileciteturn104file1L1024-L1039
+
+---
+
+# 24. Wired vs Wireless HAN
+
+## Wired HAN
+
+Advantages/features:
+
+- Easy integration with existing house infrastructure.
+- Low cost.
+- Can use:
+  - Power lines
+  - Coaxial cables
+  - Telephone lines
+  - Optical fibers
+  - Other wired technologies
+
+## Wireless HAN
+
+Can use:
+
+- Wi-Fi
+- ZigBee
+- 6LoWPAN
+
+Wireless implementation can be easier.
+
+Source: fileciteturn104file1L1041-L1071
+
+---
+
+# 25. HAN Medium Classification
+
+The lecture classifies HAN communication into:
+
+## Wired
+Examples shown include:
+- HomePlug
+- Ethernet
+- Insteon
+- X-10
+
+## Wireless — Battery Operated
+Examples:
+- Z-Wave
+- Wi-Fi
+- 6LoWPAN
+- ZigBee
+
+## Wireless — Battery Free
+Uses:
+- Energy harvesting
+- Example: EnOcean
+
+**Exam association:**  
+**Battery-free wireless → energy harvesting → EnOcean.**
+
+---
+
+# 26. HAN Standards
+
+## 26.1 UPnP — Universal Plug and Play
+
+- Application-layer technology.
+- Mainly web-based.
+- TCP/IP supports lower layers.
+- Enables seamless integration.
+- Supports zero-configuration networking.
+- Automatic device discovery.
+
+Source: fileciteturn104file1L1080-L1096
 
 ### Memory
-`UPnP = Plug + Play + zero configuration + discovery`
+**UPnP = plug + play + zero configuration + discovery.**
 
 ---
 
-# 30. DLNA
+## 26.2 DLNA
 
-**Digital Living Network Alliance**
+- Trade organization created by Sony, Intel and Microsoft.
+- Connects cable-based and wireless networks for sharing media/control/access.
+- Supports domestic network-media sharing.
 
-Key points:
-- trade organization created by Sony, Intel and Microsoft,
-- connects cable-based and wireless networks,
-- supports media sharing/control/access,
-- enables domestic sharing of network media resources.
+Source: fileciteturn104file1L1098-L1113
 
 ### Memory
-`DLNA = home media sharing`
+**DLNA = home media/resource sharing.**
 
 ---
 
-# 31. KONNEX / KNX
+## 26.3 Konnex / KNX
 
-Konnex (KNX):
-- open important standard for home/building networks,
-- uses broad communication infrastructure:
-  - power lines,
-  - coaxial cable,
-  - twisted pair,
-  - RF,
-  - etc.
-- requires software setup/configuration before proper use.
+- Open important standard for home/building networks.
+- Can use:
+  - Power lines
+  - Coaxial cables
+  - Twisted pair
+  - RF
+- Must be set up/configured through software before proper use.
+
+Source: fileciteturn104file1L1115-L1131
 
 ### Memory
-`KNX = open home/building standard + many media`
+**KNX = configurable home/building network standard.**
 
 ---
 
-# 32. LONWORKS
+## 26.4 LonWorks
 
-**Local Operation Networks**
+Each device includes:
 
-Key point:
-- each device includes a **Neuron Chip**,
-- plus transceiver and application electronics.
+- Neuron chip
+- Transceiver
+- Application electronics
 
-Neuron Chip is an SoC containing:
-- multiple microprocessors,
-- RAM,
-- ROM,
-- I/O interface ports.
+Neuron chip is a system-on-chip containing:
 
-It splits device groups into intelligent elements that communicate through a physical medium.
+- Multiple microprocessors
+- RAM
+- ROM
+- I/O interface ports
+
+Source: fileciteturn104file1L1133-L1149
 
 ### Memory
-`LonWorks → Neuron Chip`
+**LonWorks = Neuron chip.**
 
 ---
 
-# 33. ZIGBEE
+## 26.5 ZigBee
 
-Zigbee has four layers:
+Four layers:
+
 1. Physical
 2. MAC
 3. Network
 4. Application
 
-### Layer ownership
-- IEEE 802.15.4 → Physical + MAC
-- Zigbee → Network + Application
+- IEEE 802.15.4 → PHY + MAC
+- ZigBee → Network + Application
+- Low-cost, low-energy devices
 
-### Design goal
-- low cost,
-- low energy.
-
-### Assignment
-Q10 → **Zigbee**
-
----
-
-# 34. X-10
-
-X-10:
-- controls compliant transmitters/receivers,
-- uses existing power lines/electrical wiring,
-- was adopted by GE and Philips,
-- uses AC carrier signals,
-- low speed,
-- low data rate,
-- mainly used for:
-  - lighting,
-  - appliance networks,
-  - security sensors.
-
-### Assignment
-Q11 → **X-10**
+Source: fileciteturn104file1L1151-L1164
 
 ### Memory
-`X-10 = power line + lighting/appliances/security`
+**ZigBee = 802.15.4 PHY/MAC + ZigBee Network/Application.**
 
 ---
 
-# 35. HAN ARCHITECTURES
+## 26.6 X-10
 
-The lecture discusses two architectures:
+- Uses existing power wiring.
+- Remote control of compliant devices.
+- Low speed/low data rate.
+- Lighting/appliance/security use.
+
+Source: fileciteturn104file1L1169-L1182
+
+### Memory
+**X-10 = power-line home control.**
+
+---
+
+# 27. HAN Architectures
 
 ## DomoNet
-Key points:
-- XML for description,
-- web services for control,
-- Service-Oriented Architecture (SOA),
-- not tied to a particular software/language/architecture,
-- central gateway connects different technologies,
-- technology manager for each technology provides web services for control/access.
 
-### Memory
-`DomoNet = XML + Web Services + SOA + central gateway`
+Lecture points:
 
----
+- XML for description.
+- Web services for control.
+- Service-Oriented Architecture (SOA).
+- Not tied to a particular software/language/architecture.
+- Central gateway connects different technologies.
+- Technology manager for each technology provides web services.
+
+Source: fileciteturn104file1L1187-L1203
 
 ## Jini
-Key points:
-- Java environment,
-- pursued by Sun Microsystems (now Oracle),
-- devices share resources,
-- auto-configuration and auto-installation,
-- organized distributed system without a central node (federation),
-- applications use bytecode running on JVM,
-- portable,
-- follows object-oriented paradigm.
 
-### Memory
-`Jini = Java + federation + portability`
+- Connects devices sharing resources.
+- Auto-configuration and auto-installation.
+- Java environment.
+- Associated with Sun Microsystems (now Oracle).
+- Federation without a central node.
+- Applications use bytecode on JVM.
+- Object-oriented paradigm.
+
+Source: fileciteturn104file1L1205-L1222
+
+### DomoNet vs Jini
+- **DomoNet** → XML, web services, SOA, central gateway.
+- **Jini** → Java, JVM bytecode, federation, no central node.
 
 ---
 
-# 36. HAN INITIATIVES
+# 28. HAN Initiatives
 
 ## HYDRA
-Aimed at:
-- middleware for embedded intelligent systems,
-- connecting Service-Oriented Architecture networks.
 
-Important because connected devices may have:
-- limited resources,
-- low processing power,
-- low memory,
-- low energy.
+A middleware approach for embedded intelligent systems.
 
-Each device has an embedded **HYDRA client** acting as a proxy between device and middleware.
+Key ideas:
 
----
+- Connects a Service-Oriented Architecture network.
+- Targets constrained connected devices.
+- Devices may have limited:
+  - Processing power
+  - Memory
+  - Energy
+- Each device has an embedded HYDRA client acting as a proxy between device and middleware.
+
+Source: fileciteturn104file1L1224-L1240
 
 ## Amigo
+
 Aimed at:
-- ambient intelligent systems,
-- networked home systems.
+
+- Ambient intelligent systems
+- Networked home systems
 
 Features:
-- user-friendly interfaces,
-- interoperability,
-- automatic discovery of devices and services.
 
-### High-priority comparison
-| HYDRA | Amigo |
-|---|---|
-| Embedded intelligent-system middleware | Ambient intelligent/networked home systems |
-| Device proxy via HYDRA client | User-friendly interface |
-| Handles resource-constrained devices | Interoperability + auto-discovery |
+- User-friendly interfaces
+- Interoperability
+- Automatic discovery of devices/services
+
+Source: fileciteturn104file1L1253-L1266
 
 ---
 
-# 37. CONNECTED VEHICLES
+# 29. Connected Vehicles
 
-A connected vehicle is equipped with:
-- sensors,
-- networking/communication devices.
+Vehicles can be equipped with:
 
-It can communicate:
-- within the vehicle,
-- with other vehicles,
-- with fixed infrastructure.
+- Sensors
+- Networking devices
+- Communication devices
+
+They can communicate:
+
+- Within the vehicle
+- With other vehicles
+- With fixed infrastructure
+
+Source: fileciteturn104file1L1284-L1297
 
 ---
 
-# 38. CONNECTED-VEHICLE CHALLENGES
+# 30. Connected-Vehicle Challenges
 
-The lecture lists:
+Memorize:
+
 - Security
 - Privacy
 - Scalability
 - Reliability
-- Quality of Service (QoS)
+- Quality of service
 - Lack of global standards
 
-### Memory
-**S-P-S-R-Q-G**
-Security, Privacy, Scalability, Reliability, QoS, Global-standard gap.
+Source: fileciteturn104file1L1299-L1307
 
 ---
 
-# 39. V2X PARADIGM
+# 31. V2X — Vehicle-to-Everything
 
-**V2X = Vehicle-to-Everything**
-
-It is a major component of future Intelligent Transportation Systems (ITS).
+V2X is a major component of future Intelligent Transportation Systems.
 
 Vehicles can share information with:
-- other vehicles,
-- pedestrians,
-- fixed infrastructure,
-- mobile towers,
-- parking meters,
-- other roadside systems.
 
-### Goals
-- traffic management,
-- on-road safety,
-- off-road safety,
-- mobility.
+- Other vehicles
+- Pedestrians
+- Fixed infrastructure
+- Mobile towers
+- Parking meters
+
+Benefits include:
+
+- Traffic management
+- On-road/off-road safety
+- Mobility
+
+Source: fileciteturn104file1L1324-L1340
+
+### V2X types to remember
+
+- **V2V** → Vehicle to Vehicle
+- **V2I** → Vehicle to Infrastructure
+- **V2P** → Vehicle to Pedestrian
+- **V2X** → Vehicle to Everything
 
 ---
 
-# 40. V2X ARCHITECTURE CHARACTERISTICS
+# 32. V2X Architecture / Information Distribution
 
 The lecture describes V2X as:
-- distributed,
-- widely distributing content,
-- not restricted to one information provider,
-- designed for highly mobile environments,
-- able to share information with nearby or remote nodes,
-- useful for travel efficiency and safety,
-- mainly an information-sharing/dissemination network.
+
+- Distributed
+- Not restricted to a single information provider
+- Designed for highly mobile environments
+- Able to share information locally and remotely
+- Useful for travel efficiency and safety
+- A network primarily used for information sharing/dissemination
+
+Source: fileciteturn104file1L1342-L1355
 
 ---
 
-# 41. WHY TRADITIONAL TCP/IP IS A PROBLEM FOR V2X
+# 33. Why TCP/IP Is a Poor Fit for Some V2X Requirements
 
-The lecture highlights four limitations:
+Lecture limitations:
 
-1. Designed mainly for single-pair information exchange.
-2. Information exchange is dependent on data location.
+1. Mainly single-pair information exchange.
+2. Data exchange depends on data location.
 3. Endpoint addresses alone are insufficient for content distribution.
-4. Increasing numbers of wireless devices can restrict mobility.
+4. Increasing wireless-device numbers can restrict mobility.
 
-### Key conceptual contrast
+Source: fileciteturn104file1L1357-L1370
 
-**Traditional IP**
-```text
-Where is the data?
-→ Identify endpoint
-→ Communicate with endpoint
-```
+### Assignment lock
+If the wording resembles:
+> "single pair + location dependent + endpoint address"
 
-**Information/content-centric approach**
-```text
-What data do I need?
-→ Request named content
-→ Obtain content from suitable source/cache
-```
+→ **TCP/IP limitation in V2X**.
 
 ---
 
-# 42. CONTENT-CENTRIC NETWORKING (CCN)
+# 34. Content-Centric Networking (CCN)
 
-CCN is derived from **Information-Centric Networking (ICN)**.
+CCN is derived from Information-Centric Networking (ICN).
 
-## Core idea
-Focus on:
-- **data/content**
-rather than:
-- actual physical/network location.
+Core ideas:
 
-## Key features
-- hierarchically named data,
-- direct transmission of named data,
-- scalable data dissemination,
-- in-network caching,
-- better operation in highly mobile environments.
+- Focuses on **data/content**, not its physical location.
+- Uses hierarchically named data.
+- Data is transmitted directly rather than being tied to a conventional conversation.
+- Supports scalable and efficient data dissemination.
+- In-network caching reduces traffic.
+- Works well in highly mobile environments.
 
-### Assignment connection
-Q12 tests the reason traditional TCP/IP is poorly suited to highly mobile V2X content distribution.
+Source: fileciteturn104file1L1372-L1385
 
----
+### TCP/IP vs CCN
 
-# 43. CCN ROUTING IN VANETS
-
-Routing/forwarding is based on:
-- **name of content**,
-not:
-- location of the content.
-
-### Important points
-- content-name prefixes are advertised by routers,
-- routers build a **Forwarding Information Base (FIB)**,
-- content name remains globally unique,
-- avoids IP address-management/address-exhaustion problems,
-- communication does not depend on node speed/direction.
-
-### Memory
-`CCN → name-based routing`
+| TCP/IP-style idea | CCN idea |
+|---|---|
+| Endpoint/location oriented | Content oriented |
+| Endpoint addresses | Hierarchical content names |
+| Location matters | Content name matters |
+| Conventional routing | Content-name forwarding |
+| Less natural for highly mobile content distribution | Designed to work well in highly mobile environments |
 
 ---
 
-# 44. CCN SCALABILITY
-
-CCN uses:
-- in-network caching at routers.
-
-Each router can have a **Content Store (CS)**:
-- stores named data chunks,
-- acts as a cache.
-
-If another node requests the same chunk:
-- it can be served from the Content Store.
-
-### Benefit
-- less network load,
-- better scalability,
-- repeated use of cached content.
-
-### Memory
-`CS = Content Store = cache`
-
----
-
-# 45. VANET
+# 35. VANETs
 
 **VANET = Vehicular Ad-hoc Network**
 
-Based on:
-- DSRC,
-- WAVE (Wireless Access in Vehicular Environment).
+The lecture connects VANETs with:
 
-Routing protocols are derived from:
-- MANETs.
+- DSRC
+- WAVE
+- Routing protocols derived from MANETs
 
-The lecture highlights:
-- high throughput,
-- low latency in mobile environments.
+Lecture-stated characteristics include:
+
+- High throughput in mobile environments
+- Low latency in mobile environments
+
+Source: fileciteturn104file1L1387-L1403
 
 ---
 
-# 46. VANET FEATURES
+# 36. VANET Features
 
 ## High dynamic topology
-Vehicles move constantly, causing:
-- changing topology,
-- changing network partitions.
+Vehicles move rapidly, causing constant changes in:
+
+- Network partitioning
+- Topology
 
 ## High transmission and computation capability
-Vehicles have:
-- stored energy,
-- computational power.
-
-Therefore vehicle resources are less restrictive than tiny battery-powered sensor nodes.
+Vehicle energy sources and computational capability reduce the restrictions that commonly affect tiny sensor nodes.
 
 ## Unstable connectivity
-Links are short-lived because:
-- vehicles move quickly,
-- topology changes rapidly.
+Links are short-lived because of highly dynamic movement.
 
 ## Large scale
-VANET can scale to:
-- many/all vehicles on roads.
+Can scale to include vehicles across roads.
 
-## Predictable mobility pattern
-Although vehicles are mobile:
-- road restrictions constrain movement,
-- therefore mobility can be more predictable than arbitrary node mobility.
+Source: fileciteturn104file1L1405-L1414
 
-### Important distinction
-`Highly dynamic ≠ completely random`
+### Exam trap
+VANET is **not** a static sensor network:
+- topology is highly dynamic,
+- links can be short-lived,
+- vehicles are mobile.
 
 ---
 
-# 47. VANET APPLICATIONS
+# 37. VANET Applications
 
 ## Safety
-- emergency braking,
-- lane-change warning,
-- collision avoidance,
-- hazard notification.
+- Emergency braking
+- Lane-change warning
+- Collision avoidance
+- Hazard notification
 
 ## Efficiency
-- congestion management,
-- electronic toll collection,
-- parking availability.
+- Congestion management
+- Electronic toll collection
+- Parking availability
 
 ## Commercial
-- Internet access,
-- multimedia streaming.
+- Internet access
+- Multimedia streaming
 
 ## Comfort
-- weather information,
-- autonomous driving,
-- journey-time estimation.
+- Weather information
+- Autonomous driving
+- Journey-time estimation
+
+Source: fileciteturn106file0L11-L27
 
 ### Memory
 **Safety – Efficiency – Commercial – Comfort**
 
 ---
 
-# 48. CCN FOR VANETS
+# 38. CCN for VANETs — Routing
 
-CCN is useful in VANETs because:
-- content is named instead of tied to location,
-- content can be cached in the network,
-- highly mobile nodes do not have to preserve a stable endpoint relationship,
-- repeated content requests can be served locally.
+CCN forwarding/routing:
 
-### Two key benefits
-1. **Name-based routing**
-2. **In-network caching**
+- Based on **content name**, not location.
+- Routers advertise content-name prefixes.
+- Builds a **Forwarding Information Base (FIB)**.
+- Content name remains globally unique.
+- Avoids traditional IP-address-management/address-exhaustion issues.
+- Communication is not dependent on node speed/direction in the same way as location-oriented routing.
 
----
-
-# 49. BODY AND BRAIN ARCHITECTURE
-
-The lecture presents an in-vehicle networking architecture with three layers.
-
-## Three-layer architecture
-
-### Body
-**Sense and Execution**
-- intelligent networking nodes (INNs),
-- collect information,
-- interact with sensors/actuators.
-
-### Nervous System
-**Network and Transmission**
-- handles communication.
-
-### Brain
-**Decision**
-- central coordination,
-- decision/control.
-
-### Easy memory
-`Body = Sense/Execute`  
-`Nervous System = Network/Transmit`  
-`Brain = Decide`
+Source: fileciteturn106file0L32-L45
 
 ---
 
-# 50. INTELLIGENT NETWORKING NODES (INNs)
+# 39. CCN for VANETs — Scalability
 
-The lecture classifies INNs into:
+Each router can have an in-network cache.
+
+### Content Store (CS)
+
+- Stores uniquely named data chunks.
+- Acts as a cache.
+- Later requests can be served from the cache.
+- Same named data can be reused.
+- Reduces network load as network size increases.
+
+Source: fileciteturn106file0L47-L61
+
+### Important terms
+
+**FIB** → forwarding based on content-name prefixes.
+
+**CS** → cached content/data chunks.
+
+---
+
+# 40. Body-and-Brain Architecture
+
+An in-vehicle networking architecture with three layers:
+
+1. **Sense and Execution** → Body
+2. **Network and Transmission** → Nervous system
+3. **Decision** → Brain
+
+The body contains intelligent networking nodes (INNs) that continually collect vehicle information; the brain manages central coordination.
+
+Source: fileciteturn106file0L63-L80
+
+### Human analogy
+**Body → Nervous system → Brain**
+=
+**Sense/Execution → Network/Transmission → Decision**
+
+---
+
+# 41. Intelligent Networking Nodes (INN)
+
+The lecture classifies INNs by types such as:
 
 ## Resistor type
-Examples:
-- open,
-- close.
+- Open
+- Close
 
 ## Motor type
-Examples:
-- clockwise,
-- counter-clockwise,
-- stop.
+- Clockwise
+- Counter-clockwise
+- Stop
 
 ## Switch type
-Examples:
-- knob,
-- pneumatic,
-- electromagnetic.
+- Knob
+- Pneumatic
+- Electromagnetic
 
 ## Sensor type
-Examples:
-- rheostatic,
-- transformer,
-- transducer.
+- Rheostatic
+- Transformer
+- Transducer
 
-### Concept
-These intelligent nodes participate in the vehicle's sense/execution architecture.
+The lecture also distinguishes assembled/separate electronic control in the shown classification.
+
+Source: fileciteturn106file0L89-L109
 
 ---
 
-# 51. INTELLIGENT CONNECTED VEHICLES (ICVs)
+# 42. Sense-and-Execution Layer
 
-An ICV environment connects:
+This layer represents the vehicle's sensing and action components.
 
-- Intelligent Transportation
-- Transport Infrastructure
+Think:
+
+**Sensors + actuators + physical vehicle functions**
+
+The exact detailed diagram is visual in the uploaded lecture, but the core architectural placement is the **Body / Sense and Execution** layer.
+
+---
+
+# 43. Network-and-Transmission Layer
+
+Purpose:
+
+- Communication
+- Transmission of information among vehicle components/nodes.
+
+In the body-brain architecture, it acts as the **nervous-system equivalent**.
+
+---
+
+# 44. Decision Layer
+
+The lecture shows two decision-layer roles:
+
+- **Administrative Node** → monitoring
+- **Supervisory Node** → control of sensors
+
+Information is transmitted upward from the network/transmission layer and commands can be transmitted downward.
+
+### Memory
+**Administrative = monitoring**  
+**Supervisory = control**
+
+---
+
+# 45. Intelligent Connected Vehicles (ICVs)
+
+ICV architecture brings together:
+
+- Intelligent transportation
+- Transport infrastructure
 - Pedestrians
-- ICV
 - Communication channel
 
-The vehicle becomes a participant in a broader intelligent transportation ecosystem.
+The lecture presents ICVs as part of the broader intelligent-transportation ecosystem.
 
 ---
 
-# 52. ICV TECHNOLOGICAL BACKGROUND
+# 46. ICV Technological Background
 
 The lecture states:
 
-- US Department of Transport + FCC allocated **75 MHz**
+- US Department of Transport + FCC allocated **75 MHz**.
 - Spectrum: **5850–5925 MHz**
-- Technology: **DSRC**
+- Dedicated for ICVs.
+- Based on **DSRC**.
+- IEEE developed:
+  - IEEE 802.11p
+  - IEEE 1609 family
+- SAE developed:
+  - SAE J2735
+  - SAE J2945
 
-### Standards mentioned
-**IEEE**
-- IEEE 802.11p
-- IEEE 1609 family
+Source: fileciteturn106file0L176-L185
 
-**SAE**
-- SAE J2735
-- SAE J2945
-
-### Assignment
-Q13 → 75 MHz, 5850–5925 MHz.
-
----
-
-# 53. IEEE 1609 FAMILY
-
-## IEEE P1609.0
-WAVE architecture.
-
-## IEEE 1609.1-2006
-WAVE Resource Manager.
-
-## IEEE 1609.2-2006
-WAVE security services for applications and management messages.
-
-## IEEE 1609.3-2007
-WAVE networking services.
-
-## IEEE 1609.4-2006
-WAVE multi-channel operations.
-
-## IEEE P1609.11
-Over-the-air data exchange protocol for intelligent transportation systems.
-
-### Memory
-`1609.0 = Architecture`  
-`1609.1 = Resource Manager`  
-`1609.2 = Security`  
-`1609.3 = Networking`  
-`1609.4 = Multi-channel`
+### Number lock
+**75 MHz = 5850–5925 MHz**
 
 ---
 
-# 54. ICV DEVELOPMENT PHASES
+# 47. IEEE 1609 Family
 
-## Phase 1
+Important associations:
+
+| Standard | Lecture association |
+|---|---|
+| IEEE P1609.0 | WAVE architecture |
+| IEEE 1609.1-2006 | WAVE resource manager |
+| IEEE 1609.2-2006 | Security services for applications/management messages |
+| IEEE 1609.3-2007 | Networking services |
+| IEEE 1609.4-2006 | Multi-channel operations |
+| IEEE P1609.11 | Over-the-air data exchange protocol for ITS |
+
+Source: fileciteturn106file0L191-L207
+
+### High-yield pairings
+- **1609.2 → Security**
+- **1609.3 → Networking**
+- **1609.4 → Multi-channel**
+- **1609.1 → Resource manager**
+
+---
+
+# 48. ICV Development Phases
+
+## Phase-1
 - Infotainment
 - Remote information processing
 - 2G/3G
 
-## Phase 2
-- Intelligent transportation service
+## Phase-2
+- Intelligent transportation services
 - 4G LTE or DSRC
 
-## Phase 3
+## Phase-3
 - Vehicles connected to cloud
 
-### Assignment
-Q14 → **Phase 2**
+Source: fileciteturn106file1L231-L243
+
+### Assignment trap
+**4G LTE or DSRC + intelligent transportation = Phase-2.**
 
 ---
 
-# 55. V2V — FORWARD COLLISION WARNING
+# 49. Forward Collision Warning and Vulnerable Road Users
 
-A V2V application can support:
-- forward collision warning.
+The lecture includes examples of:
 
-Basic idea:
-- vehicles exchange relevant information,
-- approaching collision can be detected,
-- driver can be warned.
+- **Forward Collision Warning (V2V)**
+- **Vulnerable Road User Safety (V2P)**
 
-### Exam connection
-V2V is a vehicle-to-vehicle communication example.
+### Memory
+- Collision warning between vehicles → **V2V**
+- Vulnerable road user safety → **V2P**
 
 ---
 
-# 56. V2P — VULNERABLE ROAD USER SAFETY
+# 50. VANET Domain Classification
 
-V2P = Vehicle-to-Pedestrian.
-
-Goal:
-- improve safety for pedestrians/vulnerable road users.
-
-### Examples
-- pedestrian presence information,
-- warning about possible vehicle-pedestrian collision.
-
----
-
-# 57. VANET DOMAIN CLASSIFICATION
-
-The lecture divides VANET-related architecture into:
+Three domains shown:
 
 1. **In-Vehicle Domain**
 2. **Ad-hoc Domain**
@@ -1577,641 +1555,523 @@ The lecture divides VANET-related architecture into:
 
 ---
 
-# 58. IN-VEHICLE DOMAIN
+## 50.1 In-Vehicle Domain
 
 Contains:
-- one or more OBUs (On-Board Units),
-- ADAS sensors.
 
-Examples of ADAS sensors:
-- cameras,
-- proximity sensors,
-- engine sensors,
-- radars,
-- actuators.
+- One or more OBUs
+- ADAS sensors such as:
+  - Cameras
+  - Proximity sensors
+  - Engine sensors
+  - Radars
+  - Actuators
 
-Communication technologies:
-- CAN (Controller Area Network),
-- Vehicular Powerline Networks (VPLN),
-- Ethernet.
+Communication mainly through:
 
-### Memory
-`Inside vehicle = OBU + ADAS + CAN/VPLN/Ethernet`
+- CAN
+- Vehicular Powerline Networks (VPLN)
+- Ethernet
+
+Source: fileciteturn106file1L284-L300
 
 ---
 
-# 59. AD-HOC DOMAIN
+## 50.2 Ad-hoc Domain
 
 Contains:
-- vehicles,
-- Road-Side Units (RSUs).
 
-### Roles
-- OBUs/vehicles → mobile
+- Vehicles / OBUs → mobile
 - RSUs → static
 
-### Communication
-- V2V,
-- V2I.
+Communication:
 
-### Stack
-- DSRC,
-- IEEE 802.11p.
+- V2V
+- V2I
 
-### Assignment
-Q15 → **Ad-hoc Domain**
+Technology:
+
+- DSRC stack
+- IEEE 802.11p
+
+Source: fileciteturn106file1L304-L317
+
+### Assignment lock
+**Mobile OBUs + static RSUs + V2V/V2I = Ad-hoc Domain.**
 
 ---
 
-# 60. INFRASTRUCTURE DOMAIN
+## 50.3 Infrastructure Domain
 
-Key points:
 - RSUs connect to Internet through gateways.
-- Vehicles can access Internet through V2I where RSUs are available.
-- Without RSUs, vehicles may communicate:
-  - with each other,
-  - or through cellular networks such as 3G/4G/LTE.
+- Vehicles can communicate with Internet through RSUs/V2I.
+- If RSUs are absent, vehicles may communicate with one another or Internet through:
+  - 3G/4G
+  - LTE
+  - Cellular networks
 
-### Memory
-`Infrastructure domain = RSU + gateway + Internet/cellular connectivity`
-
----
-
-# 61. V2X COMMUNICATION ADVANTAGES
-
-The lecture lists:
-
-- increased traffic safety,
-- increased driver safety,
-- optimized travel time,
-- improved fuel-consumption efficiency,
-- secure travel,
-- easier driving in low-visibility/unfavorable weather.
+Source: fileciteturn106file1L321-L335
 
 ---
 
-# 62. V2X COMMUNICATION DISADVANTAGES / PRIVACY RISKS
+# 51. V2X Advantages
 
-Potential concerns include:
-- privacy violation,
-- loss of data control,
-- collection of personal data,
-- secondary use of data,
-- unauthorized entities using data,
-- tracking movement,
-- localization of position.
+Lecture lists:
 
-### Exam connection
-These concerns reinforce why **security and privacy** are central connected-vehicle challenges.
+- Increased traffic safety
+- Increased driver safety
+- Optimized travel time
+- Better fuel-consumption efficiency
+- Secure travel
+- Easier driving in low visibility/unfavorable weather
+
+Source: fileciteturn106file1L341-L353
 
 ---
 
-# 63. HIGH-PRIORITY COMPARISON TABLES
+# 52. V2X Disadvantages / Privacy
 
-## Smart-city application focus areas
+Lecture lists:
 
-| Focus area | Main emphasis |
+- Privacy violation
+- Loss of data control
+- Collection of personal data
+- Second use of data
+- Data use by unauthorized entities
+- Tracking of movements
+- Localization of position
+
+Source: fileciteturn110file7L637-L646
+
+### Cumulative mock cross-check
+A cumulative mock exam asks about the major privacy concern in V2X and identifies **tracking vehicle movements/location** as a significant concern. fileciteturn107file6L597-L614
+
+### Exam trap
+If a question asks for a V2X privacy issue:
+**tracking + location + personal data + unauthorized use** are all lecture-supported concerns.
+
+---
+
+# PART C — HAN STANDARD COMPARISON
+
+| Standard | Key exam identity |
 |---|---|
-| Smart Economy | Competitiveness |
-| Smart Governance | Citizen participation |
-| Smart People | Social/human capital |
-| Smart Mobility | Transport + ICT |
-| Smart Environment | Natural resources |
-| Smart Living | Quality of life |
+| **UPnP** | Zero-config networking + automatic discovery |
+| **DLNA** | Home media/resource sharing |
+| **KNX/Konnex** | Open home/building network standard; configurable |
+| **LonWorks** | Neuron chip |
+| **ZigBee** | Low-cost/low-energy; 802.15.4 PHY/MAC |
+| **X-10** | Power-line lighting/appliance/security control |
 
 ---
 
-## Smart parking functional layers
+# PART D — DATA-FUSION TRAP BANK
 
-| Layer | Examples |
-|---|---|
-| Information Collection | Sensors, meters, sensor networks, crowd sensing |
-| System Deployment | Software, information management, e-parking, guidance, analytics |
-| Service Dissemination | Dynamic pricing, parking choice, infrastructure-based/free information |
+## Trap 1
+**Same sensor type + same location + different readings**
 
----
+→ **Conflicts**
 
-## Data fusion levels
+## Trap 2
+**Outliers + missing data**
 
-| Level | Where/what |
-|---|---|
-| Signal | Sensor node/local network |
-| Pixel | Imaging device |
-| Feature | Before decision |
-| Decision | Ensemble of decisions |
+→ **Ambiguity**
 
----
+## Trap 3
+**Inaccurate/uncertain WSN data**
 
-## Data-fusion challenges
+→ **Imperfection**
 
-| Challenge | Meaning |
-|---|---|
-| Imperfection | Inaccurate/uncertain data |
-| Ambiguity | Outliers/missing data |
-| Conflicts | Same sensor type gives different data for same location |
-| Alignment | Convert frames into a singular frame |
-| Trivial features | Unimportant features can hurt overall accuracy |
+## Trap 4
+**Convert multiple sensor frames into one frame**
 
----
+→ **Alignment**
 
-## Energy harvesting
+## Trap 5
+**Fusion at sensor node/local network**
 
-| Type | Meaning |
-|---|---|
-| Ambient | Naturally available RF/wind/sun/heat/vibration |
-| Dedicated | Source intentionally deployed near IoT device |
+→ **Signal level**
 
----
+## Trap 6
+**Ensemble of decisions**
 
-## HAN standards
+→ **Decision level**
 
-| Standard | Key clue |
-|---|---|
-| UPnP | Zero configuration + automatic discovery |
-| DLNA | Media sharing |
-| KNX | Home/building standard, many media |
-| LonWorks | Neuron Chip |
-| Zigbee | IEEE 802.15.4 PHY/MAC; low-cost/low-energy |
-| X-10 | Power lines, lighting/appliances/security |
+## Trap 7
+**Fusion at imaging device**
+
+→ **Pixel level**
+
+## Trap 8
+**Fusion before decision making**
+
+→ **Feature level**
 
 ---
 
-## HAN architectures/initiatives
+# PART E — CONNECTED-VEHICLE TRAP BANK
 
-| Item | Key clue |
-|---|---|
-| DomoNet | XML + web services + SOA + central gateway |
-| Jini | Java + federation + portable bytecode |
-| HYDRA | Embedded intelligent-system middleware + device proxy |
-| Amigo | Ambient intelligence + interoperability + automatic discovery |
+## TCP/IP vs CCN
 
----
+- TCP/IP → endpoint/location-oriented.
+- CCN → content-oriented.
 
-## Connected-vehicle communication
+## ICV spectrum
 
-| Term | Meaning |
-|---|---|
-| V2V | Vehicle → Vehicle |
-| V2I | Vehicle → Infrastructure |
-| V2P | Vehicle → Pedestrian |
-| V2X | Vehicle → Everything |
+- **75 MHz**
+- **5850–5925 MHz**
+- DSRC
 
----
+## ICV phases
+
+- Phase-1 → 2G/3G + infotainment
+- **Phase-2 → 4G LTE/DSRC + intelligent transportation**
+- Phase-3 → cloud-connected vehicles
 
 ## VANET domains
 
-| Domain | Main components |
-|---|---|
-| In-Vehicle | OBUs, ADAS sensors, CAN/VPLN/Ethernet |
-| Ad-hoc | Mobile vehicles + static RSUs, V2V/V2I |
-| Infrastructure | RSUs + gateways + Internet/cellular |
+- In-Vehicle → inside vehicle
+- **Ad-hoc → OBUs + RSUs, V2V/V2I**
+- Infrastructure → RSUs + gateways + Internet/cellular
+
+## Privacy
+
+- Movement tracking
+- Position localization
+- Personal-data collection
+- Loss of data control
 
 ---
 
-# 64. MCQ/MSQ TRAPS
+# PART F — HIGH-PRIORITY MEMORY LIST
 
-1. Sensors and Tags → **Sensory Organs**.
-2. Smart Economy is a smart-city application focus area.
-3. Six focus areas → Economy, Governance, People, Mobility, Environment, Living.
-4. Smart parking → empty-slot detection/routing.
-5. Multi-tenancy data leakage → Security and Privacy.
-6. Data fusion → precision/accuracy + better decisions.
-7. Same sensor type, different reading at same location → **Conflicts**.
-8. Inaccurate/uncertain sensor data → Imperfection.
-9. Outliers/missing data → Ambiguity.
-10. Singular data frame conversion → Alignment.
-11. Sensor node/local network → **Signal-level fusion**.
-12. Decision-level fusion → ensemble of decisions.
-13. Smart parking has three layers: Information Collection, System Deployment, Service Dissemination.
-14. Dedicated harvesting → source intentionally deployed near IoT device.
-15. Ambient harvesting → RF, wind, sun, heat, vibration.
-16. Zigbee → IEEE 802.15.4 defines Physical + MAC.
-17. X-10 → power lines/electrical wiring.
-18. X-10 → low speed/low data rate.
-19. TCP/IP V2X problem → endpoint/location-centric approach.
-20. CCN → data/content-centric.
-21. CCN routing → content name, not location.
-22. CCN Content Store → cache.
-23. VANET → DSRC + WAVE.
-24. VANET topology → highly dynamic.
-25. VANET links → short-lived/unstable.
-26. VANET mobility is constrained by roads, making it somewhat predictable.
-27. ICV dedicated spectrum → 75 MHz, 5850–5925 MHz.
-28. Phase 2 → 4G LTE or DSRC + intelligent transportation.
-29. Ad-hoc domain → mobile vehicles + static RSUs.
-30. DSRC stack in ad-hoc domain → IEEE 802.11p.
-31. In-vehicle domain → CAN/VPLN/Ethernet.
-32. Infrastructure domain → RSUs + gateways + Internet.
-33. V2P → pedestrian safety.
-34. V2X privacy risks include tracking and location disclosure.
+If time is short, memorize these first:
+
+1. Sensors & Tags → **Sensory Organs**
+2. Smart-city six focus areas:
+   **Economy, Governance, People, Mobility, Environment, Living**
+3. Smart Parking → empty-slot routing + charging + vacancy detection
+4. Multi-tenancy leakage → **Security & Privacy**
+5. Data fusion → precise/accurate information for decision making
+6. Imperfection → inaccurate/uncertain data
+7. Ambiguity → outliers/missing data
+8. Conflicts → same sensor type, same location, different data
+9. Alignment → singular frame
+10. Signal-level fusion → sensor node/local network
+11. Pixel-level → imaging device
+12. Feature-level → before decision
+13. Decision-level → ensemble of decisions
+14. Dedicated energy harvesting → intentionally deployed nearby source
+15. Ambient harvesting → RF/wind/sun/heat/vibration
+16. ZigBee → IEEE 802.15.4 PHY/MAC + ZigBee Network/Application
+17. X-10 → power-line home control
+18. UPnP → zero-config + discovery
+19. DLNA → media sharing
+20. LonWorks → Neuron chip
+21. DomoNet → XML + web services + SOA + central gateway
+22. Jini → Java + JVM + federation
+23. HYDRA → middleware + embedded client/proxy
+24. V2X → vehicle shares information with vehicles/pedestrians/infrastructure
+25. TCP/IP V2X limitation → endpoint/location orientation
+26. CCN → content-centric, hierarchical names, caching
+27. VANET → DSRC/WAVE + MANET-derived routing
+28. ICV spectrum → **75 MHz, 5850–5925 MHz**
+29. Phase-2 → **4G LTE/DSRC + intelligent transportation**
+30. Ad-hoc domain → **mobile OBUs + static RSUs + V2V/V2I**
+31. In-Vehicle → CAN/VPLN/Ethernet
+32. Infrastructure → RSU + gateway + Internet/cellular
+33. V2X privacy → tracking/location/personal data
+34. IEEE 1609.2 → security
+35. IEEE 1609.3 → networking
+36. IEEE 1609.4 → multi-channel
+37. IEEE 1609.1 → resource manager
 
 ---
 
-# 65. IMPORTANT NUMBERS / NAMES / IDENTIFIERS
+# PART G — NUMBERS / STANDARDS TO MEMORIZE
 
-| Item | Memorize |
+| Item | Value / association |
 |---|---|
 | ICV dedicated spectrum | **75 MHz** |
-| ICV frequency range | **5850–5925 MHz** |
-| DSRC-related IEEE standard | **802.11p** |
-| WAVE standards | **IEEE 1609 family** |
-| ICV Phase 1 | 2G/3G |
-| ICV Phase 2 | 4G LTE / DSRC |
-| ICV Phase 3 | Cloud-connected vehicles |
-| Zigbee PHY/MAC | IEEE 802.15.4 |
-| X-10 medium | Power lines / AC carrier |
-| VANET ad-hoc stack | DSRC / IEEE 802.11p |
-| In-vehicle networks | CAN, VPLN, Ethernet |
-| CCN cache | Content Store (CS) |
-| CCN routing structure | Forwarding Information Base (FIB) |
+| ICV spectrum range | **5850–5925 MHz** |
+| ICV technology | **DSRC** |
+| Wireless access in vehicular environments | **WAVE** |
+| Vehicular radio standard | **IEEE 802.11p** |
+| ZigBee lower layers | **IEEE 802.15.4 PHY + MAC** |
+| ICV Phase-1 | **2G/3G** |
+| ICV Phase-2 | **4G LTE / DSRC** |
+| ICV Phase-3 | **Cloud-connected vehicles** |
 
 ---
 
-# 66. VISUAL / DIAGRAM-BASED EXAM NOTES
+# PART H — CUMULATIVE MOCK-STYLE PATTERNS
 
-## Human–smart-city analogy diagram
-Lecture Part I, Slide 3 visually maps body components to city components.
+The uploaded cumulative mocks repeatedly favor **short association questions**. For Week 10, the strongest directly supported mock pattern found is V2X privacy: movement/location tracking is a major concern. fileciteturn107file6L597-L614
 
-**Most likely question:**  
-Sensors and Tags → **Sensory Organs**.
+### Likely question forms
+
+**1.** Sensors and Tags in smart-city analogy correspond to:
+→ **Sensory Organs**
+
+**2.** Multi-tenancy data leakage belongs to:
+→ **Security & Privacy**
+
+**3.** Same sensor type reports different data at same location:
+→ **Conflicts**
+
+**4.** Fusion at sensor node:
+→ **Signal level**
+
+**5.** Energy source intentionally deployed near device:
+→ **Dedicated energy harvesting**
+
+**6.** IEEE 802.15.4 PHY/MAC + low-cost/low-energy:
+→ **ZigBee**
+
+**7.** Power-line home automation:
+→ **X-10**
+
+**8.** TCP/IP V2X limitation:
+→ **Single-pair/location/endpoints**
+
+**9.** ICV spectrum:
+→ **75 MHz, 5850–5925 MHz**
+
+**10.** 4G LTE/DSRC intelligent transportation:
+→ **Phase-2**
+
+**11.** OBUs + RSUs + V2V/V2I:
+→ **Ad-hoc domain**
+
+**12.** V2X privacy:
+→ **Tracking/location/personal data**
 
 ---
 
-## Data-fusion stages diagram
-Lecture Part II, Slide 6 shows four columns:
+# PART I — 25-QUESTION RAPID SELF-TEST
 
-```text
-Decision | Feature | Pixel | Signal
-```
+Try answering without looking.
 
-Remember:
-- Decision → ensemble
-- Feature → before decision
-- Pixel → imaging device
+1. Sensors and Tags correspond to what in the smart-city analogy?
+2. Name all six smart-city application focus areas.
+3. Which smart-city area routes vehicles to empty parking slots?
+4. Which challenge includes multi-tenancy data leakage?
+5. What is the main purpose of data fusion?
+6. What does imperfection mean?
+7. What does ambiguity mean?
+8. What does conflicts mean?
+9. What does alignment mean?
+10. Which fusion level occurs at the sensor node/local network?
+11. Which fusion level is an ensemble of decisions?
+12. What are the three smart-parking functional layers?
+13. What is dedicated energy harvesting?
+14. Which HAN standard uses IEEE 802.15.4 PHY/MAC and targets low-cost/low-energy devices?
+15. Which HAN standard uses existing electrical wiring?
+16. What is the main V2X problem with endpoint/location-oriented TCP/IP?
+17. What does CCN focus on?
+18. What is VANET based on?
+19. What are the four broad VANET application categories in the lecture?
+20. What is the ICV spectrum?
+21. What technology is associated with that spectrum?
+22. Which ICV phase uses 4G LTE/DSRC for intelligent transportation?
+23. What is in the Ad-hoc domain?
+24. What is the role of RSUs in the infrastructure domain?
+25. Name two V2X privacy concerns.
+
+## Answers
+
+1. Sensory organs.
+2. Smart Economy, Smart Governance, Smart People, Smart Mobility, Smart Environment, Smart Living.
+3. Smart Parking Lots.
+4. Security and Privacy.
+5. Make incoming large data volumes more precise/accurate for better decisions.
+6. Inaccurate/uncertain sensor data.
+7. Outliers/missing data.
+8. Same sensor type gives different data for same location.
+9. Converting sensor frames to a singular frame.
+10. Signal level.
+11. Decision level.
+12. Information Collection, System Deployment, Service Dissemination.
+13. Energy source intentionally deployed near IoT source/device.
+14. ZigBee.
+15. X-10.
+16. It is mainly endpoint/location-oriented and is less suited to content distribution in highly mobile V2X.
+17. Data/content rather than physical location.
+18. DSRC/WAVE; routing derived from MANETs.
+19. Safety, Efficiency, Commercial, Comfort.
+20. 75 MHz, 5850–5925 MHz.
+21. DSRC.
+22. Phase-2.
+23. Mobile OBUs + static RSUs, V2V/V2I.
+24. Connect vehicles to infrastructure/Internet through gateways and V2I.
+25. Movement tracking, position localization, personal-data collection, loss of data control, unauthorized use.
+
+---
+
+# PART J — 60-SECOND WEEK-10 RECALL
+
+> **Smart City** = ICT-enabled urban system.  
+> **Analogy:** Sensors/Tags = sensory organs; telecom = nerves; embedded intelligence = brain; software = cognition.  
+> **Six areas:** Economy, Governance, People, Mobility, Environment, Living.  
+> **Challenges:** security/privacy, heterogeneity, reliability, scale, legal/social, big data, sensor networks.  
+> **Data fusion:** combine multi-source data for better precision/accuracy.  
+> **Fusion traps:** imperfection / ambiguity / conflicts / alignment.  
+> **Levels:** signal → pixel → feature → decision.  
+> **Parking:** information collection → deployment → service dissemination.  
+> **Energy:** ambient vs dedicated.  
+> **HAN:** UPnP, DLNA, KNX, LonWorks, ZigBee, X-10; remember ZigBee = 802.15.4 PHY/MAC, X-10 = power lines.  
+> **V2X:** vehicles communicate with vehicles, pedestrians and infrastructure.  
+> **TCP/IP issue:** endpoint/location-oriented.  
+> **CCN:** content-centric + hierarchical names + caching.  
+> **VANET:** DSRC/WAVE, dynamic topology, unstable connectivity.  
+> **ICV:** 75 MHz / 5850–5925 MHz / DSRC.  
+> **Phases:** 1 = 2G/3G infotainment, 2 = 4G LTE/DSRC intelligent transport, 3 = cloud-connected vehicles.  
+> **Domains:** in-vehicle, ad-hoc, infrastructure.  
+> **Ad-hoc:** OBUs mobile + RSUs static + V2V/V2I.  
+> **V2X privacy:** tracking, localization, personal data, loss of control.
+
+---
+
+# PART K — FINAL EXAM STRATEGY
+
+## Priority 1 — Learn the 15 assignment answers
+
+Do not merely memorize letters. Memorize the **concept-to-answer mapping**:
+
+- Sensory organs
+- Smart Economy
+- Smart Parking
+- Security & Privacy
+- Data fusion
+- Conflicts
+- Signal level
+- Information Collection
+- Dedicated harvesting
+- ZigBee
+- X-10
+- TCP/IP limitation
+- 75 MHz
+- Phase-2
+- Ad-hoc domain
+
+## Priority 2 — Master comparison tables
+
+Especially:
+
+- Smart-city challenges
+- Data-fusion challenges
+- Data-fusion levels
+- HAN standards
+- TCP/IP vs CCN
+- ICV phases
+- VANET domains
+
+## Priority 3 — Memorize numbers and standards
+
+**75 MHz, 5850–5925 MHz, DSRC, IEEE 802.11p, IEEE 1609, 2G/3G, 4G LTE/DSRC.**
+
+## Priority 4 — Scenario recognition
+
+If question says:
+
+- **Multi-tenancy leakage** → Security & Privacy
+- **Different sensor values at same place** → Conflicts
+- **Sensor-node fusion** → Signal level
+- **Intentional nearby energy source** → Dedicated
+- **Power-line home control** → X-10
+- **4G LTE/DSRC intelligent transport** → Phase-2
+- **OBUs + RSUs + V2V/V2I** → Ad-hoc
+- **Tracking vehicle movement** → V2X privacy
+- **Content instead of location** → CCN
+
+---
+
+# PART L — SOURCE BASIS
+
+This Week-10 file is grounded in the uploaded course materials:
+
+1. **Assignment_10(1).pdf** — all 15 assignment questions, answer keys, and assignment explanations. fileciteturn104file0L10-L21
+2. **Week-10.pdf** — Smart Cities and Smart Homes Parts I–III and Connected Vehicles Parts I–II, including smart-city concepts, data fusion, HANs, energy harvesting, V2X, CCN, VANETs, ICVs, IEEE 1609, and domain classifications. fileciteturn104file1L415-L475
+3. **Cumulative mock exams available in the uploaded files** — used only for directly supported Week-10-style cross-checks, notably V2X privacy/movement tracking. fileciteturn107file6L597-L614
+
+> **Important:** No outside web research or invented questions were used to fill unsupported gaps. Where the lecture is primarily diagrammatic, the notes preserve the terminology and concepts explicitly supported by the uploaded material.
+
+---
+
+# FINAL ONE-PAGE REVISION
+
+## Smart City
+**ICT + interactive + accessible + efficient**
+
+## Analogy
+**Sensors/Tags → Sensory organs**  
+**Telecom → Nerves**  
+**Embedded intelligence → Brain**  
+**Software → Cognition**
+
+## Six focus areas
+**Economy – Governance – People – Mobility – Environment – Living**
+
+## Data fusion
+**Purpose:** precision + accuracy + better decisions
+
+**Challenges:**
+- Imperfection
+- Ambiguity
+- Conflicts
+- Alignment
+- Trivial features
+
+**Levels:**
 - Signal → sensor/local network
+- Pixel → imaging device
+- Feature → before decision
+- Decision → ensemble
 
----
+## Smart parking
+**Information Collection → System Deployment → Service Dissemination**
 
-## Smart-parking diagram
-The lecture shows:
+## Energy
+**Ambient:** RF/wind/sun/heat/vibration  
+**Dedicated:** intentionally deployed source near IoT device
 
-```text
-Information Collection
-        ↓
-System Deployment
-        ↓
-Service Dissemination
-```
-
-The collection stage includes:
-- sensors,
-- parking meters,
-- sensor networks,
-- crowd sensing.
-
----
-
-## Connected-vehicle architecture
-The ICV visual connects:
-- intelligent transportation,
-- transport infrastructure,
-- pedestrian,
-- ICV,
-- communication channel.
-
----
-
-## VANET domain diagram
-
-```text
-VANET
- ├── In-Vehicle Domain
- ├── Ad-hoc Domain
- └── Infrastructure Domain
-```
-
-### Ad-hoc
-```text
-Mobile Vehicles/OBUs ↔ Static RSUs
-          V2V / V2I
-             ↓
-       DSRC / 802.11p
-```
-
----
-
-# 67. CODE/CONCEPT RECOGNITION DRILL
-
-### If question says:
-**“Sensors and tags in human analogy”**
-→ Sensory organs
-
-### “Six smart-city application areas”
-→ Economy, Governance, People, Mobility, Environment, Living
-
-### “Vacant parking slot detection”
-→ Smart Parking
-
-### “Multi-tenant data leakage”
-→ Security & Privacy
-
-### “Same sensor type, different reading at same location”
-→ Conflicts
-
-### “Fusion at sensor node”
-→ Signal level
-
-### “Intentional energy source near IoT device”
-→ Dedicated harvesting
-
-### “IEEE 802.15.4 PHY/MAC + low-cost low-energy HAN”
-→ Zigbee
-
-### “Power-line home control”
-→ X-10
-
-### “Content rather than location”
-→ CCN / ICN
-
-### “Content Store”
-→ CCN cache
-
-### “75 MHz, 5850–5925 MHz”
-→ ICV / DSRC spectrum
-
-### “4G LTE or DSRC + intelligent transportation”
-→ ICV Phase 2
-
-### “Mobile vehicles + static RSUs”
-→ Ad-hoc domain
-
-### “DSRC stack”
-→ IEEE 802.11p
-
----
-
-# 68. ONE-PAGE FINAL REVISION
-
-## SMART CITY
-
-```text
-Smart City
-= Urban system
-+ ICT
-+ Interactive/accessible/efficient infrastructure
-```
-
-### Six areas
-```text
-Economy
-Governance
-People
-Mobility
-Environment
-Living
-```
-
-### Analogy
-```text
-Skeleton → Buildings/Industries/People
-Skin → Transportation/Logistics
-Organs → Hospitals/Police/Banks/Schools
-Brain → Embedded intelligence
-Nerves → Digital networks
-Sensors/Tags → Sensory organs
-Cognition → Software
-```
-
----
-
-## DATA FUSION
-
-```text
-Many sensors
-     ↓
-Data fusion
-     ↓
-Better precision/accuracy
-     ↓
-Better decision
-```
-
-### Challenges
-```text
-Imperfection
-Ambiguity
-Conflicts
-Alignment
-Trivial features
-```
-
-### Levels
-```text
-Signal → sensor/local network
-Pixel → imaging device
-Feature → before decision
-Decision → ensemble
-```
-
----
-
-## SMART PARKING
-
-```text
-Information Collection
-        ↓
-System Deployment
-        ↓
-Service Dissemination
-```
-
----
-
-## ENERGY
-
-```text
-Ambient
-→ RF / Wind / Sun / Heat / Vibration
-
-Dedicated
-→ intentionally deployed source
-```
-
----
-
-## SMART HOME
-
-```text
-HAN
-├── Wired
-└── Wireless
-```
-
-### Standards
-```text
-UPnP → discovery/zero configuration
-DLNA → media sharing
-KNX → home/building
-LonWorks → Neuron Chip
-Zigbee → 802.15.4 PHY/MAC
-X-10 → power lines
-```
-
----
+## HAN
+**UPnP:** discovery/zero config  
+**DLNA:** media sharing  
+**KNX:** home/building network  
+**LonWorks:** Neuron chip  
+**ZigBee:** 802.15.4 PHY/MAC  
+**X-10:** power lines
 
 ## V2X
+**V2V + V2I + V2P + infrastructure**
 
-```text
-V2V → Vehicle
-V2I → Infrastructure
-V2P → Pedestrian
-V2X → Everything
-```
+## TCP/IP problem
+**Single-pair + location/endpoint orientation**
 
-### Why CCN?
-```text
-TCP/IP
-→ endpoint/location based
-→ poor fit for highly mobile content distribution
+## CCN
+**Content-centric + hierarchical naming + caching**
 
-CCN
-→ content/name based
-→ in-network caching
-→ better mobility/scalability
-```
-
----
+## VANET
+**DSRC/WAVE + dynamic topology + unstable connectivity**
 
 ## ICV
+**75 MHz = 5850–5925 MHz**  
+**DSRC**
 
-```text
-75 MHz
-5850–5925 MHz
-        ↓
-DSRC
-        ↓
-IEEE 802.11p + IEEE 1609
-```
+## ICV phases
+**1:** 2G/3G + infotainment  
+**2:** 4G LTE/DSRC + intelligent transport  
+**3:** cloud-connected
 
-### Phases
-```text
-Phase 1 → 2G/3G → infotainment
-Phase 2 → 4G LTE/DSRC → intelligent transportation
-Phase 3 → cloud-connected vehicles
-```
+## VANET domains
+**In-Vehicle:** inside vehicle  
+**Ad-hoc:** mobile OBUs + static RSUs + V2V/V2I  
+**Infrastructure:** RSUs + gateways + Internet/cellular
 
-### VANET
-```text
-In-Vehicle
-Ad-hoc
-Infrastructure
-```
-
-**Ad-hoc = mobile vehicles + static RSUs + V2V/V2I + DSRC/802.11p**
+## V2X privacy
+**Tracking + localization + personal data + loss of control**
 
 ---
 
-# 69. LAST-MINUTE 15-ANSWER DRILL
-
-1. Sensors and Tags correspond to?  
-   **Sensory Organs**
-
-2. One smart-city application focus area?  
-   **Smart Economy**
-
-3. Vacant-slot detection/routing?  
-   **Smart Parking Lots**
-
-4. Multi-tenancy data leakage?  
-   **Security and Privacy**
-
-5. Purpose of data fusion?  
-   **Precise/accurate data for better decision making**
-
-6. Same sensor type gives different data at same location?  
-   **Conflicts**
-
-7. Fusion at sensor node/local network?  
-   **Signal level**
-
-8. One smart-parking functional layer?  
-   **Information Collection**
-
-9. Intentionally deployed energy source?  
-   **Dedicated energy harvesting**
-
-10. IEEE 802.15.4 PHY/MAC + low-energy HAN?  
-    **Zigbee**
-
-11. Power-line home control?  
-    **X-10**
-
-12. Why TCP/IP struggles with V2X?  
-    **Single-pair/location/endpoint-centric design**
-
-13. ICV spectrum?  
-    **75 MHz, 5850–5925 MHz**
-
-14. 4G LTE/DSRC intelligent transportation phase?  
-    **Phase 2**
-
-15. Mobile vehicles + static RSUs + DSRC?  
-    **Ad-hoc Domain**
-
----
-
-# 70. FINAL EXAM MEMORY LIST
-
-If you have very little time, memorize these exact pairs:
-
-- **Sensors + Tags → Sensory Organs**
-- **Smart Economy → Application Focus Area**
-- **Vacant parking → Smart Parking**
-- **Multi-tenancy leakage → Security & Privacy**
-- **Data fusion → Precision + accuracy + decision**
-- **Different readings from same sensor type/location → Conflicts**
-- **Sensor/local-network fusion → Signal level**
-- **Smart parking layers → Collection + Deployment + Dissemination**
-- **Intentional nearby energy source → Dedicated harvesting**
-- **Zigbee → IEEE 802.15.4 PHY/MAC**
-- **X-10 → Power lines**
-- **V2X TCP/IP problem → Location/endpoint-centric**
-- **CCN → Content-centric + caching**
-- **ICV → 75 MHz / 5850–5925 MHz**
-- **Phase 2 → 4G LTE / DSRC**
-- **Ad-hoc domain → Mobile vehicles + static RSUs**
-- **DSRC → IEEE 802.11p**
-- **IEEE 1609.2 → Security**
-- **IEEE 1609.3 → Networking**
-- **IEEE 1609.4 → Multi-channel operations**
-- **Content Store (CS) → CCN cache**
-- **FIB → Forwarding Information Base**
-- **V2P → Pedestrian**
-- **V2V → Collision warning**
-- **Infrastructure domain → RSU + gateway + Internet**
-
----
-
-# 71. SOURCE / LECTURE MAP
-
-The Week 10 lecture PDF has **98 pages** and is organized as:
-- Pages 1–20 → Smart Cities and Smart Homes – Part I
-- Pages 21–60 → Smart Cities and Smart Homes – Part II/III
-- Pages 61–79 → Connected Vehicles – Part I
-- Pages 80–98 → Connected Vehicles – Part II
-
-The assignment itself points directly to:
-- Part I slides 3, 4, 11, 16
-- Part II slides 2, 4, 6, 11
-- Part III slides 14, 15, 18
-- Connected Vehicles Part I slide 7
-- Connected Vehicles Part II slides 3, 6, 12
-
-Use these assignment-linked slides as the **highest-priority final revision targets**.
-
----
-
-# 72. FINAL MEMORY SENTENCE
-
-**Week 10 = Smart Cities + Smart Homes + Connected Vehicles:**  
-**Smart City = ICT-enabled urban system; Sensors/Tags = sensory organs; six focus areas = Economy, Governance, People, Mobility, Environment, Living; smart parking = vacant-slot detection; multi-tenancy leakage = security/privacy; data fusion = accurate information for better decisions; conflicts = same sensor type gives different readings; signal-level = sensor/local-network fusion; dedicated harvesting = intentionally deployed source; Zigbee = 802.15.4 PHY/MAC; X-10 = power-line control; TCP/IP is location/endpoint-centric while CCN is content/name-centric with caching; ICV spectrum = 75 MHz, 5850–5925 MHz; Phase 2 = 4G LTE/DSRC intelligent transportation; Ad-hoc VANET = mobile vehicles + static RSUs + V2V/V2I + DSRC/802.11p.**
+**END OF WEEK 10 NOTES**
