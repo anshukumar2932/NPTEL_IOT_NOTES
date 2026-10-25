@@ -362,7 +362,38 @@ A **nanodevice** contains components with dimensions on the order of nanometers.
 
 The lecture identifies two main communication options:
 
-### 1. Electromagnetic communication
+##
+## 🚨 EXAM PRIORITY UPDATE — ASSIGNMENT + MOCK-EXAM CROSS-CHECK
+
+**Your Week-4 priority order remains:**
+
+1. **All 15 assignment questions first**
+2. **ALL Week-4 lecture/PPT topics**
+3. **Repeated patterns from uploaded Mock Exams 1–5**
+4. **Traps + formulas/numbers + rapid revision**
+
+### Week-4 concepts reinforced by the uploaded mock exams
+
+| Topic | Mock/assignment pattern | Must remember |
+|---|---|---|
+| **Coverage + connectivity** | Repeated in Mock 2 and Mock 4 | Full coverage ⇒ full connectivity when **Rc ≥ 2Rs** |
+| **UAV networks** | Mock/assignment | UAV mobility causes **frequent topology changes** |
+| **Stationary WSN** | Assignment | Nodes remain fixed; they do **not** automatically move after failure |
+| **M2M** | Assignment | Devices exchange data **without direct human control** |
+| **M2M vs SCADA** | Assignment | M2M supports **cross-platform integration** |
+| **UAV trajectory control** | Mock 2 | Dynamically alter UAV paths to improve communication links/reduce congestion |
+| **WirelessHART** | Mock 4 / Week-3 overlap | TDMA vs ZigBee CSMA/CA; mesh/redundancy |
+| **Dumb node** | Mocks 2/4 | Can sense but cannot transmit because environmental/transient factors degrade its signal |
+| **Data mule / UAV-WSN** | Week-4 lecture | UAV can collect/carry data and support collaborative sensing |
+| **UAV gateway selection** | Week-4 lecture | Divide coverage into sub-areas and dynamically optimize derived metrics |
+| **WMSN topology management** | Week-4 lecture | Coverage + connectivity + network lifetime matter together |
+
+### ⚠️ Do not mix in unrelated mock topics
+
+The cumulative mocks also contain Raspberry Pi, MQTT, cloud, SDN, Arduino, etc. Those are important for other weeks but are **not promoted into Week-4 core material** just because they appear in the mocks.
+
+
+# 1. Electromagnetic communication
 - Uses electromagnetic effects at nanoscale.
 - The lecture places EM nanonetwork communication around the **0.1–10 THz** channel range.
 - Surface Plasmon Polariton (SPP) is discussed.
@@ -1380,3 +1411,721 @@ If time is short, revise in this order:
 - **M2M:** pages 87–107 — M2M definition, applications, node types, ecosystem, platforms, IP/non-IP networks and management.
 
 **Week-4 assignment:** 15 questions, 15 marks.
+
+
+---
+
+# NEW — MOCK-EXAM CROSS-CHECK (MOCK EXAMS 1–5)
+
+> **Use this only after the assignment + lecture notes.** This section adds the Week-4-relevant patterns that repeatedly appeared in the uploaded cumulative mocks. It does not remove or replace the original Week-4 content.
+
+## 1. Coverage ↔ Connectivity — VERY HIGH PRIORITY
+
+This is one of the clearest repeated Week-4 exam patterns.
+
+### Core condition
+
+If:
+
+\[
+R_c \ge 2R_s
+\]
+
+then achieving **full coverage** implies **full connectivity**.
+
+Where:
+
+- \(R_c\) = transmission/communication range
+- \(R_s\) = sensing range
+
+### Memory
+
+> **Communication range at least twice sensing range → coverage guarantees connectivity.**
+
+### Trap options
+
+- \(R_c = R_s\) → ❌ not the stated sufficient condition
+- \(R_s \ge 2R_c\) → ❌ reversed
+- deterministic grid → ❌ not the required condition
+
+This exact condition is reinforced in the uploaded Mock Exam 2 and Mock Exam 4. fileciteturn71file4 fileciteturn70file3
+
+---
+
+# 2. UAV Networks — VERY HIGH PRIORITY
+
+## Common UAV-network issue
+
+**Frequent topology changes**
+
+Why?
+
+Because UAVs are mobile, their relative positions change, causing communication links and network topology to change frequently.
+
+### Exam answer
+
+> **Frequent topology changes**
+
+The uploaded Week-4 assignment explicitly gives this as the correct answer. fileciteturn70file4
+
+## UAV-network advantages from the lecture
+
+Remember the lecture's list:
+
+- **High reliability**
+- **High survivability**
+- **Single malfunction proof**
+- **Cost effective**
+- **Efficient**
+- **Speeded-up missions**
+
+These are lecture-specific terms and should be recognized as the intended benefits.
+
+---
+
+# 3. UAV Topologies
+
+## Star configuration
+
+- UAV is directly connected to the **ground station**.
+- High latency.
+- Highly dependent on the ground station.
+
+## Multi-star configuration
+
+- UAVs form multiple star topologies.
+- One node from each group connects to the ground station.
+
+### Fast comparison
+
+| Star | Multi-star |
+|---|---|
+| Direct UAV → ground-station connection | Multiple groups |
+| Strong dependence on ground station | One node from each group connects to ground station |
+| Lecture notes high latency | Extends star organization |
+
+The Week-4 lecture explicitly presents these two UAV topology forms. fileciteturn71file5
+
+---
+
+# 4. Ad-Hoc FANET — KNOW THE CONNECTIONS
+
+### FANET
+
+**Flying Ad-Hoc Network**
+
+### A2A
+
+**A2A links = Air-to-Air links**
+
+Used for data delivery among UAVs.
+
+### Heterogeneous radio interfaces
+
+The lecture gives examples such as:
+
+- **XBee-PRO (IEEE 802.15.4)**
+- **Wi-Fi (IEEE 802.11)**
+
+### Ground networks may be
+
+- stationary WSNs
+- VANETs
+- control stations
+
+### UAV ↔ WSN
+
+Can support:
+
+- **collaborative sensing**
+- **data-muling**
+
+### UAV ↔ VANET
+
+Can support:
+
+- visual guidance
+- data-muling
+- coverage enhancement
+
+This mapping is directly shown in the Week-4 lecture. fileciteturn70file1
+
+---
+
+# 5. Data Mule — EXAM RECOGNITION
+
+A **data mule** is a mobile entity that physically moves through an area and helps collect/carry sensor data toward a sink or collection point.
+
+For Week 4, connect:
+
+**UAV → mobility → visit sensor network → collect/carry data → sink/control station**
+
+### Do not confuse
+
+- **Data mule** → carries/collects data by mobility
+- **Gateway** → provides communication/interconnection function
+- **Sink** → collection destination in a WSN
+
+The lecture specifically connects UAV-WSN integration with **data-muling**. fileciteturn71file2
+
+---
+
+# 6. UAV Gateway Selection
+
+The Week-4 lecture describes a distributed gateway-selection approach.
+
+### Core idea
+
+1. Divide the entire UAV-network coverage area into **sub-areas**.
+2. Sub-areas collectively cover the entire communication area.
+3. Adjust the size of sub-areas dynamically.
+4. Adjust based on UAV interconnections and derived metrics.
+5. Optimize those metrics iteratively until an optimum state is reached.
+
+### Memory chain
+
+**Coverage area → sub-areas → dynamic adjustment → metrics → iterative optimization**
+
+The lecture explicitly gives this process. fileciteturn70file2
+
+---
+
+# 7. UAV Trajectory Control — MOCK EXAM PATTERN
+
+A cumulative mock asks about the purpose of **trajectory control** in large UAV networks.
+
+### Correct idea
+
+> Dynamically alter UAV flight paths to optimize communication links and reduce network congestion.
+
+The Week-4 lecture gives the more detailed mechanism:
+
+- UAVs whose queue occupancy exceeds a threshold can experience congestion and communication delay.
+- The control station instructs UAVs to change their trajectory centers.
+- Commands are based on traffic at a “busy” communication link.
+- For enhanced coverage, UAVs may be commanded to change the radius of their trajectories.
+
+fileciteturn71file4 fileciteturn71file9
+
+### Trap
+
+> “Trajectory control means all UAVs follow one fixed predefined path.”
+
+❌ Wrong.
+
+The important idea is **dynamic adaptation**.
+
+---
+
+# 8. Stationary WSN — IMPORTANT TRUE/FALSE
+
+### Definition
+
+In a **stationary WSN**, sensor nodes remain fixed after deployment.
+
+Therefore:
+
+> “Sensor nodes automatically move to restore connectivity after a node failure.”
+
+**FALSE**
+
+The Week-4 assignment explicitly gives this answer and explanation. fileciteturn70file4
+
+### Contrast
+
+| Stationary WSN | Mobile WSN |
+|---|---|
+| Nodes remain fixed | Nodes can move |
+| Topology changes mainly because of failures/environment/network conditions | Mobility itself changes topology |
+| Cannot physically move to repair a failed link | Mobility can be exploited |
+
+---
+
+# 9. M2M — VERY HIGH PRIORITY
+
+## Definition
+
+**Machine-to-Machine (M2M)** communication allows machines/devices to exchange data **without direct human control**.
+
+### Core phrase
+
+> **Devices exchange data automatically.**
+
+Human involvement may still exist for maintenance/operation, but the communication itself does not require direct human control.
+
+This is exactly how the Week-4 assignment frames M2M. fileciteturn70file4
+
+---
+
+# 10. M2M vs Traditional SCADA
+
+The Week-4 assignment tests:
+
+> Compared with traditional SCADA, M2M supports what?
+
+Expected answer:
+
+**Cross-platform integration**
+
+### Memory
+
+**SCADA → commonly associated with isolated/proprietary systems**
+
+**M2M → broader device-to-device communication and cross-platform integration**
+
+Do not overgeneralize beyond the course wording.
+
+---
+
+# 11. M2M — FEATURES TO RECOGNIZE
+
+From the Week-4 lecture, keep these concepts together:
+
+- automated device-to-device communication
+- devices exchange information
+- reduced dependence on direct human intervention
+- integration across systems/platforms
+- M2M ecosystem
+- service platform
+- device/user/application components
+- access platform
+- area-network management
+- IP-based and non-IP-based M2M
+
+### High-level chain
+
+**Device → network/access → service platform → application/user**
+
+---
+
+# 12. WMSN — HIGH-YIELD LECTURE POINT
+
+## Wireless Multimedia Sensor Networks
+
+WMSNs deal with multimedia data such as video.
+
+### Why topology management is harder
+
+The lecture highlights:
+
+- video data are larger (example: **1024 bytes**)
+- larger data require more bandwidth
+- larger data consume more battery power
+- event coverage must be provided quickly
+- connectivity must be maintained during transfer to the control center
+- network lifetime matters
+
+Therefore the proposed distributed topology management considers:
+
+**Coverage + Connectivity + Network Lifetime**
+
+The lecture describes **Coalition Formation Game** between CS and SS nodes for event coverage. fileciteturn70file6
+
+### Exam trap
+
+Do not remember WMSN as only a “video sensing” topic.
+
+The exam-worthy system problem is:
+
+> **large multimedia data + bandwidth + energy + timely coverage + connectivity + lifetime**
+
+---
+
+# 13. Underwater Acoustic Sensor Networks — LECTURE-SPECIFIC
+
+The Week-4 lecture emphasizes **internal solitons**.
+
+### Internal solitons
+
+In a layered shallow oceanic region:
+
+- nonlinear internal waves called **solitons** are major scatterers of underwater sound
+- acoustic signals interact with these solitons
+- inter-node communication is affected
+- network performance can therefore be greatly affected
+
+fileciteturn69file0
+
+### Memory
+
+**Underwater → acoustic communication → solitons scatter sound → communication/performance affected**
+
+---
+
+# 14. OFMM — OCEANIC FORCES MOBILITY MODEL
+
+The lecture introduces:
+
+**OFMM = Oceanic Forces Mobility Model**
+
+Purpose:
+
+- incorporate realistic oceanic forces affecting node mobility
+- model more realistic ocean scenarios
+- move nodes in a **3D ocean column**
+
+The lecture notes that earlier work was limited to shallow/coastal scenarios and did not sufficiently consider major oceanic forces driving mobility. fileciteturn69file4
+
+### Trap
+
+> OFMM is a routing protocol.
+
+❌
+
+It is a **mobility model**.
+
+---
+
+# 15. HASL — UNDERWATER LOCALIZATION
+
+**HASL = High-Speed AUV-Based Silent Localization for Underwater Sensor Networks**
+
+Lecture sequence:
+
+1. AUV gets **GPS**
+2. starts **dead-reckoning**
+3. broadcasts beacon at a constant interval
+4. sensor performs **silent listening**
+5. receives an effective beacon message
+6. performs **trilateration**
+7. gets **z** from pressure
+8. estimates sensor location
+
+fileciteturn69file1
+
+### Fast recall
+
+**GPS → dead reckoning → beacon → silent listening → trilateration → pressure z**
+
+---
+
+# 16. Tic-Tac-Toe-Arch
+
+The Week-4 lecture presents:
+
+**Tic-Tac-Toe-Arch = a self-organizing virtual architecture for underwater sensor networks**
+
+Key ideas:
+
+- calculates the duration of connectivity between underwater nodes
+- uses dynamic formation of a virtual topology
+- self-organizing architecture
+
+fileciteturn69file2
+
+### Trap
+
+It is **not** a game or generic graph algorithm.
+
+It is the name of a proposed **underwater sensor-network architecture**.
+
+---
+
+# 17. MWSN — MOBILE WIRELESS SENSOR NETWORK
+
+## Components
+
+The Week-4 lecture identifies:
+
+**Mobile Sensor Nodes**
+
+They:
+
+- sense physical parameters from the environment
+- deliver data when they come into close proximity of the sink
+
+fileciteturn69file3
+
+### Core contrast
+
+**Stationary WSN:** nodes stay fixed.
+
+**MWSN:** sensor nodes can move.
+
+Mobility can therefore become part of data delivery/localization/network organization.
+
+---
+
+# 18. Coverage Types — DO NOT MIX THEM
+
+The Week-4 lecture classifies static-WSN coverage problems into:
+
+1. **Area coverage**
+2. **Point coverage**
+3. **Barrier coverage**
+
+fileciteturn70file9
+
+## Barrier coverage
+
+- **1-barrier coverage** → covered by at least 1 sensor
+- **2-barrier coverage** → covered by at least 2 sensors
+- **K-barrier coverage** → covered by at least \(k\) sensors
+
+fileciteturn70file8
+
+### Memory
+
+**Area = region**
+
+**Point = specific target/location**
+
+**Barrier = crossing/detection path**
+
+---
+
+# 19. MOCK-EXAM TRAP BANK — WEEK 4
+
+### Trap 1 — Coverage/connectivity
+
+**Rc ≥ 2Rs** → coverage implies connectivity.
+
+### Trap 2 — UAV topology
+
+UAV movement → **frequent topology changes**.
+
+### Trap 3 — Stationary WSN
+
+Stationary nodes automatically move after failure → **FALSE**.
+
+### Trap 4 — M2M
+
+M2M requires a human to manually perform every exchange → **FALSE**.
+
+### Trap 5 — M2M vs SCADA
+
+M2M supports **cross-platform integration**.
+
+### Trap 6 — UAV trajectory control
+
+Trajectory control = fixed path → **FALSE**.
+
+It dynamically changes trajectories based on communication conditions.
+
+### Trap 7 — WirelessHART
+
+WirelessHART MAC → **TDMA**.
+
+ZigBee comparison in the mock → **primarily CSMA/CA**.
+
+### Trap 8 — Dumb node
+
+Dumb node ≠ intentionally malicious node.
+
+Dumb node can sense but cannot transmit because environmental/transient factors degrade the signal. fileciteturn71file0
+
+### Trap 9 — WMSN
+
+WMSN topology management is not only about connectivity.
+
+Remember:
+
+**coverage + connectivity + network lifetime**
+
+### Trap 10 — OFMM
+
+OFMM = **mobility model**, not routing protocol.
+
+### Trap 11 — HASL
+
+HASL uses **AUV-based silent localization**.
+
+### Trap 12 — Tic-Tac-Toe-Arch
+
+It is an **underwater self-organizing virtual architecture**.
+
+---
+
+# 20. WEEK-4 HIGH-PRIORITY RANKING
+
+## 🔴 Tier 1 — MUST MEMORIZE
+
+1. **Rc ≥ 2Rs**
+2. Area / Point / Barrier coverage
+3. Barrier coverage: 1 / 2 / k
+4. Stationary WSN = fixed nodes
+5. UAV networks = frequent topology changes
+6. UAV trajectory control = dynamic path adjustment
+7. Data mule = mobile data collection/carrying
+8. M2M = automatic device-to-device communication
+9. M2M vs SCADA = cross-platform integration
+10. UAV-WSN = collaborative sensing + data-muling
+11. FANET = UAV ad-hoc networking
+12. WMSN = coverage + connectivity + lifetime
+13. Internal solitons affect underwater acoustic communication
+14. OFMM = 3D ocean mobility model
+15. HASL sequence
+16. Tic-Tac-Toe-Arch = self-organizing underwater architecture
+
+## 🟠 Tier 2 — VERY IMPORTANT
+
+17. Push / Poll / Guided target tracking
+18. AID sensor
+19. WMSN CS/SS topology management
+20. Nanonetworks
+21. Underwater acoustic networks
+22. MobiL / HASL localization
+23. Opportunistic localization
+24. Stationary WSN reporting
+25. MWSN
+26. Human-centric sensing
+27. Participatory sensing
+28. Delay-tolerant WSN
+29. UAV star / multi-star / mesh
+30. Gateway selection
+31. Layered gateway
+32. Trajectory control
+33. M2M ecosystem and service platform
+
+## 🟡 Tier 3 — UNDERSTAND
+
+34. Coverage algorithms
+35. Distributed vs centralized vs localized coverage
+36. OGDC
+37. Optimality conditions
+38. Mobile entities
+39. UAV heterogeneous radio links
+40. Area-network management
+41. IP-based vs non-IP-based M2M
+
+---
+
+# 21. IMPORTANT FORMULA / RELATIONSHIP SHEET
+
+### Coverage → connectivity
+
+\[
+R_c \ge 2R_s
+\]
+
+Then:
+
+**Full coverage ⇒ full connectivity**
+
+### Barrier coverage
+
+\[
+1\text{-barrier} \Rightarrow \ge 1\text{ sensor}
+\]
+
+\[
+2\text{-barrier} \Rightarrow \ge 2\text{ sensors}
+\]
+
+\[
+k\text{-barrier} \Rightarrow \ge k\text{ sensors}
+\]
+
+### WMSN objective
+
+**Coverage + Connectivity + Network Lifetime**
+
+### UAV trajectory logic
+
+**Busy link / high queue occupancy → control station changes UAV trajectory → reduce congestion / improve throughput or coverage**
+
+---
+
+# 22. 60-SECOND WEEK-4 RECALL
+
+> **Target tracking = push / poll / guided.**  
+> **WMSN = multimedia data → bandwidth + energy + timely coverage + connectivity.**  
+> **Coverage types = area / point / barrier.**  
+> **Barrier = 1, 2, or k sensors.**  
+> **Rc ≥ 2Rs → full coverage implies full connectivity.**  
+> **Stationary WSN = fixed nodes.**  
+> **MWSN = mobile sensor nodes.**  
+> **UAV networks = frequent topology changes.**  
+> **FANET = UAV ad-hoc network.**  
+> **UAV-WSN = collaborative sensing + data-muling.**  
+> **Trajectory control = dynamically change paths for communication/coverage.**  
+> **M2M = automatic device-to-device communication.**  
+> **M2M vs SCADA = cross-platform integration.**  
+> **Underwater = acoustic + solitons affect sound propagation.**  
+> **OFMM = realistic 3D ocean mobility model.**  
+> **HASL = GPS → dead reckoning → beacon → silent listening → trilateration → pressure z.**  
+> **Tic-Tac-Toe-Arch = self-organizing virtual underwater architecture.**
+
+---
+
+# 23. FINAL WEEK-4 RAPID DRILL
+
+1. What condition makes full coverage imply full connectivity?  
+   → **Rc ≥ 2Rs**
+
+2. Three static WSN coverage types?  
+   → **Area, Point, Barrier**
+
+3. K-barrier means?  
+   → **At least k sensors cover the barrier**
+
+4. Do stationary nodes automatically move after failure?  
+   → **No**
+
+5. Common UAV-network issue?  
+   → **Frequent topology changes**
+
+6. UAV-WSN link supports?  
+   → **Collaborative sensing + data-muling**
+
+7. A2A means?  
+   → **Air-to-Air**
+
+8. FANET?  
+   → **Flying Ad-Hoc Network**
+
+9. Main role of a data mule?  
+   → **Collect/carry data through mobility**
+
+10. Purpose of UAV trajectory control?  
+    → **Dynamically improve communication/throughput/coverage**
+
+11. M2M?  
+    → **Devices exchange data without direct human control**
+
+12. M2M advantage over traditional SCADA in the assignment?  
+    → **Cross-platform integration**
+
+13. WMSN topology-management goals?  
+    → **Coverage, connectivity, network lifetime**
+
+14. What scatters underwater sound in the lecture's shallow layered ocean scenario?  
+    → **Internal solitons**
+
+15. OFMM?  
+    → **Oceanic Forces Mobility Model**
+
+16. OFMM models nodes moving in what?  
+    → **3D ocean column**
+
+17. HASL starts with what?  
+    → **GPS**
+
+18. HASL localization uses what geometric method?  
+    → **Trilateration**
+
+19. Tic-Tac-Toe-Arch?  
+    → **Self-organizing virtual architecture for underwater sensor networks**
+
+20. What is the key stationary-vs-mobile distinction?  
+    → **Stationary nodes remain fixed; mobile nodes can move**
+
+---
+
+# 24. SOURCE-BASED UPDATE NOTE
+
+This improvement was built from the uploaded **Week-4 lecture/assignment material** and the uploaded cumulative mock exams.
+
+The lecture directly supports the underwater acoustic, OFMM, HASL, Tic-Tac-Toe-Arch, MWSN, FANET, UAV topology, gateway-selection, trajectory-control, WMSN, and coverage material. fileciteturn69file0 fileciteturn69file1 fileciteturn69file2 fileciteturn69file3 fileciteturn70file1
+
+The uploaded mock exams reinforce the coverage/connectivity condition, UAV topology changes, UAV trajectory control, WirelessHART comparison, dumb-node behavior, and M2M concepts. fileciteturn71file4 fileciteturn70file3 fileciteturn71file0
+
+No unrelated mock-exam topics were promoted into Week 4 merely because they appeared in the cumulative papers.
+
+
+---
+
+## UPDATE STATUS
+
+**Version:** Week 4 — Improved with uploaded Mock Exams 1–5  
+**Priority:** Assignment → ALL Week-4 lecture/PPT topics → mock-exam repetition → traps/formulas/numbers → rapid drill
