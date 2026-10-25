@@ -1952,3 +1952,989 @@ The Week 7 assignment contains **8 pages and 15 questions / 15 marks**.
 
 **Week 7 = Remote Logging + SDN:**  
 **DHT → `read_retry()` → UDP `SOCK_DGRAM` → `sendto()` → `recvfrom()` → DataLog.txt → `split(",")` → Matplotlib `ion()`; Traditional OSPF runs at switches; SDN separates control from hardware; OpenFlow = 2008; no rule → PACKET-IN; Southbound = control↔infrastructure; 200 requests/s/thread; centralized = one controller; SDN+IoT gives visibility; WSN has limited memory; SDN-WISE INPP = In Network Packet Processing.**
+
+
+---
+
+# 🚨 WEEK 7 UPDATE — MOCK-EXAM CROSS-CHECK
+
+**Priority remains:**
+
+1. **All 15 assignment questions**
+2. **ALL Week-7 lecture/PPT topics**
+3. **Repeated patterns from the uploaded cumulative mock exams**
+4. **MCQ/MSQ traps + important numbers/commands/code**
+5. **Rapid revision**
+
+> This update keeps the Week-7 material focused on **Remote Data Logging + SDN + Software-Defined WSN**. Unrelated mock topics from other weeks are intentionally excluded.
+
+---
+
+# 1. 🔴 ASSIGNMENT-FIRST — WEEK 7 ANSWER LOCK
+
+The Week-7 assignment directly tests the following items. These should be memorized before moving to the lecture-wide revision.
+
+| Q | Correct answer | What to remember |
+|---|---|---|
+| **1** | `SOCK_DGRAM` | Remote data logging client uses **UDP** |
+| **2** | `Adafruit_DHT.read_retry()` | Reads DHT temperature/humidity |
+| **3** | `Datalog.txt` | Server stores received data in this text file |
+| **4** | `split()` | Splits comma-separated sensor data |
+| **5** | **True** | Matplotlib plots received temperature/humidity data |
+| **6** | `ion()` | Enables Matplotlib interactive mode |
+| **7** | Individual switches | Traditional routing logic such as OSPF runs at switches |
+| **8** | **2008** | OpenFlow project presented at ACM SIGCOMM |
+| **9** | `PACKET-IN` | Sent when no matching flow rule exists |
+| **10** | **Southbound API** | Control layer ↔ infrastructure layer |
+| **11** | **~200 requests/sec** | Approximate single-thread controller handling capacity in the lecture |
+| **12** | **Centralized control** | One controller takes network-wide control decisions |
+| **13** | **Visibility of network resources** | Listed SDN-for-IoT benefit |
+| **14** | **Limited memory for control programs** | Important WSN resource constraint |
+| **15** | **In Network Packet Processing** | `INPP` in SDN-WISE |
+
+The assignment explicitly confirms Q1–Q6 and Q7–Q15, including the exact terminology above. 
+
+---
+
+# 2. 🔴 REMOTE DATA LOGGING — CODE RECOGNITION
+
+## System chain
+
+The Week-7 lecture's remote data logging system is:
+
+**DHT sensor → Raspberry Pi → read sensor data → send to server → save data → split data → plot data**
+
+The lecture explicitly lists:
+
+- temperature/humidity sensor connected to Raspberry Pi
+- read data
+- send to server
+- save data at server
+- data splitting
+- plotting
+
+### Memory
+
+> **READ → SEND → SAVE → SPLIT → PLOT**
+
+---
+
+## Client side
+
+### Socket
+
+The client creates:
+
+```python
+socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+```
+
+Therefore:
+
+**UDP → `SOCK_DGRAM`**
+
+### DHT reading
+
+The client uses:
+
+```python
+Adafruit_DHT.read_retry(sensor, 17)
+```
+
+to obtain:
+
+- humidity
+- temperature
+
+### Trap
+
+Do not choose:
+
+```text
+SOCK_STREAM
+```
+
+for the Week-7 remote-data-logging assignment.
+
+**Assignment answer = `SOCK_DGRAM`.**
+
+---
+
+# 3. 🔴 SERVER-SIDE DATA STORAGE
+
+The server stores received sensor data in:
+
+```text
+Datalog.txt
+```
+
+The lecture/assignment describes opening the file in **append mode** and writing the received message.
+
+### Memory
+
+> **Remote logging → Datalog.txt**
+
+### Trap
+
+It is **not**:
+
+- MySQL
+- Excel
+- cloud dashboard
+
+for the assignment's described implementation.
+
+---
+
+# 4. 🔴 `split()` — VERY HIGH PRIORITY
+
+Sensor data are comma-separated.
+
+Example concept:
+
+```text
+temperature,humidity
+```
+
+The server uses:
+
+```python
+Data.split(",")
+```
+
+### Meaning
+
+`split(",")` divides the string wherever a comma occurs.
+
+### Trap
+
+- `divide()` → ❌
+- `partition()` → not the assignment answer
+- `separate()` → ❌
+- **`split()` → ✅**
+
+---
+
+# 5. 🔴 MATPLOTLIB
+
+The lecture uses Matplotlib to plot temperature/humidity data.
+
+Functions to recognize:
+
+```python
+plot()
+xlabel()
+ylabel()
+title()
+```
+
+### Interactive mode
+
+```python
+ion()
+```
+
+means:
+
+> **Turn on interactive mode.**
+
+This allows the plot to update as new data arrive.
+
+### Related functions mentioned in the assignment
+
+- `figure()`
+- `grid()`
+- `subplot()`
+- `close()`
+- `scatter()`
+
+### Trap
+
+`ion()` does **not** mean:
+
+- create a figure
+- create a subplot
+- draw a grid
+
+**`ion()` = interactive mode ON.**
+
+---
+
+# 6. 🔴 SDN FUNDAMENTAL PRINCIPLE
+
+The cumulative mocks reinforce the central SDN concept:
+
+> **Decouple the control plane from the data/forwarding plane.**
+
+### Traditional network
+
+Routing/control logic is distributed across individual switches.
+
+Example from the assignment:
+
+**OSPF → individual switches**
+
+### SDN
+
+Control decisions are moved into the control plane/controller, while forwarding is handled by infrastructure devices.
+
+### Memory
+
+> **Traditional = intelligence distributed in switches**  
+> **SDN = control separated from forwarding**
+
+---
+
+# 7. 🔴 SDN ARCHITECTURE
+
+The Week-7 lecture summarizes SDN as three layers:
+
+1. **Application layer**
+2. **Control layer**
+3. **Infrastructure layer**
+
+### Application layer
+
+Contains network applications/services that express requirements.
+
+### Control layer
+
+Contains the SDN controller and network-control logic.
+
+### Infrastructure layer
+
+Contains forwarding devices/switches.
+
+### Memory
+
+**Application → Control → Infrastructure**
+
+---
+
+# 8. 🔴 NORTHBOUND vs SOUTHBOUND API
+
+This is a major Week-7 MCQ trap and is repeated in the cumulative mocks.
+
+| Interface | Connects |
+|---|---|
+| **Northbound API** | Application layer ↔ Control layer |
+| **Southbound API** | Control layer ↔ Infrastructure layer |
+
+### Assignment answer
+
+> **Southbound API**
+
+### OpenFlow connection
+
+The Week-7 assignment describes the Southbound API as communicating between the control and infrastructure layers using **OpenFlow**.
+
+### Trap
+
+If the question says:
+
+> “Control layer ↔ application layer”
+
+→ **Northbound**
+
+If it says:
+
+> “Control layer ↔ infrastructure/data plane”
+
+→ **Southbound**
+
+---
+
+# 9. 🔴 SDN ≠ OPENFLOW
+
+The Week-7 lecture explicitly emphasizes:
+
+> **SDN is NOT OpenFlow.**
+
+### SDN
+
+A:
+
+- technology
+- concept
+- architectural approach
+
+### OpenFlow
+
+A:
+
+- protocol
+- used for communication between data plane and control plane
+
+### Memory
+
+> **SDN = concept/architecture**  
+> **OpenFlow = protocol**
+
+This distinction is directly stated in the Week-7 lecture.
+
+---
+
+# 10. 🔴 OPENFLOW — IMPORTANT YEAR
+
+The Week-7 assignment asks:
+
+> In which year was the OpenFlow project presented at ACM SIGCOMM?
+
+### Answer
+
+**2008**
+
+The assignment also notes that the OpenFlow V1.0.0 specification was published the following year.
+
+### Memory
+
+> **OpenFlow project → 2008**
+
+---
+
+# 11. 🔴 PACKET-IN — VERY HIGH PRIORITY
+
+Suppose a switch receives a packet and:
+
+> **No matching flow rule exists.**
+
+The switch sends:
+
+```text
+PACKET-IN
+```
+
+to the controller.
+
+The controller then determines an appropriate flow rule and inserts it at the switch.
+
+### Flow logic
+
+**Packet arrives → table lookup → no matching rule → PACKET-IN → controller decision → flow rule → switch**
+
+### Trap
+
+Do not confuse `PACKET-IN` with:
+
+- FLOW-REQUEST
+- RULE-MISS
+- CONTROL-SYNC
+
+**Assignment answer = PACKET-IN.**
+
+---
+
+# 12. 🔴 FLOW TABLE / RULE PLACEMENT
+
+The Week-7 lecture recap explicitly highlights:
+
+> **Rule Placement → TCAM and Delay**
+
+and:
+
+> **OpenFlow → flow-rule and match-fields**
+
+### Core idea
+
+A switch maintains flow rules that determine what happens to packets matching particular fields.
+
+### Important concepts
+
+- flow rule
+- match fields
+- actions
+- rule placement
+- TCAM
+- delay
+
+### Memory
+
+> **OpenFlow question → think MATCH → RULE → ACTION**
+
+---
+
+# 13. 🔴 TCAM — EXAM RECOGNITION
+
+**TCAM = Ternary Content-Addressable Memory**
+
+For Week 7, connect TCAM with:
+
+- flow-rule lookup
+- fast matching
+- rule placement
+- hardware switch forwarding
+
+### Trap
+
+TCAM is not:
+
+- the SDN controller
+- the OpenFlow protocol
+- the application layer
+
+It is associated with **rule matching/lookup in the forwarding infrastructure**.
+
+---
+
+# 14. 🔴 CONTROLLER PLACEMENT
+
+The lecture considers controller placement using:
+
+- **Remote controller**
+- **Local controller**
+
+### Remote controller
+
+The controller can be situated remotely and communicated with using:
+
+- IP address
+- port number
+
+### Local controller
+
+The controller is placed locally with respect to the network being controlled.
+
+The lecture states that infrastructure deployment and controller placement in the simulator/emulator must support OpenFlow.
+
+---
+
+# 15. 🔴 CONTROL MECHANISMS
+
+The Week-7 lecture distinguishes:
+
+## Centralized control
+
+> Control decisions are taken by a **single controller**.
+
+### Assignment answer
+
+**Centralized control**
+
+## Distributed control
+
+> Control decisions are taken in a distributed manner.
+
+Example:
+
+> Different subnetworks are controlled by different controllers.
+
+### Fast comparison
+
+| Centralized | Distributed |
+|---|---|
+| One controller | Multiple controllers |
+| Network-wide control decisions | Decisions distributed across controllers |
+| Simple conceptual control point | Can distribute control responsibility |
+
+---
+
+# 16. 🔴 BACKUP CONTROLLER
+
+The lecture asks:
+
+> What happens if the controller goes down?
+
+A **backup controller** is introduced.
+
+### Concept
+
+- replica of main controller is created
+- if main controller fails, backup takes control
+- goal = uninterrupted network management
+
+### Memory
+
+> **Main controller fails → backup controller → continue network management**
+
+---
+
+# 17. 🔴 FLAT vs HIERARCHICAL ARCHITECTURE
+
+## Flat architecture
+
+Controllers directly manage their corresponding switches.
+
+The lecture diagram emphasizes:
+
+**PACKET-IN ↔ controller ↔ flow-rule**
+
+## Hierarchical/tree architecture
+
+Controllers are organized hierarchically.
+
+A higher-level controller coordinates lower-level controllers.
+
+### Trap
+
+Do not treat:
+
+**flat = one controller always**
+
+as a universal rule.
+
+The Week-7 lecture's important distinction is the **organization/relationship of controllers and controlled switches**.
+
+---
+
+# 18. 🔴 MININET
+
+The Week-7 lecture explicitly gives:
+
+> **Mininet = virtual network with OpenFlow-enabled switches**
+
+Key points:
+
+- based on **Python**
+- supports **remote controllers**
+- supports **local controllers**
+
+### Memory
+
+> **Mininet = virtual OpenFlow network**
+
+### Trap
+
+Mininet is not:
+
+- the SDN controller itself
+- OpenFlow itself
+- a physical switch
+
+It is used for **network experimentation/deployment in a virtual environment**.
+
+---
+
+# 19. 🔴 EXPERIMENTING WITH SDN
+
+The lecture's simulator/emulator requirements include:
+
+### Infrastructure deployment
+
+Must support:
+
+**OpenFlow**
+
+### Controller placement
+
+Must support:
+
+**OpenFlow**
+
+### Remote controller
+
+Can be located remotely and contacted through:
+
+**IP address + port number**
+
+---
+
+# 20. 🔴 SDN SECURITY
+
+Week-7 covers security concerns in SDN and SDN for IoT.
+
+High-level recognition:
+
+- centralized control can become a critical point
+- controller availability matters
+- backup controllers improve resilience
+- traffic/flow visibility enables intelligent security analysis
+- flow classification can support enhanced security
+
+### Assignment-linked SDN-for-IoT benefit
+
+> **Visibility of network resources**
+
+Other lecture-listed benefits include:
+
+- intelligent routing decisions
+- simplified information collection/analysis/decision-making
+- intelligent traffic-pattern analysis
+
+---
+
+# 21. 🔴 SDN FOR IoT
+
+The assignment directly asks for a benefit of integrating SDN with IoT.
+
+### Correct answer
+
+**Visibility of network resources**
+
+### Other lecture concepts
+
+SDN can provide:
+
+- intelligent routing
+- information collection
+- analysis
+- decision-making
+- traffic-pattern analysis
+- programmable network behavior
+
+### Memory
+
+> **SDN + IoT = programmable + visible + intelligent networking**
+
+---
+
+# 22. 🔴 SOFTWARE-DEFINED WSN
+
+Why is SDN useful for WSN?
+
+The assignment identifies a key challenge:
+
+> **Limited memory for control programs**
+
+The lecture also describes WSN constraints such as:
+
+- resource-constrained sensor nodes
+- heavy computation limitations
+- limited memory
+- vendor-specific architecture
+- difficulty with real-time programming
+
+### Exam logic
+
+**Limited resources → difficult to load many control programs → need software-defined approach**
+
+---
+
+# 23. 🔴 SOFT-WSN
+
+The Week-7 lecture describes **Soft-WSN** with:
+
+## Sensor Device Management
+
+- multiple sensors can be implemented in one sensor board
+- sensors can be selected according to application-specific requirements
+
+## Delay Management
+
+- sensing delay can be changed dynamically in real time
+
+## Active-Sleep Management
+
+- active/sleep states can be changed dynamically
+
+### Results from lecture
+
+Soft-WSN shows:
+
+- **increased packet delivery ratio** compared with traditional WSN
+- **reduced number of replicated data packets** compared with traditional WSN
+
+### Memory
+
+> **Soft-WSN = sensor management + delay management + active/sleep management**
+
+---
+
+# 24. 🔴 SDN-WISE
+
+The Week-7 lecture identifies:
+
+**SDN-WISE — Galluccio et al., IEEE INFOCOM '15**
+
+Key ideas:
+
+- software-defined WSN platform
+- flow table for rule placement at sensor nodes
+- nodes can be programmed in real time through an API
+
+### Sensor-node stack
+
+The lecture identifies:
+
+- **IEEE 802.15.4**
+- **MCU**
+- forwarding layer above IEEE 802.15.4
+- **flow-rules**
+- **INPP**
+
+---
+
+# 25. 🔴 INPP — MUST MEMORIZE
+
+### Full form
+
+**INPP = In Network Packet Processing**
+
+### Context
+
+In the SDN-WISE protocol stack, INPP is part of the sensor-node processing architecture.
+
+### Trap
+
+- Integrated Node Path Protocol → ❌
+- Internal Node Power Processing → ❌
+- IoT Network Priority Protocol → ❌
+- **In Network Packet Processing → ✅**
+
+---
+
+# 26. 🔴 WEEK-7 MOCK-EXAM TRAP BANK
+
+### Trap 1 — UDP vs TCP
+
+Remote data logging client:
+
+**`SOCK_DGRAM` → UDP → correct**
+
+`SOCK_STREAM` → ❌ for the assignment's client.
+
+### Trap 2 — DHT function
+
+**`Adafruit_DHT.read_retry()` → correct**
+
+### Trap 3 — Data file
+
+**`Datalog.txt` → correct**
+
+### Trap 4 — String splitting
+
+**`split()` → correct**
+
+### Trap 5 — Matplotlib
+
+**`ion()` → interactive mode**
+
+### Trap 6 — Traditional routing
+
+OSPF-type routing logic:
+
+**individual switches**
+
+### Trap 7 — OpenFlow year
+
+**2008**
+
+### Trap 8 — Missing flow rule
+
+**PACKET-IN**
+
+### Trap 9 — API direction
+
+Control ↔ infrastructure:
+
+**Southbound API**
+
+### Trap 10 — API direction
+
+Application ↔ control:
+
+**Northbound API**
+
+### Trap 11 — Centralized control
+
+One controller:
+
+**Centralized**
+
+### Trap 12 — SDN vs OpenFlow
+
+SDN ≠ OpenFlow.
+
+**SDN = concept/architecture**
+
+**OpenFlow = protocol**
+
+### Trap 13 — SDN-WISE
+
+`INPP`:
+
+**In Network Packet Processing**
+
+### Trap 14 — WSN resource constraint
+
+**Limited memory for control programs**
+
+### Trap 15 — Mininet
+
+**Virtual OpenFlow-enabled network environment**
+
+### Trap 16 — Soft-WSN
+
+Not merely “software running on a sensor.”
+
+Remember:
+
+**sensor management + delay management + active/sleep management**
+
+---
+
+# 27. 🔥 WEEK-7 PRIORITY RANKING
+
+## 🔴 TIER 1 — MUST MEMORIZE
+
+1. `SOCK_DGRAM` = UDP
+2. `Adafruit_DHT.read_retry()`
+3. `Datalog.txt`
+4. `split()`
+5. Matplotlib
+6. `ion()`
+7. Traditional routing → individual switches
+8. OpenFlow → **2008**
+9. Missing flow rule → `PACKET-IN`
+10. Southbound API
+11. Northbound API
+12. ~**200 requests/sec** single-thread controller figure from lecture
+13. Centralized vs distributed control
+14. SDN ≠ OpenFlow
+15. SDN = control/data-plane separation
+16. Limited memory for WSN control programs
+17. INPP = In Network Packet Processing
+18. SDN-WISE
+19. Mininet
+20. TCAM + rule placement
+
+## 🟠 TIER 2 — VERY IMPORTANT
+
+21. Remote vs local controller
+22. Backup controller
+23. Flat architecture
+24. Hierarchical/tree architecture
+25. OpenFlow match fields + flow rules
+26. SDN security
+27. SDN for IoT benefits
+28. Soft-WSN
+29. Sensor device management
+30. Delay management
+31. Active-sleep management
+32. Soft-WSN packet-delivery result
+33. Soft-WSN replicated-data result
+
+## 🟡 TIER 3 — UNDERSTAND
+
+34. Why SDN is useful for IoT
+35. Why WSN constraints motivate SDN
+36. Controller placement tradeoffs
+37. Simulator/emulator requirements
+38. Flow-rule placement and delay
+39. SDN-WISE architecture
+40. Real-time programming through APIs
+
+---
+
+# 28. 📌 WEEK-7 IMPORTANT NUMBERS / COMMANDS / TERMS
+
+| Item | Must remember |
+|---|---|
+| Remote logging transport | **UDP** |
+| Python UDP socket | `SOCK_DGRAM` |
+| DHT read function | `Adafruit_DHT.read_retry()` |
+| Server file | `Datalog.txt` |
+| String parsing | `split(",")` |
+| Plot library | **Matplotlib** |
+| Interactive mode | `ion()` |
+| OpenFlow project | **2008** |
+| No matching flow rule | **PACKET-IN** |
+| Control ↔ infrastructure | **Southbound API** |
+| Application ↔ control | **Northbound API** |
+| Controller single-thread capacity | **~200 requests/sec** |
+| SDN-WISE paper reference | **IEEE INFOCOM '15** |
+| SDN-WISE packet processing | **INPP** |
+| INPP full form | **In Network Packet Processing** |
+| Sensor-node base MAC/PHY context | **IEEE 802.15.4** |
+| Virtual SDN network tool | **Mininet** |
+
+---
+
+# 29. 🧠 60-SECOND WEEK-7 RECALL
+
+> **Remote logging = DHT → Raspberry Pi → UDP → server → Datalog.txt → split → Matplotlib.**  
+> **UDP = `SOCK_DGRAM`.**  
+> **DHT = `read_retry()`.**  
+> **Split comma data = `split(",")`.**  
+> **Interactive plotting = `ion()`.**  
+> **Traditional routing = individual switches.**  
+> **SDN = control plane separated from forwarding/data plane.**  
+> **SDN layers = Application → Control → Infrastructure.**  
+> **Northbound = Application ↔ Control.**  
+> **Southbound = Control ↔ Infrastructure.**  
+> **OpenFlow project = 2008.**  
+> **No flow match = PACKET-IN.**  
+> **SDN ≠ OpenFlow.**  
+> **Centralized = one controller.**  
+> **Distributed = control decisions distributed.**  
+> **Backup controller = continuity after failure.**  
+> **Mininet = virtual OpenFlow network.**  
+> **TCAM = fast flow-rule matching.**  
+> **SDN-WISE = flow-table + real-time programmable WSN.**  
+> **INPP = In Network Packet Processing.**  
+> **Soft-WSN = sensor + delay + active/sleep management.**
+
+---
+
+# 30. 📝 FINAL WEEK-7 RAPID DRILL
+
+1. Remote data logging uses which socket type?  
+   → **`SOCK_DGRAM`**
+
+2. What transport does that imply?  
+   → **UDP**
+
+3. Which Adafruit function reads DHT values?  
+   → **`Adafruit_DHT.read_retry()`**
+
+4. Where does the server save the data?  
+   → **`Datalog.txt`**
+
+5. Which function splits comma-separated data?  
+   → **`split()`**
+
+6. Which library plots the data?  
+   → **Matplotlib**
+
+7. Which function enables interactive plotting?  
+   → **`ion()`**
+
+8. Traditional OSPF logic executes where?  
+   → **Individual switches**
+
+9. OpenFlow project presentation year?  
+   → **2008**
+
+10. No matching flow rule → what message?  
+    → **PACKET-IN**
+
+11. Control ↔ infrastructure API?  
+    → **Southbound**
+
+12. Application ↔ control API?  
+    → **Northbound**
+
+13. One-controller control mechanism?  
+    → **Centralized control**
+
+14. What is the approximate single-thread controller rate in the assignment?  
+    → **200 requests/sec**
+
+15. What is a key WSN resource constraint?  
+    → **Limited memory for control programs**
+
+16. SDN benefit for IoT asked in the assignment?  
+    → **Visibility of network resources**
+
+17. SDN-WISE `INPP`?  
+    → **In Network Packet Processing**
+
+18. What does SDN-WISE place at sensor nodes?  
+    → **Flow-table / flow-rules**
+
+19. What does Soft-WSN dynamically manage?  
+    → **Sensors, sensing delay, active/sleep states**
+
+20. What is Mininet used for?  
+    → **Creating a virtual network with OpenFlow-enabled switches**
+
+---
+
+# 31. SOURCE-BASED UPDATE NOTE
+
+The Week-7 assignment directly supports the 15 assignment answers, including the remote logging socket/function/file/plotting questions and the SDN questions on traditional routing, OpenFlow, PACKET-IN, APIs, controller capacity, centralized control, SDN-for-IoT benefits, WSN memory constraints, and SDN-WISE INPP. 
+
+The Week-7 lecture supports the remote-data-logging workflow, SDN architecture, TCAM/rule placement, OpenFlow terminology, controller placement, Mininet, centralized/distributed control, backup controller, Soft-WSN, and SDN-WISE. 
+
+The cumulative mocks reinforce the Week-7 patterns around **SDN control/data-plane separation** and **Southbound API**, while the uploaded Week-7 assignment provides the more course-specific OpenFlow/SDN questions and exact answers.
+
+**No images were generated or added.**
