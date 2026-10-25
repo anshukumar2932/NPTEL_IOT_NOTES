@@ -2215,3 +2215,761 @@ The assignment is **7 pages** and contains **15 questions / 15 marks**.
 # FINAL MEMORY LINE
 
 **Python: 5 types → `def` → `try/except/else` → `a` append → PIL/Pillow → TCP=`SOCK_STREAM`; Raspberry Pi: single-board computer → 40 GPIO → Raspbian → GPIO library → CSI between Ethernet/HDMI → `raspistill`; IoT implementation: DHT = humidity+temperature → relay = NO/Common/NC → temperature above threshold → fan ON.**
+
+
+---
+
+# 🚨 WEEK 6 UPDATE — MOCK-EXAM CROSS-CHECK
+
+**Priority:** Assignment first → ALL Week-6 lecture/PPT topics → repeated mock patterns → traps/numbers/code recognition.
+
+This update adds only Week-6-relevant patterns found in the uploaded cumulative mock exams. It does **not** replace the original assignment or lecture material.
+
+# 1. 🔴 MOCK-EXAM HIGH-PRIORITY TOPICS
+
+## A. Raspberry Pi OS / Raspbian
+
+A cumulative mock directly asks for the official Debian-based OS optimized for Raspberry Pi hardware.
+
+### Answer
+
+**Raspbian**
+
+The Week-6 lecture also uses Raspberry Pi OS setup material, so this is a direct Week-6 recognition item. fileciteturn76file7
+
+### Trap
+
+- Ubuntu MATE → ❌
+- Windows 10 IoT Core → ❌
+- Fedora → ❌
+- **Raspbian → ✅**
+
+---
+
+## B. `raspi-config` — VERY HIGH PRIORITY
+
+A cumulative mock asks the purpose of the `raspi-config` utility.
+
+### Correct idea
+
+`raspi-config` provides a **text-based interface for configuring Raspberry Pi system settings**, including settings such as:
+
+- enabling the camera
+- enabling SSH
+- other system configuration options
+
+### Memory
+
+> **raspi-config = Raspberry Pi configuration utility**
+
+The mock explicitly tests this. fileciteturn76file3
+
+### Trap
+
+`raspi-config` is **not**:
+- a Python IDE
+- a file-transfer tool
+- a web browser
+
+---
+
+# 2. 🔴 RASPBERRY PI 3 MODEL B — NUMBERS TO MEMORIZE
+
+The Week-6 lecture gives:
+
+| Specification | Raspberry Pi 3 Model B |
+|---|---|
+| RAM | **1 GB SDRAM** |
+| CPU | **Quad Cortex-A53 @ 1.2 GHz** |
+| GPU | **400 MHz VideoCore IV** |
+| Ethernet | **10/100** |
+| Wireless | **802.11 / Bluetooth 4.0** |
+| Video output | **HDMI / Composite** |
+| GPIO | **40** |
+
+fileciteturn75file0
+
+### Fast memory
+
+> **Pi 3B = 1GB / A53 1.2GHz / 400MHz GPU / 10-100 Ethernet / Wi-Fi + BT 4.0 / 40 GPIO**
+
+### Comparison
+
+| Feature | Pi 3 Model B | Pi 2 Model B | Pi Zero |
+|---|---|---|---|
+| RAM | 1 GB | 1 GB | 512 MB |
+| CPU | Quad A53 @ 1.2 GHz | Quad A53 @ 900 MHz | ARM11 @ 1 GHz |
+| GPU | 400 MHz VideoCore IV | 250 MHz VideoCore IV | 250 MHz VideoCore IV |
+| Ethernet | 10/100 | 10/100 | None |
+| Wireless | 802.11 + BT 4.0 | None | None |
+| GPIO | 40 | 40 | 40 |
+
+fileciteturn77file4
+
+---
+
+# 3. 🔴 PYTHON INDENTATION — MOCK PATTERN
+
+A cumulative mock directly asks why Python has a strict indentation policy.
+
+### Answer
+
+Indentation is used to **define code blocks**, such as:
+
+- `if` / `else`
+- `for`
+- `while`
+- functions
+- other compound statements
+
+fileciteturn76file7
+
+### Memory
+
+> **Python indentation = block structure**
+
+### Trap
+
+Indentation is **not** primarily used to:
+- declare variable types
+- import libraries
+- comment code
+
+---
+
+# 4. 🔴 PYTHON FUNCTION / EXCEPTION / FILE-MODE RECOGNITION
+
+These are already covered in the Week-6 assignment and lecture notes. Keep the following as direct exam-recognition items:
+
+| Question type | Answer |
+|---|---|
+| Define a function | **`def`** |
+| Exception handler | **`except`** |
+| Append to a file | **`a`** |
+| TCP socket type | **`SOCK_STREAM`** |
+| Five basic Python data types listed in assignment | **Numbers, String, List, Tuple, Dictionary** |
+
+### File I/O core sequence
+
+The lecture gives three basic steps:
+
+1. **Open**
+2. **Read/Write**
+3. **Close**
+
+No separate module/library is required for basic Python file read/write operations. fileciteturn77file6
+
+---
+
+# 5. 🔴 PYTHON SOCKETS — MUST RECOGNIZE
+
+The Week-6 lecture gives:
+
+```python
+s = socket.socket(socket_family, socket_type, protocol=0)
+```
+
+Possible socket families:
+
+- `AF_UNIX`
+- `AF_INET`
+
+Possible socket types:
+
+- `SOCK_STREAM`
+- `SOCK_DGRAM`
+
+Protocol default:
+
+- `0`
+
+fileciteturn77file0
+
+### Exam mapping
+
+**TCP → `SOCK_STREAM`**
+
+**UDP → `SOCK_DGRAM`**
+
+### Trap
+
+Do not mix:
+
+- `AF_INET` → address family
+- `SOCK_STREAM` → socket type
+- `SOCK_DGRAM` → socket type
+
+---
+
+# 6. 🔴 PIL / PILLOW — IMAGE PROCESSING
+
+The Week-6 lecture covers Python image operations using:
+
+**PIL = Python Imaging Library**
+
+The lecture gives:
+
+```bash
+sudo pip install pillow
+```
+
+and notes:
+
+- PIL supported through Python 2.7
+- Pillow supports Python 3.x
+
+fileciteturn77file1
+
+### Reading an image
+
+```python
+from PIL import Image
+
+image = Image.open(image_name)
+image.show()
+```
+
+fileciteturn77file8
+
+### Memory
+
+**PIL/Pillow → image read/write/processing**
+
+---
+
+# 7. 🔴 RASPBERRY PI CAMERA — VERY HIGH PRIORITY
+
+The lecture says:
+
+- Raspberry Pi has a dedicated **CSI slot** for the camera.
+- The cable slot is positioned **between the Ethernet port and HDMI port**.
+
+fileciteturn77file2
+
+### Still image command
+
+```bash
+raspistill -o image.jpg
+```
+
+This stores the image as:
+
+**`image.jpg`**
+
+fileciteturn77file7
+
+### Python camera module
+
+The lecture also gives:
+
+```bash
+sudo apt-get install python-picamera
+```
+
+and:
+
+```python
+import picamera
+
+camera = picamera.PiCamera()
+camera.capture('image.jpg')
+```
+
+fileciteturn76file1
+
+### Trap
+
+- Camera connector → **CSI**
+- `raspistill` → command-line still image capture
+- `picamera` → Python camera module
+
+---
+
+# 8. 🔴 DHT22 + RASPBERRY PI
+
+The lecture includes a DHT22 interfacing example with Raspberry Pi.
+
+The example output reports:
+
+- temperature
+- humidity
+
+fileciteturn77file3
+
+### Core concept
+
+**Sensor → Raspberry Pi → Python program → read environmental values**
+
+### Do not confuse with Arduino Week 5
+
+Week 5 used Arduino + DHT.
+
+Week 6 extends the same sensor idea to:
+
+**DHT22 + Raspberry Pi + Python**
+
+---
+
+# 9. 🔴 DHT SENSOR + RELAY GPIO NUMBERING — MOCK TRAP
+
+A cumulative mock specifically asks about using DHT and relay together.
+
+The intended lecture-specific distinction is:
+
+- **DHT sensor → BCM mode**
+- **Relay → BOARD mode**
+
+The mock answer key marks this distinction as the correct choice. fileciteturn76file0
+
+Another cumulative mock asks why both modes may appear in the same script.
+
+The lecture-based explanation is that different hardware components/libraries can specify different GPIO numbering conventions. fileciteturn76file9
+
+### CRITICAL TRAP
+
+Do **not** memorize:
+
+> BCM = input  
+> BOARD = output
+
+That is **wrong**.
+
+BCM and BOARD describe **numbering conventions**, not whether a pin is input/output.
+
+---
+
+# 10. 🔴 RELAY — EXAM NUMBERS
+
+The Week-6 lecture defines a relay as a:
+
+> **Mechanical/electromechanical switch**
+
+It has **3 output terminals**:
+
+1. **NO — Normally Open**
+2. **Common**
+3. **NC — Normally Closed**
+
+fileciteturn77file5
+
+### Memory
+
+> **Relay = 3 terminals → NO / Common / NC**
+
+### Trap
+
+Do not interpret:
+
+- NO = “no output”
+- NC = “no connection”
+
+They mean:
+
+- **Normally Open**
+- **Normally Closed**
+
+---
+
+# 11. 🔴 SENSOR → ACTUATOR SYSTEM FLOW
+
+The Week-6 lecture gives a system overview:
+
+1. Sensor and actuator interface with Raspberry Pi.
+2. Read data from the sensor.
+3. Control the actuator according to the sensor reading.
+4. Connect the actuator to a device.
+
+fileciteturn75file6
+
+### Core IoT control loop
+
+**Sensor → Raspberry Pi → decision/control → actuator → physical device**
+
+This is one of the most important conceptual diagrams of Week 6.
+
+---
+
+# 12. 🔴 RASPBERRY PI GPIO — RECOGNITION
+
+The lecture's Raspberry Pi material uses GPIO programming for:
+
+- LED control
+- sensor interfacing
+- actuator/relay control
+
+The Pi 3 Model B has:
+
+**40 GPIO pins**
+
+fileciteturn75file0
+
+### Important distinction
+
+**GPIO number ≠ physical board position**
+
+This is exactly why the course discusses:
+
+- **BCM numbering**
+- **BOARD numbering**
+
+---
+
+# 13. 🔴 LED BLINKING — CODE PATTERN
+
+For a GPIO-controlled LED, recognize the conceptual sequence:
+
+```python
+GPIO.setmode(...)
+GPIO.setup(pin, GPIO.OUT)
+
+GPIO.output(pin, GPIO.HIGH)
+# delay
+GPIO.output(pin, GPIO.LOW)
+```
+
+Then clean up GPIO resources when the program finishes.
+
+### Exam recognition
+
+- `GPIO.setup()` → configure pin
+- `GPIO.output()` → set output state
+- `GPIO.HIGH` → high/on state in the example
+- `GPIO.LOW` → low/off state
+- `GPIO.cleanup()` → clean up GPIO configuration
+
+---
+
+# 14. 🔴 RASPBERRY PI PROGRAMMING LANGUAGES
+
+The Week-6 lecture lists these as installed/default programming languages:
+
+- Python
+- C
+- C++
+- Java
+- Scratch
+- Ruby
+
+It notes that languages capable of compiling for ARMv6 can be used with Raspberry Pi. fileciteturn75file4
+
+### Exam trap
+
+Do not assume:
+
+> Raspberry Pi = Python only
+
+The lecture explicitly lists multiple languages.
+
+---
+
+# 15. MOCK-EXAM REPEATED PATTERNS — WEEK 6
+
+## Pattern 1 — Raspbian
+
+**Raspberry Pi Debian-based OS → Raspbian**
+
+## Pattern 2 — `raspi-config`
+
+**System configuration utility → `raspi-config`**
+
+## Pattern 3 — Python indentation
+
+**Indentation → code blocks**
+
+## Pattern 4 — DHT + relay
+
+**DHT → BCM numbering in the lecture example**
+
+**Relay → BOARD numbering in the lecture example**
+
+## Pattern 5 — GPIO numbering
+
+**BCM vs BOARD = numbering convention**
+
+## Pattern 6 — Raspberry Pi specifications
+
+**Pi 3B → 1GB RAM, A53 1.2GHz, 40 GPIO**
+
+## Pattern 7 — Camera
+
+**CSI → camera connector**
+
+**`raspistill -o image.jpg` → still image**
+
+## Pattern 8 — Python sockets
+
+**TCP → SOCK_STREAM**
+
+**UDP → SOCK_DGRAM**
+
+## Pattern 9 — Pillow
+
+**PIL/Pillow → image operations**
+
+## Pattern 10 — Relay
+
+**NO / Common / NC**
+
+---
+
+# 16. ⚠️ WEEK-6 MOCK-EXAM TRAP BANK
+
+### Trap 1
+`raspi-config` is a Python coding environment.
+
+❌ **Wrong**
+
+It is a Raspberry Pi system configuration utility.
+
+### Trap 2
+Python indentation is optional.
+
+❌ **Wrong for the course framing**
+
+Indentation defines code blocks.
+
+### Trap 3
+`SOCK_STREAM` = UDP.
+
+❌ **Wrong**
+
+`SOCK_STREAM` → TCP-style stream socket.
+
+### Trap 4
+`SOCK_DGRAM` = TCP.
+
+❌ **Wrong**
+
+`SOCK_DGRAM` → datagram socket.
+
+### Trap 5
+BCM means input.
+
+❌ **Wrong**
+
+BCM is a GPIO numbering convention.
+
+### Trap 6
+BOARD means output.
+
+❌ **Wrong**
+
+BOARD is also a numbering convention.
+
+### Trap 7
+Relay has two terminals.
+
+❌ **Wrong**
+
+The lecture identifies **three output terminals**.
+
+### Trap 8
+DHT sensor requires an analog pin.
+
+❌ **Not the lecture's framing**
+
+The course's Raspberry Pi example uses GPIO interfacing.
+
+### Trap 9
+Pi camera uses HDMI connector.
+
+❌ **Wrong**
+
+Camera uses the dedicated **CSI** slot.
+
+### Trap 10
+`raspistill` is used to read a DHT sensor.
+
+❌ **Wrong**
+
+It captures a still image.
+
+### Trap 11
+PIL/Pillow is a networking library.
+
+❌ **Wrong**
+
+It is used for image operations.
+
+### Trap 12
+Pi 3 Model B has 4 GPIO pins.
+
+❌ **Wrong**
+
+The lecture specifies **40 GPIO**.
+
+---
+
+# 17. 🔥 WEEK-6 PRIORITY RANKING
+
+## 🔴 TIER 1 — MUST MEMORIZE
+
+1. **Python indentation = code blocks**
+2. `def` = function definition
+3. `except` = exception handler
+4. `a` = append file mode
+5. `SOCK_STREAM` = TCP
+6. `SOCK_DGRAM` = UDP
+7. PIL/Pillow = image operations
+8. Pi 3B = **1GB / 1.2GHz A53 / 40 GPIO**
+9. Raspbian
+10. `raspi-config`
+11. GPIO numbering: **BCM vs BOARD**
+12. CSI camera connector
+13. `raspistill -o image.jpg`
+14. DHT22 → temperature/humidity
+15. Relay → NO / Common / NC
+16. Sensor → Pi → actuator control loop
+
+## 🟠 TIER 2 — VERY IMPORTANT
+
+17. Pi 3 wireless = 802.11 + Bluetooth 4.0
+18. Pi 3 Ethernet = 10/100
+19. Pi 3 GPU = 400 MHz VideoCore IV
+20. `GPIO.setup()`
+21. `GPIO.output()`
+22. `GPIO.HIGH` / `GPIO.LOW`
+23. `GPIO.cleanup()`
+24. Python `picamera`
+25. `camera.capture()`
+26. file open/read-write/close sequence
+27. Python data types
+28. exception handling
+29. CSV handling
+30. socket syntax
+
+## 🟡 TIER 3 — UNDERSTAND
+
+31. Python scope
+32. modules/imports
+33. prime-number example
+34. loops and control flow
+35. PIL/Pillow compatibility note from lecture
+36. Pi 2 vs Pi 3 vs Pi Zero
+37. sensor/relay integration architecture
+38. TCP client/server structure
+
+---
+
+# 18. 📌 WEEK-6 IMPORTANT NUMBERS / COMMANDS
+
+| Item | Must remember |
+|---|---|
+| Pi 3 RAM | **1 GB** |
+| Pi 3 CPU | **Quad Cortex-A53 @ 1.2 GHz** |
+| Pi 3 GPU | **400 MHz VideoCore IV** |
+| Ethernet | **10/100** |
+| Wireless | **802.11 + Bluetooth 4.0** |
+| GPIO | **40** |
+| Raspbian | Pi OS named in course/assignment |
+| Camera connector | **CSI** |
+| Camera location | **Between Ethernet and HDMI** |
+| Still capture | `raspistill -o image.jpg` |
+| Pillow install | `sudo pip install pillow` |
+| picamera install | `sudo apt-get install python-picamera` |
+| Socket TCP type | `SOCK_STREAM` |
+| Socket UDP type | `SOCK_DGRAM` |
+| Relay terminals | **NO / Common / NC** |
+
+---
+
+# 19. 🧠 60-SECOND WEEK-6 RECALL
+
+> **Python indentation → code blocks.**  
+> **`def` → function.**  
+> **`except` → exception handler.**  
+> **`a` → append.**  
+> **PIL/Pillow → images.**  
+> **`SOCK_STREAM` → TCP.**  
+> **`SOCK_DGRAM` → UDP.**  
+> **Pi 3B → 1GB, A53 1.2GHz, 40 GPIO.**  
+> **Raspbian → Raspberry Pi OS named in the course.**  
+> **`raspi-config` → system configuration.**  
+> **BCM/BOARD → numbering modes.**  
+> **DHT → sensor.**  
+> **Relay → actuator/switch.**  
+> **Relay terminals → NO, Common, NC.**  
+> **Camera → CSI.**  
+> **`raspistill -o image.jpg` → capture still image.**  
+> **`picamera` → Python camera module.**  
+> **Sensor → Pi → decision → actuator.**
+
+---
+
+# 20. 📝 FINAL WEEK-6 RAPID DRILL
+
+1. What keyword defines a Python function?  
+   → **`def`**
+
+2. What handles an exception?  
+   → **`except`**
+
+3. Append mode?  
+   → **`a`**
+
+4. TCP socket type?  
+   → **`SOCK_STREAM`**
+
+5. UDP socket type?  
+   → **`SOCK_DGRAM`**
+
+6. Image library?  
+   → **PIL/Pillow**
+
+7. Raspberry Pi 3B RAM?  
+   → **1 GB**
+
+8. Raspberry Pi 3B CPU?  
+   → **Quad Cortex-A53 @ 1.2 GHz**
+
+9. Raspberry Pi 3B GPIO count?  
+   → **40**
+
+10. Raspberry Pi OS named in the course/assignment?  
+    → **Raspbian**
+
+11. Configuration utility?  
+    → **`raspi-config`**
+
+12. Camera connector?  
+    → **CSI**
+
+13. Camera slot location?  
+    → **Between Ethernet and HDMI**
+
+14. Still image command?  
+    → **`raspistill -o image.jpg`**
+
+15. DHT22 measures?  
+    → **Temperature and humidity**
+
+16. Relay terminal count?  
+    → **3**
+
+17. Relay terminals?  
+    → **NO, Common, NC**
+
+18. BCM and BOARD mean what?  
+    → **GPIO numbering conventions**
+
+19. What does `GPIO.output()` do?  
+    → **Sets the GPIO output state**
+
+20. What does `GPIO.cleanup()` do?  
+    → **Cleans up GPIO configuration**
+
+21. What is the sensor-actuator flow?  
+    → **Sensor → Raspberry Pi → control decision → actuator**
+
+22. What does `camera.capture('image.jpg')` do?  
+    → **Captures an image to `image.jpg`**
+
+---
+
+# 21. SOURCE-BASED UPDATE NOTE
+
+The Week-6 lecture supports the Raspberry Pi specifications, programming languages, Python image operations, socket syntax, camera/CSI details, DHT22 example, and relay terminals. fileciteturn75file0 fileciteturn75file4 fileciteturn77file1 fileciteturn77file0 fileciteturn77file2 fileciteturn77file3 fileciteturn77file5
+
+The cumulative mock exams reinforce Raspbian, `raspi-config`, Python indentation, DHT/relay GPIO numbering, and Raspberry Pi/Arduino recognition patterns. fileciteturn76file7 fileciteturn76file3 fileciteturn76file0 fileciteturn76file9
+
+**No images were generated or added.**
