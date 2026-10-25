@@ -791,6 +791,250 @@ Path to remember:
 
 ---
 
+
+# 35.5. NEW — Mock-Exam Cross-Check (Mock Exams 1–5)
+
+The five uploaded mock exams are **cumulative across the course**, so not every mock question belongs to Week 1. For this Week 1 revision, only the questions that directly reinforce Week 1 concepts are used here. This is **not a replacement for the Week 1 assignment**; it is an exam-pattern enhancement.
+
+## A. Concepts repeatedly tested across the mocks
+
+### 1. IoT core vision / motivation — VERY HIGH PRIORITY
+
+The mock exams repeatedly test the same central idea:
+
+> **IoT expands/interconnects the existing Internet with physical objects (“things”) to provide advanced levels of service to society and businesses.**
+
+Do NOT confuse this with:
+- replacing the Internet,
+- creating a separate Internet only for M2M,
+- focusing only on smart homes/cities.
+
+**Fast answer rule:**  
+If an option says **“interconnect physical objects using the existing Internet / provide advanced services”**, it is usually the intended answer.
+
+---
+
+### 2. Sensor — VERY HIGH PRIORITY
+
+The mocks repeatedly ask the primary function of a sensor.
+
+**Correct concept:**
+
+> A sensor **detects changes/physical phenomena in the environment and converts them into measurable signals**.
+
+Think:
+
+**Physical quantity → Sensor → measurable/electrical signal → processing**
+
+Examples:
+- temperature
+- pressure
+- light
+- humidity
+- acceleration
+
+**Trap:** A sensor does not primarily perform physical action. That is the actuator.
+
+---
+
+### 3. Actuator — VERY HIGH PRIORITY
+
+The mocks repeatedly ask the reverse of sensing.
+
+**Correct concept:**
+
+> An actuator **translates a control/digital signal into physical action, motion, force or torque**.
+
+Think:
+
+**Control signal → Actuator → physical action**
+
+### Actuator types explicitly reinforced by the mocks + Week 1 lecture
+
+| Type | What to remember |
+|---|---|
+| Hydraulic | Uses pressurized liquid/fluid; can generate large force |
+| Pneumatic | Uses pressurized gas/air |
+| Electrical | Converts electrical energy into mechanical action/torque |
+| Thermal/Magnetic | Uses thermal or magnetic effects |
+| Mechanical | Uses mechanisms such as gears, rails, pulleys, chains |
+
+**Mock-exam trap:**  
+“Pressurized oil” → **Hydraulic**  
+“Electrical energy → mechanical torque” → **Electrical**
+
+---
+
+### 4. IoT Gateway — HIGH PRIORITY
+
+A mock question specifically tests the gateway.
+
+**Gateway = bridge between local IoT devices/networks and the wider Internet/cloud.**
+
+Typical responsibilities:
+- connect local IoT nodes to upstream networks,
+- translate between protocols when needed,
+- manage/forward traffic,
+- provide an interface between heterogeneous local devices and the Internet.
+
+### Gateway vs Proxy
+
+| Gateway | Proxy |
+|---|---|
+| Connects/bridges different networks or protocol domains | Acts on behalf of another device/service |
+| Often handles protocol translation and traffic forwarding | Commonly mediates requests/responses |
+| Sits between local IoT network and wider network | Can sit between clients and servers/services |
+
+**Exam trap:** Gateway is not simply “the cloud” and is not necessarily the sensor-data storage system.
+
+---
+
+### 5. Mesh topology — MEDIUM/HIGH PRIORITY
+
+One mock explicitly tests why mesh topology is valuable in sensor networks.
+
+**Main advantage:**
+> **Reliability and fault tolerance through multiple/redundant communication paths.**
+
+If one path fails, another path may still be available.
+
+**Do not choose:**
+- “always the lowest power,”
+- “longest possible range,”
+- “all processing at one sink.”
+
+Those are not the defining advantage of mesh topology.
+
+---
+
+### 6. Sensor drift — HIGH PRIORITY because it is directly asked in a mock
+
+A mock asks for the error defined as a **slow, independent change in output over time unrelated to changes in the measured property**.
+
+Answer:
+
+> **Drift**
+
+Quick distinction:
+
+| Error | Memory cue |
+|---|---|
+| Offset/Bias | Constant shift from the true/expected value |
+| Drift | Slow output change over time |
+| Hysteresis | Output depends on previous input/history |
+| Noise | Random unwanted variation |
+| Nonlinearity | Input-output relation deviates from ideal linear behavior |
+| Quantization | Continuous value represented using discrete levels |
+| Aliasing | Sampling-related distortion when sampling is inadequate |
+
+---
+
+## B. Mock-style questions you should now be able to answer instantly
+
+### Q1. What is the core vision of IoT?
+**Answer:** Expand the existing Internet to encompass/interconnect physical objects.
+
+### Q2. What is the primary motivation of IoT?
+**Answer:** Provide advanced levels of service to society and businesses by interconnecting physical objects.
+
+### Q3. What does a sensor do?
+**Answer:** Detects physical/ambient changes and converts them into measurable signals.
+
+### Q4. What does an actuator do?
+**Answer:** Converts a control/digital signal into physical action.
+
+### Q5. Pressurized oil is associated with which actuator?
+**Answer:** Hydraulic actuator.
+
+### Q6. Electrical energy converted directly into mechanical torque is associated with which actuator?
+**Answer:** Electrical actuator.
+
+### Q7. What is the main role of an IoT gateway?
+**Answer:** Bridge local IoT devices/networks to the wider network/cloud, including protocol translation/traffic handling.
+
+### Q8. Why is mesh topology useful?
+**Answer:** Multiple redundant paths improve reliability and fault tolerance.
+
+### Q9. Which sensor error is a slow independent change in output over time?
+**Answer:** Drift.
+
+---
+
+# 35.6. NEW — Mock-Exam Trap Bank for Week 1
+
+These are the **exact conceptual traps** the uploaded mocks repeatedly use.
+
+### Trap 1 — IoT is NOT a replacement for the Internet
+Wrong idea:
+> “IoT creates a completely new Internet.”
+
+Correct:
+> IoT extends/interconnects the existing Internet with physical objects.
+
+### Trap 2 — Sensor and actuator are opposites
+
+**Sensor:** physical world → signal/data  
+**Actuator:** control signal/data → physical world
+
+### Trap 3 — Gateway is not the same as a sensor node
+
+A sensor node can sense/process/communicate.  
+A gateway bridges the local IoT network toward other networks/cloud and may translate protocols.
+
+### Trap 4 — Mesh ≠ “lowest power”
+The mock emphasizes **redundant paths → reliability/fault tolerance**.
+
+### Trap 5 — Drift ≠ offset
+
+- **Offset:** fixed/constant bias
+- **Drift:** slowly changes with time
+
+### Trap 6 — Actuator type clues matter
+
+- oil/fluid pressure → hydraulic
+- air/gas pressure → pneumatic
+- electrical energy → mechanical action/torque → electrical actuator
+
+---
+
+# 35.7. NEW — Week 1 “Mock Exam Signal” Priority Ranking
+
+Based on repetition across the five uploaded cumulative mocks, revise these Week 1 concepts in this order:
+
+1. **IoT vision / motivation**
+2. **Sensor definition and function**
+3. **Actuator definition and function**
+4. **IoT Gateway**
+5. **Actuator types**
+6. **Sensor errors, especially drift**
+7. **Mesh topology and redundant paths**
+8. **Basic IoT networking roles: node → gateway → Internet/proxy/cloud**
+
+This ranking is a **mock-exam pattern aid**, not a claim about the exact distribution of questions in the actual certification exam.
+
+---
+
+# 35.8. NEW — 60-Second Week 1 Recall Chain
+
+Memorize this sequence:
+
+> **IoT = connect physical things → Sense → Process → Communicate → Actuate**
+
+Then map the network:
+
+> **Sensor Node → Gateway → Proxy/Internet → Cloud/Analytics → Actuation**
+
+And remember the two most important opposites:
+
+> **Sensor = world → data**  
+> **Actuator = command → world**
+
+And the two common traps:
+
+> **Mesh = redundant paths/reliability**  
+> **Drift = slow output change over time**
+
+
 # 35. High-Priority Exam Memory List
 
 Memorize these first:
@@ -902,3 +1146,18 @@ Memorize these first:
 - `Week-1_B.pdf` – Introduction to IoT – Part II.
 - `Week-1_C.pdf` – Sensing, Actuation and Basics of IoT Networking.
 
+
+
+---
+
+# 38. Additional Source Used for This Improved Version
+
+This improved Week 1 file additionally cross-checks Week 1 concepts against the five uploaded cumulative mock exams:
+
+- Mock Exam 1
+- Mock Exam 2
+- Mock Exam 3
+- Mock Exam 4
+- Mock Exam 5
+
+Only mock questions that directly reinforce Week 1 concepts were incorporated into the Week 1 study notes. Later-week topics appearing in the mocks were deliberately not pulled into Week 1 unless they reinforce a Week 1 foundation concept.
