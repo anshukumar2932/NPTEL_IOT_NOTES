@@ -1,565 +1,480 @@
-# NPTEL Introduction to Internet of Things — Week 11 Exam Notes
+# NPTEL Introduction to Internet of Things — Week 11
+## Assignment-First + Complete Lecture Coverage + Exam-Trap Revision
 
-## Assignment Priority + Complete Lecture Coverage
-
-**Week:** 11  
-**Exam type:** MCQ/MSQ  
-**Assignment:** 15 questions, 15 marks  
-**Lecture PDF:** 132 pages
-
-> **Study rule:** Assignment questions are the highest-priority revision source. They are placed first. After the assignment, all major lecture topics are covered so that questions outside the assignment are also prepared.
+> **Priority rule:** Assignment questions come first. After that, cover the complete Week-11 lecture material. The notes below are grounded in the uploaded `Assignment_11.pdf` and `Week-11.pdf`, with cumulative mock-exam cross-checks where directly relevant.
+>
+> **No images generated or added.**
 
 ---
 
-# 1. WEEK 11 ULTRA-QUICK REVISION
+# PART A — ASSIGNMENT 11: HIGHEST PRIORITY
 
-## Smart Grid
-- Traditional grid: centralized generation, **one-directional energy flow**, manual monitoring/restoration.
-- Smart Grid: modernized grid with **bidirectional energy flow + two-way communication/control**.
-- Key benefits: efficiency, faster restoration, lower peak demand, renewable integration, improved security.
-- Smart-home interface: **smart meter**.
-- Time-of-Use pricing → shift consumption to **off-peak** hours.
-- Net metering → bill depends on **energy inflow + energy outflow**.
-- PMU → samples voltage/current; multiple PMUs form a phasor network analyzed by SCADA.
-- Distribution intelligence → outage detection, automated switching/restoration, real/reactive power optimization.
-- Gateway → connects nearby smart meters to **DAUs**.
-- DoS → attacks **availability**.
+## Answer Lock
 
-## IIoT
-- IIoT = IoT applied to industry.
-- Links automation with **enterprise, planning and product lifecycle**.
-- Uses ML, Big Data, M2M and automation.
-- **Wrap & re-use**, not rip & replace.
-- Industry 4.0 → IIoT.
-- Key design objectives: Energy, Latency, Throughput, Scalability, Topology, Safety/Security.
-- IIoT focuses on industrial efficiency, safety and security; M2M is extensive.
-- Applications: manufacturing, healthcare, transportation/logistics, mining, firefighting.
-- Mining → air quality, poisonous gases, oxygen level.
-- Transportation → DSRC for V2V/V2R.
-- Challenges: identification, huge data, integration of existing infrastructure, storage, safety, standardization, privacy/security.
+| Q | Answer | Must remember |
+|---|---|---|
+| 1 | **C** | Smart grid → bidirectional energy + two-way communication/control |
+| 2 | **B** | Smart meter → interface between consumer and energy service provider |
+| 3 | **A** | Time-of-Use → consume during off-peak hours |
+| 4 | **D** | Net metering → energy inflow + energy outflow |
+| 5 | **A** | PMU → samples voltage/current |
+| 6 | **B** | Distribution intelligence → outage detection + automatic power-flow restoration |
+| 7 | **A** | Gateway → nearby smart meters ↔ DAU |
+| 8 | **D** | Availability attack → DoS |
+| 9 | **A** | IIoT → IoT application in industries linking automation, enterprise, planning, product lifecycle |
+| 10 | **C** | IIoT existing-system strategy → Wrap and re-use |
+| 11 | **D** | V2V/V2R enabling technology → DSRC |
+| 12 | **A** | Mining WSN → air quality + poisonous gases + oxygen level |
+| 13 | **C** | Bias/noise/abnormality → Veracity |
+| 14 | **D** | Redundancy mitigation → detection + filtering + compression |
+| 15 | **A** | HDFS actual data blocks → Datanode |
 
-## Big Data + Data Handling
-- Data flow: **Generation → Acquisition → Storage → Analysis**
-- Big Data = **7 Vs**:
-  - Volume
-  - Velocity
-  - Variety
-  - Variability
-  - Veracity
-  - Visualization
-  - Value
-- Veracity → **bias, noise, abnormality**.
-- Structured data → organized, often relational/SQL.
-- Unstructured data → no predefined model.
-- Pre-processing:
-  - Integration
-  - Cleaning
-  - Redundancy mitigation
-- Redundancy mitigation → detection + filtering + compression to remove repeated data.
-- HDFS:
-  - **Namenode = metadata**
-  - **Datanode = actual data blocks**
-  - Files divided into blocks and replicated.
-- Hadoop building blocks:
-  - Hadoop Common
-  - HDFS
-  - MapReduce
-  - YARN
+The assignment contains 15 MCQ/MSQ questions and gives these answer mappings explicitly. fileciteturn113file0L18-L59 fileciteturn113file0L66-L165 fileciteturn113file0L172-L234 fileciteturn113file0L238-L276 fileciteturn113file0L282-L342
 
 ---
 
-# 2. ASSIGNMENT-FIRST: ALL 15 QUESTIONS
-
-## Q1. Which feature distinguishes a smart grid from a traditional electrical grid?
+# Q1. Smart Grid vs Traditional Grid
 
 **Answer: C — It enables bidirectional flows of energy with two-way communication and control.**
 
-### Explanation
-The NIST definition used in the lecture describes the Smart Grid as a modernized grid supporting:
-- bidirectional energy flows,
-- two-way communication,
-- two-way control,
-- new functionalities and applications.
+### Traditional electrical grid
+- Centralized power plants.
+- Energy distribution is one-directional.
+- Monitoring and restoration are manual.
+- Limited communication/control.
 
-Traditional grids are characterized by:
-- centralized generation,
-- one-directional distribution,
-- manual monitoring/restoration.
+### Smart grid
+- Modernized electrical grid.
+- Bidirectional energy flow.
+- Two-way communication.
+- Two-way control.
+- Cyber-physical system.
+- Designed for efficient, reliable and secure electricity delivery.
+
+The lecture/NIST description explicitly emphasizes bidirectional energy flow and two-way communication/control. fileciteturn113file1L377-L417
 
 ### Exam trap
-Do **not** select:
-- one-directional energy,
-- manual restoration,
-- only centralized generation.
-
-**Memory:** `Smart Grid = Bidirectional Energy + Two-Way Communication/Control`
-
-**Lecture:** Smart Grid Part I, Slide 3.
+**Traditional = one-way energy + manual monitoring.**  
+**Smart = two-way communication/control + bidirectional energy.**
 
 ---
 
-## Q2. What is the role of a smart meter in a smart home?
+# Q2. Smart Meter
 
 **Answer: B — It provides the Smart Grid interface between the consumer and the energy service provider.**
 
-### Explanation
-Smart meters:
-- operate digitally,
-- enable automated information exchange,
-- provide usage information,
-- connect the consumer side to the energy service provider,
-- can help reduce energy costs.
+A smart meter:
+- Operates digitally.
+- Provides the interface between consumer and energy service provider.
+- Supports automated information exchange.
+- Helps consumers understand electricity usage.
+- Sends usage information toward the service provider.
+
+Source: fileciteturn113file1L621-L640
 
 ### Trap
-A smart meter is **not** the same thing as:
-- a renewable energy generator,
-- a home energy management system,
-- a simple one-way meter.
-
-**Memory:** `Smart Meter = Consumer ↔ Energy Service Provider interface`
-
-**Lecture:** Smart Grid Part I, Slide 14.
+A smart meter is **not**:
+- a renewable-energy generator,
+- a replacement for the home energy management system,
+- merely a one-way meter.
 
 ---
 
-## Q3. Under Time-of-Use pricing, when are consumers encouraged to operate smart appliances?
+# Q3. Time-of-Use Pricing
 
 **Answer: A — During off-peak hours.**
 
-### Explanation
-Energy demand changes throughout the day.
+Time-of-Use pricing:
+- Energy demand/load changes during the day.
+- Consumers are encouraged to shift consumption to off-peak periods.
+- Off-peak periods have lower grid load and lower energy price.
+- Smart appliances can be scheduled automatically by a home energy management system.
 
-During on-peak periods:
-- demand is high,
-- distribution can become less efficient,
-- more expensive/non-renewable generation may be needed.
-
-Time-of-Use pricing encourages consumers to shift appliance operation to:
-- lower-load periods,
-- lower-price periods.
+Source: fileciteturn113file1L731-L778
 
 ### Memory
-`TOU → Off-Peak → Lower load + Lower cost`
-
-**Lecture:** Smart Grid Part I, Slide 20.
+**TOU → shift load → off-peak → lower cost.**
 
 ---
 
-## Q4. In net metering, what two energy flows determine the consumer's final bill?
+# Q4. Net Metering
 
 **Answer: D — Energy inflow from the grid and energy outflow from the consumer to the grid.**
 
-### Explanation
-With home generation such as rooftop solar, a consumer may:
-- consume electricity from the grid,
-- send excess generated electricity back to the grid.
+Final bill depends on:
+1. **In-flow**: grid → consumer
+2. **Out-flow**: consumer → grid
 
-The final net-metering value considers both directions.
+A consumer with home generation can supply surplus electricity back to the grid.
 
-### Memory
-`Net metering = Grid → Home + Home → Grid`
+Source: fileciteturn113file1L780-L803
 
-**Lecture:** Smart Grid Part I, Slide 21.
+### Trap
+Do not reduce net metering to:
+- battery energy only,
+- centralized generation only,
+- reactive power only.
 
 ---
 
-## Q5. Which device samples voltage and current for monitoring the transmission system?
+# Q5. PMU
 
 **Answer: A — Phasor Measurement Unit (PMU).**
 
-### Explanation
-A PMU:
-- samples voltage and current at its installed location,
-- provides a snapshot of the active power system,
-- can provide dynamic information at higher sampling rates,
-- helps identify possible blackouts in advance.
+PMU:
+- Samples voltage and current.
+- Operates at its installed location.
+- Produces a snapshot of the active power system.
+- Higher sampling rate gives a more dynamic view.
+- Multiple PMUs form a phasor network.
+- Centralized SCADA can analyze the collected information.
 
-Multiple PMUs form a:
-- **phasor network**.
-
-The collected information can be analyzed by:
-- centralized **SCADA**.
+Source: fileciteturn113file1L877-L898
 
 ### Memory
-`PMU → Voltage + Current → Phasor Network → SCADA`
-
-**Lecture:** Smart Grid Part II, Slide 3.
+**PMU → voltage + current + phasor network.**
 
 ---
 
-## Q6. Which is a function of distribution intelligence?
+# Q6. Distribution Intelligence
 
 **Answer: B — Identifying the source of a power outage and supporting automatic power-flow restoration.**
 
-### Explanation
-Distribution intelligence equips the distribution system with smart IoT devices.
+Distribution intelligence:
+- Uses smart IoT devices and smart meters.
+- Identifies outage source.
+- Supports automated switching.
+- Optimizes real and reactive power.
+- Protects/controls feeder lines.
 
-Together with smart meters it can:
-- identify outage sources,
-- perform automated switching,
-- restore power flow,
-- optimize real and reactive power,
-- protect/control feeder lines.
+Source: fileciteturn113file1L923-L945
 
 ### Trap
-Distribution intelligence is about **automation and intelligent control**, not restricting communication.
-
-**Memory:** `Distribution Intelligence → Detect + Switch + Restore + Optimize`
-
-**Lecture:** Smart Grid Part II, Slide 5.
+Distribution intelligence is about **automation and restoration**, not removing smart meters or forcing one-way communication.
 
 ---
 
-## Q7. What does a smart-grid gateway connect?
+# Q7. Smart Grid Gateway
 
 **Answer: A — Closely located smart meters to Data Aggregator Units (DAUs).**
 
-### Explanation
-A gateway:
-- connects a group of nearby smart meters,
-- supports two-way communication,
-- acts as the communication link between meters and DAUs.
+The gateway:
+- Connects a group of nearby smart meters.
+- Provides the communication link between smart meters and DAU.
+- Supports two-way communication.
+- Can communicate using Wi-Fi/IEEE 802.11 according to the lecture.
 
-### Memory
-`Smart Meters → Gateway → DAU`
+Source: fileciteturn113file1L1062-L1085
 
-**Lecture:** Smart Grid Part II, Slide 11.
+### Architecture memory
+
+**Home appliances → Smart meter → Gateway → DAU → MDMS / operation center**
 
 ---
 
-## Q8. Which attack compromises availability by making smart-grid components/information inaccessible?
+# Q8. Availability Attack
 
 **Answer: D — Denial of Service (DoS) attack.**
 
-### Explanation
-Availability means that:
-- grid components,
-- transmitted information,
-- collected information
+Availability means:
+- Grid components and transmitted/collected information remain accessible when needed.
 
-remain accessible when required.
+A DoS attack:
+- Makes components/information unavailable.
+- Can block key signals.
+- Can affect grid stability and observability.
 
-A DoS attack attempts to:
-- block key signals,
-- make services unavailable,
-- affect grid stability and observability.
+Source: fileciteturn113file0L172-L189 and fileciteturn113file1L1195-L1212
 
 ### Security mapping
-- Integrity → data manipulation/injection
-- Availability → **DoS**
-- Time synchronization → false timing/phasor visualization
-- Replay → repeated previously observed data
 
-**Memory:** `Availability attack = DoS`
-
-**Lecture:** Smart Grid Part II, Slide 17.
+| Security property | Lecture attack/example |
+|---|---|
+| **Integrity** | Data Injection Attack, Time Synchronization Attack |
+| **Availability** | **DoS** |
+| **Dynamic system** | Replay / Dynamic Data Injection |
+| **Physical** | Physical attacks |
+| **Coordinated** | Cascading/system-wide attacks |
 
 ---
 
-## Q9. How is IIoT described in the lecture?
+# Q9. Industrial Internet of Things (IIoT)
 
 **Answer: A — An application of IoT in industries that links automation systems with enterprise, planning, and product lifecycle.**
 
-### Explanation
-IIoT modifies/extends existing industrial systems using IoT ideas.
+IIoT:
+- Applies IoT to industries.
+- Modifies existing industrial systems.
+- Links automation with:
+  - Enterprise
+  - Planning
+  - Product lifecycle
+- Includes machine learning, big data, M2M interaction and automation.
 
-It connects:
-- industrial automation,
-- enterprise systems,
-- planning,
-- product lifecycle.
+Source: fileciteturn113file0L192-L210 and fileciteturn115file0L218-L234
 
-IIoT includes:
-- machine learning,
-- Big Data,
-- machine-to-machine interaction,
-- automation.
-
-### Memory
-`IIoT = IoT + Industry + Automation + Enterprise`
-
-**Lecture:** IIoT Part I, Slide 3.
+### Important
+**IIoT ≠ all of IoT.**  
+IIoT is the industrial application/context of IoT.
 
 ---
 
-## Q10. Which approach is associated with IIoT for adapting existing industrial systems?
+# Q10. Wrap and Re-use
 
 **Answer: C — Wrap and re-use.**
 
-### Explanation
-The lecture emphasizes:
-- **wrap & re-use**
+The lecture explicitly contrasts:
 
-rather than:
-- rip & replace.
+- **Wrap & re-use** → integrate new IoT technologies with existing industrial assets.
+- **Rip & replace** → discard/replace existing systems.
 
-This means existing industrial assets can be integrated into IIoT systems instead of being discarded and completely replaced.
+IIoT favors the first approach because existing industrial systems are valuable and should be integrated rather than completely discarded.
 
-### Memory
-`IIoT → Wrap & Re-use`
+Source: fileciteturn115file0L282-L302
 
-**Lecture:** IIoT Part I, Slide 6.
+### Mock-exam cross-check
+A cumulative mock asks the same concept and identifies integration of new technologies such as sensors with existing systems, minimizing disruption/cost, as the purpose of **wrap and reuse**. fileciteturn116file7L757-L763
 
 ---
 
-## Q11. Which technology is the key enabler for V2V and V2R communication in Intelligent Transportation Systems?
+# Q11. DSRC
 
 **Answer: D — Dedicated Short-Range Communications (DSRC).**
 
-### Explanation
-The IIoT transportation section states that connected-vehicle systems support:
-- vehicle-to-sensor,
-- vehicle-to-vehicle,
-- vehicle-to-internet,
-- vehicle-to-road infrastructure.
+DSRC is identified as the key enabling technology for:
+- Vehicle-to-vehicle communication.
+- Vehicle-to-road/infrastructure communication.
+- Connected transportation / Intelligent Transportation Systems.
 
-For V2V and V2R:
-- **DSRC** is the key enabling technology.
+Source: fileciteturn113file0L238-L255
 
-### Trap
-Do not confuse DSRC with:
-- SCADA,
-- HDFS,
-- power-line communication.
-
-**Memory:** `V2V + V2R → DSRC`
-
-**Lecture:** IIoT Part II, Slide 5.
+### Memory
+**V2V + V2R → DSRC**
 
 ---
 
-## Q12. In IIoT-based mining, what environmental parameters can be monitored using wireless sensor networks?
+# Q12. IIoT Mining
 
 **Answer: A — Air quality, poisonous gases, and oxygen level inside mines.**
 
-### Explanation
-Mining safety systems can use:
-- RFID,
-- Wi-Fi,
-- wireless technologies,
-- sensor networks
+Mining applications use:
+- RFID
+- Wi-Fi
+- Other wireless technologies
+- Wireless sensor networks
 
-for:
-- early disaster warning,
-- air-quality monitoring,
-- poisonous-gas detection,
-- oxygen-level monitoring.
+For:
+- Early warning of disasters.
+- Air-quality monitoring.
+- Poisonous-gas detection.
+- Oxygen-level monitoring.
 
-### Memory
-`Mining safety → Air + Poisonous Gas + Oxygen`
-
-**Lecture:** IIoT Part II, Slide 7.
+Source: fileciteturn113file0L259-L276
 
 ---
 
-## Q13. Which Big Data characteristic refers to biases, noise and abnormality?
+# Q13. Veracity
 
 **Answer: C — Veracity.**
 
-### Explanation
-**Veracity** concerns:
-- bias,
-- noise,
-- abnormality,
-- trustworthiness/understandability of data.
+Among the 7 Vs of Big Data, **Veracity** refers to:
+- Bias
+- Noise
+- Abnormality
+- Trustworthiness/understandability concerns in data
 
-It matters especially for:
-- automated decision making,
-- machine-learning systems.
+It is particularly important for:
+- Automated decision making.
+- Machine-learning systems.
+
+Source: fileciteturn114file0L990-L1010
 
 ### Trap
-Do not confuse:
-- Volume → quantity,
-- Velocity → speed,
-- Variety → forms/types,
-- Variability → changing meaning/context,
-- Veracity → data quality/truth characteristics.
-
-**Memory:** `Veracity = Bias + Noise + Abnormality`
-
-**Lecture:** Data Handling and Analytics Part I, Slide 9.
+- **Volume** = amount.
+- **Velocity** = speed.
+- **Variety** = types/formats.
+- **Variability** = changing meaning/context.
+- **Veracity** = bias/noise/abnormality.
+- **Visualization** = graphical presentation.
+- **Value** = useful business information.
 
 ---
 
-## Q14. What is the purpose of redundancy mitigation during data pre-processing?
+# Q14. Redundancy Mitigation
 
 **Answer: D — To eliminate repeated data through detection, filtering, and compression.**
 
-### Explanation
-IoT datasets may contain:
-- noise,
-- redundancy,
-- inconsistency.
+Data preprocessing deals with:
+- Noise
+- Redundancy
+- Inconsistency
 
-Pre-processing includes:
+Main relational-data preprocessing steps:
 1. Integration
 2. Cleaning
 3. Redundancy mitigation
 
 Redundancy mitigation:
-- detects repetition,
-- filters repeated data,
-- compresses data,
-- reduces unnecessary transmission/storage.
+- Detect repeated data.
+- Filter it.
+- Compress data.
+- Avoid unnecessary transmission.
 
-### Memory
-`Redundancy Mitigation = Detect + Filter + Compress`
-
-**Lecture:** Data Handling and Analytics Part I, Slide 18.
+Source: fileciteturn114file1L1216-L1240
 
 ---
 
-## Q15. In HDFS, which node stores the actual data blocks?
+# Q15. HDFS
 
 **Answer: A — Datanode.**
 
-### Explanation
-**Namenode**
-- stores filesystem metadata,
-- maps blocks to Datanodes,
-- manages filesystem namespace.
+### Namenode
+- Centralized/master role.
+- Stores filesystem metadata.
+- Maintains mappings between blocks and datanodes.
 
-**Datanode**
-- stores actual data blocks,
-- participates in replication/rebalancing,
-- reports block information to the Namenode.
+### Datanode
+- Distributed/slave role.
+- Stores actual data.
+- Handles block creation/deletion/replication as instructed.
+- Communicates block information to Namenode.
 
-Files are:
-- divided into blocks,
-- replicated across Datanodes.
+### HDFS
+- Files divided into blocks.
+- Blocks replicated across Datanodes.
 
-### Memory
-`Name = Metadata`  
-`Data = Datanode`
+Source: fileciteturn114file1L1327-L1367
 
-**Lecture:** Data Handling and Analytics Part I, Slide 23.
-
----
-
-# 3. SMART GRID — COMPLETE LECTURE COVERAGE
-
-## 3.1 Traditional Electrical Grid
-
-Traditional grid characteristics:
-- energy generation at centralized power plants,
-- one-directional energy distribution,
-- power flows from plant → homes/industries,
-- monitoring and restoration are largely manual,
-- limited control capabilities,
-- limited information about energy flow.
-
-### Key weakness
-The traditional model is mostly:
-
-```text
-Central Generation
-       ↓
-Transmission
-       ↓
-Distribution
-       ↓
-Consumers
-```
+### Exam lock
+**Namenode = metadata.**  
+**Datanode = actual data.**
 
 ---
 
-# 4. WHAT IS A SMART GRID?
+# PART B — COMPLETE WEEK-11 LECTURE NOTES
 
-A Smart Grid is conceptualized as a nationwide network using information technology to deliver electricity:
-- efficiently,
-- reliably,
-- securely.
+# 1. Smart Grid
 
-Other names used in the lecture:
-- Electricity with a brain
-- Energy Internet
-- Electronet
+## 1.1 Traditional Electrical Grid
 
-### NIST definition — exam concept
-A smart grid is a modernized grid that enables:
-- **bidirectional flows of energy**
-- **two-way communication and control**
+The lecture describes the traditional grid as:
 
-### Core contrast
+- Energy generation at centralized power plants.
+- One-directional energy distribution:
+  **Power plant → homes/industries**
+- Monitoring and restoration performed manually.
+- Limited control and information about energy flow.
 
-| Traditional Grid | Smart Grid |
-|---|---|
-| Centralized generation | Distributed generation also integrated |
-| One-directional energy | Bidirectional energy |
-| Manual monitoring/restoration | Intelligent/automated monitoring/restoration |
-| Limited information | Rich real-time information |
-| Limited control | Two-way control |
-| Weak integration of distributed resources | Better renewable/microgrid integration |
+Source: fileciteturn113file1L377-L400
 
 ---
 
-# 5. SMART GRID BENEFITS
+# 2. What is a Smart Grid?
+
+A smart grid is conceptualized as a planned network using information technology to deliver electricity:
+
+- Efficiently
+- Reliably
+- Securely
+
+Other names in the lecture:
+- **Electricity with a brain**
+- **Energy internet**
+- **Electronet**
+
+NIST definition in the lecture:
+- Modernized grid.
+- Bidirectional energy flows.
+- Two-way communication and control.
+- Enables new functionalities and applications.
+
+Source: fileciteturn113file1L402-L419
+
+---
+
+# 3. Benefits of Smart Grid
+
+## General benefits
+
+- More efficient electricity transmission.
+- Faster restoration after disturbances.
+- Lower utility operation/management cost.
+- Lower power cost for consumers.
+- Reduced peak demand.
+- Better integration of renewable energy.
+- Better integration of customer-owned generation.
+- Improved security.
+
+Source: fileciteturn113file1L425-L445
+
+---
+
+# 4. Consumer Benefits
+
+Consumers get:
+
+- Real-time information about energy usage.
+- Support for electric cars.
+- Smart-appliance charging.
+- Scheduling during off-peak periods.
+- Different pricing options.
+
+Source: fileciteturn113file1L450-L466
+
+---
+
+# 5. Stakeholder Benefits
+
+Stakeholders benefit through:
+
+- Increased grid reliability.
+- Fewer blackouts/brownouts.
+- Infrastructure for monitoring, analysis and decision-making.
+- Better resiliency.
+- Reduced delivery inefficiencies.
+- Integration of wind/solar.
+- Better distributed-energy-resource management.
+- Micro-grid and storage management.
+
+Source: fileciteturn113file1L468-L488
+
+---
+
+# 6. Properties of Smart Grid
+
+The lecture highlights:
+
+## Consumer participation
+- Real-time consumption monitoring.
+- Smart-appliance control.
+- Building automation.
+
+## Real-time pricing
+
+## Distributed generation
+- Renewable resources.
+- Micro-grid integration.
+
+## Power-system efficiency
+- Power monitoring.
+- Asset management.
+- Optimal utilization.
+- Distribution automation/protection.
+
+## Power quality
+- Self-healing.
+- Frequency monitoring/control.
+- Load forecasting.
+- Disturbance anticipation.
+
+Source: fileciteturn113file1L490-L530
+
+---
+
+# 7. Smart Grid Components
 
 The lecture lists:
-- more efficient electricity transmission,
-- quicker restoration after disturbances,
-- lower utility operation/management costs,
-- potentially lower consumer power costs,
-- reduced peak demand,
-- increased renewable integration,
-- better integration of customer-owned generation,
-- improved security.
 
-### Customer benefits
-- real-time usage information,
-- charging of EVs and smart devices,
-- scheduling appliances for off-peak periods,
-- different pricing options.
-
-### Stakeholder benefits
-- improved grid reliability,
-- fewer blackouts/brownouts,
-- monitoring/analysis/decision infrastructure,
-- better resiliency,
-- lower delivery inefficiency,
-- integration of wind and solar,
-- better distributed-energy-resource management,
-- microgrid and storage management.
-
----
-
-# 6. SMART GRID PROPERTIES
-
-## Consumer Participation
-- real-time consumption monitoring,
-- smart-appliance control,
-- building automation.
-
-## Real-Time Pricing
-Energy prices can change according to grid conditions.
-
-## Distributed Generation
-- renewable integration,
-- microgrid integration.
-
-## Power-System Efficiency
-- power monitoring,
-- asset management,
-- optimal utilization,
-- distribution automation,
-- protection.
-
-## Power Quality / Self-Healing
-- frequency monitoring/control,
-- load forecasting,
-- disturbance anticipation,
-- self-healing.
-
-### Memory
-`Consumer + Pricing + Distributed Generation + Efficiency + Quality/Self-Healing`
-
----
-
-# 7. SMART GRID ARCHITECTURE / DOMAINS
-
-The lecture includes a basic Smart Grid architecture and NIST Smart Grid domains.
-
-Important components shown in the course:
 - Smart Home
 - Renewable Energy
 - Consumer Engagement
@@ -567,1320 +482,1389 @@ Important components shown in the course:
 - Distribution Intelligence
 - Plug-in Electric Vehicle
 
-### Exam focus
-Questions are more likely to test the role of individual components than reproduce the entire architecture.
+Source: fileciteturn113file1L559-L575
 
 ---
 
-# 8. SMART HOME IN SMART GRID
+# 8. Smart Home in Smart Grid
 
-A smart home uses smart-grid technologies to:
-- save energy,
-- find lower rates,
-- support efficient grid operation.
+Smart homes use smart-grid technologies to:
 
-The interaction between:
-- grid operators,
-- utilities,
-- consumers
+- Save energy.
+- Seek lower energy rates.
+- Help the grid operate smoothly.
 
-helps the smart grid function efficiently.
+Interactive relationships exist between:
+- Grid operators
+- Utilities
+- Consumers
 
-### Main smart-home elements
+Computerized controls can:
+- Reduce consumption during high-demand periods.
+- Shift consumption to lower-cost periods.
+
+Source: fileciteturn113file1L577-L600
+
+---
+
+# 9. Smart Home Components
+
+The lecture identifies:
+
 1. Smart meters
-2. Home Energy Management Systems (HEMS)
+2. Home energy management systems
 3. Smart appliances
 4. Home power generation
 
----
-
-# 9. SMART METERS
-
-A smart meter:
-- provides the Smart Grid interface between consumer and energy service provider,
-- operates digitally,
-- supports automated/complex information transfer,
-- helps reduce consumer energy costs,
-- provides electricity-use information to providers.
-
-### Assignment connection
-Q2 → **Smart meter = interface**
+Source: fileciteturn113file1L602-L619
 
 ---
 
-# 10. HOME ENERGY MANAGEMENT SYSTEM
+# 10. Smart Meter
+
+Smart meters:
+- Interface consumer ↔ energy service provider.
+- Operate digitally.
+- Enable automated information transfer.
+- Reduce consumer energy cost.
+- Provide usage information to providers.
+
+### Exam trigger
+**Smart meter = Smart Grid interface.**
+
+---
+
+# 11. Home Energy Management System
 
 HEMS allows consumers to:
-- track energy use,
-- monitor real-time information,
-- monitor price signals,
-- automatically schedule power use when prices are low,
-- avoid peak rates,
-- support load balancing,
-- help prevent blackouts.
 
-### Core idea
-```text
-Usage + Price Information
-          ↓
-HEMS
-          ↓
-Schedule Appliances
-          ↓
-Lower Cost + Better Load Balance
-```
+- Track energy usage.
+- Monitor real-time information.
+- Monitor price signals.
+- Automatically schedule power use when prices are low.
+- Avoid peak-demand rates.
+- Help prevent blackouts.
+- Balance energy load.
+
+The provider may offer financial incentives.
+
+Source: fileciteturn113file1L642-L662
 
 ---
 
-# 11. SMART APPLIANCES
+# 12. Smart Appliances
 
-Smart appliances are:
-- automated,
-- robust,
-- responsive to energy-provider signals.
+Smart appliances:
+- Are automated/robust.
+- Respond to provider signals.
+- Avoid peak-demand periods.
+- Include consumer override controls.
 
-They can avoid operation during peak demand.
+If the consumer overrides automated operation, the appliance can operate according to consumer need, but minimum cost is not guaranteed.
 
-### Consumer override
-Consumers can override automated controls.
-
-**Important trap:** Override means the user can choose operation; it does **not** guarantee minimum cost.
+Source: fileciteturn113file1L664-L680
 
 ---
 
-# 12. HOME POWER GENERATION
+# 13. Home Power Generation
 
 Examples:
-- rooftop solar,
-- small wind turbines,
-- small hydropower,
-- home fuel-cell systems.
+- Rooftop solar.
+- Small wind turbines.
+- Small hydropower.
+- Home fuel cells.
 
-Surplus energy can be:
-- supplied back to the grid.
+Surplus energy can be fed back to the grid.
 
-### Islanding
-During an islanding condition, a home may obtain power from:
-- distributed/home generation resources.
+During islanding, a home may obtain power from its distributed resources.
 
----
-
-# 13. RENEWABLE ENERGY
-
-Renewable energy is derived from natural processes that are continually replenished.
-
-Examples mentioned:
-- solar,
-- wind,
-- ocean,
-- hydropower,
-- biomass,
-- geothermal,
-- biofuels,
-- renewable hydrogen.
-
-### Smart-grid relevance
-Consumers with renewable generation can:
-- reduce dependence on the main grid,
-- supply surplus energy,
-- potentially earn revenue.
+Source: fileciteturn113file1L682-L705
 
 ---
 
-# 14. CONSUMER ENGAGEMENT
+# 14. Renewable Energy
 
-Three major mechanisms:
-1. Time-of-Use pricing
-2. Net metering
-3. Financial incentives
+The lecture describes renewable energy as energy derived from natural processes that are constantly replenished.
 
----
-
-# 15. TIME-OF-USE PRICING
-
-Consumers are encouraged to:
-- operate appliances during off-peak hours.
-
-### Why?
-Off-peak:
-- lower grid load,
-- lower energy price,
-- better efficiency.
-
-### On-peak problem
-High demand can cause:
-- less-efficient energy distribution,
-- more pollution when additional non-renewable resources are used.
-
-### Memory
-`TOU = shift load from peak → off-peak`
-
----
-
-# 16. NET METERING
-
-Net metering requires:
-- smart meters.
-
-Consumers may receive higher compensation for excess generation supplied during high-demand periods.
-
-Final bill considers:
-- **energy inflow** from grid,
-- **energy outflow** from consumer to grid.
-
-### Memory
-`Net = Inflow − Outflow` conceptually, depending on billing scheme.
-
----
-
-# 17. FINANCIAL INCENTIVES
-
-Providers may reward:
-- shifting appliance operation to off-peak hours,
-- using stored battery energy,
-- using PHEV/EV batteries to support the grid.
-
-This benefits:
-- consumers,
-- service providers,
-- overall load balancing.
-
----
-
-# 18. OPERATION CENTERS
-
-## Traditional operation-center problems
-- tries to match generation and use,
-- limited control,
-- limited information,
-- difficulty detecting oscillations,
-- risk of widespread blackout.
-
-## Smart-grid operation center
-- information/control for transmission,
-- improved reliability,
-- reduced widespread-blackout risk.
-
----
-
-# 19. PMU — PHASOR MEASUREMENT UNIT
-
-PMU:
-- samples voltage and current at fixed sampling rates,
-- gives a snapshot of the active power system,
-- higher sampling rates reveal dynamic behavior,
-- can help identify blackout possibilities.
-
-Multiple PMUs:
-→ **phasor network**
-
-Phasor network information:
-→ centralized **SCADA**.
-
-### Must memorize
-`PMU → voltage/current`  
-`Many PMUs → phasor network`  
-`Phasor network → SCADA`
-
----
-
-# 20. SELF-HEALING GRID
-
-Self-healing includes:
-- damping unwanted power oscillations,
-- avoiding unwanted current flows,
-- rerouting power,
-- avoiding transmission-line overload.
-
-This is part of:
-- distribution intelligence.
-
----
-
-# 21. DEMAND-SIDE ENERGY DISTRIBUTION
-
-Energy supply can be adjusted according to:
-- consumer requirements,
-- current energy price,
-- available supply.
-
-The lecture also mentions:
-- energy distributors can form coalitions,
-- coalitions can serve energy requirements in a geographic area.
-
----
-
-# 22. DISTRIBUTION INTELLIGENCE
-
-Distribution intelligence means:
-> energy distribution systems equipped with smart IoT devices.
-
-Together with smart meters, it can:
-- identify outage source,
-- automate switching,
-- restore power flow,
-- optimize real/reactive power,
-- protect/control feeder lines.
-
-### Reactive power
-The lecture describes devices that store/release energy and can cause increased electrical current without consuming real power.
-
-### Memory
-`Distribution Intelligence = Smart Devices + Smart Meters + Automated Distribution`
-
----
-
-# 23. PLUG-IN ELECTRIC VEHICLES
-
-Smart-grid infrastructure supports efficient PEV use.
+Examples:
+- Solar
+- Wind
+- Ocean
+- Hydropower
+- Biomass
+- Geothermal
+- Biofuels
+- Hydrogen derived from renewable resources
 
 Benefits:
-- reduced oil dependence,
-- no direct pollution while running on electricity.
+- Reduced environmental pollution.
+- Reduced dependence on main/micro-grid.
+- Surplus energy can be supplied to grid.
+- Consumers can potentially profit from surplus generation.
 
-PEVs:
-- charge from the grid,
-- are encouraged to charge during off-peak hours,
-- can potentially discharge energy to the grid during peak hours,
-- may receive incentives for supplying energy.
-
-### Key concept
-`PEV = Consumer load + Potential distributed energy source`
+Source: fileciteturn113file1L707-L729
 
 ---
 
-# 24. SMART GRID COMMUNICATION
+# 15. Consumer Engagement
+
+Three important mechanisms:
+
+1. **Time-of-Use pricing**
+2. **Net metering**
+3. **Financial incentives**
+
+Source: fileciteturn113file1L731-L754
+
+---
+
+# 16. Time-of-Use Pricing
+
+- Grid load is dynamic.
+- On-peak periods can have high demand.
+- High demand can cause less-efficient distribution.
+- Non-renewable sources may be used to satisfy peak demand.
+- Consumers are encouraged to move consumption to off-peak hours.
+
+### Exam lock
+**TOU → off-peak consumption.**
+
+---
+
+# 17. Net Metering
+
+Net metering is feasible with smart meters.
+
+- Consumer can supply excess generated energy to grid.
+- Price can be higher when supplying during on-peak periods.
+- Price is lower during off-peak periods.
+- Final bill depends on:
+  - Grid → consumer energy inflow
+  - Consumer → grid energy outflow
+
+Source: fileciteturn113file1L780-L803
+
+---
+
+# 18. Financial Incentives
+
+Energy service providers may incentivize:
+
+- Shifting appliance operation to off-peak hours.
+- Using stored battery energy.
+- Using stored energy in PHEVs.
+- Participation in smart-grid programs.
+
+Benefits:
+- Consumer savings.
+- Efficient distribution.
+- Better load balancing.
+
+Source: fileciteturn113file1L805-L828
+
+---
+
+# 19. Operation Centers
+
+## Traditional operation-center drawbacks
+
+- Limited control.
+- Limited energy-flow information.
+- Difficulty detecting oscillations.
+- Voltage problems can destabilize the grid.
+- Potential for widespread blackout.
+
+## Smart-grid operation center
+
+- Provides information and control.
+- Improves reliability.
+- Reduces widespread-blackout possibility.
+
+Source: fileciteturn113file1L852-L875
+
+---
+
+# 20. PMU and Phasor Network
+
+PMU:
+- Samples voltage/current at fixed sample rate.
+- Provides system snapshot.
+- Higher sampling rate gives dynamic scenario.
+- Helps identify possible blackout in advance.
+
+Multiple PMUs:
+→ **Phasor network**
+
+Phasor network information:
+→ analyzed by centralized **SCADA**.
+
+Source: fileciteturn113file1L877-L898
+
+---
+
+# 21. Self-Healing Grid
+
+Self-healing functions include:
+- Damping unwanted power oscillations.
+- Avoiding unwanted current flows.
+- Rerouting power flows.
+- Avoiding overloaded transmission lines.
+
+This is part of **distribution intelligence**.
+
+Source: fileciteturn113file1L900-L921
+
+---
+
+# 22. Demand-Side Energy Distribution
+
+Energy supply is based on consumer requirements.
+
+Consumers pay according to:
+- Energy consumed.
+- Price decided by service provider at that time.
+
+Energy distributors can form coalitions to serve requirements in geographic areas.
+
+Source: fileciteturn113file1L911-L921
+
+---
+
+# 23. Distribution Intelligence
+
+Definition:
+> Energy distribution systems equipped with smart IoT devices.
+
+Functions:
+- Identify outage source.
+- Automatic power-flow restoration.
+- Automated switching.
+- Optimize real/reactive power.
+- Protect/control feeder lines.
+
+### Reactive power
+Lecture describes reactive-power devices as devices that:
+- Store and release energy.
+- Cause increased electrical currents without consuming real power.
+
+Source: fileciteturn113file1L923-L945
+
+---
+
+# 24. Plug-in Electric Vehicles (PEVs)
+
+Smart grids enable efficient PEV use.
+
+Benefits:
+- Reduce oil dependency.
+- No pollution while running on electricity.
+- Can be charged during off-peak hours.
+- Can act as an energy source during on-peak hours.
+- Can discharge energy to grid and receive incentives.
+
+Source: fileciteturn113file1L947-L970
+
+### Exam idea
+PEV can be both:
+- **Energy consumer**
+- **Potential energy source**
+
+---
+
+# 25. Smart Grid Communication
 
 Important components:
+
 - Smart home appliances
 - Smart meters
 - Gateways
 - Data Aggregator Units (DAUs)
 - Meter Data Management Systems (MDMSs)
 
-Networks:
+Associated networks:
 - HAN
 - NAN
 - WAN
 - IP networks
 - SANETs
 
+Source: fileciteturn113file1L972-L1008
+
 ---
 
-# 25. SMART-HOME COMMUNICATION PROTOCOLS / NUMBERS
+# 26. Smart-Grid Communication Protocols
 
-## C-Bus
-- Data rate: **3500 bits/sec**
-- Cable length: up to **1000 m**
+The lecture gives these examples:
 
-## DECT
-- Data rate: **64,000 bits/sec**
+| Technology | Key number / feature |
+|---|---|
+| **C-Bus** | 3500 bits/sec; cable up to 1000 m |
+| **DECT** | 64000 bits/sec |
+| **EnOcean** | 1880–1930 MHz; 9600 bits/sec; 902 MHz in North America |
+| **Universal Powerline Bus** | 480 bits/sec; two-way communication |
+| **Thread** | 20–250 Kbits/sec; IPv6 based 6LoWPAN |
+| **ZigBee** | 20–250 Kbits/sec; 2.4 GHz; IEEE 802.15.4; ~100 m |
+| **SCS** | 9.6 Kbits/sec; twisted pair; OpenWebNet basis |
 
-## EnOcean
-- Frequency: **1880–1930 MHz**
-- Data rate: **9600 bits/sec**
-- Also operates at **902 MHz in North America**
+Source: fileciteturn113file1L1010-L1060
 
-## Universal Powerline Bus
-- Data rate: **480 bits/sec**
+### Number traps
+These values are lecture-specific and are worth memorizing if the exam uses numerical MCQs.
+
+---
+
+# 27. Smart Meters and Gateways
+
+### Gateway
+- Connects a few nearby smart meters.
+- Often communicates using Wi-Fi / IEEE 802.11.
 - Supports two-way communication.
+- Links smart meters to DAU.
 
-## Thread
-- Data rate: **20–250 Kbits/sec**
-- IPv6 addressing,
-- based on 6LoWPAN networking.
+### Smart meter
+- Sends energy-consumption information.
+- Receives billing/control information.
 
-## Zigbee
-- Data rate: **20–250 Kbits/sec**
-- 2.4 GHz band,
-- IEEE 802.15.4,
-- approximately **100 m** range.
-
-## Simplified Cable Solution (SCS)
-- Data rate: **9.6 Kbits/sec**
-- twisted pair,
-- based on OpenWebNet.
-
-### Exam numbers to memorize
-`C-Bus = 3500 bps / 1000 m`  
-`DECT = 64000 bps`  
-`EnOcean = 1880–1930 MHz / 9600 bps / 902 MHz NA`  
-`UPB = 480 bps`  
-`Thread = 20–250 kbps`  
-`Zigbee = 20–250 kbps / 2.4 GHz / ~100 m`  
-`SCS = 9.6 kbps`
+Source: fileciteturn113file1L1062-L1085
 
 ---
 
-# 26. SMART METERS, GATEWAYS, DAUs, MDMS
+# 28. Data Aggregator Unit (DAU)
 
-## Gateway
-- connects a few closely located smart meters,
-- often communicates through Wi-Fi/IEEE 802.11,
-- enables two-way communication,
-- links meters to DAUs.
+DAU:
+- Aggregates energy consumption/requests in a geographic area.
+- Forwards information to MDMS.
+- Maintains a buffer for queued consumer energy information.
 
-## Smart meter ↔ gateway
-Smart meters can:
-- forward energy-consumption information toward gateways,
-- receive billing/control information through gateways.
+Source: fileciteturn113file1L1087-L1103
 
-## DAU
-Data Aggregator Unit:
-- aggregates energy consumption/requests for a geographic area,
-- forwards information to MDMS,
-- maintains a buffer/queue.
-
-## MDMS
-Meter Data Management System:
-- centralized coordinator,
-- handled by energy service providers,
-- part of operation center,
-- decides price per unit energy.
-
-### Architecture
-```text
-Home Appliances
-      ↓
-Smart Meter
-      ↓
-Gateway
-      ↓
-DAU
-      ↓
-MDMS / Operation Center
-```
+### Memory
+**Gateway = local smart-meter connection.**  
+**DAU = geographic aggregation.**
 
 ---
 
-# 27. SMART GRID SECURITY
+# 29. Meter Data Management System (MDMS)
 
-Smart Grid is a:
-- **cyber-physical system**.
+MDMS:
+- Centralized coordinator for smart-grid communication.
+- Handled by energy service providers.
+- Part of operation center.
+- Decides price per unit energy paid by consumers.
 
-Major security properties/threat areas:
+Source: fileciteturn113file1L1105-L1121
+
+### Mock cross-check
+A cumulative mock directly asks MDMS's primary function and identifies it as the **centralized coordinator** that processes aggregated data and manages energy pricing. fileciteturn116file7L793-L800
+
+---
+
+# 30. Smart Grid Security
+
+Smart grid is a **cyber-physical system**.
+
+Major vulnerabilities:
 - Integrity
 - Availability
 - Dynamic system attacks
 - Physical threats
 - Coordinated attacks
 
+Source: fileciteturn116file6L727-L746
+
 ---
 
-# 28. INTEGRITY ATTACKS
+# 31. Integrity
+
+Integrity = credibility/correctness of collected and transferred data.
 
 ## Data Injection Attacks (DIA)
-Attackers manipulate:
-- sensor readings,
-- feedback-control signals,
-- electricity-price signals.
 
-Possible methods:
-- compromising hardware,
-- intercepting communication links.
+Can manipulate:
+- Sensor readings.
+- Feedback control signals.
+- Electricity price signals.
 
-### Consequences
-Manipulated measurements can:
-- hide a congested line,
-- create false grid states,
-- induce fluctuations,
-- trip lines,
-- disconnect generators,
-- cause load shedding,
-- contribute to blackout.
+Attack can occur through:
+- Compromised hardware.
+- Intercepted communication links.
 
----
+Consequences:
+- False system measurements.
+- Large fluctuations.
+- Line tripping.
+- Generator disconnection.
+- Load shedding.
+- Blackout.
 
-# 29. FINANCIAL / PRICE ATTACKS
-
-Attackers may manipulate electricity prices to:
-- buy energy cheaply,
-- create financial profit.
-
-### Trap
-Price manipulation is an **integrity** issue because the information being used for decisions has been altered.
+Source: fileciteturn113file1L1145-L1167
 
 ---
 
-# 30. TIME SYNCHRONIZATION ATTACKS
+# 32. Electricity-Price Manipulation
 
-A Time Synchronization Attack (TSA):
-- manipulates the time reference used for timestamped phasor measurements.
+An attacker may manipulate electricity prices to:
+- Buy energy cheaply.
+- Gain financial benefit.
 
-This can:
-- create false visualization of system conditions,
-- cause inaccurate control/protection actions.
+This is an **integrity** concern.
 
-### Memory
-`PMU timestamps + manipulated time → TSA`
+Source: fileciteturn113file1L1169-L1193
 
 ---
 
-# 31. AVAILABILITY / DoS
+# 33. Time Synchronization Attack
+
+An attacker manipulates the time reference of timestamped measured phasors.
+
+Possible effects:
+- False visualization of actual system conditions.
+- Incorrect control/protection actions.
+
+Attacks targeting PMU time synchronization are called:
+**Time Synchronization Attacks (TSAs).**
+
+Source: fileciteturn113file1L1180-L1193
+
+---
+
+# 34. Availability and DoS
 
 Availability means:
-- components and information are accessible when required.
+- Grid components and information remain accessible when needed.
 
 DoS attacks:
-- make components/information inaccessible,
-- block key signals,
-- threaten grid stability and observability,
-- can manipulate generation-load balance.
+- Make components/information inaccessible.
+- Can block key signals.
+- Can compromise grid stability and observability.
+- Can affect generation-load balance.
 
-### Assignment
-Q8 → **DoS**
+Source: fileciteturn113file1L1195-L1212
+
+### Exam lock
+**Availability → DoS.**
 
 ---
 
-# 32. DYNAMIC SYSTEM ATTACKS
+# 35. Dynamic System Attacks
 
-## Replay Attack
-Attacker:
-1. compromises sensors,
-2. observes outputs,
-3. learns legitimate data,
-4. replays old data while injecting attack signals.
+## Replay Attack (RA)
+- Attacker compromises sensors.
+- Observes outputs.
+- Repeats previously observed outputs while injecting attack signals.
 
 ## Dynamic Data Injection Attack (D-DIA)
-Uses knowledge of:
-- the grid's dynamic model
+- Uses knowledge of the grid dynamic model.
+- Injects data that can cause unobservability of unstable poles.
+- Can lead to system collapse.
 
-to inject data that can:
-- create unobservability of unstable poles,
-- lead to system collapse.
+## Covert attack
+- Closed-loop version of replay attacks.
 
-## Covert Attack
-- closed-loop version of replay attacks.
-
----
-
-# 33. PHYSICAL THREATS
-
-Attack physical components such as:
-- generators,
-- substations,
-- transmission lines.
-
-Also:
-- physical manipulation of smart meters for energy theft.
+Source: fileciteturn113file1L1214-L1237
 
 ---
 
-# 34. COORDINATED ATTACKS
+# 36. Physical Threats
 
-Power systems have robustness measures, but interconnected components can be exploited.
+Can target:
+- Generators
+- Substations
+- Transmission lines
+- Smart meters
 
-A coordinated attacker can:
-- target multiple components,
-- use different attack types simultaneously,
-- exploit interconnections,
-- trigger cascading failures.
+Smart-meter physical manipulation can be used for energy theft.
 
-### Memory
-`One failure → local`  
-`Many coordinated failures → cascading system impact`
+Source: fileciteturn113file1L1239-L1262
 
 ---
 
-# 35. SMART GRID + CLOUD APPLICATIONS
+# 37. Coordinated Attacks
+
+Power systems have robustness measures, but dense interconnections can be exploited.
+
+An attacker can:
+- Target multiple components.
+- Use simultaneous attacks.
+- Combine different attack types.
+- Cause cascading failures.
+
+Source: fileciteturn113file1L1250-L1262
+
+---
+
+# 38. Smart Grid + Cloud
 
 Cloud applications can support:
-1. Energy management
-2. Information management
-3. Security
+- Energy management
+- Information management
+- Security
+
+Source: fileciteturn113file1L1264-L1286
 
 ---
 
-# 36. CLOUD FOR ENERGY MANAGEMENT
+# 39. Cloud-Based Energy Management
 
-Cloud can improve:
-- demand response,
-- large-scale scheduling,
-- microgrid management,
-- real-time supply-demand balancing.
+Cloud can improve energy management.
 
-Two cloud-based demand-response communication models:
-- **Data-centric communication**
-- **Topic-based group communication**
+The lecture describes cloud-based demand response models:
+1. Data-centric communication
+2. Topic-based group communication
 
 Cloud scheduling considers:
-- available resources,
-- job/request priority,
-- applicable constraints.
+- Available resources
+- Priority
+- Other constraints
+
+Source: fileciteturn113file1L1288-L1311
 
 ---
 
-# 37. CLOUD FOR MICROGRID MANAGEMENT
+# 40. Cloud for Micro-grid Management
 
-Cloud modules can support:
-- infrastructure,
-- power management,
-- services.
+Cloud integration can:
+- Support infrastructure/power-management/service modules.
+- Increase supported customers.
+- Integrate/analyze data from multiple smart meters.
+- Balance real-time demand and supply.
+- Share real-time usage/pricing information.
+- Use mobile agents to monitor heterogeneous smart-grid systems.
 
-Cloud can:
-- support more customers,
-- integrate/analyze many smart-meter streams,
-- balance real-time demand and supply,
-- share real-time energy usage and pricing,
-- use mobile agents for monitoring heterogeneous smart-grid systems.
+Source: fileciteturn113file1L1313-L1335
 
 ---
 
-# 38. CLOUD FOR INFORMATION MANAGEMENT
+# 41. Information Management Using Cloud
 
 Cloud supports:
-- large-scale computing/storage,
-- information sharing,
-- real-time distributed data management,
-- parallel information processing,
-- dynamic data centers for real-time smart-meter information,
-- dynamic pricing,
-- multi-mobile-agent cooperation.
+- Information processing.
+- Storage.
+- Sharing information from different grid components.
+- Real-time distributed data management.
+- Parallel processing.
+
+It also makes information retrieval more flexible and supports dynamic pricing.
+
+Source: fileciteturn113file1L1337-L1357 and fileciteturn115file0L12-L34
 
 ---
 
-# 39. CLOUD FOR SECURITY
+# 42. Security in Smart Grid + Cloud
 
-The lecture describes:
-- private-cloud platforms for processing millions of user records,
-- cloud-based protection against malicious software,
-- distributed verification,
-- real-time analysis/estimation,
-- cloud-based privacy schemes.
+Cloud can support:
+- Power-information security/protection.
+- Large-scale processing using private cloud.
+- Rapid response to malicious software.
+- Distributed data-storage security.
+- Real-time analysis/estimation.
+- Cloud-based privacy schemes.
 
-### Exam connection
-Cloud is not only for storage; it can also support:
-- energy management,
-- information processing,
-- security/privacy.
+Source: fileciteturn115file0L36-L79
 
 ---
 
-# 40. IIoT — INDUSTRIAL INTERNET OF THINGS
+# PART C — INDUSTRIAL INTERNET OF THINGS (IIoT)
 
-## Definition
-IIoT is an application of IoT in industry to modify existing industrial systems.
+# 43. What is IIoT?
 
-It links:
-- automation,
-- enterprise,
-- planning,
-- product lifecycle.
+The lecture defines IIoT as:
+- An application of IoT in industries.
+- A mechanism to modify existing industrial systems.
+- A link between:
+  - Automation systems
+  - Enterprise
+  - Planning
+  - Product lifecycle
 
-### Important
-**IIoT is not simply “IoT in a factory.”**
-
-The lecture presents IIoT as an intersection involving:
-- industries,
-- Industry 4.0,
-- Internet of Things,
-- enterprise/consumer contexts.
+Source: fileciteturn115file0L218-L234
 
 ---
 
-# 41. IIoT COMPONENTS / TECHNOLOGIES
+# 44. IIoT and Industry 4.0
 
-IIoT includes:
-- Machine Learning,
-- Big Data,
-- M2M interaction,
+The lecture connects IIoT with **Industry 4.0**.
+
+Industry 4.0 includes:
+- Automation and data exchange in manufacturing.
+- Cyber-physical systems.
+- Internet of Things.
+- Cloud computing.
+- Smart factory.
+
+Source: fileciteturn115file0L236-L257
+
+---
+
+# 45. IIoT Is Not Simply IoT
+
+The lecture explicitly illustrates **IIoT ≠ IoT**.
+
+### IoT
+Broader concept.
+
+### IIoT
+Industrial intersection of:
+- IoT
+- Industrial systems / Industry 4.0
+
+It focuses on industrial efficiency, safety and security rather than mainly consumer convenience.
+
+Source: fileciteturn115file0L259-L280 and fileciteturn114file0L125-L159
+
+---
+
+# 46. IIoT Includes
+
+- Machine learning.
+- Big-data technology.
+- Machine-to-machine interaction.
 - Automation.
+- Large volumes of sensor data.
 
-It is supported by:
-- large amounts of sensor data.
+### Key strategy
+**Wrap & re-use**, not **rip & replace**.
 
-### Core philosophy
-**Wrap & Re-use**
-rather than
-**Rip & Replace**.
+Source: fileciteturn115file0L282-L302
 
 ---
 
-# 42. INDUSTRIAL REVOLUTIONS
+# 47. Four Industrial Revolutions
 
-The lecture associates:
+| Revolution | Lecture description |
+|---|---|
+| **1st** | Mechanized production |
+| **2nd** | Mass production |
+| **3rd** | Internet evolution and automation |
+| **4th** | IIoT / Industry 4.0 |
 
-1. **1st Industrial Revolution** → mechanized production
-2. **2nd Industrial Revolution** → mass production
-3. **3rd Industrial Revolution** → Internet evolution and automation
-4. **4th Industrial Revolution** → IIoT / Industry 4.0
+Source: fileciteturn115file0L304-L333
 
-### Memory
-`1 = Mechanization`  
-`2 = Mass Production`  
-`3 = Internet + Automation`  
-`4 = IIoT`
-
----
-
-# 43. IIoT NETWORK
-
-IIoT is a network of:
-- physical objects,
-- systems,
-- platforms,
-- applications,
-- people.
-
-These can communicate:
-- with one another,
-- with the external environment.
-
-Sensor, processor and connectivity advances make:
-- real-time information capture,
-- real-time access
-
-more affordable and accessible.
+### Exam lock
+**4th Industrial Revolution → IIoT / Industry 4.0.**
 
 ---
 
-# 44. IIoT REQUIREMENTS
+# 48. IIoT Requirements
 
-Major requirements:
-- Hardware and software connectivity
-- Cloud platform
-- Big Data analytics
-- Application development
+Lecture lists:
 
-The lecture also highlights:
-- access anywhere/anytime/anything,
-- cloud efficiency/agility,
-- end-to-end security,
-- user experience,
-- asset management,
-- transition to smart machines.
+1. Hardware and software connectivity
+2. Cloud platform
+3. Big-data analytics
+4. Application development
 
----
+Additional themes shown:
+- Access: anything, anytime, anywhere
+- End-to-end security
+- User experience
+- Cloud efficiency/agility
+- Big data
+- Asset management
+- Transition to smart machines
 
-# 45. PHYSICAL PLANT ↔ VIRTUAL PLANT
-
-The lecture visualizes:
-- **Physical Plant**
-- **Virtual Plant**
-
-Connected by:
-- sensor readings,
-- machine instructions.
-
-### Concept
-```text
-Physical Plant
-    ↕
-Sensor Readings / Machine Instructions
-    ↕
-Virtual Plant
-```
-
-This is an important IIoT/cyber-physical concept.
+Source: fileciteturn114file0L26-L79
 
 ---
 
-# 46. IIoT DESIGN CONSIDERATIONS
+# 49. Physical Plant ↔ Virtual Plant
 
-For industrial IoT devices:
+The lecture shows:
+- Physical plant
+- Virtual plant
+- Sensor readings
+- Machine instructions
 
-## Energy
-Time for which device operates under limited power.
+This illustrates the digital/virtual representation and communication of industrial processes.
 
-## Latency
-Time required to transmit data.
-
-## Throughput
-Maximum data transmitted across the network.
-
-## Scalability
-Number of devices supported.
-
-## Topology
-Communication among devices / interoperability.
-
-## Safety & Security
-Degree of safety and security of the application.
-
-### Memory
-`E-L-T-S-T-S`
-Energy, Latency, Throughput, Scalability, Topology, Safety/Security.
+### Conceptual flow
+**Physical plant → sensor readings → virtual/analytics layer → machine instructions**
 
 ---
 
-# 47. IoT VS IIoT
+# 50. IIoT Design Considerations
+
+Six major objectives:
+
+| Objective | Lecture meaning |
+|---|---|
+| **Energy** | Time device can operate with limited power |
+| **Latency** | Time required to transmit data |
+| **Throughput** | Maximum data transmitted across network |
+| **Scalability** | Number of devices supported |
+| **Topology** | Communication/interoperability among devices |
+| **Safety & Security** | Degree of application safety/security |
+
+Source: fileciteturn114file0L104-L123
+
+### MCQ mapping
+- Transmission time → **Latency**
+- Maximum data transmitted → **Throughput**
+- Number of supported devices → **Scalability**
+- Limited power lifetime → **Energy**
+
+---
+
+# 51. IoT vs IIoT
 
 | IoT | IIoT |
 |---|---|
-| Consumer-oriented | Industrial-oriented |
-| Convenience of individuals | Efficiency, safety, security |
-| M2M more limited | M2M extensive |
+| Focus on individual convenience | Focus on efficiency, safety, security |
+| M2M relatively limited | M2M extensive |
 | Consumer-level applications | Industrial applications |
-| Comfort/consumer value | Operational/business value |
+| Consumer environments | Industrial environments |
 
-### Trap
-Do not say IIoT is merely “consumer IoT with more sensors.”
-
----
-
-# 48. SERVICE MANAGEMENT IN IIoT
-
-Service management:
-- implements/manages service quality according to end-user demand.
-
-A service:
-- is a collection of data and associated behaviors,
-- performs a function/feature of a device or part of a device.
-
-## Two service types
-
-### Primary service
-Basic services responsible for:
-- primary node functions.
-
-### Secondary service
-Auxiliary services that support:
-- primary services,
-- or other secondary services.
+Source: fileciteturn114file0L135-L159
 
 ### Memory
-`Primary = core function`  
-`Secondary = support function`
+**IoT → convenience.**  
+**IIoT → efficiency + safety + security.**
 
 ---
 
-# 49. IIoT APPLICATION AREAS
+# 52. M2M Focus vs IoT Focus
+
+The lecture diagram shows a relationship involving:
+
+- Devices
+- Network/connectivity
+- M2M focus
+- Service enablement
+- Application/data
+- System integration
+- IoT focus
+
+Interpretation from the lecture:
+- M2M emphasizes machine/device communication.
+- IoT expands beyond device communication into services, applications, data and system integration.
+
+Source: fileciteturn114file0L161-L190
+
+---
+
+# 53. Service Management in IIoT
+
+Service management:
+- Implements and manages service quality to meet end-user demand.
+
+A service:
+- Is a collection of data and associated behaviors.
+- Accomplishes a function/feature of a device or part of a device.
+
+Source: fileciteturn114file0L192-L210
+
+---
+
+# 54. Primary vs Secondary Service
+
+## Primary service
+Basic service responsible for primary node functions.
+
+## Secondary service
+Auxiliary function supporting:
+- Primary service
+- Other secondary services
+
+Source: fileciteturn114file0L212-L227
+
+---
+
+# 55. IIoT Application Areas
 
 The lecture identifies:
-1. Manufacturing
-2. Healthcare
+
+1. Manufacturing industry
+2. Healthcare service industry
 3. Transportation & logistics
 4. Mining
 5. Firefighting
 
+Source: fileciteturn114file0L250-L263
+
 ---
 
-# 50. IIoT IN MANUFACTURING
+# 56. Manufacturing Industry
 
-Integrates:
-- devices,
-- equipment,
-- workforce,
-- supply chain,
-- work platform.
+IIoT connects:
+- Devices
+- Equipment
+- Workforce
+- Supply chain
+- Work platform
 
 Goals:
-- smart production,
-- lower operating costs,
-- improved worker productivity,
-- fewer workplace injuries,
-- resource optimization,
-- waste reduction,
-- end-to-end automation.
+- Smart production
+- Lower operational costs
+- Higher worker productivity
+- Fewer workplace injuries
+- Resource optimization
+- Waste reduction
+- End-to-end automation
+
+Source: fileciteturn114file0L265-L281
 
 ---
 
-# 51. IIoT IN HEALTHCARE
+# 57. Healthcare
 
-Implanted/on-body sensors enable:
-- continuous patient monitoring,
-- improved treatment outcomes,
-- lower costs,
-- improved disease detection,
-- more accurate data collection,
-- better drug management.
+Implanted/on-body sensors enable continuous patient monitoring.
 
-### Memory
-`Healthcare IIoT → Continuous Monitoring`
+Benefits:
+- Improved treatment outcome.
+- Reduced cost.
+- Better disease detection.
+- More accurate data collection.
+- Improved drug management.
 
----
-
-# 52. IIoT IN TRANSPORTATION & LOGISTICS
-
-Intelligent Transportation Systems (ITS) use connected vehicles.
-
-Connectivity:
-- Vehicle-to-Sensor
-- Vehicle-to-Vehicle
-- Vehicle-to-Internet
-- Vehicle-to-Road infrastructure
-
-### DSRC
-Key enabling technology for:
-- V2V,
-- V2R.
+Source: fileciteturn114file0L283-L299
 
 ---
 
-# 53. IIoT IN SUPPLY CHAINS
+# 58. Transportation & Logistics
 
-Physical objects can carry:
-- barcodes,
-- RFID tags.
+Connected vehicles support:
+- Vehicle-to-sensor connectivity.
+- Vehicle-to-vehicle connectivity.
+- Vehicle-to-Internet connectivity.
+- Vehicle-to-road infrastructure.
+
+**DSRC** is the key enabling technology for V2V and V2R.
+
+Source: fileciteturn114file0L301-L321
+
+---
+
+# 59. Supply-Chain Tracking
+
+Physical objects can be equipped with:
+- Barcodes
+- RFID tags
 
 This enables real-time monitoring of:
-- status,
-- location,
-- movement
+- Status
+- Location
 
-across the supply chain.
+Across the supply chain from destination to origin.
 
-### Security requirement
-Supply-chain data must maintain:
-- security,
-- privacy.
+Security and privacy must be maintained.
+
+Source: fileciteturn114file0L323-L338
 
 ---
 
-# 54. IIoT IN MINING
+# 60. Mining
+
+IIoT/wireless technologies support:
+- Early disaster warning.
+- Air-quality monitoring.
+- Poisonous-gas detection.
+- Oxygen-level monitoring.
+
+Technologies mentioned:
+- RFID
+- Wi-Fi
+- Other wireless technologies
+
+Source: fileciteturn114file0L340-L355
+
+---
+
+# 61. Firefighting
 
 Uses:
-- RFID,
-- Wi-Fi,
-- wireless technologies,
-- sensor networks.
+- Sensor networks
+- RFID tags
 
-Monitors:
-- air quality,
-- poisonous gases,
-- oxygen levels.
+For:
+- Automatic diagnosis
+- Early disaster warning
+- Emergency rescue
+- Real-time monitoring
+- Improved public security
 
-Supports:
-- early disaster warning,
-- accident prevention.
-
-### Assignment
-Q12 directly tests this.
+Source: fileciteturn114file0L357-L373
 
 ---
 
-# 55. IIoT IN FIREFIGHTING
+# 62. IIoT Examples
 
-Uses:
-- sensor networks,
-- RFID tags.
+Lecture examples:
+- UAVs inspecting oil pipelines.
+- Sensors monitoring food safety.
+- Reducing worker exposure to noise, chemicals and hazardous gases.
+- Unmanned marine vehicles collecting data for long periods without fuel/crew.
 
-Supports:
-- automatic diagnosis,
-- early warning,
-- emergency rescue,
-- real-time monitoring.
-
-Result:
-- improved public security.
+Source: fileciteturn114file0L375-L390
 
 ---
 
-# 56. IIoT EXAMPLES
-
-Examples in lecture:
-- UAVs inspecting oil pipelines,
-- sensor-based food-safety monitoring,
-- minimizing worker exposure to noise/chemicals/hazardous gases,
-- unmanned marine vehicles collecting data for long periods without fuel/crew.
-
----
-
-# 57. CONNECTED ECOSYSTEMS
+# 63. Connected Ecosystems
 
 Traditional industrial supply chains are:
-- relatively linear.
+- Linear.
 
 IIoT encourages:
-- shifting business focus from products → outcomes,
-- digital ecosystems,
-- faster adaptation to external changes.
+- Digital ecosystems.
+- A shift from product focus to outcome focus.
+- Faster adaptation to external changes.
 
-### Memory
-`Traditional = linear product chain`  
-`IIoT = connected digital ecosystem + outcome focus`
+Source: fileciteturn114file0L392-L406
 
 ---
 
-# 58. DIGITAL + HUMAN WORKFORCE
+# 64. Digital + Human Workforce
 
-IIoT makes machines:
-- more intelligent,
-- more capable of automated tasks.
+IIoT makes machines more intelligent.
 
-Humans and machines can work together to:
-- increase productivity,
-- improve quality,
-- reduce costs.
+Results:
+- More automated tasks.
+- Lower cost.
+- Higher quality.
+- Humans work with machines.
+- Higher overall productivity.
+- Worker skills are reformed/redefined.
 
-Workers' skills evolve toward:
-- digital skills,
-- analytical skills.
+Source: fileciteturn114file0L408-L422
 
 ---
 
-# 59. NEW JOBS
+# 65. New Jobs
 
 IIoT can create new composite industries such as:
-- precision agriculture,
-- digital healthcare,
-- digital mines.
+- Precision agriculture.
+- Digital healthcare.
+- Digital mines.
 
-Automation can:
-- reduce demand for some unskilled work,
-- increase demand for skilled digital/analytical experts.
+Automation may reduce unskilled work but increase demand for:
+- Skilled experts.
+- Digital skills.
+- Analytical skills.
+
+Source: fileciteturn114file0L424-L438
 
 ---
 
-# 60. REFORMATION OF ROBOTS
+# 66. Reformation of Robots
 
-IIoT robots are described with three major capabilities:
-
+IIoT robots gain:
 1. **Sensing**
 2. **Thinking**
 3. **Acting**
 
 They can:
-- perform repetitive tasks,
-- work under human supervision,
-- be reprogrammed,
-- learn new tasks faster.
+- Perform repetitive tasks.
+- Work under human supervision.
+- Be reprogrammed.
+- Perform new tasks.
+- Learn faster.
+
+Source: fileciteturn114file0L440-L456
 
 ### Memory
-`Robot = Sense + Think + Act`
+**Robot = Sense + Think + Act.**
 
 ---
 
-# 61. IIoT CHALLENGES
+# 67. IIoT Challenges
 
 Primary challenges:
-- identification of objects/things,
-- managing huge amounts of data,
-- integrating existing infrastructure into IIoT,
-- enabling data storage.
+- Identification of objects/things.
+- Managing huge data volumes.
+- Integrating existing infrastructure into new IIoT infrastructure.
+- Enabling data storage.
+
+Source: fileciteturn114file0L458-L477
 
 ---
 
-# 62. IIoT SAFETY CHALLENGES
-
-Important areas:
-- worker health and safety,
-- regulatory compliance,
-- environmental protection,
-- optimized operations.
-
----
-
-# 63. IIoT HAZARDS
+# 68. IIoT Safety Challenges
 
 The lecture lists:
-- handling/storing/using hazardous substances,
-- oxygen deficiency,
-- particulates,
-- radiation,
-- physiological stress.
+- Worker health and safety.
+- Regulatory compliance.
+- Environmental protection.
+- Optimized operations.
 
-### Exam trap
-These are **safety hazards**, not Big Data characteristics.
+Source: fileciteturn114file0L479-L495
 
 ---
 
-# 64. IIoT STANDARDIZATION
+# 69. IIoT Hazards
+
+Hazards include:
+- Handling/storing/using hazardous substances.
+- Oxygen deficiency.
+- Particulates.
+- Radiation.
+- Physiological stress.
+
+Source: fileciteturn114file0L497-L519
+
+---
+
+# 70. Standardization in IIoT
 
 Standardization aims to:
-- improve interoperability,
-- allow different systems/applications to work together,
-- improve product/service performance.
+- Improve interoperability.
+- Help different systems/applications work together.
+- Improve product/service performance.
 
 Problems:
-- interoperability,
-- semantic interoperability/data semantics,
-- security and privacy,
-- radio-access-level issues.
+- Interoperability.
+- Semantic interoperability.
+- Security/privacy.
+- Radio-access-level issues.
 
-### Memory
-`Standardization → Interoperability`
+Source: fileciteturn114file0L521-L552
+
+### Trap
+**Semantic interoperability** is specifically about **data semantics/meaning**, not merely physical connectivity.
 
 ---
 
-# 65. IIoT PRIVACY & SECURITY
+# 71. IIoT Privacy and Security
 
 Two major concerns:
 1. Information security
 2. Data privacy protection
 
-Because devices/things can be:
-- tracked,
-- monitored,
-- connected,
+Because industrial devices/things can be:
+- Tracked
+- Monitored
+- Connected
 
-there is risk to:
-- personal information,
-- private data.
+there are risks to personal/private data.
 
-### Examples
-Healthcare:
-- patient medical data must not be tampered with.
+Examples:
+- Healthcare → patient medical data must not be tampered with.
+- Food industry → deterioration information can affect company reputation and must remain confidential.
 
-Food industry:
-- deterioration information may need confidentiality to protect company reputation.
+Source: fileciteturn114file0L554-L588
 
 ---
 
-# 66. MANUFACTURING RISKS
+# 72. Manufacturing Risks
 
-Factors that can hinder IIoT adoption:
-- lack of vision/leadership,
-- lack of management understanding of value,
-- costly sensors,
-- inadequate infrastructure.
+Factors hindering IIoT adoption:
+- Lack of vision and leadership.
+- Lack of management understanding of value.
+- Costly sensors.
+- Inadequate infrastructure.
 
----
-
-# 67. MEETING IIoT CHALLENGES — SENSOR IMPROVEMENT
-
-Sensor improvements include:
-- miniaturization,
-- performance,
-- lower cost,
-- lower energy consumption.
-
-### Core idea
-Better sensors make IIoT:
-- more accessible,
-- more scalable,
-- more energy efficient.
+Source: fileciteturn114file0L590-L604
 
 ---
 
-# 68. IIoT + PREDICTIVE MAINTENANCE
+# 73. Improving Sensors
 
-Software capabilities can improve operational efficiency through:
-- predictive maintenance,
-- reduced scheduled-repair cost,
-- lower maintenance cost,
-- fewer breakdowns.
+Sensor technology improvements include:
+- Miniaturization.
+- Performance improvement.
+- Lower cost.
+- Lower energy consumption.
 
-### Memory
-`Sensor data → prediction → maintenance before failure`
+Source: fileciteturn114file0L606-L619
 
 ---
 
-# 69. IIoT PRODUCT EXAMPLES
+# 74. Manufacturing Improvement Through Software
+
+Software can improve operational efficiency through:
+- Predictive maintenance.
+- Savings on scheduled repairs.
+- Reduced maintenance costs.
+- Reduced breakdowns.
+
+Source: fileciteturn114file0L621-L636
+
+---
+
+# 75. Rt Tech Software Case Study
+
+Lecture case study:
+- Improves industrial-facility efficiency.
+- Improves productivity.
+- Provides energy-management solution.
+- Automates mapping and management of energy consumption.
+- Targets reduction of a plant's highest variable cost.
+
+Source: fileciteturn114file0L638-L659
+
+---
+
+# 76. Industrial Products
 
 ## Intelligent Radio Modem (IRM)
-Examples:
-- IRM 1500
-- ACE 1000
 
-Capabilities:
-- M2M connectivity,
-- data transmission,
-- easy installation/maintenance,
-- connects IP and non-IP serial devices.
+Lecture mentions:
+- IRM 1500
+- ACE 1000-IRM
+
+Features:
+- Simple M2M connectivity.
+- Data transmission.
+- Easy maintenance/installation.
+- Can connect IP and non-IP serial devices.
+- Extends monitoring/communication capability.
+
+Source: fileciteturn114file0L661-L682
 
 ## Comtrol IO Link Master Gateway
+
 Supports:
-- Ethernet/IP,
-- PROFINET (PNIO),
-- Modbus TCP.
+- Ethernet/IP
+- PROFINET (PNIO)
+- Modbus TCP
 
-### Exam note
-These are examples of industrial connectivity products, not core definitions.
+Can integrate with existing and new industrial networks.
 
----
-
-# 70. IIoT BENEFITS
-
-Benefits include:
-- improved connectivity,
-- improved efficiency,
-- upgraded scalability,
-- reduced operation time,
-- remote diagnosis,
-- cost effectiveness.
+Source: fileciteturn114file0L684-L704
 
 ---
 
-# 71. IIoT RESEARCH TRENDS
+# 77. IIoT Benefits
 
-The lecture highlights:
-- better communication among things/objects,
-- energy-efficient sensor techniques,
-- context-aware IoT middleware,
-- smarter objects with more memory,
-- more processing capability,
-- more reasoning capability.
+The lecture lists:
 
----
+- Improved connectivity among devices.
+- Improved efficiency.
+- Upgraded scalability.
+- Reduced operation time.
+- Remote diagnosis.
+- Cost effectiveness.
 
-# 72. IIoT CONCLUSION
-
-The lecture emphasizes the need for:
-- smaller,
-- less expensive,
-- accessible sensors,
-- distributed assembly-line control,
-- automated monitoring,
-- automated control,
-- automated maintenance.
+Source: fileciteturn114file0L706-L727
 
 ---
 
-# 73. DATA HANDLING
+# 78. IIoT Research Trends
 
-Data handling ensures data is:
-- stored safely,
-- archived safely,
-- disposed of safely.
+Research directions:
+- Improve communication among objects/things.
+- Develop energy-efficient sensor techniques.
+- Develop context-aware IoT middleware.
+- Create smart objects with larger:
+  - Memory
+  - Processing capability
+  - Reasoning capability
 
-It includes policies/procedures for:
-- electronic data,
-- non-electronic data.
-
-### Why important in IoT?
-IoT generates:
-- heavy traffic,
-- huge sensor datasets,
-- continuous streams.
-
-This leads naturally to:
-- Big Data.
+Source: fileciteturn114file0L729-L746
 
 ---
 
-# 74. WHAT IS BIG DATA?
+# 79. IIoT Conclusion
 
-Big Data technologies are designed to:
-- economically extract value,
-- from very large volumes,
-- of varied data,
-- captured at high velocity,
-- for discovery/analysis.
+The lecture concludes that IIoT requires:
+- Smaller, cheaper sensors.
+- Distributed assembly-line control.
+- Automated monitoring.
+- Automated control.
+- Automated maintenance.
 
-NIST framing emphasizes situations where:
-- volume,
-- acquisition speed,
-- or data representation
-
-limits traditional relational analysis.
-
-### Key idea
-`Big Data ≠ only “a lot of data”`
-
-It also involves:
-- speed,
-- variety,
-- processing/analysis challenges.
+Source: fileciteturn114file0L748-L761
 
 ---
 
-# 75. TYPES OF DATA
+# PART D — BIG DATA AND DATA HANDLING
 
-## Structured Data
-- easily organized,
-- often stored in relational databases,
-- managed with SQL,
-- lecture states roughly **20%** of available data.
+# 80. What is Data Handling?
 
-## Unstructured Data
-- no predefined model,
-- traditional RDBMSs struggle with it,
-- lecture states roughly **80%** of available data.
+Data handling:
+- Stores, archives or disposes of data safely and securely.
+- Includes policies/procedures for electronic and non-electronic data.
 
-### Exam memory
-`Structured ≈ 20%`  
-`Unstructured ≈ 80%`
+IoT creates huge data volumes because:
+- IoT devices generate heavy traffic.
+- Large sensor deployments generate massive amounts of data.
+
+Source: fileciteturn114file1L841-L862
 
 ---
 
-# 76. BIG DATA — 7 Vs
+# 81. What is Big Data?
 
-## 1. Volume
-Quantity of data generated.
+The lecture presents Big Data as technology/architecture for extracting value from:
+- Very large data volumes.
+- Wide variety of data.
+- High-velocity capture/discovery/analysis.
 
-Example:
-- LSST: **30 TB of images every night**.
+NIST framing in the lecture:
+- Data volume, acquisition speed or representation limits traditional relational analysis methods.
 
-## 2. Velocity
-Speed of data generation/processing.
+Source: fileciteturn114file1L864-L886
 
-Examples from lecture:
-- **140 million tweets/day** (2011 survey),
-- NYSE: **1 TB** trade information per trading session.
+---
 
-## 3. Variety
-Different data forms:
-- text,
-- images,
-- audio,
-- video,
-- web,
-- GPS,
-- sensor data,
-- SMS,
-- documents,
-- PDFs.
+# 82. Structured vs Unstructured Data
 
-## 4. Variability
-Meaning/context can change continuously.
+## Structured data
+- Easily organized.
+- Usually stored in relational databases.
+- SQL manages it.
+- Lecture states approximately **20%** of available data.
+
+## Unstructured data
+- No predefined model.
+- Traditional RDBMS cannot directly process it.
+- Lecture states approximately **80%** of available data.
+- Includes many forms of non-tabular information.
+
+Source: fileciteturn114file1L888-L909
+
+### Number trap
+**Structured ≈ 20%**  
+**Unstructured ≈ 80%**
+
+---
+
+# 83. Seven Vs of Big Data
+
+Memorize in order:
+
+1. **Volume**
+2. **Velocity**
+3. **Variety**
+4. **Variability**
+5. **Veracity**
+6. **Visualization**
+7. **Value**
+
+Source: fileciteturn114file1L911-L928
+
+---
+
+# 84. Volume
+
+Volume:
+- Quantity of generated data.
+- Data sources continually increase.
+
+Lecture examples:
+- 30 TB of images every night from LSST.
+- 72 hours of video uploaded to YouTube every minute.
+
+Source: fileciteturn114file1L930-L947
+
+### Trigger
+**How much data? → Volume**
+
+---
+
+# 85. Velocity
+
+Velocity:
+- Speed at which data is generated.
+- Processing time must decrease for real-time services.
+- Older batch processing may not handle high-velocity data.
+
+Lecture examples:
+- 140 million tweets/day average (2011 survey).
+- NYSE captures 1 TB trade information during each session.
+
+Source: fileciteturn114file1L949-L968
+
+### Trigger
+**How fast? → Velocity**
+
+---
+
+# 86. Variety
+
+Variety:
+- Different categories/formats of data.
+- No restriction on input formats.
+- Data is often unstructured/semi-structured.
 
 Examples:
-- language processing,
-- hashtags,
-- geospatial data,
-- multimedia,
-- sensor events.
+- Text
+- Images
+- Audio
+- Video
+- Web
+- GPS
+- Sensor data
+- SMS
+- Documents
+- PDFs
 
-## 5. Veracity
-- bias,
-- noise,
-- abnormality,
-- understandability/trustworthiness.
+Source: fileciteturn114file1L970-L988
 
-**Assignment Q13 → Veracity**
-
-## 6. Visualization
-Presenting data:
-- pictorially,
-- graphically.
-
-Supports:
-- pattern recognition,
-- decision making.
-
-## 7. Value
-Extracting useful business information from scattered data.
-
-### Mnemonic
-**V-V-V-V-V-V-V**
-- Volume
-- Velocity
-- Variety
-- Variability
-- Veracity
-- Visualization
-- Value
+### Trigger
+**What type/format? → Variety**
 
 ---
 
-# 77. BIG DATA 7-V COMPARISON
+# 87. Variability
 
-| V | Meaning | Trigger word |
-|---|---|---|
-| Volume | Quantity | How much? |
-| Velocity | Speed | How fast? |
-| Variety | Types/forms | How many formats? |
-| Variability | Changing meaning/context | Does meaning change? |
-| Veracity | Bias/noise/abnormality | Can we trust/understand it? |
-| Visualization | Graphical representation | How do we see it? |
-| Value | Useful information | What benefit do we get? |
+Variability:
+- Meaning of data changes.
+- Meaning depends on context.
+- Data may appear as an unstructured/indecipherable mass.
 
-### MCQ traps
-- Bias/noise → **Veracity**
-- Speed → **Velocity**
-- Quantity → **Volume**
-- Forms → **Variety**
-- Changing meaning → **Variability**
-- Graphical presentation → **Visualization**
-- Useful business information → **Value**
+Examples in lecture:
+- Language processing
+- Hashtags
+- Geo-spatial data
+- Multimedia
+- Sensor events
+
+Source: fileciteturn114file1L990-L1010
+
+### Trigger
+**Does the meaning/context change? → Variability**
 
 ---
 
-# 78. DATA HANDLING TECHNOLOGIES
+# 88. Veracity
 
-## Cloud Computing
-NIST essential characteristics:
+Veracity:
+- Bias.
+- Noise.
+- Abnormality.
+- Important for automated decision making.
+- Important for unsupervised machine learning.
+
+Source: fileciteturn114file1L1002-L1010
+
+### Assignment lock
+**Bias + noise + abnormality → Veracity.**
+
+---
+
+# 89. Visualization
+
+Visualization:
+- Presents data graphically/pictorially.
+- Helps decision makers see analytics visually.
+- Helps identify patterns.
+
+Source: fileciteturn114file1L1024-L1046
+
+### Trigger
+**Graphical presentation → Visualization**
+
+---
+
+# 90. Value
+
+Value:
+- Extracting useful business information from scattered data.
+- Uses large volume/variety.
+- Provides useful analytics for informed decisions.
+
+Source: fileciteturn114file1L1036-L1046
+
+### Trigger
+**Useful business insight → Value**
+
+---
+
+# PART E — DATA-HANDLING TECHNOLOGIES
+
+# 91. Cloud Computing
+
+NIST characteristics shown in the lecture:
+
 1. On-demand self-service
 2. Broad network access
 3. Resource pooling
@@ -1892,239 +1876,221 @@ Service models:
 - PaaS
 - SaaS
 
-## IoT
-Sensors:
-- embedded in devices/machines,
-- deployed in fields,
-- transmit sensed data to remote servers.
-
-Continuous acquisition can come from:
-- mobile equipment,
-- transportation,
-- public facilities,
-- home appliances.
-
-## Data Centers
-Support:
-- storage,
-- management,
-- organization,
-- processing capacity,
-- network infrastructure,
-- energy management,
-- backup/replication,
-- business analytics.
+Source: fileciteturn114file1L1048-L1070
 
 ---
 
-# 79. FLOW OF DATA
+# 92. IoT as a Data Source
 
-The lecture gives a four-stage flow:
+The lecture describes IoT as:
+- Physical objects connected to the Internet.
+- Objects can identify themselves to other devices.
+- Sensors are embedded in devices/machines.
+- Sensors transmit sensed data to remote servers.
+- Continuous acquisition occurs from:
+  - Mobile equipment
+  - Transportation
+  - Public facilities
+  - Home appliances
 
-```text
-Generation
-    ↓
-Acquisition
-    ↓
-Storage
-    ↓
-Analysis
-```
+Source: fileciteturn114file1L1072-L1112
 
-## Generation sources
+---
+
+# 93. Data Centers
+
+Data-center handling includes:
+- Storing data.
+- Managing/organizing data.
+- Providing processing capacity.
+- Providing network infrastructure.
+- Managing energy.
+- Replicating data for backup.
+- Developing business-oriented solutions.
+- Helping personnel analyze data.
+- Discovering operational problems.
+
+Source: fileciteturn114file1L1114-L1134
+
+---
+
+# 94. Flow of Data
+
+The lecture gives:
+
+**Generation → Acquisition → Storage → Analysis**
+
+### Generation
 - Enterprise data
 - IoT data
-- Bio-medical data
-- Other fields
+- Biomedical data
+- Other data
 
-## Acquisition
-- data collection,
-- data transportation,
-- data pre-processing.
+### Acquisition
+- Data collection
+- Data transportation
+- Data preprocessing
 
-## Storage
-- Hadoop,
-- MapReduce-related ecosystem,
-- NoSQL databases.
+### Storage
+- Hadoop
+- MapReduce
+- NoSQL databases
 
-## Analysis
-- Bloom filters,
-- parallel computing,
-- hashing,
-- indexing.
+### Analysis
+- Bloom filter
+- Parallel computing
+- Hashing/indexing
+
+Source: fileciteturn114file1L1136-L1161
 
 ---
 
-# 80. DATA SOURCES
+# 95. Data Sources
 
 ## Enterprise data
-- online trading/analysis,
-- production/inventory,
-- sales,
-- financial data.
+- Online trading/analysis.
+- Production/inventory.
+- Sales/financial data.
 
 ## IoT data
-- industry,
-- agriculture,
-- traffic,
-- transportation,
-- healthcare,
-- public departments,
-- families.
+- Industry.
+- Agriculture.
+- Traffic.
+- Transportation.
+- Medical care.
+- Public departments.
+- Families.
 
-## Biomedical data
-- gene sequencing,
-- clinics,
-- medical R&D.
+## Biomedical
+- Gene sequencing.
+- Clinics.
+- Medical R&D.
 
 ## Other fields
-- computational biology,
-- astronomy,
-- nuclear research.
+- Computational biology.
+- Astronomy.
+- Nuclear research.
+
+Source: fileciteturn114file1L1163-L1189
 
 ---
 
-# 81. DATA ACQUISITION
+# 96. Data Acquisition
 
-## Data Collection
-Sources:
-- log/record files,
-- sensory data,
-- mobile-device data.
+## Data collection
+Sources include:
+- Automatically generated log/record files.
+- Sensor data:
+  - Sound
+  - Voice
+  - Vibration
+  - Automobile
+  - Chemical
+  - Current
+  - Weather
+  - Pressure
+  - Temperature
+- Mobile-device data:
+  - Geographic location
+  - 2D barcodes
+  - Pictures
+  - Videos
 
-Sensor examples:
-- sound,
-- voice,
-- vibration,
-- automobile data,
-- chemical,
-- current,
-- weather,
-- pressure,
-- temperature.
+## Data transmission
+After collection, data moves to storage for processing/analysis.
 
-Mobile data examples:
-- geographic location,
-- 2D barcodes,
-- pictures,
-- videos.
+Lecture categorizes transmission into:
+- Inter-DCN transmission
+- Intra-DCN transmission
 
-## Data Transmission
-After collection:
-- data is transferred to storage for processing/analysis.
-
-Transmission categories:
-- **Inter-DCN**
-- **Intra-DCN**
+Source: fileciteturn114file1L1191-L1214
 
 ---
 
-# 82. DATA PRE-PROCESSING
+# 97. Data Pre-processing
 
-Collected data can suffer from:
-- noise,
-- redundancy,
-- inconsistency.
+Collected datasets can contain:
+- Noise
+- Redundancy
+- Inconsistency
 
-Main relational-data preprocessing stages:
-1. Integration
-2. Cleaning
-3. Redundancy mitigation
+Three main preprocessing activities:
+1. **Integration**
+2. **Cleaning**
+3. **Redundancy mitigation**
 
----
+### Integration
+Combine data from various sources into a uniform view.
 
-# 83. INTEGRATION
+### Cleaning
+Identify:
+- Inaccurate data.
+- Incomplete data.
+- Unreasonable data.
 
-Integration:
-- combines data from multiple sources,
-- provides a uniform view.
+Then modify/delete it.
 
-### Memory
-`Integration = Combine sources → Uniform view`
+### Redundancy mitigation
+- Detect repeated data.
+- Filter.
+- Compress.
+- Avoid unnecessary transmission.
 
----
-
-# 84. CLEANING
-
-Cleaning:
-- identifies inaccurate data,
-- identifies incomplete data,
-- identifies unreasonable data,
-- modifies or deletes such data.
-
-### Memory
-`Cleaning = Find bad data → Fix/Delete`
+Source: fileciteturn114file1L1216-L1240
 
 ---
 
-# 85. REDUNDANCY MITIGATION
+# 98. Data Storage
 
-Redundancy mitigation:
-- detects repeated data,
-- filters repeated data,
-- compresses data,
-- avoids unnecessary transmission.
+## Distributed file systems
 
-### Assignment
-Q14 → **Eliminate repeated data through detection, filtering and compression.**
-
-### Memory
-`Redundancy = Repetition`  
-`Mitigation = Detect + Filter + Compress`
-
----
-
-# 86. DATA STORAGE
-
-## Distributed File Systems
-Designed for:
-- massive data,
-- consistency,
-- availability,
-- fault tolerance.
+Goals:
+- Consistency.
+- Availability.
+- Fault tolerance.
 
 Examples:
-- GFS,
-- HDFS,
-- Kosmosfs.
+- GFS
+- HDFS
+- Kosmosfs
 
-### GFS
-A notable large-scale distributed file system.
+GFS has performance limitations for small files.
 
-Lecture notes:
-- performance is limited for small files.
+## NoSQL databases
 
----
+Used because Big Data has characteristics that traditional relational databases may not handle well.
 
-# 87. NoSQL DATABASES
+Three main NoSQL types:
+1. Key-value
+2. Column-oriented
+3. Document-oriented
 
-NoSQL emerged to handle Big Data characteristics.
-
-Three main categories mentioned:
-1. Key-value databases
-2. Column-oriented databases
-3. Document-oriented databases
-
-### Memory
-`NoSQL = Key-Value + Column + Document`
+Source: fileciteturn114file1L1242-L1265
 
 ---
 
-# 88. HADOOP
+# PART F — HADOOP
 
-Hadoop:
-- software framework for distributed processing,
-- processes large datasets,
-- across large computer clusters,
-- open-source implementation inspired by Google's GFS and MapReduce.
+# 99. What is Hadoop?
 
-Apache Hadoop:
-- MapReduce derived from Google MapReduce,
-- HDFS derived from Google File System.
+Hadoop is:
+- Open-source software framework.
+- Distributed processing of large datasets.
+- Works across large computer clusters.
+
+Lecture links Hadoop to Google's:
+- GFS
+- MapReduce
+
+Apache Hadoop components include:
+- MapReduce
+- HDFS
+
+Source: fileciteturn114file1L1277-L1303
 
 ---
 
-# 89. HADOOP BUILDING BLOCKS
+# 100. Hadoop Building Blocks
 
 ## Hadoop Common
 Utilities supporting Hadoop components.
@@ -2133,675 +2099,637 @@ Utilities supporting Hadoop components.
 Reliable distributed data storage/access.
 
 ## MapReduce
-Parallel processing framework for large datasets.
+Framework for parallel processing of large datasets.
 
 ## YARN
-Allocates:
-- CPU,
-- memory,
-- storage
+Yet Another Resource Negotiator:
+- Allocates CPU.
+- Allocates memory.
+- Allocates storage to applications running in Hadoop cluster.
 
-to applications running on the Hadoop cluster.
-
-### Memory
-`Common = utilities`  
-`HDFS = storage`  
-`MapReduce = processing`  
-`YARN = resource allocation`
+Source: fileciteturn114file1L1305-L1325
 
 ---
 
-# 90. HDFS
+# 101. HDFS Architecture
 
-HDFS = **Hadoop Distributed File System**
+### Namenode
+- Centralized node.
+- Maintains filesystem metadata.
 
-### Centralized node
-**Namenode**
-- maintains filesystem metadata.
+### Datanode
+- Distributed node.
+- Stores actual data.
 
-### Distributed nodes
-**Datanodes**
-- store actual data.
+### File storage
+- Files divided into blocks.
+- Blocks replicated.
 
-### File handling
-- files divided into blocks,
-- blocks replicated.
+Source: fileciteturn114file1L1327-L1349
 
-### Core architecture
-```text
-             Namenode
-          (Metadata / Map)
-             /    |    \
-            /     |     \
-       Datanode Datanode Datanode
-        Blocks    Blocks   Blocks
-```
+### Assignment lock
+**Actual data blocks → Datanode.**
 
 ---
 
-# 91. NAMENODE
+# 102. Namenode Details
 
 Namenode:
-- stores filesystem metadata,
-- maintains mappings between:
-  - Datanodes and blocks,
-  - blocks and Datanodes.
+- Stores filesystem metadata.
+- Maintains in-memory mappings:
+  - Datanodes → blocks
+  - Blocks → datanodes
 
-### Trap
-Namenode does **not** store the actual file blocks in the basic architecture described here.
+It is the master/centralized role in the HDFS architecture shown.
 
-**Memory:** `NAME = Metadata`
+Source: fileciteturn114file1L1351-L1371
 
 ---
 
-# 92. DATANODE
+# 103. Datanode Details
 
 Datanode:
-- stores actual data,
-- talks to other Datanodes,
-- supports rebalancing,
-- supports replication,
-- periodically updates Namenode with block information,
-- verifies checksums before updates.
+- Stores actual data.
+- Can communicate with other Datanodes.
+- Helps rebalance/replicate data.
+- Periodically updates Namenode with block information.
+- Verifies checksums before updates.
 
-### Memory
-`DATA = Actual blocks`
+Source: fileciteturn114file1L1351-L1371
 
 ---
 
-# 93. JOB TRACKER / TASK TRACKER
+# 104. Job Tracker and Task Tracker
 
-The lecture presents the classic Hadoop MapReduce architecture.
+The lecture presents the older Hadoop architecture:
 
 ## Job Tracker
-- runs with Namenode,
-- receives user jobs,
-- decides number of mapper tasks,
-- decides where each mapper runs,
-- uses locality.
+- Runs with Namenode.
+- Receives user's job.
+- Decides number of tasks/mappers.
+- Decides where each mapper runs.
+- Uses locality.
 
 ## Task Tracker
-- runs on each Datanode,
-- receives tasks from Job Tracker,
-- reports progress.
+- Runs on each Datanode.
+- Receives tasks from Job Tracker.
+- Reports progress.
 
-### Exam warning
-This is a **classic Hadoop architecture** concept. Do not confuse Job Tracker/Task Tracker with the newer YARN architecture.
+Source: fileciteturn114file1L1373-L1399
 
----
-
-# 94. HADOOP MASTER-SLAVE ARCHITECTURE
-
-Hadoop is shown as a:
-- master-slave,
-- shared-nothing architecture.
-
-## Master
-- handles file operations such as open/close/rename,
-- determines block-to-Datanode mapping.
-
-## Slaves
-- serve read/write requests,
-- create/delete/replicate blocks as instructed by Namenode.
+### Exam caution
+The Week-11 lecture explicitly presents **Job Tracker/Task Tracker**. Do not silently replace these lecture terms when answering source-based questions.
 
 ---
 
-# 95. HIGH-PRIORITY COMPARISON TABLES
+# 105. Hadoop Master-Slave Architecture
 
-## Traditional Grid vs Smart Grid
+The lecture describes a:
+**Master-slave shared-nothing architecture**
 
-| Traditional | Smart Grid |
+### Master
+- Opens/closes/renames files/directories.
+- Determines block-to-Datanode mapping.
+
+### Slave
+- Serves read/write requests.
+- Performs block creation/deletion/replication as instructed by Namenode.
+
+Source: fileciteturn114file1L1401-L1425
+
+---
+
+# PART G — HIGH-PRIORITY COMPARISON TABLES
+
+# 106. Traditional Grid vs Smart Grid
+
+| Traditional | Smart |
 |---|---|
-| One-way energy | Two-way/bidirectional energy |
-| Manual restoration | Automated/intelligent restoration |
-| Centralized generation | Distributed generation integration |
-| Limited information | Rich real-time information |
+| Centralized generation | Supports distributed/customer generation |
+| One-directional energy | **Bidirectional energy** |
+| Manual monitoring | Digital/automated monitoring |
 | Limited control | Two-way communication/control |
-| Weak renewable integration | Better renewable integration |
+| Less adaptive | More reliable/resilient |
+| Limited renewable integration | Better renewable integration |
 
 ---
 
-## Smart Meter vs HEMS
-
-| Smart Meter | HEMS |
-|---|---|
-| Grid interface | Home energy management |
-| Measures/provides usage information | Tracks and schedules usage |
-| Communicates with provider | Uses price/signals to optimize appliance operation |
-
----
-
-## PMU vs DAU vs MDMS
+# 107. Smart Meter vs Gateway vs DAU vs MDMS
 
 | Component | Main role |
 |---|---|
-| PMU | Voltage/current sampling and phasor measurements |
-| DAU | Aggregates energy data for an area |
-| MDMS | Central coordinator / pricing / meter data management |
+| **Smart Meter** | Consumer ↔ energy-service-provider interface; measures/communicates usage |
+| **Gateway** | Nearby smart meters ↔ DAU |
+| **DAU** | Aggregates geographically grouped energy data |
+| **MDMS** | Centralized coordination + pricing |
+
+### One-line chain
+**Meter → Gateway → DAU → MDMS**
 
 ---
 
-## Smart Grid security
+# 108. Smart Grid Security Mapping
 
-| Threat | Key clue |
+| Concept | Key association |
 |---|---|
-| Data Injection | Manipulate sensor/control/price data |
-| Time Synchronization | Manipulate PMU time references |
-| DoS | Availability becomes inaccessible |
-| Replay | Re-send observed sensor outputs |
-| D-DIA | Uses dynamic model knowledge |
-| Physical | Attack physical components/meters |
-| Coordinated | Multiple simultaneous/cascading attacks |
+| Integrity | Correctness/credibility of data |
+| Data Injection | Manipulates sensor/control/price data |
+| Time Synchronization Attack | Manipulates PMU time |
+| Availability | Accessibility |
+| **DoS** | **Availability attack** |
+| Replay Attack | Repeats learned sensor outputs |
+| D-DIA | Uses grid dynamic model |
+| Physical threat | Attacks physical components |
+| Coordinated attack | Multiple simultaneous/cascading attacks |
 
 ---
 
-## IoT vs IIoT
+# 109. IoT vs IIoT
 
 | IoT | IIoT |
 |---|---|
-| Consumer convenience | Industrial efficiency |
-| Consumer applications | Industrial applications |
-| Limited M2M | Extensive M2M |
-| Comfort-oriented | Safety/security/operations-oriented |
+| Convenience | Efficiency/safety/security |
+| Consumer-level | Industrial-level |
+| M2M limited | M2M extensive |
+| Smart consumer applications | Smart industrial systems |
+| Broad ecosystem | Industrial ecosystem |
 
 ---
 
-## Big Data Vs
+# 110. Big Data 7 Vs
 
-| Characteristic | Key word |
+| V | Meaning |
 |---|---|
-| Volume | Quantity |
+| Volume | Amount |
 | Velocity | Speed |
-| Variety | Forms |
-| Variability | Changing meaning |
-| Veracity | Bias/noise/abnormality |
-| Visualization | Graphical view |
-| Value | Useful information |
+| Variety | Data types/formats |
+| Variability | Changing meaning/context |
+| **Veracity** | **Bias/noise/abnormality** |
+| Visualization | Graphical presentation |
+| Value | Useful information/business insight |
+
+### Mnemonic
+**V V V V V V V** → remember the meanings, not just the letters.
 
 ---
 
-## HDFS
+# 111. Data Preprocessing
 
-| Node | Role |
+| Step | Purpose |
 |---|---|
-| Namenode | Metadata |
-| Datanode | Actual blocks |
+| **Integration** | Combine sources into uniform view |
+| **Cleaning** | Fix/remove inaccurate/incomplete/unreasonable data |
+| **Redundancy mitigation** | Remove repeated data using detection/filtering/compression |
 
 ---
 
-# 96. MCQ/MSQ TRAPS
+# 112. HDFS
 
-1. Smart Grid is **not** one-directional.
-2. Smart Grid supports **bidirectional energy flow**.
-3. Smart meter = interface between consumer and provider.
-4. TOU → off-peak consumption.
-5. Net metering → inflow + outflow.
-6. PMU → voltage/current sampling.
-7. Multiple PMUs → phasor network.
-8. Phasor network → centralized SCADA analysis.
-9. Distribution intelligence → automated outage detection/restoration.
-10. Gateway → nearby meters ↔ DAU.
-11. DoS → availability.
-12. Data injection → integrity.
-13. Replay attack → repeats observed outputs.
-14. Time synchronization attack → manipulates PMU time reference.
-15. IIoT → industrial IoT, not consumer-only IoT.
-16. IIoT → wrap & re-use.
-17. IIoT includes ML, Big Data, M2M and automation.
-18. Industry 4.0 → IIoT.
-19. DSRC → V2V/V2R.
-20. Mining → air quality + poisonous gases + oxygen.
-21. Veracity → bias/noise/abnormality.
-22. Redundancy mitigation → detection/filtering/compression.
-23. HDFS Datanode → actual data.
-24. HDFS Namenode → metadata.
-25. HDFS files → blocks + replication.
-26. Hadoop Common → utilities.
-27. MapReduce → parallel processing.
-28. YARN → resource allocation.
-29. Structured data → relational/SQL.
-30. Unstructured data → no predefined model.
-31. Variability ≠ Variety.
-32. Visualization ≠ Value.
-33. Cloud supports smart-grid energy, information and security applications.
-34. PEVs can be both loads and potential energy sources.
-35. Consumer override of smart appliances does not guarantee minimum cost.
-36. IIoT safety hazards include oxygen deficiency, particulates and radiation.
-37. Standardization aims to improve interoperability.
-38. Semantic interoperability is a data-meaning issue.
-39. Primary service = basic node function.
-40. Secondary service = auxiliary/support function.
-
----
-
-# 97. IMPORTANT NUMBERS / IDENTIFIERS
-
-| Item | Memorize |
+| Component | Function |
 |---|---|
-| Week 11 lecture length | **132 pages** |
-| Smart-grid C-Bus | **3500 bits/sec** |
-| C-Bus cable length | **up to 1000 m** |
-| DECT | **64000 bits/sec** |
-| EnOcean | **1880–1930 MHz** |
-| EnOcean data rate | **9600 bits/sec** |
-| EnOcean North America | **902 MHz** |
-| Universal Powerline Bus | **480 bits/sec** |
-| Thread | **20–250 Kbits/sec** |
-| Zigbee | **20–250 Kbits/sec** |
-| Zigbee band | **2.4 GHz** |
-| Zigbee range | **~100 m** |
-| SCS | **9.6 Kbits/sec** |
-| Structured data in lecture | **~20%** |
-| Unstructured data in lecture | **~80%** |
-| LSST images | **30 TB/night** |
-| YouTube example | **72 hours/minute** |
-| Tweets example | **140 million/day** |
-| NYSE example | **1 TB/session** |
-| Big Data characteristics | **7 Vs** |
-| HDFS actual data | **Datanode** |
-| HDFS metadata | **Namenode** |
+| **Namenode** | Metadata |
+| **Datanode** | Actual data |
+| Files | Divided into blocks |
+| Blocks | Replicated |
+| Job Tracker | Receives/assigns jobs in lecture's older architecture |
+| Task Tracker | Executes/report tasks on Datanodes |
 
 ---
 
-# 98. VISUAL / DIAGRAM-BASED EXAM NOTES
+# PART H — MOCK-STYLE CROSS-CHECK
 
-## Smart-grid architecture
-The lecture's architecture diagram emphasizes the connection between:
-- consumers/smart homes,
-- distribution/transmission,
-- generation,
-- communication/control.
+The cumulative mock material reinforces several Week-11 concepts.
 
-### Recall
-Smart Grid is a **cyber-physical energy system**, not merely a communication network.
+## Directly relevant patterns
 
----
+### 1. Industry 4.0
+A cumulative mock asks for the fourth industrial revolution and identifies:
+**Industry 4.0**. fileciteturn116file3L396-L402
 
-## Smart-grid communication architecture
+### 2. Wrap and reuse
+A mock asks how wrap-and-reuse helps IIoT adoption:
+**Integrates new technologies with existing systems, minimizing disruption and cost.** fileciteturn116file7L757-L763
 
-```text
-Home Appliances
-       ↓
-   Smart Meter
-       ↓
-     Gateway
-       ↓
-      DAU
-       ↓
-     MDMS
-       ↓
-Operation Center
-```
+### 3. MDMS
+A mock asks for the primary smart-grid MDMS function:
+**Centralized coordination, aggregated-data processing and energy pricing.** fileciteturn116file7L793-L800
 
-Remember:
-- Gateway = local communication bridge.
-- DAU = aggregation.
-- MDMS = centralized coordination.
+### 4. DSRC
+The Week-11 assignment itself identifies DSRC as the key V2V/V2R technology. fileciteturn113file0L238-L255
+
+### 5. Big Data
+The assignment directly tests:
+- Veracity.
+- Redundancy mitigation.
+- HDFS Datanode.
+
+These are especially high priority because they are both assignment and lecture concepts. fileciteturn113file0L282-L342
 
 ---
 
-## PMU architecture
+# PART I — EXAM TRAP BANK
 
-```text
-PMU 1 ─┐
-PMU 2 ─┼──→ Phasor Network ─→ SCADA
-PMU 3 ─┘
-```
+## Smart Grid
 
----
-
-## Data flow architecture
-
-```text
-Generation
-     ↓
-Acquisition
-     ↓
-Storage
-     ↓
-Analysis
-```
-
----
-
-## HDFS architecture
-
-```text
-              Namenode
-             Metadata
-                 |
-       ---------------------
-       |         |         |
-   Datanode   Datanode   Datanode
-    Block A    Block B    Block C
-       ↘         ↓         ↙
-        Replicated blocks
-```
-
----
-
-# 99. CODE/CONCEPT RECOGNITION DRILL
-
-### If question says:
-**“Bidirectional energy + two-way communication”**
+### Trap 1
+**Bidirectional energy + two-way communication/control**
 → Smart Grid
 
-### “Interface between consumer and energy provider”
-→ Smart Meter
+### Trap 2
+**One-directional energy + manual restoration**
+→ Traditional Grid
 
-### “Off-peak appliance scheduling”
-→ Time-of-Use pricing
+### Trap 3
+**Smart meter**
+→ Consumer ↔ Energy Service Provider interface
 
-### “Grid-to-home + home-to-grid”
-→ Net metering
+### Trap 4
+**Time-of-Use**
+→ Off-peak consumption
 
-### “Voltage/current sampling”
+### Trap 5
+**Net metering**
+→ Inflow + outflow
+
+### Trap 6
+**Voltage/current sampling**
 → PMU
 
-### “PMU network analyzed centrally”
-→ SCADA
-
-### “Automatic outage detection/restoration”
-→ Distribution Intelligence
-
-### “Nearby meters to DAU”
+### Trap 7
+**Nearby smart meters ↔ DAU**
 → Gateway
 
-### “Availability attack”
+### Trap 8
+**Availability attack**
 → DoS
-
-### “Existing industrial systems”
-→ Wrap & Re-use
-
-### “V2V/V2R”
-→ DSRC
-
-### “Mine air/gas/oxygen”
-→ IIoT mining
-
-### “Bias/noise/abnormality”
-→ Veracity
-
-### “Repeated data”
-→ Redundancy mitigation
-
-### “Actual HDFS blocks”
-→ Datanode
-
-### “HDFS metadata”
-→ Namenode
-
-### “Parallel large-dataset processing”
-→ MapReduce
-
-### “CPU/memory/storage allocation”
-→ YARN
-
----
-
-# 100. ONE-PAGE FINAL REVISION
-
-## SMART GRID
-
-```text
-Traditional:
-Centralized → One-way → Manual
-
-Smart Grid:
-Bidirectional → Two-way communication/control
-              → Automated/intelligent
-              → Renewable + distributed generation
-```
-
-### Smart-home chain
-```text
-Appliances
-   ↓
-Smart Meter
-   ↓
-Gateway
-   ↓
-DAU
-   ↓
-MDMS
-   ↓
-Operation Center
-```
-
-### Consumer mechanisms
-```text
-TOU → Off-peak
-Net Metering → Inflow + Outflow
-Incentives → Shift usage / use stored energy
-```
-
-### PMU
-```text
-Voltage + Current
-       ↓
-      PMU
-       ↓
-Phasor Network
-       ↓
-     SCADA
-```
-
-### Security
-```text
-Integrity → Data Injection / Price manipulation
-Time → Time Synchronization Attack
-Availability → DoS
-Dynamic → Replay / D-DIA / Covert
-Physical → Generator/Substation/Meter
-Coordinated → Cascading failures
-```
 
 ---
 
 ## IIoT
 
-```text
-IoT + Industry
-      ↓
-IIoT
-      ↓
-ML + Big Data + M2M + Automation
-```
+### Trap 9
+**Existing industrial systems**
+→ Wrap & re-use
 
-### Philosophy
-**Wrap & Re-use**
+### Trap 10
+**Fourth Industrial Revolution**
+→ Industry 4.0 / IIoT
 
-### Design
-```text
-Energy
-Latency
-Throughput
-Scalability
-Topology
-Safety/Security
-```
+### Trap 11
+**IIoT**
+→ Industrial application of IoT
 
-### Applications
-```text
-Manufacturing
-Healthcare
-Transportation
-Mining
-Firefighting
-```
+### Trap 12
+**Efficiency + safety + security**
+→ IIoT
 
-### Mining
-```text
-Air quality
-Poisonous gases
-Oxygen
-```
+### Trap 13
+**V2V/V2R**
+→ DSRC
 
-### Robots
-```text
-Sense → Think → Act
-```
+### Trap 14
+**Mine gases/oxygen/air quality**
+→ IIoT wireless sensing
+
+---
+
+## Big Data
+
+### Trap 15
+**Bias/noise/abnormality**
+→ Veracity
+
+### Trap 16
+**Repeated data**
+→ Redundancy mitigation
+
+### Trap 17
+**Actual HDFS blocks**
+→ Datanode
+
+### Trap 18
+**Filesystem metadata**
+→ Namenode
+
+### Trap 19
+**Graphical data presentation**
+→ Visualization
+
+### Trap 20
+**Useful business information**
+→ Value
+
+### Trap 21
+**Data speed**
+→ Velocity
+
+### Trap 22
+**Data amount**
+→ Volume
+
+### Trap 23
+**Data types/formats**
+→ Variety
+
+### Trap 24
+**Changing context/meaning**
+→ Variability
+
+---
+
+# PART J — IMPORTANT NUMBERS / FACTS
+
+| Topic | Number / fact |
+|---|---|
+| Structured data in lecture | **20%** |
+| Unstructured data in lecture | **80%** |
+| C-Bus | **3500 bits/sec** |
+| C-Bus cable length | **up to 1000 m** |
+| DECT | **64000 bits/sec** |
+| EnOcean | **1880–1930 MHz**, 9600 bits/sec |
+| EnOcean North America | **902 MHz** |
+| Universal Powerline Bus | **480 bits/sec** |
+| Thread | **20–250 Kbits/sec** |
+| ZigBee smart-grid communication | **20–250 Kbits/sec** |
+| ZigBee band | **2.4 GHz** |
+| ZigBee range in lecture | **~100 m** |
+| SCS | **9.6 Kbits/sec** |
+| LSST example | **30 TB/night** |
+| YouTube example | **72 hours/minute** |
+| Tweets example | **140 million/day** |
+| NYSE example | **1 TB/session** |
+
+> **Exam advice:** The conceptual mappings are more important than lecture-era example statistics unless the question explicitly asks for a number.
+
+---
+
+# PART K — 60-SECOND RECALL
+
+> **Smart Grid:** bidirectional energy + two-way communication/control.  
+> **Traditional grid:** centralized + one-way + manual.  
+> **Smart meter:** consumer ↔ service provider interface.  
+> **TOU:** off-peak.  
+> **Net metering:** inflow + outflow.  
+> **PMU:** voltage/current sampling → phasor network → SCADA.  
+> **Distribution intelligence:** outage detection + automatic restoration.  
+> **Gateway:** smart meters ↔ DAU.  
+> **Availability attack:** DoS.  
+> **IIoT:** industrial IoT + automation + enterprise/planning/product lifecycle.  
+> **Industry 4.0:** fourth industrial revolution.  
+> **Existing industrial assets:** wrap & reuse.  
+> **V2V/V2R:** DSRC.  
+> **Mining:** air quality + poisonous gases + oxygen.  
+> **Big Data 7 Vs:** Volume, Velocity, Variety, Variability, Veracity, Visualization, Value.  
+> **Veracity:** bias/noise/abnormality.  
+> **Preprocessing:** integration + cleaning + redundancy mitigation.  
+> **HDFS:** Namenode = metadata, Datanode = actual data.
+
+---
+
+# PART L — 30-QUESTION RAPID SELF-TEST
+
+1. What distinguishes a smart grid from a traditional grid?
+2. What is the main role of a smart meter?
+3. Under TOU pricing, when should smart appliances operate to reduce cost?
+4. Which two energy flows matter in net metering?
+5. What does a PMU sample?
+6. What is distribution intelligence?
+7. What does a smart-grid gateway connect?
+8. Which attack targets availability?
+9. What is IIoT?
+10. What approach does IIoT use for existing industrial systems?
+11. What is Industry 4.0?
+12. What is the key V2V/V2R technology?
+13. What environmental parameters are monitored in mines?
+14. What is the Big Data V referring to data amount?
+15. Which V refers to speed?
+16. Which V refers to types/formats?
+17. Which V refers to changing meaning/context?
+18. Which V refers to bias/noise/abnormality?
+19. Which V refers to graphical presentation?
+20. Which V refers to useful business information?
+21. What are the three preprocessing activities?
+22. What does redundancy mitigation do?
+23. What does HDFS store?
+24. What does the Namenode store?
+25. What does the Datanode store?
+26. What does MapReduce do?
+27. What does YARN allocate?
+28. What are the six IIoT design considerations?
+29. What are the main IIoT application areas?
+30. What are the main smart-grid security categories?
+
+## Answers
+
+1. Bidirectional energy + two-way communication/control.
+2. Smart-grid interface between consumer and energy service provider.
+3. Off-peak hours.
+4. Grid-to-consumer inflow and consumer-to-grid outflow.
+5. Voltage and current.
+6. Smart-IoT-based distribution intelligence that detects outages, restores power automatically, optimizes real/reactive power and protects feeders.
+7. Nearby smart meters to DAU.
+8. DoS.
+9. Industrial application of IoT linking automation with enterprise/planning/product lifecycle.
+10. Wrap and re-use.
+11. Fourth Industrial Revolution.
+12. DSRC.
+13. Air quality, poisonous gases and oxygen level.
+14. Volume.
+15. Velocity.
+16. Variety.
+17. Variability.
+18. Veracity.
+19. Visualization.
+20. Value.
+21. Integration, cleaning, redundancy mitigation.
+22. Removes repeated data through detection, filtering and compression.
+23. Distributed large-scale data.
+24. Filesystem metadata.
+25. Actual data.
+26. Parallel processing of large datasets.
+27. CPU, memory and storage to applications.
+28. Energy, latency, throughput, scalability, topology, safety/security.
+29. Manufacturing, healthcare, transportation/logistics, mining, firefighting.
+30. Integrity, availability, dynamic system attacks, physical threats, coordinated attacks.
+
+---
+
+# PART M — FINAL EXAM PRIORITY ORDER
+
+## Priority 1 — Memorize all 15 assignment mappings
+
+**C, B, A, D, A, B, A, D, A, C, D, A, C, D, A**
+
+But do **not** memorize only the letters. Memorize the concept:
+
+1. Smart grid → bidirectional/two-way
+2. Smart meter → interface
+3. TOU → off-peak
+4. Net metering → inflow/outflow
+5. PMU → voltage/current
+6. Distribution intelligence → outage/restoration
+7. Gateway → meters/DAU
+8. Availability → DoS
+9. IIoT → industrial application
+10. Wrap/re-use
+11. DSRC
+12. Mining sensors
+13. Veracity
+14. Redundancy mitigation
+15. Datanode
+
+## Priority 2 — Smart Grid architecture
+
+Know:
+**Meter → Gateway → DAU → MDMS**
+
+## Priority 3 — Security
+
+Know:
+**Integrity vs Availability vs Dynamic vs Physical vs Coordinated**
+
+## Priority 4 — IIoT
+
+Know:
+**IoT → Industry → Industry 4.0 → wrap/re-use → applications → challenges**
+
+## Priority 5 — Big Data
+
+Know all **7 Vs** and their exact meanings.
+
+## Priority 6 — Hadoop
+
+Know:
+**Namenode = metadata**  
+**Datanode = actual data**  
+**MapReduce = parallel processing**  
+**YARN = resource allocation**
+
+---
+
+# PART N — FINAL ONE-PAGE REVISION
+
+## SMART GRID
+
+**Traditional:** centralized + one-way + manual  
+**Smart:** bidirectional + two-way communication/control + digital
+
+**Smart meter:** consumer ↔ energy service provider
+
+**TOU:** off-peak
+
+**Net metering:** inflow − outflow concept
+
+**PMU:** voltage/current → phasor network → SCADA
+
+**Distribution intelligence:** outage detection + automatic restoration
+
+**Gateway:** smart meters → DAU
+
+**DAU:** geographic aggregation
+
+**MDMS:** centralized coordinator + pricing
+
+---
+
+## SMART GRID SECURITY
+
+**Integrity:** correct/credible data  
+**DIA:** data manipulation  
+**TSA:** PMU time manipulation  
+**Availability:** accessibility  
+**DoS:** availability attack  
+**Replay:** repeat learned outputs  
+**D-DIA:** dynamic-model-based injection  
+**Physical:** physical components  
+**Coordinated:** multiple/cascading attacks
+
+---
+
+## IIoT
+
+**IIoT = industrial application of IoT**
+
+**Industry 4.0 = fourth industrial revolution**
+
+**IIoT strategy = Wrap & Re-use**
+
+**IIoT focus = efficiency + safety + security**
+
+**Design:** Energy + Latency + Throughput + Scalability + Topology + Safety/Security
+
+**Applications:**
+- Manufacturing
+- Healthcare
+- Transportation/logistics
+- Mining
+- Firefighting
+
+**V2V/V2R → DSRC**
+
+**Mining → air quality + poisonous gases + oxygen**
+
+**Robot → sensing + thinking + acting**
 
 ---
 
 ## BIG DATA
 
-### 7 Vs
-```text
-Volume       → Quantity
-Velocity     → Speed
-Variety      → Formats
-Variability  → Changing meaning
-Veracity     → Bias/noise/abnormality
-Visualization→ Graphical
-Value        → Useful information
-```
+**7 Vs:**
 
-### Pre-processing
-```text
-Integration
-Cleaning
-Redundancy Mitigation
-```
+- Volume = amount
+- Velocity = speed
+- Variety = types
+- Variability = changing meaning
+- Veracity = bias/noise/abnormality
+- Visualization = graphical
+- Value = useful information
 
-### Redundancy
-```text
-Detect → Filter → Compress
-```
-
-### Hadoop
-```text
-Hadoop Common → Utilities
-HDFS          → Storage
-MapReduce     → Processing
-YARN          → Resource allocation
-```
-
-### HDFS
-```text
-Namenode  → Metadata
-Datanode  → Actual data blocks
-```
+**Structured ≈ 20%**  
+**Unstructured ≈ 80%**
 
 ---
 
-# 101. LAST-MINUTE 15-ANSWER DRILL
+## DATA PREPROCESSING
 
-1. Smart Grid's key distinction?  
-   **Bidirectional energy + two-way communication/control**
+**Integration → Cleaning → Redundancy Mitigation**
 
-2. Smart meter role?  
-   **Consumer ↔ energy provider interface**
-
-3. TOU encourages?  
-   **Off-peak usage**
-
-4. Net metering uses?  
-   **Energy inflow + energy outflow**
-
-5. Voltage/current sampling?  
-   **PMU**
-
-6. Distribution intelligence?  
-   **Outage identification + automatic restoration**
-
-7. Gateway connects?  
-   **Nearby smart meters ↔ DAU**
-
-8. Availability attack?  
-   **DoS**
-
-9. IIoT definition?  
-   **IoT applied to industry, linking automation/enterprise/planning/product lifecycle**
-
-10. Existing industrial systems?  
-    **Wrap & re-use**
-
-11. V2V/V2R technology?  
-    **DSRC**
-
-12. Mining parameters?  
-    **Air quality + poisonous gases + oxygen**
-
-13. Bias/noise/abnormality?  
-    **Veracity**
-
-14. Repeated-data removal?  
-    **Redundancy mitigation**
-
-15. Actual HDFS blocks?  
-    **Datanode**
+- Integration → uniform view
+- Cleaning → inaccurate/incomplete/unreasonable data
+- Redundancy mitigation → repeated data → detection/filtering/compression
 
 ---
 
-# 102. FINAL EXAM MEMORY LIST
+## HADOOP
 
-If you have only a few minutes, memorize these exact pairs:
+**Hadoop = distributed processing of large datasets**
 
-- **Smart Grid → Bidirectional energy + two-way communication/control**
-- **Smart Meter → Consumer/provider interface**
-- **TOU → Off-peak**
-- **Net Metering → Inflow + Outflow**
-- **PMU → Voltage + Current**
-- **PMU network → SCADA**
-- **Distribution Intelligence → Automatic outage detection/restoration**
-- **Gateway → Smart meters ↔ DAU**
-- **DoS → Availability**
-- **DIA → Integrity**
-- **Replay → Repeated observed data**
-- **TSA → PMU time reference**
-- **IIoT → Industrial IoT**
-- **IIoT → Wrap & Re-use**
-- **Industry 4.0 → IIoT**
-- **DSRC → V2V/V2R**
-- **Mining → Air + Gas + Oxygen**
-- **Veracity → Bias + Noise + Abnormality**
-- **Redundancy mitigation → Detect + Filter + Compress**
-- **Namenode → Metadata**
-- **Datanode → Actual data**
-- **MapReduce → Parallel processing**
-- **YARN → Resource allocation**
-- **HDFS → Blocks + Replication**
-- **7 Vs → Volume, Velocity, Variety, Variability, Veracity, Visualization, Value**
+**HDFS = distributed storage**
+
+**Namenode = metadata**
+
+**Datanode = actual data**
+
+**MapReduce = parallel processing**
+
+**YARN = CPU + memory + storage allocation**
+
+**Files → blocks → replicated blocks**
 
 ---
 
-# 103. SOURCE / LECTURE MAP
+# SOURCE BASIS
 
-The Week 11 lecture PDF has **132 pages** and contains:
+This file is based on:
 
-- **Pages 1–23:** Smart Grid – Part I
-- **Pages 24–53:** Smart Grid – Part II
-- **Pages 54–72:** IIoT – Part I
-- **Pages 73–104:** IIoT – Part II
-- **Pages 105–132:** Data Handling and Analytics – Part I
+1. **Assignment_11.pdf** — all 15 Week-11 assignment questions, answer keys and explanations. fileciteturn113file0L18-L59 fileciteturn113file0L66-L165 fileciteturn113file0L172-L234 fileciteturn113file0L238-L342
+2. **Week-11.pdf** — Smart Grid Part I, Smart Grid Part II, IIoT Part I, IIoT Part II, and Data Handling & Analytics Part I. fileciteturn113file1L377-L530 fileciteturn113file1L559-L705 fileciteturn113file1L877-L1121 fileciteturn114file0L218-L456 fileciteturn114file0L458-L746 fileciteturn114file1L841-L1425
+3. **Uploaded cumulative mock exams** — used only for directly relevant Week-11 cross-checks such as Industry 4.0, wrap-and-reuse, and MDMS. fileciteturn116file3L396-L402 fileciteturn116file7L757-L800
 
-### Assignment-linked high-priority lecture slides
-- Smart Grid Part I:
-  - Slide 3 → Smart Grid definition
-  - Slide 14 → Smart meter
-  - Slide 20 → TOU
-  - Slide 21 → Net metering
-- Smart Grid Part II:
-  - Slide 3 → PMU
-  - Slide 5 → Distribution intelligence
-  - Slide 11 → Gateway
-  - Slide 17 → DoS
-- IIoT Part I:
-  - Slide 3 → IIoT definition
-  - Slide 6 → Wrap & re-use
-- IIoT Part II:
-  - Slide 5 → DSRC
-  - Slide 7 → Mining
-- Data Handling and Analytics Part I:
-  - Slide 9 → Veracity
-  - Slide 18 → Redundancy mitigation
-  - Slide 23 → HDFS Datanode
-
-These assignment-linked slides should be revised first immediately before the exam.
+> **No outside web research and no invented assignment questions were used.**
+>
+> **No images were generated or added.**
 
 ---
 
-# 104. FINAL MEMORY SENTENCE
-
-**Week 11 = Smart Grid + IIoT + Big Data:** Smart Grid is **bidirectional energy + two-way communication/control**; smart meter is the **consumer/provider interface**; TOU shifts usage to **off-peak**; net metering considers **inflow and outflow**; **PMU** samples voltage/current and feeds a phasor network analyzed by **SCADA**; distribution intelligence enables automatic outage restoration; gateway connects meters to **DAUs**; **DoS = availability attack**; IIoT connects industrial automation with enterprise/planning/product lifecycle and uses **wrap & re-use**; **DSRC = V2V/V2R**; mining monitors **air quality, poisonous gases and oxygen**; **Veracity = bias/noise/abnormality**; redundancy mitigation removes repeated data through **detection, filtering and compression**; in HDFS **Namenode = metadata** and **Datanode = actual data**.
+# END OF WEEK 11 NOTES
