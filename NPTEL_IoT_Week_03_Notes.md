@@ -455,7 +455,40 @@ Process:
 
 ## NFC Modes
 
-### 1. Peer-to-peer
+#
+## 🚨 Exam Priority Update — Assignment + Mock-Exam Cross-Check
+
+**Priority order for Week 3**
+1. **All 15 assignment questions first**
+2. **All Week-3 lecture/PPT topics**
+3. **Repeated mock-exam patterns**
+4. **Final traps, numbers, comparisons, and rapid recall**
+
+### Week-3 concepts reinforced by the uploaded mock exams
+
+| Topic | Repeated exam pattern | Must remember |
+|---|---|---|
+| **WirelessHART** | TDMA vs ZigBee; mesh reliability; channel blacklisting | TDMA, channel hopping/blacklisting, mesh, redundant paths |
+| **NFC** | Full form, magnetic induction, passive tags, reader | Near Field Communication; magnetic induction; passive supermarket tags |
+| **Bluetooth** | Piconet repeatedly tested | 1 master + up to 7 active slaves |
+| **Z-Wave** | Frequency, GFSK, Manchester, Healing | US 908.42 MHz; Europe 868.42 MHz; GFSK + Manchester; Healing |
+| **Sensor-node behavior** | Dumb behavior | Environmental/transient behavior; assignment says **temporal** |
+| **UMB interoperability** | Adaptor/Core responsibilities | Adaptor → device abstraction using UDT; Core → routing/dissemination between adaptors |
+| **ISA100.11A** | Security mechanism | Data-link hop security + transport end-to-end security |
+| **Sensor Web / WSN** | Conceptual identification | Service-oriented sensing, observations, SensorML/SOS/SPS/SAS/WNS |
+| **ZigBee** | Data rate/comparison | Assignment: commonly **250 kbps**; compare with WirelessHART/Z-Wave |
+
+### ⚠️ Important source-specific wording
+
+For exam preparation, preserve the NPTEL wording even where a broader textbook may phrase the concept differently. In particular:
+- Assignment Q3 explicitly expects **Temporal** for dumb behavior.
+- Assignment Q4 expects **Channel Blacklisting**.
+- Assignment Q8 says Bluetooth is based on **Piconets**.
+- Assignment Q11 distinguishes **Manchester** from the deliberately incorrect “Hongkong” option.
+- Assignment Q12 uses **Healing** for bypassing Z-Wave radio dead-spots.
+
+
+## 1. Peer-to-peer
 Two smartphones/devices exchange data.
 
 ### 2. Read/Write
@@ -1578,3 +1611,642 @@ This file follows the supplied NPTEL Week-3 lecture material and Assignment-Week
 
 **Assignment:** 15 questions, 15 marks.  
 **Lecture:** Connectivity Technologies Parts III–V + Sensor Networks Parts I–II.
+
+
+---
+
+# NEW — Mock-Exam Cross-Check (Mock Exams 1–5)
+
+> **Use this section after mastering the assignment and lecture notes.** It adds only Week-3-relevant patterns from the uploaded mock exams; unrelated later-week questions are intentionally excluded.
+
+## 1. WirelessHART — high priority
+
+### Core exam facts
+
+- WirelessHART is the wireless release of the HART protocol.
+- It is intended for networked smart field devices.
+- The lecture states that **Wired HART lacks a network layer**.
+- WirelessHART uses:
+  - **2.4 GHz ISM band**
+  - **15 channels** in the lecture
+  - **TDMA**
+  - **10 ms timeslots**
+  - **channel hopping**
+  - **channel blacklisting**
+  - **mesh networking**
+
+### Channel blacklisting
+
+**Channel blacklisting** = identifying channels consistently affected by interference and removing them from use.
+
+**Exam trap:**  
+“Channel trimming” / “channel flushing” → ❌  
+**Channel blacklisting** → ✅
+
+### TDMA vs ZigBee CSMA/CA
+
+| WirelessHART | ZigBee |
+|---|---|
+| TDMA | Primarily CSMA/CA in the lecture comparison |
+| Scheduled time slots | Contention-based access |
+| Deterministic/collision-free communication | Collision avoidance by sensing the channel |
+| Channel hopping | Does not hop after every individual message in the lecture comparison |
+
+### Why mesh matters
+
+WirelessHART is described as a **true mesh**:
+
+- each node can forward packets
+- alternative paths can be used if one node fails
+- this improves reliability/resilience
+
+**Mock trap:**  
+WirelessHART's mesh advantage is **redundant communication paths / resilience**, not simply “higher data rate.”
+
+---
+
+# 2. NFC — very high priority
+
+## Full form
+
+**NFC = Near Field Communication**
+
+## Principle
+
+**NFC works on magnetic induction.**
+
+The lecture's working chain:
+
+**Reader → small electric current → magnetic field → coupling with another coil → electrical impulses → information transfer**
+
+## Passive vs Active
+
+| Passive NFC | Active NFC |
+|---|---|
+| Contains information | Can collect and transmit information |
+| Cannot read information itself according to lecture | Can collect as well as transmit |
+| Supermarket NFC tags are examples | Smartphone is a good example |
+| Uses energy from reader | Has its own power source |
+
+### Most important trap
+
+> “NFC tags found in supermarket products are active.”
+
+❌ **False**
+
+They are **passive NFC tags**.
+
+## NFC numbers from the lecture
+
+- Frequency: **13.56 MHz**
+- Data rates: **106, 212, 424 Kbps**
+- Typical tag storage: **96–512 bytes**
+- Communication range: **less than 20 cm**
+
+### NFC modes
+
+1. **Peer-to-peer**
+   - Two smartphones exchange data.
+
+2. **Read/Write**
+   - One active device reads information from a passive device.
+
+3. **Card emulation**
+   - NFC device behaves like a contactless card.
+
+### Reader trap
+
+If asked which NFC component creates the magnetic field:
+
+**Reader** → emits the small electric current that creates the magnetic field.
+
+---
+
+# 3. Bluetooth — repeated mock favorite
+
+Bluetooth is repeatedly tested in the uploaded mocks.
+
+## One-line memory
+
+**Bluetooth = short-range, ad-hoc wireless technology based on piconets.**
+
+## Piconet
+
+A **piconet** is a small ad-hoc Bluetooth network containing:
+
+- **1 master**
+- **up to 7 active slaves**
+
+This exact fact was repeatedly tested.
+
+### Do not confuse
+
+- **Piconet** → one master + up to 7 active slaves
+- **Scatternet** → linked/overlapping piconets
+
+### Master role
+
+The device that initializes the piconet becomes the master.
+
+The master:
+- controls transmission
+- divides communication into time slots
+- polls slaves before slave transmission
+
+### Important piconet facts from the lecture
+
+- No direct slave-to-slave connection in the basic piconet model.
+- Connections are master-to-slave or slave-to-master.
+- A device can participate in multiple piconets.
+- A device can be a slave in one piconet and master in another.
+- The lecture states a device cannot be master in more than one piconet.
+- Linked piconets form a **scatternet**.
+
+## Bluetooth frequency and rate facts
+
+- ISM band: **2.4–2.485 GHz**
+- Nominal hopping rate: **1600 hops/sec**
+- Version 1.2: **1 Mbps**
+- Version 2.0: **3 Mbps** as given in the lecture
+
+## Range classes
+
+| Class | Lecture range |
+|---|---:|
+| Class 3 | up to **1 m** |
+| Class 2 | about **10 m** |
+| Class 1 | about **100 m** |
+
+## Connection establishment
+
+**Inquiry → discover nearby devices**
+
+**Paging → form a connection between Bluetooth devices**
+
+## Bluetooth modes
+
+| Mode | Core idea |
+|---|---|
+| **Active** | Actively transmits/receives |
+| **Sniff** | Sleeps; listens at defined intervals |
+| **Hold** | Power-saving sleep for a defined period |
+| **Park** | Slave becomes inactive until master wakes it |
+
+## Protocol-stack traps
+
+### Baseband
+Physical layer functions, including:
+- physical channels/links
+- error correction
+- data whitening
+- hop selection
+- security
+- paging/inquiry
+- packet handling
+
+### L2CAP
+**Logical Link Control and Adaptation Protocol**
+
+Key functions:
+- multiplexing logical connections
+- segmentation/reassembly
+- connection-oriented and connectionless services
+
+### RFCOMM
+Think:
+
+**RFCOMM = virtual serial cable / serial-port emulation**
+
+### SDP
+Think:
+
+**SDP = Service Discovery Protocol**
+
+It lets applications discover available services and their features.
+
+## Assignment-specific Bluetooth facts
+
+- Bluetooth is based on **Piconets**.
+- Bluetooth uses **ad-hoc network technology**.
+- **Link Manager Protocol** manages establishment, authentication, and link configuration.
+
+---
+
+# 4. Z-Wave — numbers are highly testable
+
+## Core identity
+
+Z-Wave is a communication protocol for **home automation** using RF signaling/control.
+
+## Frequencies
+
+The assignment directly tests:
+
+- **US = 908.42 MHz**
+- **Europe = 868.42 MHz**
+
+The lecture also gives a wider global-frequency table, including India and other regions.
+
+### Assignment trap
+
+908.42 MHz / 868.42 MHz is the expected US/Europe pair.
+
+## Network
+
+- Mesh topology
+- Up to **232 nodes** in a network
+- One primary/central network controller
+- Source-routed mesh
+- Static network model in the lecture; mobile devices are excluded
+
+## Modulation and encoding
+
+**GFSK = Gaussian Frequency Shift Keying**
+
+Z-Wave uses:
+
+- **GFSK modulation**
+- **Manchester channel encoding**
+
+### Deliberate trap
+
+“Hongkong channel encoding” → ❌  
+**Manchester channel encoding** → ✅
+
+## IDs
+
+- Home/Network ID = **4 bytes**
+- Node ID = **1 byte**
+- Nodes with different Home IDs cannot communicate with one another.
+
+## Healing
+
+**Healing = bypassing radio dead-spots / obstructions through alternate nodes.**
+
+This is a direct assignment memory item.
+
+### Trap
+
+- Ping → ❌
+- Frame → ❌
+- **Healing → ✅**
+
+## Z-Wave vs ZigBee
+
+The lecture's comparison emphasizes:
+
+### Z-Wave
+- More user-friendly
+- Simple to set up
+- Easier for basic home-automation users
+- More expensive
+
+### ZigBee
+- Very low power
+- Devices can last up to **seven years** on one set of batteries, as stated in the lecture comparison
+- More customizable for technology experts
+- Cheaper than Z-Wave
+
+---
+
+# 5. ISA100.11A — exam recognition
+
+ISA100.11A is designed mainly for:
+
+**large-scale industrial complexes and plants**
+
+The lecture discusses:
+- reliable service
+- best-effort service
+- real-time service
+- native and tunneled application layers
+- industrial wireless communication/security
+
+### Mock-exam security trap
+
+The mock asks about the two-step security mechanism.
+
+Remember:
+
+**Data-link layer → secures each hop**
+
+**Transport layer → secures end-to-end peer-to-peer communication**
+
+So:
+
+> hop-by-hop + end-to-end
+
+is the key memory phrase.
+
+---
+
+# 6. Sensor-network node behavior — assignment + mock overlap
+
+## Dumb behavior
+
+The assignment explicitly asks:
+
+> Dumb behavior of sensor nodes is ______ in nature.
+
+Expected answer:
+
+**Temporal**
+
+Why?
+
+The lecture explanation ties it to **environmental conditions**, so the behavior depends on conditions over time.
+
+### Mock distinction
+
+A dumb node can:
+- sense data
+- but fail to transmit because environmental factors degrade its communication
+
+This is different from intentional selfish behavior.
+
+## Selfish behavior
+
+The mock describes selfish behavior as an **intentional refusal to relay packets to conserve resources**.
+
+### Memory
+
+**Dumb = unintentional/environment-dependent**
+
+**Selfish = intentional/resource-conserving**
+
+---
+
+# 7. UMB interoperability — very likely medium-level trap
+
+The uploaded mocks repeatedly test the Universal Middleware Bridge.
+
+## UMB Adaptor
+
+**UMB Adaptor → converts physical IoT devices into virtual abstractions using Universal Device Templates (UDT).**
+
+## UMB Core
+
+**UMB Core → routes messages and disseminates data between different UMB adaptors.**
+
+### Fast distinction
+
+| Component | Remember |
+|---|---|
+| **Adaptor** | Device → virtual abstraction |
+| **UDT** | Universal Device Template |
+| **Core** | Routes/disseminates between adaptors |
+
+### Trap
+
+Do not swap **Adaptor** and **Core**.
+
+---
+
+# 8. Sensor Web — keep the service names exact
+
+The Week-3 lecture presents a service-oriented Sensor Web.
+
+Important terms:
+
+- **O&M** — Observations & Measurements
+- **SensorML** — Sensor Model Language
+- **TML / TransducerML** — Transducer Model Language
+- **SOS** — Sensor Observation Service
+- **SPS** — Sensor Planning Service
+- **SAS** — Sensor Alert Service
+- **WNS** — Web Notification Services
+
+### Fast recall
+
+**O&M → model/describe → observe → plan → alert → notify**
+
+Do not invent alternative expansions in the exam; use the lecture terminology.
+
+---
+
+# 9. Mock-Exam Trap Bank — Week 3
+
+### Trap 1
+**Wired HART has a network layer** → ❌  
+Assignment answer: **No network layer**
+
+### Trap 2
+**WirelessHART uses CSMA/CA at MAC** → ❌  
+Lecture/mock comparison: **TDMA**
+
+### Trap 3
+**WirelessHART mesh has no redundancy** → ❌  
+Mesh gives **alternative/redundant paths**.
+
+### Trap 4
+**Channel trimming = removing interfered channels** → ❌  
+Expected term: **Channel blacklisting**
+
+### Trap 5
+**NFC = Near Field Contact** → ❌  
+**Near Field Communication** → ✅
+
+### Trap 6
+**NFC works by ordinary wired electrical contact** → ❌  
+**Magnetic induction** → ✅
+
+### Trap 7
+**Supermarket NFC tag = active** → ❌  
+**Passive** → ✅
+
+### Trap 8
+**Bluetooth = nanonet/binarynet** → ❌  
+**Piconet** → ✅
+
+### Trap 9
+**Bluetooth piconet = unlimited slaves** → ❌  
+**Up to 7 active slaves per master** → ✅
+
+### Trap 10
+**Z-Wave uses Hongkong encoding** → ❌  
+**Manchester encoding** → ✅
+
+### Trap 11
+**Z-Wave dead-spot bypass = Ping** → ❌  
+**Healing** → ✅
+
+### Trap 12
+**Z-Wave US frequency = 868.42 MHz** → ❌  
+Assignment pair: **US 908.42 MHz, Europe 868.42 MHz**
+
+### Trap 13
+**Dumb behavior is spatial** → ❌  
+Assignment answer: **Temporal**
+
+### Trap 14
+**Sensor nodes have unlimited battery life** → ❌  
+Assignment answer: **False; battery life is limited**
+
+### Trap 15
+**UMB Adaptor routes between UMB cores** → ❌  
+Adaptor = **physical device → virtual abstraction using UDT**
+
+### Trap 16
+**UMB Core creates the virtual device abstraction** → ❌  
+Core = **routes/disseminates between adaptors**
+
+### Trap 17
+**ISA100.11A only secures at the gateway** → ❌  
+Mock framing: **data-link hop security + transport end-to-end security**
+
+---
+
+# 10. Week-3 Numbers & One-Line Facts
+
+Memorize these as a single table:
+
+| Fact | Value |
+|---|---|
+| Z-Wave US | **908.42 MHz** |
+| Z-Wave Europe | **868.42 MHz** |
+| Z-Wave network size | **232 nodes** |
+| Z-Wave Network ID | **4 bytes** |
+| Z-Wave Node ID | **1 byte** |
+| NFC frequency | **13.56 MHz** |
+| NFC data rates | **106 / 212 / 424 Kbps** |
+| NFC tag storage | **96–512 bytes** |
+| NFC range | **< 20 cm** |
+| Bluetooth band | **2.4–2.485 GHz** |
+| Bluetooth hopping | **1600 hops/sec** |
+| Bluetooth Class 3 | **1 m** |
+| Bluetooth Class 2 | **10 m** |
+| Bluetooth Class 1 | **100 m** |
+| Bluetooth piconet | **1 master + up to 7 active slaves** |
+| Bluetooth v1.2 | **1 Mbps** |
+| Bluetooth v2.0 | **3 Mbps** |
+| ZigBee assignment data rate | **250 kbps** |
+| WirelessHART slot | **10 ms** |
+| WirelessHART channels in lecture | **15 channels** |
+
+---
+
+# 11. Mock-Exam Priority Ranking
+
+## 🔴 Tier 1 — Must memorize
+
+1. WirelessHART vs ZigBee: **TDMA vs CSMA/CA**
+2. WirelessHART **mesh + redundant paths**
+3. **Channel blacklisting**
+4. Wired HART **has no network layer**
+5. NFC full form
+6. NFC **magnetic induction**
+7. NFC **passive vs active**
+8. NFC **reader**
+9. Bluetooth **piconet**
+10. Bluetooth **1 master + 7 active slaves**
+11. Z-Wave **908.42 / 868.42 MHz**
+12. Z-Wave **GFSK + Manchester**
+13. Z-Wave **Healing**
+14. Dumb behavior = **Temporal**
+15. UMB Adaptor vs UMB Core
+16. ISA100.11A **hop-by-hop + end-to-end security**
+17. ZigBee **250 kbps**
+
+## 🟠 Tier 2 — Very important
+
+18. Bluetooth inquiry vs paging
+19. Bluetooth Active/Sniff/Hold/Park
+20. Bluetooth Baseband
+21. L2CAP
+22. RFCOMM
+23. SDP
+24. Scatternet
+25. Z-Wave IDs
+26. Z-Wave source routing
+27. Sensor Web service names
+28. Sensor Web architecture
+
+## 🟡 Tier 3 — Understand
+
+29. WirelessHART network manager
+30. WirelessHART congestion control
+31. ISA100.11A service types
+32. WSN energy limitations
+33. Sensor Web service-oriented model
+34. Human-centric/social sensing concepts in the lecture
+
+---
+
+# 12. 60-Second Week-3 Recall
+
+> **Wired HART has no network layer.**  
+> **WirelessHART = 2.4 GHz + TDMA + 10 ms slots + hopping + blacklisting + mesh.**  
+> **NFC = Near Field Communication + magnetic induction.**  
+> **Passive NFC tag = information + reader energy; active device = can collect/transmit.**  
+> **NFC = 13.56 MHz, 106/212/424 Kbps, <20 cm.**  
+> **Bluetooth = ad-hoc piconet.**  
+> **Piconet = 1 master + up to 7 active slaves.**  
+> **Scatternet = linked piconets.**  
+> **Z-Wave = home automation + mesh + 232 nodes.**  
+> **US 908.42 MHz; Europe 868.42 MHz.**  
+> **GFSK + Manchester.**  
+> **Healing = bypass dead-spots.**  
+> **Dumb behavior = Temporal.**  
+> **UMB Adaptor = device abstraction/UDT.**  
+> **UMB Core = routes/disseminates between adaptors.**  
+> **ISA100.11A security = hop-by-hop + end-to-end.**  
+> **ZigBee assignment number = 250 kbps.**
+
+---
+
+# 13. Final Week-3 Rapid Drill
+
+Answer without looking:
+
+1. Wired HART network layer? → **None**
+2. WirelessHART MAC? → **TDMA**
+3. WirelessHART interference channel removal? → **Channel blacklisting**
+4. WirelessHART topology? → **Mesh**
+5. NFC full form? → **Near Field Communication**
+6. NFC principle? → **Magnetic induction**
+7. Supermarket NFC tag? → **Passive**
+8. NFC reader does what? → **Creates magnetic field via emitted current**
+9. NFC frequency? → **13.56 MHz**
+10. Bluetooth network unit? → **Piconet**
+11. Active slaves in piconet? → **Up to 7**
+12. Linked piconets? → **Scatternet**
+13. Z-Wave US frequency? → **908.42 MHz**
+14. Z-Wave Europe frequency? → **868.42 MHz**
+15. Z-Wave modulation? → **GFSK**
+16. Z-Wave encoding? → **Manchester**
+17. Z-Wave dead-spot bypass? → **Healing**
+18. Dumb behavior nature? → **Temporal**
+19. UMB Adaptor? → **Physical device → virtual abstraction using UDT**
+20. UMB Core? → **Routes/disseminates between adaptors**
+21. ISA100.11A security? → **Data-link hop + transport end-to-end**
+22. ZigBee assignment data rate? → **250 kbps**
+23. Bluetooth LMP? → **Establishment, authentication, link configuration**
+24. Sensor Web observation service? → **SOS**
+25. Sensor Web planning service? → **SPS**
+26. Sensor Web alert service? → **SAS**
+27. Web notification service? → **WNS**
+
+---
+
+# 14. Update Source Note
+
+This update is grounded in the uploaded **Week-3 lecture PDF**, **Week-3 assignment solution**, and uploaded **Mock Exams 1–5**.
+
+The mock layer particularly reinforces:
+- WirelessHART TDMA/mesh/channel blacklisting
+- NFC magnetic induction/passive tags
+- Bluetooth piconets
+- Z-Wave frequency/modulation/encoding/healing
+- UMB Adaptor/Core
+- sensor-node dumb behavior
+- ISA100.11A security
+
+Unrelated mock topics from Weeks 1, 2, 4+ were intentionally not promoted into Week-3 core material.
+
+
+---
+
+## Update Status
+
+**Version:** Week 3 — Improved with uploaded Mock Exams 1–5  
+**Priority:** Assignment → all Week-3 lecture/PPT topics → mock-exam repetition → traps/numbers/rapid drill
