@@ -1,4 +1,5 @@
 # NPTEL – Introduction to Internet of Things
+
 ## Week 2 Exam Preparation Notes
 
 > **Source basis:** Week-2 assignment and the uploaded Week-2 lecture PDF covering 6LoWPAN, LOADng, RPL, RFID, MQTT, SMQTT, CoAP, XMPP, AMQP, IEEE 802.15.4 and ZigBee.
@@ -10,6 +11,41 @@
 # 1. Week 2 – Quick Revision
 
 ## Core topics
+
+## 🚨 Exam Priority Update — Assignment + Mock-Exam Cross-Check
+
+**Your priority rule:**
+
+1. **Assignment questions first** — all 15 Week-2 assignment questions remain the highest priority.
+2. **Then all lecture/PPT topics** — do not skip topics that are not directly asked in the assignment.
+3. **Then repeated mock-exam patterns** — especially concepts that appeared repeatedly across the uploaded Mock Exams 1–5.
+
+### Week-2 topics repeatedly reinforced by the mock exams
+
+| Topic                                    | Mock-exam pattern              | What to memorize                                                                  |
+| ---------------------------------------- | ------------------------------ | --------------------------------------------------------------------------------- |
+| **MQTT**                           | Repeated in Mock 1, 2, 3, 4, 5 | Broker, publish/subscribe, topic as routing information                           |
+| **MQTT wildcards**                 | Mock 1                         | `+` = exactly one hierarchy level; `#` = multiple/remaining hierarchy levels  |
+| **6LoWPAN**                        | Mock 2, 3, 4                   | IPv6 over low-power wireless; header compression; 802.15.4 packet-size constraint |
+| **6LoWPAN Mesh Addressing Header** | Mock 3                         | Mesh forwarding; includes **Hops Left**                                     |
+| **Passive RFID**                   | Mock 3                         | Powered inductively by the RFID reader; no internal battery                       |
+| **IEEE 802.15.4**                  | Mock 1                         | Mainly PHY + MAC for LR-WPAN                                                      |
+| **FFD/RFD**                        | Mock 2, 5                      | FFD can be coordinator/router/end device; RFD has limited functionality           |
+| **CoAP**                           | Mock 5                         | Lightweight web-transfer protocol for constrained IoT; runs over UDP              |
+| **AMQP**                           | Mock 3 / assignment            | **Exchange + Queue + Binding**; Flow frame controls message-flow rate       |
+
+### ⚠️ Do NOT mix weeks
+
+Some mock questions are useful only as cross-week context. For Week 2, focus on:
+
+- MQTT
+- 6LoWPAN
+- RFID
+- CoAP
+- AMQP
+- IEEE 802.15.4 / ZigBee
+
+Bluetooth, WirelessHART, SDN, Arduino, Raspberry Pi, cloud, etc. belong mainly to other weeks and are **not added as Week-2 core material** merely because they appear in the mocks.
 
 1. 6LoWPAN
 2. 6LoWPAN addressing
@@ -73,10 +109,10 @@ Because IEEE 802.15.4 has small packet sizes, 6LoWPAN uses techniques such as:
 
 Two important address types:
 
-| Address | Meaning |
-|---|---|
-| **64-bit extended address** | Globally unique |
-| **16-bit short address** | PAN-specific; assigned by PAN coordinator |
+| Address                           | Meaning                                   |
+| --------------------------------- | ----------------------------------------- |
+| **64-bit extended address** | Globally unique                           |
+| **16-bit short address**    | PAN-specific; assigned by PAN coordinator |
 
 ### Important exam trap
 
@@ -110,6 +146,7 @@ Important fields/concepts include:
 ## Dispatch header
 
 The dispatch header:
+
 - Initiates communication
 - Identifies the dispatch type
 - Indicates the type of next header
@@ -117,6 +154,7 @@ The dispatch header:
 ## Mesh Addressing Header
 
 Contains information such as:
+
 - Originator address
 - Final destination address
 - Hops Left
@@ -161,6 +199,7 @@ It is derived from **AODV** and adapted for IoT use.
 ## Route failure
 
 If a route breaks:
+
 - A **Route Error (RERR)** is returned to the originator.
 
 ## Very important rule
@@ -193,6 +232,7 @@ It is a distance-vector IPv6 routing protocol designed for low-power and lossy n
 ## Routing objectives
 
 RPL can optimize for:
+
 - Minimum energy
 - Minimum latency
 - Node power constraints
@@ -225,6 +265,7 @@ It is somewhat similar to barcodes, but RFID has an important advantage:
 ## RFID tag
 
 An RFID tag contains:
+
 - Integrated circuit
 - Antenna
 - Protective material
@@ -233,12 +274,12 @@ An RFID tag contains:
 
 # 10. Passive vs Active RFID
 
-| Feature | Passive RFID | Active RFID |
-|---|---|---|
-| Own power supply | No | Yes |
-| Power source | RFID reader | Internal power supply |
-| Transmission | After reader powers tag | Uses its own power |
-| Common use | Very widely used | Used when longer/active operation is needed |
+| Feature          | Passive RFID            | Active RFID                                 |
+| ---------------- | ----------------------- | ------------------------------------------- |
+| Own power supply | No                      | Yes                                         |
+| Power source     | RFID reader             | Internal power supply                       |
+| Transmission     | After reader powers tag | Uses its own power                          |
+| Common use       | Very widely used        | Used when longer/active operation is needed |
 
 ### Critical exam fact
 
@@ -265,16 +306,16 @@ Important applications:
 
 The lecture groups protocols by functionality.
 
-| Function | Examples |
-|---|---|
-| Connectivity | 6LoWPAN, RPL |
-| Identification | EPC, uCode, IPv6, URIs |
-| Communication / Transport | Wi-Fi, Bluetooth, LPWAN |
-| Discovery | Physical Web, mDNS, DNS-SD |
-| Device Management | TR-069, OMA-DM |
-| Semantic | JSON-LD, Web Thing Model |
-| Data Protocols | MQTT, CoAP, AMQP, WebSocket, Node |
-| Multi-layer Frameworks | AllJoyn, IoTivity, Weave, HomeKit |
+| Function                  | Examples                          |
+| ------------------------- | --------------------------------- |
+| Connectivity              | 6LoWPAN, RPL                      |
+| Identification            | EPC, uCode, IPv6, URIs            |
+| Communication / Transport | Wi-Fi, Bluetooth, LPWAN           |
+| Discovery                 | Physical Web, mDNS, DNS-SD        |
+| Device Management         | TR-069, OMA-DM                    |
+| Semantic                  | JSON-LD, Web Thing Model          |
+| Data Protocols            | MQTT, CoAP, AMQP, WebSocket, Node |
+| Multi-layer Frameworks    | AllJoyn, IoTivity, Weave, HomeKit |
 
 ---
 
@@ -301,15 +342,19 @@ It is a lightweight, **publish-subscribe** messaging protocol designed for IoT a
 Three major roles:
 
 ### Publisher
+
 Produces and publishes data.
 
 ### Subscriber
+
 Subscribes to topics and receives matching messages.
 
 ### Broker
+
 Acts as the central communication point.
 
 The broker:
+
 - Connects publishers and subscribers
 - Classifies data into topics
 - Dispatches messages to matching subscribers
@@ -343,6 +388,7 @@ house/living-room/temperature
 ```
 
 A client can:
+
 - Subscribe to an exact topic
 - Subscribe using a wildcard
 
@@ -478,12 +524,16 @@ CoAP is designed to provide REST-like services while meeting constrained-device 
 CoAP has two major conceptual sub-layers:
 
 ### Messaging sub-layer
+
 Responsible for:
+
 - Reliability
 - Duplication handling
 
 ### Request/Response sub-layer
+
 Responsible for:
+
 - Communication between endpoints
 
 ---
@@ -498,9 +548,11 @@ There are four important modes:
 4. **Separate**
 
 ### Confirmable
+
 Used for reliable transmission.
 
 ### Non-confirmable
+
 Used for unreliable transmission.
 
 ---
@@ -542,12 +594,12 @@ Server → Response later
 
 As presented in the lecture:
 
-| Method | Purpose |
-|---|---|
-| **GET** | Retrieve data |
-| **PUT** | Create data |
-| **PUSH** | Update data |
-| **DELETE** | Delete data |
+| Method           | Purpose       |
+| ---------------- | ------------- |
+| **GET**    | Retrieve data |
+| **PUT**    | Create data   |
+| **PUSH**   | Update data   |
+| **DELETE** | Delete data   |
 
 ### Exam note
 
@@ -573,6 +625,7 @@ Follow the mapping used in the NPTEL lecture/assignment for the exam.
 **XMPP = Extensible Messaging and Presence Protocol.**
 
 It is:
+
 - A communication protocol for message-oriented middleware
 - XML-based
 - Designed for real-time exchange of structured data
@@ -637,6 +690,7 @@ Important limitations:
 **AMQP = Advanced Message Queuing Protocol.**
 
 It is an open standard for passing business messages between:
+
 - Applications
 - Organizations
 - Systems
@@ -663,6 +717,7 @@ Remember:
 - Open standard
 
 Other important features:
+
 - Targeted QoS
 - Persistence
 - Multiple consumers
@@ -676,6 +731,7 @@ Other important features:
 ## At-most-once
 
 Each message is delivered:
+
 - Once
 - Or never
 
@@ -686,6 +742,7 @@ The message is certain to be delivered, but it may be delivered multiple times.
 ## Exactly-once
 
 The message:
+
 - Arrives
 - And arrives only once
 
@@ -703,17 +760,17 @@ Exactly-once   →  exactly 1
 
 Important frame types:
 
-| Frame | Function |
-|---|---|
-| **Open** | Open connection |
-| **Begin** | Open session |
-| **Attach** | Initiate link |
-| **Transfer** | Send actual messages |
-| **Flow** | Control message-flow rate |
+| Frame                 | Function                           |
+| --------------------- | ---------------------------------- |
+| **Open**        | Open connection                    |
+| **Begin**       | Open session                       |
+| **Attach**      | Initiate link                      |
+| **Transfer**    | Send actual messages               |
+| **Flow**        | Control message-flow rate          |
 | **Disposition** | Communicate transfer-state changes |
-| **Detach** | Terminate link |
-| **End** | Close session |
-| **Close** | Close connection |
+| **Detach**      | Terminate link                     |
+| **End**         | Close session                      |
+| **Close**       | Close connection                   |
 
 ### Most important exam fact
 
@@ -724,14 +781,17 @@ Important frame types:
 # 36. AMQP Components
 
 ## Exchange
+
 - Receives messages
 - Routes messages to queues
 
 ## Queue
+
 - Stores messages
 - Consumers/business processes receive messages from queues
 
 ## Binding
+
 - Defines message-distribution rules
 - Connects exchange routing logic to queues
 
@@ -775,6 +835,7 @@ The lecture lists:
 IEEE 802.15.4 is a well-known standard for **low-data-rate WPANs**.
 
 It is designed for:
+
 - Low-data-rate monitoring/control
 - Extended-life
 - Low-power consumption
@@ -782,6 +843,7 @@ It is designed for:
 ### Layers
 
 IEEE 802.15.4 primarily covers:
+
 - Physical layer
 - MAC layer
 
@@ -800,6 +862,7 @@ Operates in the **ISM band**.
 Uses **Direct Sequence Spread Spectrum (DSSS)**.
 
 Benefits include:
+
 - Noise/interference tolerance
 - Link reliability improvement
 
@@ -833,14 +896,14 @@ Important lecture points:
 
 Memorize this table:
 
-| Variant | Application / Region |
-|---|---|
-| **802.15.4a/b** | Base version |
-| **802.15.4c** | China |
-| **802.15.4d** | Japan |
-| **802.15.4e** | Industrial applications |
-| **802.15.4f** | Active RFID |
-| **802.15.4g** | Smart utility networks / Smart Grids |
+| Variant               | Application / Region                 |
+| --------------------- | ------------------------------------ |
+| **802.15.4a/b** | Base version                         |
+| **802.15.4c**   | China                                |
+| **802.15.4d**   | Japan                                |
+| **802.15.4e**   | Industrial applications              |
+| **802.15.4f**   | Active RFID                          |
+| **802.15.4g**   | Smart utility networks / Smart Grids |
 
 ### Assignment trap
 
@@ -905,6 +968,7 @@ ZigBee is a widely deployed enhancement that works on top of IEEE 802.15.4.
 **ZigBee → Layer 3 and above**
 
 ZigBee adds:
+
 - Authentication
 - Encryption
 - Routing
@@ -920,13 +984,17 @@ ZigBee adds:
 # 46. ZigBee Components
 
 ## ZDO – ZigBee Device Object
+
 Responsible for:
+
 - Device management
 - Security
 - Policies
 
 ## APS – Application Support Sublayer
+
 Provides:
+
 - Interfacing
 - Control services
 - Bridge between network and application-related layers
@@ -1024,6 +1092,7 @@ Important applications:
 **Answer: `a. Topic`**
 
 ### Explanation
+
 The publisher includes a topic in the message. The broker uses that topic to determine which subscribers should receive the message.
 
 **Memory:** MQTT → **Topic = routing information**
@@ -1041,6 +1110,7 @@ Correct answers:
 - `house/+/temperature` can match `house/kitchen/temperature`.
 
 ### Incorrect
+
 `house/#` does **not** match only the exact topic `house`.
 
 ---
@@ -1060,6 +1130,7 @@ The complete SMQTT sequence is:
 **Setup → Encryption → Publish → Decryption**
 
 ### Incorrect
+
 Route discovery is not an SMQTT stage.
 
 ---
@@ -1086,11 +1157,11 @@ CoAP is designed for constrained environments and operates over UDP.
 **Correct answers: `a, b, c, d`**
 
 | Method | Function |
-|---|---|
-| GET | Retrieve |
-| PUT | Create |
-| PUSH | Update |
-| DELETE | Delete |
+| ------ | -------- |
+| GET    | Retrieve |
+| PUT    | Create   |
+| PUSH   | Update   |
+| DELETE | Delete   |
 
 ---
 
@@ -1148,6 +1219,7 @@ Non-beacon-enabled  → Unslotted CSMA/CA
 IEEE 802.15.4 provides the lower layers (primarily PHY and MAC), while ZigBee adds higher-layer functionality.
 
 ### ZigBee adds
+
 - Authentication
 - Encryption
 - Routing
@@ -1163,11 +1235,13 @@ Correct answers:
 **a, b, c**
 
 A ZigBee End Device:
+
 - Communicates with its parent.
 - Cannot relay data for other devices.
 - Is a reduced-functionality device.
 
 ### Incorrect
+
 The coordinator forms the network root and can act as the Trust Center.
 
 ---
@@ -1245,19 +1319,19 @@ Memorize these before the exam:
 
 # 53. Protocol Comparison Table
 
-| Protocol / Technology | Main idea | Key exam fact |
-|---|---|---|
-| **6LoWPAN** | IPv6 for low-power WPAN | 16-bit short vs 64-bit extended |
-| **LOADng** | On-demand routing | Only destination responds to RREQ |
-| **RPL** | IPv6 LLN routing | Low-power/lossy networks |
-| **RFID** | Radio-frequency identification | Passive tag powered by reader |
-| **MQTT** | Publish/subscribe messaging | Topic is routing information |
-| **SMQTT** | Secure MQTT | Setup → Encryption → Publish → Decryption |
-| **CoAP** | Lightweight RESTful protocol | Runs over UDP |
-| **XMPP** | XML-based messaging/presence | Open, decentralized |
-| **AMQP** | Business messaging/queuing | Flow controls message rate |
-| **802.15.4** | Low-rate WPAN | PHY + MAC |
-| **ZigBee** | Higher-layer IoT/mesh stack | Builds on 802.15.4 |
+| Protocol / Technology | Main idea                      | Key exam fact                                |
+| --------------------- | ------------------------------ | -------------------------------------------- |
+| **6LoWPAN**     | IPv6 for low-power WPAN        | 16-bit short vs 64-bit extended              |
+| **LOADng**      | On-demand routing              | Only destination responds to RREQ            |
+| **RPL**         | IPv6 LLN routing               | Low-power/lossy networks                     |
+| **RFID**        | Radio-frequency identification | Passive tag powered by reader                |
+| **MQTT**        | Publish/subscribe messaging    | Topic is routing information                 |
+| **SMQTT**       | Secure MQTT                    | Setup → Encryption → Publish → Decryption |
+| **CoAP**        | Lightweight RESTful protocol   | Runs over UDP                                |
+| **XMPP**        | XML-based messaging/presence   | Open, decentralized                          |
+| **AMQP**        | Business messaging/queuing     | Flow controls message rate                   |
+| **802.15.4**    | Low-rate WPAN                  | PHY + MAC                                    |
+| **ZigBee**      | Higher-layer IoT/mesh stack    | Builds on 802.15.4                           |
 
 ---
 
@@ -1298,76 +1372,77 @@ Matches topics under the `house` hierarchy.
 
 ## MQTT vs CoAP
 
-| MQTT | CoAP |
-|---|---|
-| Publish/subscribe | Request/response |
-| Broker-based | Client/server style |
-| Topic-based | RESTful resources |
-| Uses TCP/IP | Uses UDP |
+| MQTT                            | CoAP                                  |
+| ------------------------------- | ------------------------------------- |
+| Publish/subscribe               | Request/response                      |
+| Broker-based                    | Client/server style                   |
+| Topic-based                     | RESTful resources                     |
+| Uses TCP/IP                     | Uses UDP                              |
 | Good for event-driven messaging | Good for constrained RESTful services |
 
 ---
 
 ## IEEE 802.15.4 vs ZigBee
 
-| IEEE 802.15.4 | ZigBee |
-|---|---|
-| Mainly PHY + MAC | Higher layers |
+| IEEE 802.15.4            | ZigBee                                    |
+| ------------------------ | ----------------------------------------- |
+| Mainly PHY + MAC         | Higher layers                             |
 | Low-rate WPAN foundation | Adds networking/application functionality |
-| CSMA/CA | Routing, security, mesh support |
-| Base wireless standard | Enhancement built on 802.15.4 |
+| CSMA/CA                  | Routing, security, mesh support           |
+| Base wireless standard   | Enhancement built on 802.15.4             |
 
 ---
 
 ## FFD vs RFD
 
-| FFD | RFD |
-|---|---|
-| Full functionality | Reduced functionality |
+| FFD                                   | RFD                   |
+| ------------------------------------- | --------------------- |
+| Full functionality                    | Reduced functionality |
 | Can communicate with all device types | Communicates with FFD |
-| More resources | Lower CPU/RAM |
-| Higher capability | Lower power |
+| More resources                        | Lower CPU/RAM         |
+| Higher capability                     | Lower power           |
 
 ---
 
 ## ZC vs ZR vs ZED
 
-| Device | Role |
-|---|---|
-| ZC | Root/coordinator/Trust Center |
-| ZR | Routing/relaying |
-| ZED | Parent communication only |
+| Device | Role                          |
+| ------ | ----------------------------- |
+| ZC     | Root/coordinator/Trust Center |
+| ZR     | Routing/relaying              |
+| ZED    | Parent communication only     |
 
 ---
 
 # 56. MCQ Traps
 
-| Question clue | Correct thought |
-|---|---|
-| MQTT routing field | **Topic** |
-| `+` wildcard | **One level** |
-| `#` wildcard | **Multiple levels** |
-| SMQTT stage | **Setup / Encryption / Publish / Decryption** |
-| CoAP transport | **UDP** |
-| Piggyback | **Response + ACK** |
-| Separate | **ACK first, response later** |
-| AMQP flow rate | **Flow frame** |
-| AMQP routing | **Exchange + Binding** |
-| 802.15.4e | **Industrial** |
-| 802.15.4f | **Active RFID** |
-| Non-beacon | **Unslotted CSMA/CA** |
-| ZigBee lower layers | **IEEE 802.15.4** |
-| ZigBee end device | **Cannot relay** |
-| 6LoWPAN 16-bit | **PAN-specific** |
-| 6LoWPAN 64-bit | **Globally unique** |
-| LOADng intermediate response | **Not allowed** |
-| Passive RFID | **Powered by reader** |
+| Question clue                | Correct thought                                     |
+| ---------------------------- | --------------------------------------------------- |
+| MQTT routing field           | **Topic**                                     |
+| `+` wildcard               | **One level**                                 |
+| `#` wildcard               | **Multiple levels**                           |
+| SMQTT stage                  | **Setup / Encryption / Publish / Decryption** |
+| CoAP transport               | **UDP**                                       |
+| Piggyback                    | **Response + ACK**                            |
+| Separate                     | **ACK first, response later**                 |
+| AMQP flow rate               | **Flow frame**                                |
+| AMQP routing                 | **Exchange + Binding**                        |
+| 802.15.4e                    | **Industrial**                                |
+| 802.15.4f                    | **Active RFID**                               |
+| Non-beacon                   | **Unslotted CSMA/CA**                         |
+| ZigBee lower layers          | **IEEE 802.15.4**                             |
+| ZigBee end device            | **Cannot relay**                              |
+| 6LoWPAN 16-bit               | **PAN-specific**                              |
+| 6LoWPAN 64-bit               | **Globally unique**                           |
+| LOADng intermediate response | **Not allowed**                               |
+| Passive RFID                 | **Powered by reader**                         |
 
 ---
 
 # 57. One-Page Final Revision
 
 ## 6LoWPAN
+
 - IPv6 over low-power WPAN
 - 64-bit = globally unique
 - 16-bit = PAN-specific
@@ -1376,6 +1451,7 @@ Matches topics under the `house` hierarchy.
 - LOADng / RPL
 
 ## LOADng
+
 - Derived from AODV
 - RREQ → destination
 - Destination → RREP
@@ -1383,6 +1459,7 @@ Matches topics under the `house` hierarchy.
 - Only destination responds
 
 ## RPL
+
 - IPv6
 - Low-power lossy networks
 - Distance-vector
@@ -1390,12 +1467,14 @@ Matches topics under the `house` hierarchy.
 - Energy/latency/objective optimization
 
 ## RFID
+
 - Tag + reader + antenna
 - No line-of-sight required
 - Passive = reader-powered
 - Active = own power
 
 ## MQTT
+
 - Publish/subscribe
 - Broker
 - Topic = routing
@@ -1403,12 +1482,14 @@ Matches topics under the `house` hierarchy.
 - `#` = multiple levels
 
 ## SMQTT
+
 - Setup
 - Encryption
 - Publish
 - Decryption
 
 ## CoAP
+
 - Constrained Application Protocol
 - RESTful
 - UDP
@@ -1418,6 +1499,7 @@ Matches topics under the `house` hierarchy.
 - Separate
 
 ## XMPP
+
 - XML
 - Messaging + presence
 - Open standard
@@ -1426,6 +1508,7 @@ Matches topics under the `house` hierarchy.
 - Higher text overhead
 
 ## AMQP
+
 - Business messaging
 - Exchange
 - Queue
@@ -1434,6 +1517,7 @@ Matches topics under the `house` hierarchy.
 - At-most-once / At-least-once / Exactly-once
 
 ## IEEE 802.15.4
+
 - Low-rate WPAN
 - PHY + MAC
 - CSMA/CA
@@ -1442,6 +1526,7 @@ Matches topics under the `house` hierarchy.
 - FFD / RFD
 
 ## ZigBee
+
 - Above 802.15.4
 - Authentication
 - Encryption
@@ -1456,3 +1541,457 @@ Matches topics under the `house` hierarchy.
 - **Week-2.pdf** – NPTEL lecture slides covering 6LoWPAN, routing, RFID, MQTT, SMQTT, CoAP, XMPP, AMQP, IEEE 802.15.4 and ZigBee.
 - **Assignment-Week 2** – 15 MCQ/MSQ questions and solutions.
 
+---
+
+# 35. NEW — Mock-Exam Cross-Check (Uploaded Mock Exams 1–5)
+
+> **Purpose:** This section is an exam-pattern layer added after the original Week-2 assignment + lecture notes. It does **not** replace the assignment or lecture material.
+
+## 35.1 Highest-frequency Week-2 concept: MQTT
+
+MQTT was repeatedly tested across the uploaded mocks.
+
+### Core chain
+
+**Publisher → MQTT Broker → Subscriber**
+
+- **Publisher:** sends/publishes a message.
+- **Broker:** central communication point; receives messages and dispatches them to matching subscribers.
+- **Subscriber:** subscribes to a topic and receives matching messages.
+- **Topic:** the broker uses the topic as **routing information**.
+
+### Mock-exam recognition
+
+If the question asks:
+
+> “What is the central server that receives messages from publishers and forwards them to subscribers?”
+
+Answer:
+
+**Message Broker**
+
+If it asks:
+
+> “What is a topic used for?”
+
+Answer:
+
+**Categorizing messages / routing them to interested subscribers.**
+
+### MQTT wildcard trap
+
+| Wildcard | Meaning                         | Example                 |
+| -------- | ------------------------------- | ----------------------- |
+| `+`    | **Single-level** wildcard | `house/+/temperature` |
+| `#`    | **Multi-level** wildcard  | `house/#`             |
+
+#### Example
+
+`house/+/temperature` can match:
+
+- `house/kitchen/temperature`
+- `house/living-room/temperature`
+
+But `+` cannot replace multiple hierarchy levels.
+
+`house/#` matches topics beginning with `house` across the underlying hierarchy.
+
+### Repeated mock trap
+
+**Do not confuse:**
+
+- **Topic** → routing information
+- **Broker** → dispatches messages
+- **Publisher** → sends messages
+- **Subscriber** → receives matching messages
+
+---
+
+## 35.2 6LoWPAN — repeated mock focus
+
+The mocks repeatedly tested the **purpose of 6LoWPAN** and **header compression**.
+
+### One-line definition
+
+**6LoWPAN enables IPv6 packets to be transmitted over low-power, low-bandwidth wireless links, especially IEEE 802.15.4 networks.**
+
+### Why header compression?
+
+IPv6 has a large header, while IEEE 802.15.4 has a small packet structure.
+
+Therefore:
+
+**Header compression → reduces IPv6 header overhead so packets can fit efficiently into constrained 802.15.4 frames.**
+
+### Mock-style question
+
+> What is the primary function of header compression in 6LoWPAN?
+
+**Answer:** Reduce the size of large IPv6 headers to fit within smaller IEEE 802.15.4 packets.
+
+### 6LoWPAN memory chain
+
+**IPv6 → constrained wireless → IEEE 802.15.4 → compression/adaptation → IoT**
+
+---
+
+## 35.3 6LoWPAN Mesh Addressing Header
+
+A mock specifically tested the Mesh Addressing Header.
+
+### Remember
+
+**Mesh Addressing Header = mesh forwarding information**
+
+Important field:
+
+- **Hops Left** → decremented by each forwarding node before sending to the next hop.
+
+### Do not confuse the headers
+
+| Header                           | Main idea                                    |
+| -------------------------------- | -------------------------------------------- |
+| **Dispatch Header**        | Identifies/initiates the next header type    |
+| **Mesh Addressing Header** | Supports mesh forwarding; includes Hops Left |
+| **Fragmentation Header**   | Handles fragmentation of large datagrams     |
+
+### Exam trap
+
+If the option says:
+
+> “Mesh Addressing Header breaks large IPv6 packets into fragments”
+
+❌ Wrong.
+
+That is the **Fragmentation Header**.
+
+---
+
+## 35.4 IEEE 802.15.4 — repeated mock focus
+
+### Primary role
+
+IEEE 802.15.4 mainly specifies:
+
+- **Physical layer (PHY)**
+- **MAC layer**
+
+It is intended for **low-rate, low-power wireless personal area networks (LR-WPANs).**
+
+### High-yield distinction
+
+> **IEEE 802.15.4 ≠ ZigBee**
+
+Think:
+
+**802.15.4 → PHY + MAC**
+
+**ZigBee → higher-layer networking/functions built on top of 802.15.4**
+
+### FFD vs RFD
+
+| Device        | Key capability                                                |
+| ------------- | ------------------------------------------------------------- |
+| **FFD** | Can act as **PAN coordinator, router, or end device**   |
+| **RFD** | Reduced functionality; limited role; communicates with an FFD |
+
+### Mock trap
+
+If an option says:
+
+> “FFD can only act as a simple sensing end device.”
+
+❌ False.
+
+Correct:
+
+> **FFD can act as PAN coordinator, router, or end device.**
+
+---
+
+## 35.5 Passive RFID — repeated mock focus
+
+### Passive RFID
+
+A passive RFID tag:
+
+- has **no internal battery**
+- receives power **inductively from the RFID reader**
+- then transmits its information
+
+### Active vs Passive
+
+| Feature               | Passive RFID                 | Active RFID                    |
+| --------------------- | ---------------------------- | ------------------------------ |
+| Own power supply      | ❌ No                        | ✅ Yes                         |
+| Reader provides power | ✅ Yes                       | Not required for tag operation |
+| Common exam clue      | **Inductive powering** | **Own power supply**     |
+
+### Mock trap
+
+> “Passive RFID does not require any power source.”
+
+❌ False.
+
+It has no **internal** power source, but it receives power from the reader.
+
+---
+
+## 35.6 CoAP — repeated mock focus
+
+The uploaded mocks reinforced the basic identification of CoAP.
+
+### One-line memory
+
+**CoAP = lightweight web-transfer protocol for constrained IoT devices.**
+
+### Transport
+
+**CoAP runs over UDP.**
+
+Why?
+
+- constrained devices
+- lower overhead
+- lightweight communication
+
+### CoAP vs MQTT
+
+| Feature              | CoAP                                  | MQTT                  |
+| -------------------- | ------------------------------------- | --------------------- |
+| Main model           | Request/response                      | Publish/subscribe     |
+| Transport in lecture | **UDP**                         | **TCP/IP**      |
+| Typical idea         | Lightweight web/REST-like interaction | Lightweight messaging |
+| Central broker       | ❌ Not the core model                 | ✅ Broker             |
+
+### CoAP request mapping — memorize exactly as taught in the assignment
+
+| Method           | Lecture mapping |
+| ---------------- | --------------- |
+| **GET**    | Retrieve data   |
+| **PUT**    | Create data     |
+| **PUSH**   | Update data     |
+| **DELETE** | Delete data     |
+
+> **Important:** Use the mapping given in the NPTEL Week-2 assignment/lecture for this exam.
+
+### Piggyback vs Separate
+
+**Piggyback:**
+
+- ACK carries the response/data.
+
+**Separate:**
+
+- ACK is sent first.
+- Server response arrives later in a separate message.
+
+---
+
+## 35.7 AMQP — mock + assignment reinforcement
+
+### Three core components
+
+**Exchange → Queue → Consumer**
+
+The **binding** defines the relationship/routing rule between the exchange and queue.
+
+### Remember
+
+- **Exchange** → receives and routes messages
+- **Queue** → stores messages
+- **Binding** → defines message-distribution relationship/rule
+- **Consumer** → receives/uses queued messages
+
+### AMQP frame trap
+
+**Flow frame → controls message-flow rate**
+
+Do not confuse:
+
+| Frame                 | Main role                               |
+| --------------------- | --------------------------------------- |
+| **Transfer**    | Carries messages                        |
+| **Disposition** | Communicates a change in transfer state |
+| **Detach**      | Terminates a link                       |
+| **Flow**        | **Controls message-flow rate**    |
+
+### Binding trap
+
+If asked:
+
+> “What is a Binding?”
+
+Answer:
+
+**A rule defining the relationship between an exchange and a queue and governing message flow.**
+
+---
+
+# 36. Mock-Exam Trap Bank — Week 2
+
+## Trap 1: MQTT Topic vs Broker
+
+- Topic = **routing information**
+- Broker = **dispatches messages**
+
+## Trap 2: MQTT `+` vs `#`
+
+- `+` = **one level**
+- `#` = **multiple/remaining hierarchy levels**
+
+## Trap 3: 6LoWPAN vs IPv6
+
+- 6LoWPAN does not mean “a new version of IPv6.”
+- It is the adaptation needed to carry IPv6 over constrained low-power wireless networks.
+
+## Trap 4: Header Compression vs Encryption
+
+- Header compression = **reduce overhead**
+- Encryption = **security**
+
+## Trap 5: Mesh Addressing vs Fragmentation
+
+- Mesh Addressing Header = **forwarding / Hops Left**
+- Fragmentation Header = **large datagram fragmentation**
+
+## Trap 6: IEEE 802.15.4 vs ZigBee
+
+- 802.15.4 = **PHY + MAC**
+- ZigBee = **higher-layer functionality on top**
+
+## Trap 7: FFD vs RFD
+
+- FFD = coordinator/router/end device
+- RFD = reduced functionality / limited communication role
+
+## Trap 8: Passive vs Active RFID
+
+- Passive = **reader-powered**
+- Active = **own power supply**
+
+## Trap 9: CoAP vs MQTT
+
+- CoAP = **request/response + UDP**
+- MQTT = **publish/subscribe + broker + TCP/IP**
+
+## Trap 10: AMQP Exchange vs Queue vs Binding
+
+- Exchange = **routes**
+- Queue = **stores**
+- Binding = **defines routing relationship**
+
+## Trap 11: AMQP Flow vs Transfer
+
+- Flow = **flow control**
+- Transfer = **message transfer**
+
+---
+
+# 37. Mock-Exam Priority Ranking for Week 2
+
+### 🔴 Tier 1 — Must memorize
+
+1. MQTT broker
+2. MQTT topic as routing information
+3. `+` vs `#`
+4. 6LoWPAN purpose
+5. 6LoWPAN header compression
+6. IEEE 802.15.4 = PHY + MAC
+7. FFD vs RFD
+8. Passive RFID = inductive reader power
+9. CoAP = UDP
+10. CoAP piggyback vs separate
+11. AMQP exchange / queue / binding
+12. AMQP Flow frame
+
+### 🟠 Tier 2 — Very important
+
+13. 6LoWPAN 64-bit vs 16-bit addressing
+14. Dispatch / Mesh / Fragmentation headers
+15. LOADng RREQ/RREP behavior
+16. RPL for low-power and lossy networks
+17. IEEE 802.15.4 variants
+18. Beacon vs non-beacon CSMA/CA
+19. ZigBee relationship with 802.15.4
+20. XMPP purpose and architecture
+
+### 🟡 Tier 3 — Understand well
+
+21. RFID applications
+22. MQTT methods
+23. SMQTT four stages
+24. CoAP features
+25. AMQP delivery/frames beyond the directly tested items
+26. Functionality-based IoT protocol organization
+
+---
+
+# 38. 60-Second Week-2 Recall Chain
+
+Say this aloud before the exam:
+
+> **6LoWPAN = IPv6 over constrained low-power wireless.**
+> **Header compression = fit IPv6 efficiently into 802.15.4.**
+> **64-bit = globally unique; 16-bit = PAN-specific.**
+> **LOADng = on-demand; only destination answers RREQ.**
+> **RPL = IPv6 routing for low-power lossy networks.**
+> **Passive RFID = reader-powered inductively.**
+> **MQTT = publish/subscribe + broker + topic.**
+> **`+` = one level; `#` = multiple levels.**
+> **SMQTT = setup → encryption → publish → decryption.**
+> **CoAP = lightweight REST/web style + UDP.**
+> **Piggyback = ACK + response; separate = ACK first, response later.**
+> **AMQP = exchange + queue + binding.**
+> **Flow = flow control.**
+> **802.15.4 = PHY + MAC.**
+> **FFD = coordinator/router/end device; RFD = limited.**
+> **ZigBee = higher-layer functionality over 802.15.4.**
+
+---
+
+# 39. Mock-Derived Mini Drill — Do Without Looking
+
+1. MQTT routing field? → **Topic**
+2. MQTT central server? → **Broker**
+3. `+` wildcard? → **Single level**
+4. `#` wildcard? → **Multi-level**
+5. 6LoWPAN purpose? → **IPv6 over low-power wireless**
+6. Header compression purpose? → **Reduce IPv6 header overhead**
+7. Mesh Addressing Header key field? → **Hops Left**
+8. Passive RFID power? → **Inductive power from reader**
+9. CoAP transport? → **UDP**
+10. Piggyback? → **ACK carries response**
+11. AMQP routing component? → **Exchange**
+12. AMQP storage component? → **Queue**
+13. AMQP relationship/routing rule? → **Binding**
+14. AMQP flow-control frame? → **Flow**
+15. IEEE 802.15.4 layers? → **PHY + MAC**
+16. FFD roles? → **Coordinator/router/end device**
+17. RFD? → **Reduced functionality**
+18. ZigBee vs 802.15.4? → **ZigBee adds higher-layer functions**
+19. LOADng RREQ response? → **Destination only**
+20. RPL target network type? → **Low-power and lossy networks**
+
+---
+
+# 40. Source Cross-Check Used for This Update
+
+This update was based only on the uploaded course materials and uploaded mock exams:
+
+- **Week-2 lecture PDF** — 96 pages covering 6LoWPAN, LOADng, RPL, RFID, MQTT, SMQTT, CoAP, XMPP, AMQP, IEEE 802.15.4 and ZigBee.
+- **Week-2 assignment PDF** — all 15 assignment questions and official detailed solutions.
+- **Mock Exam 1** — MQTT topic/wildcards and IEEE 802.15.4 purpose.
+- **Mock Exam 2** — MQTT broker, IEEE 802.15.4 FFD, 6LoWPAN header compression.
+- **Mock Exam 3** — MQTT acronym, 6LoWPAN purpose, Mesh Addressing Header, passive RFID, AMQP components.
+- **Mock Exam 4** — MQTT broker, 6LoWPAN header compression, plus cross-week WirelessHART/Bluetooth items that were intentionally excluded from the Week-2 core.
+- **Mock Exam 5** — MQTT broker, CoAP, IEEE 802.15.4 FFD/RFD, plus cross-week Bluetooth/coverage items that were intentionally excluded.
+
+**Bottom line:** The original Week-2 notes are preserved, and this update adds the repeated mock-exam patterns and traps without removing any assignment or lecture topics.
+
+---
+
+## Update Status
+
+**Version:** Week 2 — Improved with uploaded Mock Exams 1–5
+**Priority order:** Assignment → All Week-2 lecture/PPT topics → Repeated mock-exam patterns → Final recall/drill
