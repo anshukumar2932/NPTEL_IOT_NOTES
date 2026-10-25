@@ -2511,3 +2511,1172 @@ Especially:
 
 **Week 8 = Recent SDN advances + Cloud Computing:**  
 **Traditional mobile = static/over-provisioned/difficult to scale; ODIN agent = physical side; Mobi-Flow = predict future location + proactive rules using order-K Markov; Mininet-WiFi = Ethernet + IEEE 802.11; NIST cloud = on-demand shared configurable resources; five characteristics = on-demand self-service, broad network access, resource pooling, rapid elasticity, measured service; IaaS = infrastructure, PaaS = platform, SaaS = software; hypervisor = multiple VMs; private = one organization; SLA = non-functional requirements; accounting = usage records; IAM = identity/access; CloudSim = Java + CLOUDS Lab University of Melbourne; GreenCloud = energy + NS2; OpenStack = open source.**
+
+
+---
+
+# 🚨 WEEK 8 UPDATE — MOCK-EXAM CROSS-CHECK
+
+**Priority remains:**
+
+1. **Assignment first**
+2. **ALL Week-8 lecture/PPT topics**
+3. **Relevant cumulative mock-exam patterns**
+4. **MCQ/MSQ traps + numbers + terminology**
+5. **Rapid revision**
+
+**No images are added or generated.**
+
+---
+
+# 1. 🔴 WEEK-8 ASSIGNMENT ANSWER LOCK
+
+These are the 15 Week-8 assignment answers that should be memorized first.
+
+| Q | Correct answer | Exam memory |
+|---|---|---|
+| **1** | **D** | Traditional mobile networks are difficult to scale because they are static and over-provisioned |
+| **2** | **C** | ODIN agent is placed with physical devices/APs to communicate with controller |
+| **3** | **B** | Mobi-Flow predicts future user location and proactively places rules |
+| **4** | **D** | Mininet-WiFi supports wired + IEEE 802.11 wireless experimentation |
+| **5** | **B** | NIST cloud = shared pool of configurable computing resources |
+| **6** | **A** | Rapid elasticity |
+| **7** | **B** | Single organization = private cloud |
+| **8** | **A** | AWS = public cloud example |
+| **9** | **C** | Servers/storage/network/OS = IaaS |
+| **10** | **D** | Hypervisor enables multiple VMs on physical hardware |
+| **11** | **C** | Application middleware offered to developers = PaaS |
+| **12** | **B** | SLA defines expected non-functional requirements |
+| **13** | **A** | Service accounting obtains resource-usage records |
+| **14** | **D** | Cloud simulators enable reliable, scalable, repeatable pre-deployment evaluation |
+| **15** | **B** | CloudSim = CLOUDS Lab, University of Melbourne + Java |
+
+The assignment source explicitly confirms Q6–Q15 and their detailed solutions. 
+
+---
+
+# 2. 🔴 SDN MOBILE NETWORKING — THE 4 MUST-KNOW ITEMS
+
+## 2.1 Traditional mobile network problem
+
+### Assignment answer
+
+**D — Difficult to scale due to static, over-provisioned networks.**
+
+The lecture framing is:
+
+- static
+- over-provisioned
+- difficult to manage
+- inflexible
+- expensive
+
+### Memory
+
+> **Traditional mobile = static + over-provisioned + hard to scale**
+
+### Trap
+
+Do not choose:
+
+> “Too much centralized control”
+
+The problem described is the opposite: traditional architectures have distributed/static infrastructure and are difficult to adapt.
+
+---
+
+# 3. 🔴 ODIN — AGENT vs MASTER
+
+This is a classic Week-8 location question.
+
+## Odin agent
+
+The **agent is placed at the physical device/access point**.
+
+It communicates with the controller.
+
+## Odin master
+
+The **Odin master resides at the controller end**.
+
+### Memory
+
+> **ODIN agent = physical side**  
+> **Odin master = controller side**
+
+### Trap
+
+- Agent at controller → ❌
+- Agent performs cloud billing → ❌
+- Agent replaces OpenFlow entirely → ❌
+- **Agent with physical device/AP → ✅**
+
+The Week-8 assignment explicitly tests this distinction.
+
+---
+
+# 4. 🔴 UBI-FLOW vs MOBI-FLOW vs ODIN
+
+The Week-8 lecture lists three approaches:
+
+- **ODIN**
+- **Ubi-Flow**
+- **Mobi-Flow**
+
+fileciteturn85file3
+
+### Quick comparison
+
+| Approach | Key idea to remember |
+|---|---|
+| **ODIN** | Wireless SDN architecture with agent at physical/AP side |
+| **Ubi-Flow** | SDN approach for mobility/unified flow handling |
+| **Mobi-Flow** | Mobility-aware proactive flow-rule placement |
+
+Do not collapse all three into “mobile SDN.”
+
+---
+
+# 5. 🔴 MOBI-FLOW — VERY HIGH PRIORITY
+
+The assignment asks for the primary goal of Mobi-Flow.
+
+### Correct concept
+
+Mobi-Flow:
+
+1. observes the user at time **t**
+2. predicts the user's location at **t+1**
+3. identifies the AP(s) likely to serve the user
+4. proactively places flow-rules at those APs
+
+The prediction uses an:
+
+> **order-K Markov predictor**
+
+### Memory
+
+> **Mobi-Flow = Predict → Place proactively**
+
+---
+
+# 6. 🔴 MOBI-FLOW — WHY IT MATTERS
+
+The lecture explicitly shows that Mobi-Flow can reduce:
+
+- **control message overhead**
+- **energy consumption**
+
+compared with conventional flow-rule placement schemes. fileciteturn85file0
+
+### Mock-exam pattern
+
+A cumulative mock asks why MobiFlow reduces control overhead and energy consumption.
+
+### Correct logic
+
+> **Proactive rule placement based on predicted user movement**
+
+### Trap
+
+Do not choose:
+
+> “Wait for PACKET-IN and then react”
+
+That is the reactive pattern Mobi-Flow is trying to improve upon.
+
+---
+
+# 7. 🔴 MININET-WIFI — MUST MEMORIZE
+
+### Assignment answer
+
+**Mininet-WiFi**
+
+### What it supports
+
+The lecture/assignment describes it as supporting:
+
+- wired Ethernet
+- wireless Wi-Fi
+- IEEE **802.11**
+
+### Controller
+
+The assignment notes that:
+
+**ONOS** can be used to place controllers.
+
+### Memory
+
+> **Mininet-WiFi = wired + wireless SDN experimentation**
+
+### Trap
+
+- CloudSim → cloud simulation
+- NS2 → not the assignment answer
+- GreenCloud → cloud/network energy simulation
+- **Mininet-WiFi → correct**
+
+---
+
+# 8. 🔴 NIST CLOUD DEFINITION
+
+The lecture quotes NIST:
+
+> Cloud computing enables convenient, on-demand network access to a shared pool of **configurable computing resources**.
+
+Examples include:
+
+- network infrastructures
+- servers
+- storage
+- applications
+
+fileciteturn87file6
+
+### Memory
+
+> **Cloud = on-demand + shared + configurable resources**
+
+---
+
+# 9. 🔴 NIST FIVE ESSENTIAL CHARACTERISTICS
+
+Memorize all five:
+
+1. **On-demand self-service**
+2. **Broad network access**
+3. **Resource pooling**
+4. **Rapid elasticity**
+5. **Measured service**
+
+The Week-8 NIST visual model places these alongside the service and deployment models. fileciteturn86file6
+
+### Assignment trap
+
+If the question asks for an essential characteristic:
+
+**Rapid elasticity → YES**
+
+Examples such as:
+
+- manual resource allocation
+- single-tenant only access
+- fixed billing regardless of usage
+
+→ **NO**
+
+---
+
+# 10. 🔴 CLOUD SERVICE MODELS
+
+## IaaS
+
+**Infrastructure-as-a-Service**
+
+Provides infrastructure such as:
+
+- servers
+- storage
+- network
+- operating system
+
+### Assignment answer
+
+**IaaS**
+
+### Memory
+
+> **IaaS = Infrastructure**
+
+---
+
+## PaaS
+
+**Platform-as-a-Service**
+
+The lecture/assignment describes it as:
+
+> application middleware offered as a service to developers.
+
+Developers focus on deploying/managing applications without managing the underlying hardware and OS.
+
+### Memory
+
+> **PaaS = Platform for developers**
+
+---
+
+## SaaS
+
+**Software-as-a-Service**
+
+Provides software/application functionality to users.
+
+### Master comparison
+
+| Model | Main idea |
+|---|---|
+| **IaaS** | Infrastructure |
+| **PaaS** | Platform/middleware |
+| **SaaS** | Software/application |
+
+---
+
+# 11. 🔴 IaaS — HYPERVISOR
+
+The assignment asks:
+
+> Which component allows multiple VMs to share the same physical hardware?
+
+### Answer
+
+**Hypervisor**
+
+### Concept
+
+The hypervisor sits above physical hardware and manages multiple virtual machines.
+
+Each VM can run its own operating system.
+
+### Memory
+
+> **Physical hardware → Hypervisor → multiple VMs**
+
+### Trap
+
+Do not confuse:
+
+- hypervisor → virtualization
+- firewall → security filtering
+- DNS → name resolution
+- load balancer → traffic distribution
+
+---
+
+# 12. 🔴 IaaS USER RESPONSIBILITY — MOCK-EXAM PATTERN
+
+A cumulative mock asks:
+
+> In IaaS, which parts of the IT stack are typically managed by the user?
+
+The important exam distinction is:
+
+**IaaS gives infrastructure; the user manages the upper layers such as the OS and applications.**
+
+This is why the IaaS vs PaaS comparison matters.
+
+### Memory
+
+> **IaaS = more user control**  
+> **PaaS = provider handles more underlying platform/infrastructure**
+
+---
+
+# 13. 🔴 CLOUD DEPLOYMENT MODELS
+
+The Week-8 lecture lists:
+
+1. **Public cloud**
+2. **Private cloud**
+3. **Hybrid cloud**
+
+and also:
+
+- Community cloud
+- Distributed cloud
+- Multi-cloud
+- Inter-cloud
+
+fileciteturn86file3
+
+---
+
+# 14. 🔴 PRIVATE vs PUBLIC vs HYBRID
+
+## Private cloud
+
+Exclusive use by:
+
+**one organization**
+
+Can be:
+
+- on-premises
+- off-premises through a third party
+
+### Assignment answer
+
+**Private cloud**
+
+---
+
+## Public cloud
+
+Available for use by:
+
+**any person or industry**
+
+Examples given in the assignment/lecture include:
+
+- **AWS**
+- Google Compute Engine
+- Microsoft Azure
+
+### Assignment answer
+
+**AWS**
+
+---
+
+## Hybrid cloud
+
+Combination of:
+
+**private/internal + public/hosted**
+
+### Memory
+
+> **Hybrid = private + public**
+
+---
+
+# 15. 🔴 ON-PREMISE vs OFF-PREMISE
+
+The lecture's comparison:
+
+| Access | On-premise | Off-premise |
+|---|---|---|
+| Dedicated | Private cloud | Hosted private cloud |
+| Shared | Community cloud | Public cloud |
+
+fileciteturn85file5
+
+This table is worth recognizing directly because NPTEL can convert it into an MCQ.
+
+---
+
+# 16. 🔴 OPEN-SOURCE vs COMMERCIAL CLOUD
+
+The Week-8 lecture compares:
+
+### Open-source clouds
+
+Examples:
+
+- OpenStack
+- CloudStack
+- Eucalyptus
+
+Mostly:
+
+**IaaS**
+
+Security:
+
+**Implemented by user**
+
+Type:
+
+**Private / on-premise**
+
+### Commercial clouds
+
+Examples:
+
+- AWS
+- Microsoft Azure
+- Google App Engine
+
+Can offer:
+
+- IaaS
+- PaaS
+- SaaS
+
+Security:
+
+**Implemented by service provider**
+
+Type:
+
+**Public / off-premise / hosted-private**
+
+fileciteturn86file0
+
+---
+
+# 17. 🔴 CLOUD SERVICE MANAGEMENT — SLA
+
+### SLA = Service Level Agreement
+
+The assignment answer:
+
+> Defines the **non-functional requirements expected from the service provider**.
+
+It provides a roadmap with defined deliverables describing:
+
+- quality
+- utility
+- warranty
+
+### Trap
+
+SLA is not primarily:
+
+- physical data-center location
+- programming language
+- hardware vendor list
+
+### Memory
+
+> **SLA = expected service quality / non-functional requirements**
+
+---
+
+# 18. 🔴 SERVICE ACCOUNTING
+
+### Assignment answer
+
+Service accounting obtains:
+
+> **resource-usage information, typically in the form of records**
+
+Usage information comes from metric measurements and monitoring.
+
+### Memory
+
+> **Accounting = measure usage**
+
+### Trap
+
+Do not confuse:
+
+**Accounting → usage records**
+
+with:
+
+**Billing → charging based on usage/service terms**
+
+---
+
+# 19. 🔴 CLOUD SECURITY — IAM
+
+The Week-8 lecture includes cloud security topics such as:
+
+- authentication
+- authorization
+- Identity and Access Management
+- data confidentiality
+- integrity
+- availability
+
+A cumulative mock specifically asks the purpose of IAM.
+
+### IAM purpose
+
+> Manage digital identities and control user access so that legitimate users access legitimate resources for legitimate reasons.
+
+### Memory
+
+**IAM = Identity + Access**
+
+### Trap
+
+IAM is not simply:
+
+- encryption
+- backup
+- traffic monitoring
+
+---
+
+# 20. 🔴 CLOUD SIMULATORS
+
+The Week-8 lecture lists:
+
+- **CloudSim**
+- CloudAnalyst
+- GreenCloud
+- iCanCloud
+- GroudSim
+- DCSim
+
+fileciteturn89file2
+
+### Why simulate?
+
+Cloud simulators provide a:
+
+- reliable
+- scalable
+- repeatable
+
+environment for **pre-deployment performance evaluation**.
+
+### Assignment answer
+
+**D**
+
+---
+
+# 21. 🔴 CLOUDSIM — MUST MEMORIZE
+
+CloudSim is:
+
+- a **simulation framework**
+- models cloud environments
+- models data centers
+- models VMs
+- models applications
+- models users
+- models network topology
+- written in **Java**
+- developed at **CLOUDS Lab, University of Melbourne**
+
+fileciteturn89file4
+
+### Assignment answer
+
+**B — CLOUDS Lab, University of Melbourne + Java**
+
+### Memory
+
+> **CloudSim = Java + CLOUDS Lab + University of Melbourne**
+
+---
+
+# 22. 🔴 CLOUDSIM ARCHITECTURE
+
+The lecture gives three major layers:
+
+## Top layer — User Code
+
+Contains:
+
+- users
+- physical machines
+- virtual machines
+- applications/services
+- scheduling policies
+
+## Middle layer — CloudSim
+
+Provides:
+
+- cloud environment
+- modelling
+- simulation
+
+## Bottom layer — Core Simulation Engine
+
+Handles:
+
+- event scheduling
+- entity creation
+- interaction between components
+- clock management
+
+fileciteturn87file2
+
+### Memory
+
+> **User Code → CloudSim → Core Simulation Engine**
+
+---
+
+# 23. 🔴 CLOUDSIM FEATURES
+
+The lecture lists features including:
+
+- multiple cloud data centers
+- different data-center network topologies
+- message-passing applications
+- server-host virtualization
+- VM allocation
+- user-defined resource-allocation policies
+- energy-aware computational resources
+- dynamic addition/removal of simulation components
+- stop/resume simulation
+
+fileciteturn89file7
+
+---
+
+# 24. 🔴 CLOUDSIM ARCHITECTURE — COMPONENT RECOGNITION
+
+The detailed architecture includes:
+
+### Cloud resources
+
+- CPU allocation
+- memory allocation
+- storage allocation
+- bandwidth allocation
+- VM provisioning
+
+### VM services
+
+- VM management
+- Cloudlet execution
+
+### Cloud services
+
+- cloud coordinator
+- data center
+
+### Network
+
+- network topology
+- message-delay calculation
+
+### User interface structure
+
+- user interface
+- VM services
+- cloud services
+- cloud resources
+
+fileciteturn87file3
+
+---
+
+# 25. 🔴 CLOUDSIM ADVANTAGES
+
+The lecture emphasizes:
+
+### Time effectiveness
+
+Cloud-based application implementation with:
+
+- minimum time
+- minimum effort
+
+### Flexibility and applicability
+
+- supports diverse cloud environments
+- enables modelling of application services in different environments
+
+fileciteturn87file1
+
+---
+
+# 26. 🔴 SDN MOBILE + CLOUD — DO NOT MIX TOOLS
+
+This is a major Week-8 trap.
+
+| Tool | Main Week-8 association |
+|---|---|
+| **Mininet-WiFi** | Wireless SDN / wired + IEEE 802.11 |
+| **CloudSim** | Cloud computing simulation |
+| **CloudAnalyst** | Cloud simulation/analysis |
+| **GreenCloud** | Cloud/network energy-oriented simulation |
+| **iCanCloud** | Cloud simulation |
+| **GroudSim** | Cloud simulation |
+| **DCSim** | Cloud simulation |
+
+### Fast memory
+
+> **Wireless SDN → Mininet-WiFi**  
+> **Cloud → CloudSim**
+
+---
+
+# 27. 🔴 WEEK-8 MOCK-EXAM PATTERNS
+
+The cumulative mock exams reinforce several Week-8-relevant concepts:
+
+### Pattern 1 — IaaS vs PaaS
+
+Mock question asks the distinction.
+
+**IaaS:** user manages more of the OS/application stack.
+
+**PaaS:** provider manages underlying infrastructure/platform while developer focuses on applications.
+
+### Pattern 2 — Mobi-Flow
+
+Mock question asks how Mobi-Flow reduces control overhead and energy.
+
+**Answer:** proactive flow-rule placement based on predicted user movement using an **order-K Markov predictor**.
+
+### Pattern 3 — Cloud security / IAM
+
+Mock question asks the primary purpose of IAM.
+
+**Answer:** manage identities and control legitimate access to resources.
+
+### Pattern 4 — Mininet-WiFi
+
+Assignment explicitly tests it as the wireless SDN experimentation tool supporting wired + IEEE 802.11.
+
+### Pattern 5 — CloudSim
+
+Assignment repeatedly locks the high-yield identity:
+
+**Java + CLOUDS Lab + University of Melbourne**
+
+---
+
+# 28. ⚠️ WEEK-8 MCQ/MSQ TRAP BANK
+
+### Trap 1
+Traditional mobile networks are difficult to scale because they have **too much centralized control**.
+
+❌
+
+Correct:
+
+**Static, over-provisioned networks are difficult to scale.**
+
+### Trap 2
+ODIN agent is located at the controller.
+
+❌
+
+**Agent → physical device/AP**
+
+### Trap 3
+Mobi-Flow waits for packets before placing rules.
+
+❌
+
+It is **proactive** and predicts future location.
+
+### Trap 4
+Mobi-Flow predicts current location.
+
+❌
+
+It predicts future location, conceptually:
+
+**t → predict t+1**
+
+### Trap 5
+Mininet-WiFi is a cloud simulator.
+
+❌
+
+**Mininet-WiFi → wireless SDN experimentation**
+
+### Trap 6
+CloudSim is the NIST cloud definition.
+
+❌
+
+**CloudSim → simulation framework**
+
+### Trap 7
+NIST cloud resource pool means fixed hardware only.
+
+❌
+
+**Configurable computing resources**
+
+### Trap 8
+Rapid elasticity means manual allocation.
+
+❌
+
+Resources can be rapidly allocated/released.
+
+### Trap 9
+Single-organization cloud = public.
+
+❌
+
+**Private cloud**
+
+### Trap 10
+AWS = private cloud example.
+
+❌
+
+**AWS = public cloud example in the assignment/lecture**
+
+### Trap 11
+IaaS = software applications.
+
+❌
+
+**IaaS = infrastructure**
+
+### Trap 12
+Hypervisor = firewall.
+
+❌
+
+**Hypervisor = virtualization / multiple VMs**
+
+### Trap 13
+PaaS means user manages all physical hardware.
+
+❌
+
+PaaS abstracts underlying infrastructure and supports application deployment.
+
+### Trap 14
+SLA = hardware vendor list.
+
+❌
+
+**SLA = expected non-functional requirements**
+
+### Trap 15
+Service accounting = user identity.
+
+❌
+
+**Accounting = resource-usage information/records**
+
+### Trap 16
+CloudSim = Python.
+
+❌
+
+**CloudSim = Java-based environment**
+
+### Trap 17
+CloudSim developed at IIT Kharagpur.
+
+❌
+
+**CLOUDS Lab, University of Melbourne**
+
+### Trap 18
+IAM's main purpose is only encryption.
+
+❌
+
+**IAM = identity and access control**
+
+---
+
+# 29. 🔥 WEEK-8 PRIORITY RANKING
+
+## 🔴 TIER 1 — MUST MEMORIZE
+
+1. Traditional mobile → static/over-provisioned/difficult to scale
+2. ODIN agent → physical device/AP
+3. Mobi-Flow → future location prediction
+4. Mobi-Flow → order-K Markov predictor
+5. Mobi-Flow → proactive rule placement
+6. Mininet-WiFi → wired + IEEE 802.11
+7. NIST cloud definition
+8. Five NIST characteristics
+9. Rapid elasticity
+10. Private cloud
+11. AWS → public cloud
+12. IaaS
+13. Hypervisor
+14. PaaS
+15. SLA
+16. Service accounting
+17. Cloud simulator purpose
+18. CloudSim
+19. Java
+20. CLOUDS Lab, University of Melbourne
+
+## 🟠 TIER 2 — VERY IMPORTANT
+
+21. ODIN vs Ubi-Flow vs Mobi-Flow
+22. ONOS in Mininet-WiFi setup
+23. Cloud deployment models
+24. On-premise vs off-premise
+25. Open-source vs commercial clouds
+26. IaaS categories
+27. IaaS/PaaS/SaaS responsibility differences
+28. IAM
+29. CloudSim architecture
+30. CloudSim features
+31. CloudSim advantages
+32. Cloud simulator list
+
+## 🟡 TIER 3 — UNDERSTAND
+
+33. Why traditional mobile networks are inflexible
+34. Why proactive flow placement helps mobile users
+35. Why prediction reduces control overhead
+36. Why cloud simulation is useful before deployment
+37. Why virtualization enables multiple VMs
+38. Why SLA is a non-functional contract
+39. Why IAM matters in cloud security
+40. Relationship between deployment and service models
+
+---
+
+# 30. 📌 WEEK-8 NUMBERS / NAMES / TERMS SHEET
+
+| Item | Memorize |
+|---|---|
+| Traditional mobile issue | **Static + over-provisioned + difficult to scale** |
+| ODIN physical-side component | **Odin agent** |
+| Mobi-Flow predictor | **Order-K Markov predictor** |
+| Mobi-Flow strategy | **Proactive flow-rule placement** |
+| Wireless SDN simulator | **Mininet-WiFi** |
+| Wireless standard | **IEEE 802.11** |
+| Controller tool mentioned | **ONOS** |
+| NIST cloud | **Shared pool of configurable computing resources** |
+| Essential characteristics | **5** |
+| Rapid elasticity | **YES — NIST characteristic** |
+| Single organization | **Private cloud** |
+| Public cloud example | **AWS** |
+| Infrastructure service | **IaaS** |
+| Platform service | **PaaS** |
+| Software service | **SaaS** |
+| VM-sharing component | **Hypervisor** |
+| SLA | **Non-functional requirements** |
+| Accounting | **Resource-usage records** |
+| CloudSim language | **Java** |
+| CloudSim institution | **CLOUDS Lab, University of Melbourne** |
+| CloudSim purpose | **Cloud modelling/simulation** |
+
+---
+
+# 31. 🧠 60-SECOND WEEK-8 RECALL
+
+> **Traditional mobile = static + over-provisioned + hard to scale.**  
+> **ODIN agent = physical device/AP.**  
+> **Odin master = controller side.**  
+> **Mobi-Flow = predict future location.**  
+> **Predictor = order-K Markov.**  
+> **Mobi-Flow = proactive rules.**  
+> **Mininet-WiFi = wired + IEEE 802.11.**  
+> **NIST cloud = on-demand shared configurable resources.**  
+> **5 characteristics = self-service, broad access, pooling, elasticity, measured service.**  
+> **Private = one organization.**  
+> **AWS = public cloud.**  
+> **IaaS = infrastructure.**  
+> **PaaS = platform.**  
+> **SaaS = software.**  
+> **Hypervisor = multiple VMs on physical hardware.**  
+> **SLA = non-functional requirements.**  
+> **Accounting = usage records.**  
+> **IAM = identity + access.**  
+> **CloudSim = simulation.**  
+> **CloudSim = Java + CLOUDS Lab + University of Melbourne.**
+
+---
+
+# 32. 📝 FINAL WEEK-8 RAPID DRILL
+
+1. Main scaling problem in traditional mobile networks?  
+   → **Static, over-provisioned networks**
+
+2. ODIN agent location?  
+   → **With physical devices/APs**
+
+3. Odin master location?  
+   → **Controller end**
+
+4. Mobi-Flow main idea?  
+   → **Predict future user location and proactively place flow-rules**
+
+5. Mobi-Flow predictor?  
+   → **Order-K Markov predictor**
+
+6. Mobi-Flow benefit?  
+   → **Reduced control message overhead and energy consumption**
+
+7. Wireless SDN simulation tool?  
+   → **Mininet-WiFi**
+
+8. Wireless protocol supported?  
+   → **IEEE 802.11**
+
+9. NIST cloud resource pool?  
+   → **Configurable computing resources**
+
+10. One NIST characteristic?  
+    → **Rapid elasticity**
+
+11. Single-organization cloud?  
+    → **Private cloud**
+
+12. Public cloud provider in assignment?  
+    → **AWS**
+
+13. Infrastructure service?  
+    → **IaaS**
+
+14. Multiple VMs sharing physical hardware?  
+    → **Hypervisor**
+
+15. Application middleware for developers?  
+    → **PaaS**
+
+16. SLA purpose?  
+    → **Define expected non-functional requirements**
+
+17. Service accounting?  
+    → **Resource-usage information/records**
+
+18. Why cloud simulators?  
+    → **Reliable, scalable, repeatable pre-deployment evaluation**
+
+19. CloudSim language?  
+    → **Java**
+
+20. CloudSim institution?  
+    → **CLOUDS Lab, University of Melbourne**
+
+21. CloudSim models?  
+    → **Data centers, VMs, applications, users, network topology**
+
+22. IAM purpose?  
+    → **Manage identities and control access**
+
+23. Hybrid cloud?  
+    → **Private + public**
+
+24. Open-source cloud examples?  
+    → **OpenStack, CloudStack, Eucalyptus**
+
+25. Commercial cloud examples?  
+    → **AWS, Microsoft Azure, Google App Engine**
+
+---
+
+# 33. FINAL WEEK-8 EXAM STRATEGY
+
+### If you have only 5 minutes
+
+Memorize this chain:
+
+**Traditional mobile → static/over-provisioned**
+
+**ODIN → agent at physical side**
+
+**Mobi-Flow → future prediction + proactive rules + order-K Markov**
+
+**Mininet-WiFi → wired + 802.11**
+
+**NIST → configurable resources**
+
+**5 characteristics → self-service / broad access / pooling / elasticity / measured service**
+
+**Private → one organization**
+
+**AWS → public**
+
+**IaaS → infrastructure**
+
+**Hypervisor → multiple VMs**
+
+**PaaS → middleware/platform**
+
+**SLA → non-functional requirements**
+
+**Accounting → usage records**
+
+**CloudSim → Java + CLOUDS Lab + Melbourne**
+
+### Highest-value trap pair
+
+> **Mininet-WiFi = wireless SDN**  
+> **CloudSim = cloud simulation**
+
+Do not swap them.
+
+**No images were generated or added.**
